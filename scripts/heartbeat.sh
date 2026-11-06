@@ -71,14 +71,14 @@ ${tail_log:-（还没有输出）}
 
   payload_file=$(mktemp)
   if [ -z "$SHA" ]; then
-    SHA=$(curl -s -H "Authorization: Bearer $TOKEN" "$API?ref=$BRANCH" \
+    SHA=$(curl -s -m 15 --connect-timeout 8 -H "Authorization: Bearer $TOKEN" "$API?ref=$BRANCH" \
       | python3 -c 'import json,sys
 try: print(json.load(sys.stdin).get("sha",""))
 except Exception: print("")' 2>/dev/null)
   fi
   make_payload "$payload_file" "$body"
 
-  resp=$(curl -s -X PUT -H "Authorization: Bearer $TOKEN" \
+  resp=$(curl -s -m 25 --connect-timeout 8 -X PUT -H "Authorization: Bearer $TOKEN" \
     -H "Accept: application/vnd.github+json" \
     -H "Content-Type: application/json" \
     --data @"$payload_file" "$API")
