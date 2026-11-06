@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 16:59:43Z |
+| 采样时刻 | 2026-11-06 17:00:14Z |
 | 已运行 | **10 分钟** |
-| ninja 进度 | `1010/28037` |
-| 工作卷 | `63G used, 33G avail, 66%` |
+| ninja 进度 | `1055/28037` |
+| 工作卷 | `63G used, 33G avail, 67%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2417M used / 13566M avail | swap 4012M/17782M` |
-| PSI | `some avg10=0.31 avg60=0.79 avg300=7.34 total=94684691 full avg10=0.31 avg60=0.78 avg300=6.83 total=87505097 ` |
+| 内存 | `2466M used / 13517M avail | swap 4057M/17782M` |
+| PSI | `some avg10=0.04 avg60=0.52 avg300=6.63 total=94758389 full avg10=0.04 avg60=0.51 avg300=6.17 total=87578598 ` |
 
 ### 内存占用 Top6
 
 ```
-   414M  rustc
-   328M  ninja
-   107M  provjobd2880998
-    56M  clang++.real
+   282M  ninja
+   134M  clang++.real
+   108M  provjobd2880998
+    52M  clang++.real
     43M  multipathd
-    38M  Runner.Listener
+    39M  Runner.Listener
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  3% 986/28037] //external/zlib:libz static link libz.a [linux_glibc] (priority: 54)
-[  3% 987/28037] //external/protobuf:aprotoc link aprotoc [linux_glibc] (priority: 53)
-[  3% 988/28037] link /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/dep_fixer/linux_glibc_x86_64/obj/dep_fixer (priority: 53)
-[  3% 989/28037] //external/fmtlib:fmtlib clang++ src/format.cc (priority: 53)
-[  3% 990/28037] //system/tools/aidl:libaidl-common raw yacc.sbox.textproto [linux_glibc] (priority: 53)
-[  3% 991/28037] //system/logging/liblog:liblog strip liblog.so (priority: 53)
-[  3% 992/28037] //external/rust/android-crates-io/crates/regex:libregex rustc src/lib.rs [linux_glibc] (priority: 55)
-[  3% 993/28037] //prebuilts/rust:libstd rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/std/src/lib.rs (priority: 53)
-[  3% 994/28037] host Prebuilt: dep_fixer (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/obj/EXECUTABLES/dep_fixer_intermediates/dep_fixer) (priority: 52)
-[  3% 995/28037] host Prebuilt: aprotoc (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/obj/EXECUTABLES/aprotoc_intermediates/aprotoc) (priority: 52)
-[  3% 996/28037] //external/fmtlib:fmtlib static link fmtlib.a (priority: 52)
-[  3% 997/28037] //system/tools/aidl:libaidl-common gen yacc [linux_glibc] (priority: 52)
-[  3% 998/28037] //system/libbase:libbase clang++ abi_compatibility.cpp (priority: 52)
-[  3% 999/28037] //system/libbase:libbase clang++ chrono_utils.cpp (priority: 52)
-[  3% 1000/28037] //system/libbase:libbase clang++ cmsg.cpp (priority: 52)
-[  3% 1001/28037] //system/libbase:libbase clang++ file.cpp (priority: 52)
-[  3% 1002/28037] //system/libbase:libbase clang++ hex.cpp (priority: 52)
-[  3% 1003/28037] //system/libbase:libbase clang++ logging.cpp (priority: 52)
-[  3% 1004/28037] //system/libbase:libbase clang++ mapped_file.cpp (priority: 52)
-[  3% 1005/28037] //system/libbase:libbase clang++ parsebool.cpp (priority: 52)
-[  3% 1006/28037] //system/libbase:libbase clang++ parsenetaddress.cpp (priority: 52)
-[  3% 1007/28037] //system/libbase:libbase clang++ posix_strerror_r.cpp (priority: 52)
-[  3% 1008/28037] //system/libbase:libbase clang++ process.cpp (priority: 52)
-[  3% 1009/28037] //system/libbase:libbase clang++ properties.cpp (priority: 52)
-[  3% 1010/28037] //system/libbase:libbase clang++ result.cpp (priority: 52)
+[  3% 1031/28037] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/bssl_fipscommon/linux_glibc_x86_64/pkg/boringssl.googlesource.com/boringssl/util/fipstools/fipscommon.a (priority: 50)
+[  3% 1032/28037] //external/fmtlib:fmtlib clang++ src/format.cc [linux_glibc] (priority: 50)
+[  3% 1033/28037] //system/tools/aidl:libaidl-common clang++ aidl_checkapi.cpp [linux_glibc] (priority: 50)
+[  3% 1034/28037] //system/tools/aidl:libaidl-common clang++ aidl_const_expressions.cpp [linux_glibc] (priority: 50)
+[  3% 1035/28037] //system/tools/aidl:libaidl-common clang++ aidl_dumpapi.cpp [linux_glibc] (priority: 50)
+[  3% 1036/28037] //system/tools/aidl:libaidl-common clang++ lex/system/tools/aidl/aidl_language_l.cpp [linux_glibc] (priority: 50)
+[  3% 1037/28037] //system/tools/aidl:libaidl-common clang++ yacc/system/tools/aidl/aidl_language_y.cpp [linux_glibc] (priority: 50)
+[  3% 1038/28037] //system/tools/aidl:libaidl-common clang++ aidl_language.cpp [linux_glibc] (priority: 50)
+[  3% 1039/28037] //external/rust/android-crates-io/crates/protobuf-codegen:protoc-gen-rust rustc src/bin/protoc-gen-rust.rs [linux_glibc] (priority: 53)
+[  3% 1040/28037] host Prebuilt: protoc-gen-rust (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/obj/EXECUTABLES/protoc-gen-rust_intermediates/protoc-gen-rust) (priority: 52)
+[  3% 1041/28037] Install: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/protoc-gen-rust (priority: 51)
+[  3% 1042/28037] //system/tools/aidl:libaidl-common clang++ aidl_to_common.cpp [linux_glibc] (priority: 50)
+[  3% 1043/28037] //system/tools/aidl:libaidl-common clang++ aidl_to_cpp.cpp [linux_glibc] (priority: 50)
+[  3% 1044/28037] //system/tools/aidl:libaidl-common clang++ aidl_to_cpp_common.cpp [linux_glibc] (priority: 50)
+[  3% 1045/28037] //system/tools/aidl:libaidl-common clang++ aidl_to_ndk.cpp [linux_glibc] (priority: 50)
+[  3% 1046/28037] //system/tools/aidl:libaidl-common clang++ aidl_to_rust.cpp [linux_glibc] (priority: 50)
+[  3% 1047/28037] //system/tools/aidl:libaidl-common clang++ aidl_to_java.cpp [linux_glibc] (priority: 50)
+[  3% 1048/28037] //system/tools/aidl:libaidl-common clang++ aidl_typenames.cpp [linux_glibc] (priority: 50)
+[  3% 1049/28037] //system/tools/aidl:libaidl-common clang++ ast_java.cpp [linux_glibc] (priority: 50)
+[  3% 1050/28037] //system/tools/aidl:libaidl-common clang++ aidl.cpp [linux_glibc] (priority: 50)
+[  3% 1051/28037] //system/tools/aidl:libaidl-common clang++ code_writer.cpp [linux_glibc] (priority: 50)
+[  3% 1052/28037] //system/tools/aidl:libaidl-common clang++ check_valid.cpp [linux_glibc] (priority: 50)
+[  3% 1053/28037] //system/tools/aidl:libaidl-common clang++ comments.cpp [linux_glibc] (priority: 50)
+[  3% 1054/28037] //system/tools/aidl:libaidl-common clang++ diagnostics.cpp [linux_glibc] (priority: 50)
+[  3% 1055/28037] //system/tools/aidl:libaidl-common clang++ generate_aidl_mappings.cpp [linux_glibc] (priority: 50)
 ```
