@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:03:53Z |
-| 已运行 | **14 分钟** |
-| ninja 进度 | `2406/28037` |
+| 采样时刻 | 2026-11-06 17:04:24Z |
+| 已运行 | **15 分钟** |
+| ninja 进度 | `2584/28037` |
 | 工作卷 | `64G used, 32G avail, 67%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2261M used / 13722M avail | swap 3988M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=3.12 total=94801887 full avg10=0.00 avg60=0.00 avg300=2.90 total=87622082 ` |
+| 内存 | `2328M used / 13655M avail | swap 3977M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=2.79 total=94804916 full avg10=0.00 avg60=0.00 avg300=2.59 total=87624943 ` |
 
 ### 内存占用 Top6
 
 ```
-   348M  ninja
-   122M  rustc
-   115M  clang++.real
+   359M  ninja
+   114M  rustc
    109M  provjobd2880998
-    49M  Runner.Listener
+    68M  clang++.real
+    50M  Runner.Listener
     43M  multipathd
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  8% 2382/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/security/sharedsecret/aidl/android.hardware.security.sharedsecret-V1-ndk-source/gen/timestamp (priority: 34)
-[  8% 2383/28037] AIDL CHECK API: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/security/sharedsecret/aidl/android.hardware.security.sharedsecret_interface/dump against hardware/interfaces/security/sharedsecret/aidl/aidl_api/android.hardware.security.sharedsecret/current (priority: 34)
-[  8% 2384/28037] Verify hardware/interfaces/security/sharedsecret/aidl/aidl_api/android.hardware.security.sharedsecret/1 files have not been modified (priority: 34)
-[  8% 2385/28037] AIDL CHECK API: hardware/interfaces/security/sharedsecret/aidl/aidl_api/android.hardware.security.sharedsecret/current against hardware/interfaces/security/sharedsecret/aidl/aidl_api/android.hardware.security.sharedsecret/1 (priority: 34)
-[  8% 2386/28037]  (priority: 34)
-[  8% 2387/28037] //external/rust/android-crates-io/crates/clang-sys:copy_clang-sys_build_out raw genrule.sbox.textproto (priority: 34)
-[  8% 2388/28037] //bionic/libc:crt_pad_segment clang arch-common/bionic/crt_pad_segment.S (priority: 34)
-[  8% 2389/28037] //bionic/libc:crtbegin_so link crtbegin_so.o (priority: 34)
-[  8% 2390/28037] //bionic/libc:crtend_so clang arch-common/bionic/crtend_so.S (priority: 34)
-[  8% 2391/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V4-ndk clang++ android/hardware/security/keymint/KeyParameterValue.cpp (priority: 34)
-[  8% 2392/28037] //bionic/libc/async_safe:libasync_safe clang++ async_safe_log.cpp (priority: 34)
-[  8% 2393/28037] //system/libbase:libbase strip libbase.so (priority: 34)
-[  8% 2394/28037] //bionic/libc:libc link libc.so (priority: 34)
-[  8% 2395/28037] //prebuilts/clang/host/linux-x86:libc++ prebuilt shared library (priority: 34)
-[  8% 2396/28037] //system/core/libcutils:libcutils_sockets clang++ sockets.cpp (priority: 34)
-[  8% 2397/28037] //system/core/libcutils:libcutils_sockets clang++ android_get_control_file.cpp (priority: 34)
-[  8% 2398/28037] //external/fmtlib:fmtlib clang++ src/format.cc (priority: 34)
-[  8% 2399/28037] //system/core/libcutils:libcutils_sockets clang++ socket_inaddr_any_server_unix.cpp (priority: 34)
-[  8% 2400/28037] //system/core/libcutils:libcutils_sockets clang++ socket_local_client_unix.cpp (priority: 34)
-[  8% 2401/28037] //system/core/libcutils:libcutils_sockets clang++ socket_local_server_unix.cpp (priority: 34)
-[  8% 2402/28037] //system/core/libcutils:libcutils_sockets clang++ socket_network_client_unix.cpp (priority: 34)
-[  8% 2403/28037] //bionic/libdl:libdl link libdl.so (priority: 34)
-[  8% 2404/28037] //system/core/libcutils:libcutils_sockets clang++ sockets_unix.cpp (priority: 34)
-[  8% 2405/28037] //bionic/libdl:libdl_android link libdl_android.so (priority: 34)
-[  8% 2406/28037] //hardware/libhardware:libhardware clang hardware.c (priority: 34)
+[  9% 2560/28037] //hardware/interfaces/security/rkp/aidl:android.hardware.security.rkp-V3-ndk clang++ android/hardware/security/keymint/ProtectedData.cpp (priority: 31)
+[  9% 2561/28037] //hardware/interfaces/security/rkp/aidl:android.hardware.security.rkp-V3-ndk clang++ android/hardware/security/keymint/RpcHardwareInfo.cpp (priority: 31)
+[  9% 2562/28037] //hardware/interfaces/security/sharedsecret/aidl:android.hardware.security.sharedsecret-V1-ndk clang++ android/hardware/security/sharedsecret/ISharedSecret.cpp (priority: 31)
+[  9% 2563/28037] //hardware/interfaces/security/sharedsecret/aidl:android.hardware.security.sharedsecret_interface export types for android.hardware.security.sharedsecret/1 (priority: 31)
+[  9% 2564/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/base/keystore/aaid/aidl/android.security.aaid_aidl-cpp-source/gen/timestamp (priority: 31)
+[  9% 2565/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/security/keystore2/aidl/android.security.compat-ndk-source/gen/timestamp (priority: 31)
+[  9% 2566/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/hardware/interfaces/keystore2/aidl/android.system.keystore2-V5-ndk-source/gen/timestamp (priority: 31)
+[  9% 2567/28037] AIDL CHECK API: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/hardware/interfaces/keystore2/aidl/android.system.keystore2_interface/dump against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/current (priority: 31)
+[  9% 2568/28037] Verify system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/1 files have not been modified (priority: 31)
+[  9% 2569/28037] Verify system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/2 files have not been modified (priority: 31)
+[  9% 2570/28037] AIDL CHECK API: system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/2 against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/1 (priority: 31)
+[  9% 2571/28037] Verify system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/3 files have not been modified (priority: 31)
+[  9% 2572/28037] AIDL CHECK API: system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/3 against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/2 (priority: 31)
+[  9% 2573/28037] Verify system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/4 files have not been modified (priority: 31)
+[  9% 2574/28037] AIDL CHECK API: system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/4 against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/3 (priority: 31)
+[  9% 2575/28037] //hardware/interfaces/security/sharedsecret/aidl:android.hardware.security.sharedsecret-V1-ndk clang++ android/hardware/security/sharedsecret/SharedSecretParameters.cpp (priority: 31)
+[  9% 2576/28037] Verify system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/5 files have not been modified (priority: 31)
+[  9% 2577/28037] AIDL CHECK API: system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/5 against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/4 (priority: 31)
+[  9% 2578/28037] AIDL CHECK API: system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/current against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/5 (priority: 31)
+[  9% 2579/28037] //build/make/tools/fs_config:fs_config_generator embedded python archive [linux_glibc] (priority: 31)
+[  9% 2580/28037] //bionic/tools:generate-version-script python library archive [linux_glibc] (priority: 31)
+[  9% 2581/28037] //bionic/libc:generated_android_ids raw genrule.sbox.textproto (priority: 31)
+[  9% 2582/28037]  (priority: 31)
+[  9% 2583/28037] //bionic/linker:ld-android clang++ ld_android.cpp (priority: 31)
+[  9% 2584/28037] //bionic/libc/tools:gensyscalls Precompile the python sources of gensyscalls [linux_glibc] (priority: 31)
 ```
