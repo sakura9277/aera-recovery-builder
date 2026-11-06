@@ -112,6 +112,18 @@ jobs:
           git config --global url."https://github.com/".insteadOf "git@github.com:"
           repo --version
 
+          # 16G 内存是这台 runner 的真正瓶颈：两次运行都在编译开始后
+          # 47 分 14 秒 / 47 分 18 秒失联，与 -j 数量几乎无关，典型的
+          # 「内存吃穿 -> 疯狂换页到 loop 上的磁盘 swap -> runner 心跳
+          # 上报超时 -> 被判失联」。这里加一层 zram（压缩内存盘）当高速
+          # swap，压缩后 8-10G 的交换空间只占约 3G 物理内存，换页延迟比
+          # 磁盘 swap 快两个数量级。
+          sudo apt-get install -y --no-install-recommends zram-tools || true
+          printf 'ALGO=zstd\nPERCENT=60\nPRIORITY=100\n' | sudo tee /etc/default/zramswap >/dev/null
+          sudo systemctl restart zramswap 2>/dev/null || sudo /usr/sbin/zramswap start 2>/dev/null || true
+          echo "--- swap 布局 ---"
+          swapon --show || true
+
       - name: Init and sync AERA manifest
         run: |
           set -euo pipefail

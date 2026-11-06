@@ -27,6 +27,18 @@ SHA=""
 
 push() {  # $1 = body，成功返回 0
   local body="$1" resp new_sha
+  # SHA 为空时必须先取一次：已有的 status.md 不带 sha 直接 PUT 会被
+  # 422 拒绝（"sha" wasn't supplied），上一版就是这么整轮静默失败的。
+  if [ -z "$SHA" ]; then
+    SHA=$(curl -s -m 15 --connect-timeout 8 \
+      -H "Authorization: Bearer $TOKEN" \
+      -H "Accept: application/vnd.github+json" \
+      "$API?ref=$BRANCH" 2>/dev/null \
+      | python3 -c 'import json,sys
+try: print(json.load(sys.stdin).get("sha") or "")
+except Exception: print("")' 2>/dev/null)
+  fi
+
   resp=$(BODY="$body" SHA="$SHA" BRANCH="$BRANCH" python3 -c '
 import base64, json, os
 d = {
@@ -56,11 +68,14 @@ except Exception: print("")' 2>/dev/null)
 sample() {
   local mins=$(( ($(date +%s) - START) / 60 ))
 
-  prog=$(timeout 6 grep -o '\[[0-9]\{1,5\}/[0-9]\{1,5\}\]' "$LOG" 2>/dev/null | tail -n 1)
+  # ninja 的进度形如 [ 42% 1000/2380]，方括号里还夹着百分比，
+  # 直接匹配 [N/M] 抓不到，这里只抓数字对
+  prog=$(timeout 6 grep -o '[0-9]\{1,6\}/[0-9]\{1,6\}' "$LOG" 2>/dev/null | tail -n 1)
   disk=$(timeout 6 df -h "$WORKDIR" 2>/dev/null | tail -n 1 | awk '{print $3" used, "$4" avail, "$5}')
   rootdisk=$(timeout 6 df -h / 2>/dev/null | tail -n 1 | awk '{print $4" avail ("$5")"}')
   mem=$(timeout 6 free -m 2>/dev/null | awk '/^Mem:/{printf "%sM used / %sM avail", $3, $7} /^Swap:/{printf " | swap %sM/%sM", $3, $2}')
   psi=$(timeout 6 cat /proc/pressure/memory 2>/dev/null | tr '\n' ' ')
+  memtop=$(timeout 8 ps -eo rss,comm --sort=-rss 2>/dev/null | sed -n '2,7p' | awk '{printf "%6.0fM  %s\n", $1/1024, $2}')
   oom=$(timeout 8 sudo -n dmesg -T 2>/dev/null | grep -i -E 'out of memory|oom-kill|killed process' | tail -n 3)
   tail_log=$(timeout 6 tail -n 25 "$LOG" 2>/dev/null)
 
@@ -75,6 +90,12 @@ sample() {
 | 根分区 | \`${rootdisk}\` |
 | 内存 | \`${mem}\` |
 | PSI | \`${psi}\` |
+
+### 内存占用 Top6
+
+\`\`\`
+${memtop:-（无）}
+\`\`\`
 
 ### 内核 OOM 记录
 
