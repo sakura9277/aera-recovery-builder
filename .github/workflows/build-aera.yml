@@ -159,6 +159,8 @@ jobs:
           nohup python3 "$GITHUB_WORKSPACE/scripts/ci_monitor.py" \
             "${{ github.repository }}" "${{ secrets.GITHUB_TOKEN }}" \
             "$WORKDIR" "$WORKDIR/build.log" > /tmp/monitor.log 2>&1 &
+          # 关闭 OOM 打分：内存紧张时内核优先干掉它，心跳就会断在关键时刻
+          sudo sh -c "echo -1000 > /proc/$!/oom_score_adj" 2>/dev/null || true
           set +e
           m ${{ github.event.inputs.make_targets }} -j${{ github.event.inputs.jobs }} 2>&1 \
             | tee "$WORKDIR/build.log" | tail -n 250
