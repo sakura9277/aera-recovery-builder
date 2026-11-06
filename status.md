@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:05:58Z |
-| 已运行 | **16 分钟** |
-| ninja 进度 | `3128/28037` |
-| 工作卷 | `64G used, 32G avail, 68%` |
+| 采样时刻 | 2026-11-06 17:06:29Z |
+| 已运行 | **17 分钟** |
+| ninja 进度 | `3555/28037` |
+| 工作卷 | `65G used, 32G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2100M used / 13882M avail | swap 3948M/17782M` |
-| PSI | `some avg10=0.16 avg60=0.05 avg300=2.02 total=94888912 full avg10=0.16 avg60=0.05 avg300=1.88 total=87706507 ` |
+| 内存 | `2491M used / 13492M avail | swap 3941M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.03 avg300=1.82 total=94888914 full avg10=0.00 avg60=0.03 avg300=1.69 total=87706510 ` |
 
 ### 内存占用 Top6
 
 ```
-   383M  ninja
+   402M  rustc
+   391M  ninja
+   131M  clang++.real
    108M  provjobd2880998
-    55M  Runner.Listener
-    50M  clang++.real
+    56M  Runner.Listener
     43M  multipathd
-    39M  soong_ui
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 11% 3105/28037] //bionic/libc:libc_dns clang dns/nameser/ns_name.c (priority: 28)
-[ 11% 3106/28037] //bionic/libc:libc_dns clang dns/nameser/ns_samedomain.c (priority: 28)
-[ 11% 3107/28037] //bionic/libc:libc_dns clang dns/nameser/ns_ttl.c (priority: 28)
-[ 11% 3108/28037] //bionic/libc:libc_dns clang dns/nameser/ns_print.c (priority: 28)
-[ 11% 3109/28037] //bionic/libc:libc_dns clang dns/net/getaddrinfo.c (priority: 28)
-[ 11% 3110/28037] //bionic/libc:libc_dns clang dns/net/gethnamaddr.c (priority: 28)
-[ 11% 3111/28037] //bionic/libc:libc_dns clang dns/net/getnameinfo.c (priority: 28)
-[ 11% 3112/28037] //bionic/libc:libc_dns clang dns/net/getservent.c (priority: 28)
-[ 11% 3113/28037] //bionic/libc:libc_dns clang dns/net/nsdispatch.c (priority: 28)
-[ 11% 3114/28037] //bionic/libc:libc_dns clang dns/resolv/herror.c (priority: 28)
-[ 11% 3115/28037] //bionic/libc:libc_dns clang dns/net/sethostent.c (priority: 28)
-[ 11% 3116/28037] //bionic/libc:libc_dns clang dns/resolv/res_comp.c (priority: 28)
-[ 11% 3117/28037] //bionic/libc:libc_dns clang++ dns/resolv/res_data.cpp (priority: 28)
-[ 11% 3118/28037] //bionic/libc:libc_dns clang dns/resolv/res_cache.c (priority: 28)
-[ 11% 3119/28037] //bionic/libc:libc_dns clang dns/resolv/res_debug.c (priority: 28)
-[ 11% 3120/28037] //bionic/libc:libc_dns clang dns/resolv/res_mkquery.c (priority: 28)
-[ 11% 3121/28037] //bionic/libc:libc_dns clang dns/resolv/res_init.c (priority: 28)
-[ 11% 3122/28037] //bionic/libc:libc_dns clang dns/resolv/res_query.c (priority: 28)
-[ 11% 3123/28037] //bionic/libc:libc_dns clang dns/resolv/res_state.c (priority: 28)
-[ 11% 3124/28037] //bionic/libc:libc_dns clang dns/resolv/res_stats.c (priority: 28)
-[ 11% 3125/28037] //bionic/libc:libc_dns clang dns/resolv/res_send.c (priority: 28)
-[ 11% 3126/28037] //bionic/libc:libc_dns clang upstream-netbsd/lib/libc/isc/ev_streams.c (priority: 28)
-[ 11% 3127/28037] //bionic/libc:libc_dynamic_dispatch clang++ arch-arm64/dynamic_function_dispatch.cpp (priority: 28)
-[ 11% 3128/28037] //bionic/libc:libc_dns clang upstream-netbsd/lib/libc/isc/ev_timers.c (priority: 28)
-[ 11% 3129/28037] //bionic/libc:libc_fortify clang arch-arm64/string/__memcpy_chk.S (priority: 28)
+[ 12% 3531/28037] //external/e2fsprogs/lib/et:libext2_com_err clang error_message.c (priority: 27)
+[ 12% 3532/28037] //external/e2fsprogs/lib/et:libext2_com_err clang et_name.c (priority: 27)
+[ 12% 3533/28037] //external/e2fsprogs/lib/et:libext2_com_err clang init_et.c (priority: 27)
+[ 12% 3534/28037] //external/e2fsprogs/lib/et:libext2_com_err clang com_err.c (priority: 27)
+[ 12% 3535/28037] //external/e2fsprogs/lib/et:libext2_com_err clang com_right.c (priority: 27)
+[ 12% 3536/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang clear.c (priority: 27)
+[ 12% 3537/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang compare.c (priority: 27)
+[ 12% 3538/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang copy.c (priority: 27)
+[ 12% 3539/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang gen_uuid.c (priority: 27)
+[ 12% 3540/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang isnull.c (priority: 27)
+[ 12% 3541/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang pack.c (priority: 27)
+[ 12% 3542/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang parse.c (priority: 27)
+[ 12% 3543/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang unpack.c (priority: 27)
+[ 12% 3544/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang unparse.c (priority: 27)
+[ 12% 3545/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang uuid_time.c (priority: 27)
+[ 12% 3546/28037] //system/extras/ext4_utils:libext4_utils link libext4_utils.so (priority: 27)
+[ 12% 3547/28037] //system/libhidl:libhidlbase clang++ base/HidlInternal.cpp (priority: 27)
+[ 12% 3548/28037] //system/libhidl:libhidlbase clang++ base/HidlSupport.cpp (priority: 27)
+[ 12% 3549/28037] //system/libhidl:libhidlbase clang++ base/Status.cpp (priority: 27)
+[ 12% 3550/28037] //system/libhidl:libhidlbase clang++ base/TaskRunner.cpp (priority: 27)
+[ 12% 3551/28037] //system/libhidl:libhidlbase clang++ transport/HidlBinderSupport.cpp (priority: 27)
+[ 12% 3552/28037] //system/libhidl:libhidlbase clang++ transport/HidlLazyUtils.cpp (priority: 27)
+[ 12% 3553/28037] //system/libhidl:libhidlbase clang++ transport/HidlPassthroughSupport.cpp (priority: 27)
+[ 12% 3554/28037] //system/libhidl:libhidlbase clang++ transport/HidlTransportSupport.cpp (priority: 27)
+[ 12% 3555/28037] //system/libhidl:libhidlbase clang++ transport/HidlTransportUtils.cpp (priority: 27)
 ```
