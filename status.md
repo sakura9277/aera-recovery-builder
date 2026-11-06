@@ -2,12 +2,12 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 13:02:30Z |
-| 已运行 | **0 分钟** |
+| 采样时刻 | 2026-11-06 13:03:32Z |
+| 已运行 | **1 分钟** |
 | ninja 进度 | `n/a` |
-| 工作卷 | `/dev/mapper/buildvg-buildlv  100G   57G   44G  57% /home/runner/work/aera-recovery-builder/aera-recovery-builder` |
+| 工作卷 | `/dev/mapper/buildvg-buildlv  100G   58G   43G  58% /home/runner/work/aera-recovery-builder/aera-recovery-builder` |
 | 内存 | ` total used free shared buff/cache available
-Mem: 15Gi 1.4Gi 5.0Gi 42Mi 9.6Gi 14Gi
+Mem: 15Gi 2.4Gi 2.4Gi 42Mi 11Gi 13Gi
 Swap: 4.0Gi 93Mi 3.9Gi` |
 
 ```
@@ -26,5 +26,10 @@ nvme0n1              150G disk
 ```
 
 ```
-（还没有输出）
+[ 95% 125/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-art/pkg/android/soong/art.a
+[ 96% 126/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/xsdc-soong-rules/pkg/android/soong/xsdc.a
+[ 96% 127/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-sdk/pkg/android/soong/sdk.a
+[ 97% 128/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
+[ 98% 129/131] link /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong_build/obj/soong_build
+[ 99% 130/131] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/soong_build
 ```
