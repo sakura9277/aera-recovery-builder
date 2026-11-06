@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:37:41Z |
+| 采样时刻 | 2026-11-06 17:38:13Z |
 | 已运行 | **48 分钟** |
-| ninja 进度 | `19205/28037` |
+| ninja 进度 | `19906/28037` |
 | 工作卷 | `69G used, 28G avail, 72%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2717M used / 13266M avail | swap 3711M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95362726 full avg10=0.00 avg60=0.00 avg300=0.00 total=88160997 ` |
+| 内存 | `2553M used / 13430M avail | swap 3706M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95362731 full avg10=0.00 avg60=0.00 avg300=0.00 total=88161002 ` |
 
 ### 内存占用 Top6
 
 ```
-   622M  ninja
-   157M  soong_ui
+   628M  ninja
+   168M  soong_ui
    110M  provjobd2880998
-    92M  clang++.real
     71M  Runner.Worker
     61M  Runner.Listener
+    56M  clang.real
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 68% 19181/28037] //system/linkerconfig:linkerconfig_modules clang++ modules/stringutil.cc [linux_glibc] (priority: 12)
-[ 68% 19182/28037] //system/linkerconfig:linkerconfig_modules clang++ modules/variables.cc [linux_glibc] (priority: 12)
-[ 68% 19183/28037] //system/linkerconfig:linkerconfig_modules clang++ cpp/com_android_apex.cpp [linux_glibc] (priority: 12)
-[ 68% 19184/28037] //system/linkerconfig:linkerconfig_modules clang++ cpp/com_android_apex_enums.cpp [linux_glibc] (priority: 12)
-[ 68% 19185/28037] //system/logging/logcat:logcat clang++ proto/system/logging/logcat/logcat.pb.cc (priority: 12)
-[ 68% 19186/28037] //system/logging/logcat:logcat clang++ process_names.cpp (priority: 12)
-[ 68% 19187/28037] //system/logging/logcat:logcat clang++ logcat.cpp (priority: 12)
-[ 68% 19188/28037] //system/logging/logd:logd clang++ CommandListener.cpp (priority: 12)
-[ 68% 19189/28037] //system/logging/logd:logd clang++ main.cpp (priority: 12)
-[ 68% 19190/28037] //system/logging/logd:logd clang++ LogdNativeService.cpp (priority: 12)
-[ 68% 19191/28037] //system/logging/logd:logd clang++ LogAudit.cpp (priority: 12)
-[ 68% 19192/28037] //system/logging/logd:logd clang++ LogKlog.cpp (priority: 12)
-[ 68% 19193/28037] //system/logging/logd:logd clang++ LogListener.cpp (priority: 12)
-[ 68% 19194/28037] //system/logging/logd:logd clang++ LogPermissions.cpp (priority: 12)
-[ 68% 19195/28037] //system/logging/logd:logd clang++ TrustyLog.cpp (priority: 12)
-[ 68% 19196/28037] //system/logging/logd:logd clang++ LogReader.cpp (priority: 12)
-[ 68% 19197/28037] //system/logging/logd:logd clang++ PkgIds.cpp (priority: 12)
-[ 68% 19198/28037] //system/logging/logd:logd clang++ android/os/logcat/ILogcatManagerService.cpp (priority: 12)
-[ 68% 19199/28037] //system/extras/partition_tools:lpadd clang++ lpadd.cc (priority: 12)
-[ 68% 19200/28037] //system/extras/partition_tools:lpdumpd link lpdumpd (priority: 12)
-[ 68% 19201/28037] //system/extras/partition_tools:lpdump clang++ lpdump_target.cc (priority: 12)
-[ 68% 19202/28037] //system/extras/partition_tools:lpflash clang++ lpflash.cc (priority: 12)
-[ 68% 19203/28037] //system/extras/partition_tools:lpmake clang++ lpmake.cc (priority: 12)
-[ 68% 19204/28037] //external/lptools:lptools clang++ lptools.cc (priority: 12)
-[ 68% 19205/28037] //system/update_engine:lz4diff-protos static link lz4diff-protos.a (priority: 12)
+[ 70% 19882/28037] target Prebuilt: ziptool.recovery (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/EXECUTABLES/ziptool.recovery_intermediates/ziptool) (priority: 11)
+[ 70% 19883/28037] Copy init script: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/ETC/init_recovery.rc_intermediates/init_recovery.rc (priority: 11)
+[ 70% 19884/28037] target Prebuilt: libft2 (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libft2_intermediates/libft2.so) (priority: 11)
+[ 70% 19885/28037] target Strip: libblkid (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libblkid_intermediates/libblkid.so) (priority: 11)
+[ 70% 19886/28037] target Prebuilt: libjpeg (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libjpeg_intermediates/libjpeg.so) (priority: 11)
+[ 70% 19887/28037] target Prebuilt: libminuitwrp (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libminuitwrp_intermediates/libminuitwrp.so) (priority: 11)
+[ 70% 19888/28037] target Strip: libgpt_twrp (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libgpt_twrp_intermediates/libgpt_twrp.so) (priority: 11)
+[ 70% 19889/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libsync.so (priority: 11)
+[ 70% 19890/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libjsoncpp.so (priority: 11)
+[ 70% 19891/28037] target Strip: libtwrpmtp-ffs (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libtwrpmtp-ffs_intermediates/libtwrpmtp-ffs.so) (priority: 11)
+[ 70% 19892/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libunwindstack.so (priority: 11)
+[ 70% 19893/28037] target Prebuilt: liblzma (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/liblzma_intermediates/liblzma.so) (priority: 11)
+[ 70% 19894/28037] target Strip: libtar (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libtar_intermediates/libtar.so) (priority: 11)
+[ 70% 19895/28037] build /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libtwadbbu_intermediates/libtwadbbu.so.toc (priority: 11)
+[ 70% 19896/28037] target  C: fatlabel <= bootable/recovery/dosfstools/src/boot.c (priority: 11)
+[ 70% 19897/28037] target  C: fatlabel <= bootable/recovery/dosfstools/src/check.c (priority: 11)
+[ 70% 19898/28037] target  C: fatlabel <= bootable/recovery/dosfstools/src/common.c (priority: 11)
+[ 70% 19899/28037] target  C: fatlabel <= bootable/recovery/dosfstools/src/fat.c (priority: 11)
+[ 70% 19900/28037] target  C: fatlabel <= bootable/recovery/dosfstools/src/file.c (priority: 11)
+[ 70% 19901/28037] target  C: fatlabel <= bootable/recovery/dosfstools/src/io.c (priority: 11)
+[ 70% 19902/28037] target  C: fatlabel <= bootable/recovery/dosfstools/src/lfn.c (priority: 11)
+[ 70% 19903/28037] target  C: fatlabel <= bootable/recovery/dosfstools/src/fatlabel.c (priority: 11)
+[ 70% 19904/28037] target  C: fsckexfat <= bootable/recovery/exfat/fsck/main.c (priority: 11)
+[ 70% 19905/28037] build /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libexfat_twrp_intermediates/libexfat_twrp.so.toc (priority: 11)
+[ 70% 19906/28037] target  C++: twrpbu <= bootable/recovery/adbbu/adbbumain.cpp (priority: 11)
 ```
