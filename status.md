@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:18:27Z |
+| 采样时刻 | 2026-11-06 17:18:58Z |
 | 已运行 | **29 分钟** |
-| ninja 进度 | `9762/28037` |
+| ninja 进度 | `10019/28037` |
 | 工作卷 | `66G used, 30G avail, 69%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2604M used / 13379M avail | swap 3825M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.12 total=95072364 full avg10=0.00 avg60=0.00 avg300=0.11 total=87878884 ` |
+| 内存 | `2349M used / 13634M avail | swap 3821M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.10 total=95088636 full avg10=0.00 avg60=0.00 avg300=0.09 total=87894759 ` |
 
 ### 内存占用 Top6
 
 ```
-   507M  ninja
-   146M  clang++.real
-   134M  rustc
-   110M  provjobd2880998
-    82M  soong_ui
+   511M  ninja
+   180M  ld.lld
+   122M  provjobd2880998
+   115M  clang++.real
+    83M  soong_ui
     59M  Runner.Listener
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 34% 9738/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/EphemeralStorageKeyResponse.cpp (priority: 18)
-[ 34% 9739/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/IKeystoreOperation.cpp (priority: 18)
-[ 34% 9740/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/IKeystoreSecurityLevel.cpp (priority: 18)
-[ 34% 9741/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/IKeystoreService.cpp (priority: 18)
-[ 34% 9742/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/KeyDescriptor.cpp (priority: 18)
-[ 34% 9743/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/KeyEntryResponse.cpp (priority: 18)
-[ 34% 9744/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/KeyMetadata.cpp (priority: 18)
-[ 34% 9745/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/KeyPermission.cpp (priority: 18)
-[ 34% 9746/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/KeyParameters.cpp (priority: 18)
-[ 34% 9747/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/ResponseCode.cpp (priority: 18)
-[ 34% 9748/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V1-ndk clang++ android/system/keystore2/OperationChallenge.cpp (priority: 18)
-[ 34% 9749/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/AuthenticatorSpec.cpp (priority: 18)
-[ 34% 9750/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/Authorization.cpp (priority: 18)
-[ 34% 9751/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/Domain.cpp (priority: 18)
-[ 34% 9752/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/CreateOperationResponse.cpp (priority: 18)
-[ 34% 9753/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/EphemeralStorageKeyResponse.cpp (priority: 18)
-[ 34% 9754/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/IKeystoreOperation.cpp (priority: 18)
-[ 34% 9755/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/IKeystoreSecurityLevel.cpp (priority: 18)
-[ 34% 9756/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/IKeystoreService.cpp (priority: 18)
-[ 34% 9757/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/KeyDescriptor.cpp (priority: 18)
-[ 34% 9758/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/KeyEntryResponse.cpp (priority: 18)
-[ 34% 9759/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/KeyMetadata.cpp (priority: 18)
-[ 34% 9760/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/KeyPermission.cpp (priority: 18)
-[ 34% 9761/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/KeyParameters.cpp (priority: 18)
-[ 34% 9762/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V4-ndk clang++ android/system/keystore2/ResponseCode.cpp (priority: 18)
+[ 35% 9995/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/label_file.c (priority: 18)
+[ 35% 9996/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/lgetfilecon.c (priority: 18)
+[ 35% 9997/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/load_policy.c (priority: 18)
+[ 35% 9998/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/lsetfilecon.c (priority: 18)
+[ 35% 9999/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/mapping.c (priority: 18)
+[ 35% 10000/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/matchpathcon.c (priority: 18)
+[ 35% 10001/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/policyvers.c (priority: 18)
+[ 35% 10002/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/procattr.c (priority: 18)
+[ 35% 10003/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/regex.c (priority: 18)
+[ 35% 10004/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/reject_unknown.c (priority: 18)
+[ 35% 10005/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/selinux_internal.c (priority: 18)
+[ 35% 10006/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/sestatus.c (priority: 18)
+[ 35% 10007/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/setenforce.c (priority: 18)
+[ 35% 10008/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/setfilecon.c (priority: 18)
+[ 35% 10009/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/setrans_client.c (priority: 18)
+[ 35% 10010/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/sha1.c (priority: 18)
+[ 35% 10011/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/stringrep.c (priority: 18)
+[ 35% 10012/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/android/android_device.c (priority: 18)
+[ 35% 10013/28037] //external/selinux/libselinux:libselinux link libselinux.so [linux_glibc] (priority: 18)
+[ 35% 10014/28037] //external/rust/android-crates-io/crates/smallvec:libsmallvec rustc src/lib.rs (priority: 18)
+[ 35% 10015/28037] //external/selinux/libselinux:libselinux link libselinux.so (priority: 18)
+[ 35% 10016/28037] //external/sqlite/android:libsqlite3_android clang++ PhoneNumberUtils.cpp (priority: 18)
+[ 35% 10017/28037] //external/sqlite/android:libsqlite3_android clang++ OldPhoneNumberUtils.cpp (priority: 18)
+[ 35% 10018/28037] //external/sqlite/android:libsqlite3_android clang++ sqlite3_android.cpp (priority: 18)
+[ 35% 10019/28037] //system/logging/rust:libstructured_log clippy structured_logger.rs (priority: 18)
 ```
