@@ -68,7 +68,9 @@ jobs:
           # 典型特征是体积型撑爆：把保留区压到最小，尽可能多留给 out/
           root-reserve-mb: 2048
           temp-reserve-mb: 1024
-          swap-size-mb: 8192
+          # 实测 -j4/-j3 的失败时间点完全一致，内存不是瓶颈（失败时也只用了 6-14 G），
+          # 所以把 swap 从 8 G 压到 4 G，让出的 4 G 全部给 out/
+          swap-size-mb: 4096
           remove-dotnet: 'true'
           remove-android: 'true'
           remove-haskell: 'true'
@@ -80,6 +82,10 @@ jobs:
           df -h
           free -h
           nproc
+          # 逻辑卷 96 G 未必等于物理空间，这里把真实布局打出来
+          lsblk -o NAME,SIZE,TYPE,MOUNTPOINT || true
+          sudo pvs --units g || true
+          sudo lvs --units g || true
 
       # 放在扩盘之后，避免源码被挂载点替换覆盖
       - name: Checkout builder
@@ -127,11 +133,15 @@ jobs:
             "${{ github.event.inputs.device_path }}"
           ls -la "${{ github.event.inputs.device_path }}" | head -40
 
-      - name: Drop .repo to free disk
+      - name: Drop .repo and unrelated projects
         run: |
           cd "$WORKDIR"
           du -sh .repo || true
           rm -rf .repo
+          # recovery 用不到这些子树，AOSP 16 里合计 8-15 G；
+          # 编译时靠 ALLOW_MISSING_DEPENDENCIES=true 容忍缺失
+          du -sh cts test platform_testing developers pdk sdk 2>/dev/null || true
+          rm -rf cts test platform_testing developers pdk sdk
           df -h "$WORKDIR"
 
       - name: Build recovery image
@@ -156,7 +166,7 @@ jobs:
           # 心跳必须在本 step 里起：runner 在每个 step 结束时清理孤儿进程，
           # 单独放一个 step 里启动的话活不过 2 分钟
           rm -f "$WORKDIR/build.done"
-          nohup python3 "$GITHUB_WORKSPACE/scripts/ci_monitor.py" \
+          nohup bash "$GITHUB_WORKSPACE/scripts/heartbeat.sh" \
             "${{ github.repository }}" "${{ secrets.GITHUB_TOKEN }}" \
             "$WORKDIR" "$WORKDIR/build.log" > /tmp/monitor.log 2>&1 &
           # 关闭 OOM 打分：内存紧张时内核优先干掉它，心跳就会断在关键时刻
