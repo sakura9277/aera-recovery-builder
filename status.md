@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 16:54:32Z |
+| 采样时刻 | 2026-11-06 16:55:03Z |
 | 已运行 | **5 分钟** |
-| ninja 进度 | `133/145` |
-| 工作卷 | `61G used, 35G avail, 64%` |
+| ninja 进度 | `144/145` |
+| 工作卷 | `62G used, 34G avail, 65%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `4108M used / 11875M avail | swap 239M/17782M` |
-| PSI | `some avg10=6.64 avg60=29.52 avg300=19.28 total=90658314 full avg10=5.91 avg60=26.98 avg300=17.80 total=83484957 ` |
+| 内存 | `9884M used / 6099M avail | swap 223M/17782M` |
+| PSI | `some avg10=0.27 avg60=17.33 avg300=17.27 total=90658315 full avg10=0.24 avg60=15.84 avg300=15.94 total=83484959 ` |
 
 ### 内存占用 Top6
 
 ```
-  3026M  ckati
-    95M  provjobd2880998
+  8770M  ckati
+   132M  provjobd2880998
     43M  multipathd
+    28M  Runner.Listener
     19M  python3
     17M  dockerd
-    16M  php-fpm8.3
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 90% 118/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-fsgen/pkg/android/soong/fsgen.a
-[ 90% 119/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-sysprop/pkg/android/soong/sysprop.a
-[ 91% 120/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-apex/pkg/android/soong/apex.a
-[ 92% 121/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-art/pkg/android/soong/art.a
-[ 93% 122/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-selinux/pkg/android/soong/selinux.a
-[ 93% 123/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-systemfeatures/pkg/android/soong/systemfeatures.a
-[ 94% 124/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-sdk/pkg/android/soong/sdk.a
-[ 95% 125/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-tradefed-modules/pkg/android/soong/tradefed_modules.a
-[ 96% 126/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/vintf-compatibility-matrix-soong-rules/pkg/android/soong/vintf-compatibility-matrix.a
-[ 96% 127/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/xsdc-soong-rules/pkg/android/soong/xsdc.a
-[ 97% 128/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
-[ 98% 129/131] link /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong_build/obj/soong_build
-[ 99% 130/131] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/soong_build
-[100% 131/131] analyzing Android.bp files and generating ninja file at /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/build.twrp_hummer.ninja
-Warning: Module 'CameraExtensionsProxy' depends on non-existing optional_uses_libs 'androidx.camera.extensions.impl'
-Warning: Module 'androidx.test.uiautomator_uiautomator' depends on non-existing optional_uses_libs 'com.android.extensions.xr'
-Warning: Module 'androidx.wear_wear' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.compose_compose-foundation' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.watchface_watchface-complications-data' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.watchface_watchface-complications-data-source' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.watchface_watchface' depends on non-existing optional_uses_libs 'wear-sdk'
-/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/build-twrp_hummer-cleanspec.ninja is missing, regenerating...
-/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/build-twrp_hummer.ninja is missing, regenerating...
-[100% 132/132] initializing legacy Make module parser ...
-[ 91% 133/145] including /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/installs-twrp_hummer.mk ...
+[ 93% 136/145] including art/Android.mk ...
+[ 94% 137/145] including bootable/recovery/Android.mk ...
+bootable/recovery/aera_build.mk:687: warning: "OF_MISCELLANEOUS_ROOT_DIRECTORY" is used. This is EXPERIMENTAL. Ensure that "/sdcard" will ALWAYS be accessible on the device
+bootable/recovery/aera_build.mk:919: warning: The wlan features will be enabled. You need to provide (and load and manage) your WiFi drivers in your device tree
+bootable/recovery/prebuilt/Android.mk:486: warning: vendor_hw:  bootable/recovery/prebuilt/relink.sh /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/recovery/root/vendor/bin/hw 
+bootable/recovery/orscmd/../aera_build.mk:687: warning: "OF_MISCELLANEOUS_ROOT_DIRECTORY" is used. This is EXPERIMENTAL. Ensure that "/sdcard" will ALWAYS be accessible on the device
+bootable/recovery/orscmd/../aera_build.mk:919: warning: The wlan features will be enabled. You need to provide (and load and manage) your WiFi drivers in your device tree
+[ 95% 138/145] including device/oneplus/hummer/Android.mk ...
+[ 95% 139/145] including device/qcom/twrp-common/Android.mk ...
+[ 96% 140/145] including external/magisk-prebuilt/Android.mk ...
+[ 97% 141/145] including hardware/qcom/wlan/Android.mk ...
+[ 97% 142/145] including vendor/twrp/Android.mk ...
+[ 98% 143/145] including /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/late-twrp_hummer.mk ...
+[ 99% 144/145] finishing legacy Make module parsing ...
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/framework/catbox-tradefed.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/framework/catbox-tradefed-tests.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/catbox-tradefed has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/framework/catbox-report-lib.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/framework/cts-tradefed.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/framework/cts-tradefed-tests.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/cts-tradefed has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/test-utils-script has no license metadata
 ```
