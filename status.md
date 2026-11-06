@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:11:10Z |
-| 已运行 | **21 分钟** |
-| ninja 进度 | `5918/28037` |
+| 采样时刻 | 2026-11-06 17:11:41Z |
+| 已运行 | **22 分钟** |
+| ninja 进度 | `6149/28037` |
 | 工作卷 | `65G used, 31G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `4809M used / 11174M avail | swap 3885M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.67 total=95032606 full avg10=0.00 avg60=0.00 avg300=0.62 total=87840527 ` |
+| 内存 | `2433M used / 13550M avail | swap 3881M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.59 total=95040610 full avg10=0.00 avg60=0.00 avg300=0.55 total=87848518 ` |
 
 ### 内存占用 Top6
 
 ```
-  1714M  rustc
-  1220M  rustc
-   448M  ninja
-   109M  provjobd2880998
+   452M  ninja
+   110M  provjobd2880998
+    62M  clang++.real
+    58M  soong_ui
     58M  Runner.Listener
-    57M  soong_ui
+    57M  clang++.real
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 21% 5894/28037] //bionic/libc:libstdc++ clang++ bionic/new.cpp (priority: 23)
-[ 21% 5895/28037] //bionic/libc:libstdc++.arm64.map generate libstdc++.arm64.map.txt (priority: 23)
-[ 21% 5896/28037] //external/rust/android-crates-io/crates/tempfile:libtempfile rustc src/lib.rs (priority: 23)
-[ 21% 5897/28037] //external/rust/android-crates-io/crates/yoke:libyoke rustc src/lib.rs (priority: 23)
-[ 21% 5898/28037] //external/selinux/secilc:secilc clang secilc.c [linux_glibc] (priority: 23)
-[ 21% 5899/28037] //external/rust/android-crates-io/crates/regex-syntax:libregex_syntax rustc src/lib.rs (priority: 23)
-[ 21% 5900/28037] //system/tools/sysprop:sysprop_cpp link sysprop_cpp [linux_glibc] (priority: 23)
-[ 21% 5901/28037]  (priority: 23)
-[ 21% 5902/28037]  (priority: 23)
-[ 21% 5903/28037] //system/tools/aidl/build:test-piece-1_interface export types for test-piece-1/3 (priority: 23)
-[ 21% 5904/28037] //system/sepolicy/tools:version_policy clang version_policy.c [linux_glibc] (priority: 23)
-[ 21% 5905/28037] link /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/zip2zip/linux_glibc_x86_64/obj/zip2zip (priority: 23)
-[ 21% 5906/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libcutils.so (priority: 22)
-[ 21% 5907/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/liblog.so (priority: 22)
-[ 21% 5908/28037] Symlink: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/system/lib64/libm.so (priority: 22)
-[ 21% 5909/28037] Install: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/system/lib64/bootstrap/libm.so (priority: 22)
-[ 21% 5910/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/recovery/root/system/lib64/libc.so (priority: 22)
-[ 21% 5911/28037] target Prebuilt: libdl.recovery (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libdl.recovery_intermediates/libdl.recovery.so) (priority: 22)
-[ 21% 5912/28037] Install: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/recovery/root/system/lib64/ld-android.so (priority: 22)
-[ 21% 5913/28037] Install: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/lib64/libbase.so (priority: 22)
-[ 21% 5914/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libcrecovery.so (priority: 22)
-[ 21% 5915/28037] Install: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/lib64/libprotobuf-cpp-full.so (priority: 22)
-[ 21% 5916/28037] host Prebuilt: zip2zip (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/obj/EXECUTABLES/zip2zip_intermediates/zip2zip) (priority: 22)
-[ 21% 5917/28037] host Prebuilt: sysprop_cpp (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/obj/EXECUTABLES/sysprop_cpp_intermediates/sysprop_cpp) (priority: 22)
-[ 21% 5918/28037] Copy: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/common/obj/JAVA_LIBRARIES/xsdc_intermediates/javalib.jar (priority: 22)
+[ 21% 6125/28037] //external/libchrome:libchrome clang++ base/files/memory_mapped_file.cc (priority: 22)
+[ 21% 6126/28037] //external/libchrome:libchrome clang++ base/files/memory_mapped_file_posix.cc (priority: 22)
+[ 21% 6127/28037] //external/libchrome:libchrome clang++ base/files/scoped_file.cc (priority: 22)
+[ 21% 6128/28037] //external/libchrome:libchrome clang++ base/files/scoped_temp_dir.cc (priority: 22)
+[ 21% 6129/28037] //external/libchrome:libchrome clang++ base/guid.cc (priority: 22)
+[ 21% 6130/28037] //external/libchrome:libchrome clang++ base/hash.cc (priority: 22)
+[ 21% 6131/28037] //external/libchrome:libchrome clang++ base/json/json_file_value_serializer.cc (priority: 22)
+[ 21% 6132/28037] //external/libchrome:libchrome clang++ base/json/json_reader.cc (priority: 22)
+[ 21% 6133/28037] //external/libchrome:libchrome clang++ base/json/json_parser.cc (priority: 22)
+[ 21% 6134/28037] //external/libchrome:libchrome clang++ base/json/json_string_value_serializer.cc (priority: 22)
+[ 21% 6135/28037] //external/libchrome:libchrome clang++ base/json/json_value_converter.cc (priority: 22)
+[ 21% 6136/28037] //external/libchrome:libchrome clang++ base/json/json_writer.cc (priority: 22)
+[ 21% 6137/28037] //external/libchrome:libchrome clang++ base/json/string_escape.cc (priority: 22)
+[ 21% 6138/28037] //external/libchrome:libchrome clang++ base/lazy_instance_helpers.cc (priority: 22)
+[ 21% 6139/28037] //external/libchrome:libchrome clang++ base/location.cc (priority: 22)
+[ 21% 6140/28037] //external/libchrome:libchrome clang++ base/md5.cc (priority: 22)
+[ 21% 6141/28037] //external/libchrome:libchrome clang++ base/logging.cc (priority: 22)
+[ 21% 6142/28037] //external/libchrome:libchrome clang++ base/memory/aligned_memory.cc (priority: 22)
+[ 21% 6143/28037] //external/libchrome:libchrome clang++ base/memory/platform_shared_memory_region.cc (priority: 22)
+[ 21% 6144/28037] //external/libchrome:libchrome clang++ base/memory/read_only_shared_memory_region.cc (priority: 22)
+[ 21% 6145/28037] //external/libchrome:libchrome clang++ base/memory/ref_counted.cc (priority: 22)
+[ 21% 6146/28037] //external/libchrome:libchrome clang++ base/memory/shared_memory_handle.cc (priority: 22)
+[ 21% 6147/28037] //external/libchrome:libchrome clang++ base/memory/ref_counted_memory.cc (priority: 22)
+[ 21% 6148/28037] //external/libchrome:libchrome clang++ base/memory/shared_memory_mapping.cc (priority: 22)
+[ 21% 6149/28037] //external/libchrome:libchrome clang++ base/memory/shared_memory_helper.cc (priority: 22)
 ```
