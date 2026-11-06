@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:05:26Z |
+| 采样时刻 | 2026-11-06 17:05:58Z |
 | 已运行 | **16 分钟** |
-| ninja 进度 | `2798/28037` |
+| ninja 进度 | `3128/28037` |
 | 工作卷 | `64G used, 32G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `3593M used / 12390M avail | swap 3952M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=2.25 total=94830871 full avg10=0.00 avg60=0.00 avg300=2.09 total=87650115 ` |
+| 内存 | `2100M used / 13882M avail | swap 3948M/17782M` |
+| PSI | `some avg10=0.16 avg60=0.05 avg300=2.02 total=94888912 full avg10=0.16 avg60=0.05 avg300=1.88 total=87706507 ` |
 
 ### 内存占用 Top6
 
 ```
-  1527M  rustc
-   380M  ninja
-   179M  clang++.real
-   109M  provjobd2880998
-    54M  Runner.Listener
+   383M  ninja
+   108M  provjobd2880998
+    55M  Runner.Listener
+    50M  clang++.real
     43M  multipathd
+    39M  soong_ui
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  9% 2774/28037] //external/e2fsprogs/lib/et:libext2_com_err clang com_err.c (priority: 29)
-[  9% 2775/28037] //external/e2fsprogs/lib/et:libext2_com_err clang com_right.c (priority: 29)
-[  9% 2776/28037] //external/e2fsprogs/lib/uuid:libext2_uuid strip libext2_uuid.so (priority: 29)
-[  9% 2777/28037] //bionic/libc:libicu4x_bionic clippy bionic/icu4x.rs (priority: 29)
-[  9% 2778/28037] //external/rust/android-crates-io/crates/icu_collections:libicu_collections rustc src/lib.rs (priority: 29)
-[  9% 2779/28037] //external/rust/android-crates-io/crates/icu_properties_data:libicu_properties_data rustc src/lib.rs (priority: 29)
-[  9% 2780/28037] //hardware/interfaces/keymaster/4.0/support:libkeymaster4support strip libkeymaster4support.so (priority: 29)
-[  9% 2781/28037] //system/keymaster:libpuresoftkeymasterdevice strip libpuresoftkeymasterdevice.so (priority: 29)
-[  9% 2782/28037] //system/core/libsparse:libsparse clang++ backed_block.cpp (priority: 29)
-[  9% 2783/28037] //system/core/libsparse:libsparse clang++ output_file.cpp (priority: 29)
-[  9% 2784/28037] //system/core/libsparse:libsparse clang++ sparse.cpp (priority: 29)
-[  9% 2785/28037] //system/core/libsparse:libsparse clang++ sparse_crc32.cpp (priority: 29)
-[  9% 2786/28037] //system/core/libsparse:libsparse clang++ sparse_err.cpp (priority: 29)
-[  9% 2787/28037] //system/core/libsparse:libsparse clang++ sparse_read.cpp (priority: 29)
-[  9% 2788/28037] //external/rust/android-crates-io/crates/unicode-bidi:libunicode_bidi rustc src/lib.rs (priority: 29)
-[  9% 2789/28037] //system/core/libutils:libutils link libutils.so (priority: 29)
-[  9% 2790/28037] //system/core/libvndksupport:libvndksupport clang stub.c (priority: 29)
-[  9% 2791/28037] //external/zlib:libz generate toc libz.so (priority: 29)
-[  9% 2792/28037] //external/zlib:libz link libz.so (priority: 29)
-[  9% 2793/28037] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong_javac_wrapper/linux_glibc_x86_64/obj/soong_javac_wrapper.a (priority: 29)
-[  9% 2794/28037] //bionic/libc:syscalls-arm64 generate syscalls-arm64.S (priority: 29)
-[  9% 2795/28037] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/zipsync/linux_glibc_x86_64/obj/zipsync.a (priority: 29)
-[  9% 2796/28037] Install: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/symbols_map (priority: 28)
-[  9% 2797/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/boot/aidl/android.hardware.boot-V1-ndk-source/gen/timestamp (priority: 28)
-[  9% 2798/28037] //hardware/interfaces/boot/1.0:android.hardware.boot@1.0 generate toc android.hardware.boot@1.0.so (priority: 28)
+[ 11% 3105/28037] //bionic/libc:libc_dns clang dns/nameser/ns_name.c (priority: 28)
+[ 11% 3106/28037] //bionic/libc:libc_dns clang dns/nameser/ns_samedomain.c (priority: 28)
+[ 11% 3107/28037] //bionic/libc:libc_dns clang dns/nameser/ns_ttl.c (priority: 28)
+[ 11% 3108/28037] //bionic/libc:libc_dns clang dns/nameser/ns_print.c (priority: 28)
+[ 11% 3109/28037] //bionic/libc:libc_dns clang dns/net/getaddrinfo.c (priority: 28)
+[ 11% 3110/28037] //bionic/libc:libc_dns clang dns/net/gethnamaddr.c (priority: 28)
+[ 11% 3111/28037] //bionic/libc:libc_dns clang dns/net/getnameinfo.c (priority: 28)
+[ 11% 3112/28037] //bionic/libc:libc_dns clang dns/net/getservent.c (priority: 28)
+[ 11% 3113/28037] //bionic/libc:libc_dns clang dns/net/nsdispatch.c (priority: 28)
+[ 11% 3114/28037] //bionic/libc:libc_dns clang dns/resolv/herror.c (priority: 28)
+[ 11% 3115/28037] //bionic/libc:libc_dns clang dns/net/sethostent.c (priority: 28)
+[ 11% 3116/28037] //bionic/libc:libc_dns clang dns/resolv/res_comp.c (priority: 28)
+[ 11% 3117/28037] //bionic/libc:libc_dns clang++ dns/resolv/res_data.cpp (priority: 28)
+[ 11% 3118/28037] //bionic/libc:libc_dns clang dns/resolv/res_cache.c (priority: 28)
+[ 11% 3119/28037] //bionic/libc:libc_dns clang dns/resolv/res_debug.c (priority: 28)
+[ 11% 3120/28037] //bionic/libc:libc_dns clang dns/resolv/res_mkquery.c (priority: 28)
+[ 11% 3121/28037] //bionic/libc:libc_dns clang dns/resolv/res_init.c (priority: 28)
+[ 11% 3122/28037] //bionic/libc:libc_dns clang dns/resolv/res_query.c (priority: 28)
+[ 11% 3123/28037] //bionic/libc:libc_dns clang dns/resolv/res_state.c (priority: 28)
+[ 11% 3124/28037] //bionic/libc:libc_dns clang dns/resolv/res_stats.c (priority: 28)
+[ 11% 3125/28037] //bionic/libc:libc_dns clang dns/resolv/res_send.c (priority: 28)
+[ 11% 3126/28037] //bionic/libc:libc_dns clang upstream-netbsd/lib/libc/isc/ev_streams.c (priority: 28)
+[ 11% 3127/28037] //bionic/libc:libc_dynamic_dispatch clang++ arch-arm64/dynamic_function_dispatch.cpp (priority: 28)
+[ 11% 3128/28037] //bionic/libc:libc_dns clang upstream-netbsd/lib/libc/isc/ev_timers.c (priority: 28)
+[ 11% 3129/28037] //bionic/libc:libc_fortify clang arch-arm64/string/__memcpy_chk.S (priority: 28)
 ```
