@@ -2,12 +2,12 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 12:03:42Z |
-| 已运行 | **0 分钟** |
+| 采样时刻 | 2026-11-06 12:04:44Z |
+| 已运行 | **1 分钟** |
 | ninja 进度 | `n/a` |
-| 工作卷 | `/dev/mapper/buildvg-buildlv  100G   57G   44G  57% /home/runner/work/aera-recovery-builder/aera-recovery-builder` |
+| 工作卷 | `/dev/mapper/buildvg-buildlv  100G   57G   43G  58% /home/runner/work/aera-recovery-builder/aera-recovery-builder` |
 | 内存 | ` total used free shared buff/cache available
-Mem: 15Gi 1.3Gi 3.3Gi 42Mi 11Gi 14Gi
+Mem: 15Gi 1.5Gi 2.0Gi 43Mi 12Gi 14Gi
 Swap: 4.0Gi 140Mi 3.9Gi` |
 
 ```
@@ -26,5 +26,10 @@ sda                  150G disk
 ```
 
 ```
-（还没有输出）
+[ 87% 114/130] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-sh/pkg/android/soong/sh.a
+[ 88% 115/130] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-suite-harness/pkg/android/soong/tradefed/suite_harness.a
+[ 89% 116/130] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-systemfeatures/pkg/android/soong/systemfeatures.a
+[ 90% 117/130] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-filesystem/pkg/android/soong/filesystem.a
+[ 90% 118/130] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-sysprop/pkg/android/soong/sysprop.a
+[ 91% 119/130] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-tradefed-modules/pkg/android/soong/tradefed_modules.a
 ```
