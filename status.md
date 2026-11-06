@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:34:34Z |
+| 采样时刻 | 2026-11-06 17:35:05Z |
 | 已运行 | **45 分钟** |
-| ninja 进度 | `17493/28037` |
+| ninja 进度 | `17622/28037` |
 | 工作卷 | `68G used, 28G avail, 71%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2715M used / 13268M avail | swap 3721M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.01 avg300=0.00 total=95242098 full avg10=0.00 avg60=0.01 avg300=0.00 total=88044908 ` |
+| 内存 | `2709M used / 13274M avail | swap 3720M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95268863 full avg10=0.00 avg60=0.00 avg300=0.00 total=88070074 ` |
 
 ### 内存占用 Top6
 
 ```
-   606M  ninja
-   237M  ld.lld
+   609M  ninja
    147M  soong_ui
-   126M  provjobd2880998
-   110M  clang++.real
+   125M  provjobd2880998
+   121M  clang++.real
+    84M  clang++.real
     71M  Runner.Worker
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 62% 17479/28037] //system/core/init:init_first_stage clang++ switch_root.cpp (priority: 12)
-[ 62% 17480/28037] //system/core/init:init_first_stage clang++ uevent_listener.cpp (priority: 12)
-system/core/init/uevent_listener.cpp:196:19: warning: ISO C++ requires field designators to be specified in declaration order; field 'events' will be initialized after field 'fd' [-Wreorder-init-list]
-  196 |             .fd = device_fd_.get(),
-      |             ~~~~~~^~~~~~~~~~~~~~~~
-system/core/init/uevent_listener.cpp:195:23: note: previous initialization for field 'events' is here
-  195 |             .events = POLLIN,
-      |                       ^~~~~~
-bionic/libc/kernel/uapi/asm-generic/poll.h:9:16: note: expanded from macro 'POLLIN'
-    9 | #define POLLIN 0x0001
-      |                ^~~~~~
-1 warning generated.
-[ 62% 17481/28037] //system/core/init:init_first_stage rustc generated_rust_staticlib/librustlibs.rs (priority: 12)
-[ 62% 17482/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/bootable/recovery/init_recovery.rc/android_recovery_arm64_armv8-a/init.rc (priority: 12)
-[ 62% 17483/28037] //system/core/init:init_first_stage clang++ util.cpp (priority: 12)
-[ 62% 17484/28037] //system/security/keystore2:keystore2 clippy src/keystore2_main.rs (priority: 12)
-[ 62% 17485/28037] //system/security/keystore:keystore_cli_v2 link keystore_cli_v2 (priority: 12)
-[ 62% 17486/28037] //system/apex/proto:lib_apex_manifest_proto_lite clang++ proto/system/apex/proto/apex_manifest.pb.cc [linux_glibc] (priority: 12)
-[ 62% 17487/28037] //build/soong/linkerconfig/proto:lib_linker_config_proto_lite clang++ proto/build/soong/linkerconfig/proto/linker_config.pb.cc [linux_glibc] (priority: 12)
-[ 62% 17488/28037] //packages/modules/adb/crypto:libadb_crypto strip libadb_crypto.so (priority: 12)
-[ 62% 17489/28037] //packages/modules/adb/crypto:libadb_crypto static link libadb_crypto.a (priority: 12)
-[ 62% 17490/28037] //packages/modules/adb/crypto:libadb_crypto_static clang++ key.cpp (priority: 12)
-[ 62% 17491/28037] //packages/modules/adb/crypto:libadb_crypto_static clang++ rsa_2048_key.cpp (priority: 12)
-[ 62% 17492/28037] //packages/modules/adb/crypto:libadb_crypto_static clang++ x509_generator.cpp (priority: 12)
-[ 62% 17493/28037] //packages/modules/adb/pairing_auth:libadb_pairing_auth_static clang++ aes_128_gcm.cpp (priority: 12)
+[ 62% 17598/28037] //bootable/recovery/aeraui:libaeraui clang++ components/wallpaper.cpp (priority: 12)
+[ 62% 17599/28037] //bootable/recovery/aeraui:libaeraui clang++ features/developer/kernel_settings.cpp (priority: 12)
+[ 62% 17600/28037] //bootable/recovery/aeraui:libaeraui clang++ core/gpu_renderer.cpp (priority: 12)
+[ 62% 17601/28037] //bootable/recovery/aeraui:libaeraui clang++ core/runner.cpp (priority: 12)
+[ 62% 17602/28037] //bootable/recovery/aeraui:libaeraui clang++ core/status_bar.cpp (priority: 12)
+[ 62% 17603/28037] //bootable/recovery/aeraui:libaeraui clang++ core/engine.cpp (priority: 12)
+[ 62% 17604/28037] //bootable/recovery/aeraui:libaeraui clang++ features/artillery/game.cpp (priority: 12)
+[ 62% 17605/28037] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration.cpp (priority: 12)
+[ 62% 17606/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/mobile_data_scene.cpp (priority: 12)
+[ 62% 17607/28037] //bootable/recovery/aeraui:libaeraui clang++ features/backup/incremental_apks.cpp (priority: 12)
+[ 62% 17608/28037] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration_io.cpp (priority: 12)
+[ 62% 17609/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/launcher.cpp (priority: 12)
+[ 62% 17610/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/runtime.cpp (priority: 12)
+[ 62% 17611/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/session.cpp (priority: 12)
+[ 62% 17612/28037] //bootable/recovery/aeraui:libaeraui clang++ features/doom/launcher.cpp (priority: 12)
+[ 62% 17613/28037] //bootable/recovery/aeraui:libaeraui clang++ features/doom/session.cpp (priority: 12)
+[ 62% 17614/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/web_scene.cpp (priority: 12)
+[ 62% 17615/28037] //bootable/recovery/aeraui:libaeraui clang++ features/files/file_manager.cpp (priority: 12)
+[ 62% 17616/28037] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/fontsource.cpp (priority: 12)
+[ 62% 17617/28037] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/font_library.cpp (priority: 12)
+[ 62% 17618/28037] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/fontsource_download.cpp (priority: 12)
+[ 62% 17619/28037] //bootable/recovery/aeraui:libaeraui clang++ features/media/session.cpp (priority: 12)
+[ 62% 17620/28037] //bootable/recovery/aeraui:libaeraui clang++ features/media/launcher.cpp (priority: 12)
+[ 62% 17621/28037] //bootable/recovery/aeraui:libaeraui clang++ features/plugin_api/launcher.cpp (priority: 12)
+[ 62% 17622/28037] //bootable/recovery/aeraui:libaeraui clang++ features/nas/smb_browser.cpp (priority: 12)
 ```
