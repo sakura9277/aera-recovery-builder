@@ -1,97 +1,90 @@
 name: Build AERA Recovery
 
-# 用法：Actions → Build AERA Recovery → Run workflow
-# 默认参数编的是一加 13 (dodge)，用来验证流水线能跑通、能出 recovery.img。
-# 换机型只改下面 5 个 input，不需要改 workflow 本身。
-
 on:
   workflow_dispatch:
     inputs:
-      device_code:
-        description: '机型代号（TARGET_DEVICE，例如 dodge / hummer）'
+      device:
+        description: Device codename (TARGET_DEVICE)
         required: true
-        default: 'dodge'
-      device_tree_url:
-        description: '设备树仓库 Git 地址'
+        default: dodge
+      device_tree:
+        description: Device tree repository URL
         required: true
-        default: 'https://github.com/AERA-Recovery/android_device_oneplus_dodge-AERA'
-      device_tree_branch:
-        description: '设备树分支'
+        default: https://github.com/AERA-Recovery/android_device_oneplus_dodge-AERA
+      device_tree_ref:
+        description: Device tree branch or tag
         required: true
-        default: 'aera-16.0'
+        default: aera-16.0
       device_path:
-        description: '设备树在源码树中的路径'
+        description: Device tree path inside the source tree
         required: true
-        default: 'device/oneplus/dodge'
-      lunch_target:
-        description: 'lunch 目标（Android 16 是 <product>-bp2a-eng）'
+        default: device/oneplus/dodge
+      lunch:
+        description: Lunch target
         required: true
-        default: 'twrp_dodge-bp2a-eng'
-      make_targets:
-        description: '编译目标'
+        default: twrp_dodge-bp2a-eng
+      targets:
+        description: Make targets
         required: true
-        default: 'adbd recoveryimage'
+        default: adbd recoveryimage
       jobs:
-        description: '并行任务数（4 核 16G，实测 -j3/-j4 都在同一分钟失联，先降到 2 压峰值）'
+        description: Parallel jobs
         required: true
-        default: '2'
+        default: "2"
+      debug:
+        description: Publish build telemetry to the ci-status branch
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: write
 
 concurrency:
-  group: aera-${{ github.event.inputs.device_code }}
+  group: aera-${{ inputs.device }}
   cancel-in-progress: false
 
 env:
   WORKDIR: ${{ github.workspace }}/aera_workspace
   MANIFEST_URL: https://github.com/AERA-Recovery/android_manifest.git
   MANIFEST_BRANCH: aera-16.0
-  # 16G 内存的 runner 上，GOMEMLIMIT=10GiB 会让 soong_build 把内存吃到见底
-  GOGC: '40'
-  GOMEMLIMIT: '3GiB'
-  ALLOW_MISSING_DEPENDENCIES: 'true'
+  GOGC: "40"
+  GOMEMLIMIT: "3GiB"
+  ALLOW_MISSING_DEPENDENCIES: "true"
 
 jobs:
   build:
-    name: AERA · ${{ github.event.inputs.device_code }}
+    name: ${{ inputs.device }}
     runs-on: ubuntu-24.04
     timeout-minutes: 350
 
     steps:
-      # 必须先扩盘再 checkout：该 action 会重建 /home/runner 所在的挂载点，
-      # 反过来会把已 check out 的文件弄丢。
+      # maximize-build-space 会重建 /home/runner 挂载点，必须早于 checkout
       - name: Expand disk space
         uses: easimon/maximize-build-space@master
         with:
-          # 前几轮都跑到编译约 47 分钟时 runner 失联，日志一并丢失，无法判断
-          # 是磁盘写满还是 OOM。这里换成 4G/1G/8G 的保守组合，工作卷约 135G，
-          # 保证即使 out/ 涨到 70G 也不会把卷写满；同时 swap 放大到 8G 作为
-          # 内存尖峰的缓冲。
           root-reserve-mb: 4096
           temp-reserve-mb: 1024
           swap-size-mb: 8192
-          remove-dotnet: 'true'
-          remove-android: 'true'
-          remove-haskell: 'true'
-          remove-codeql: 'true'
-          remove-docker-images: 'true'
+          remove-dotnet: "true"
+          remove-android: "true"
+          remove-haskell: "true"
+          remove-codeql: "true"
+          remove-docker-images: "true"
 
       - name: Report host resources
         run: |
           df -h
           free -h
           nproc
-          # 逻辑卷 96 G 未必等于物理空间，这里把真实布局打出来
-          lsblk -o NAME,SIZE,TYPE,MOUNTPOINT || true
-          sudo pvs --units g || true
-          sudo lvs --units g || true
+          lsblk -o NAME,SIZE,TYPE,MOUNTPOINT
+          sudo pvs --units g
+          sudo lvs --units g
 
-      # 放在扩盘之后，避免源码被挂载点替换覆盖
       - name: Checkout builder
         uses: actions/checkout@v4
 
-      - name: Install build dependencies
+      - name: Install dependencies
         run: |
           export DEBIAN_FRONTEND=noninteractive
           sudo apt-get update
@@ -100,116 +93,104 @@ jobs:
             zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \
             lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc fontconfig \
             python3 python-is-python3 rsync lz4 bc ccache libssl-dev \
-            libncurses-dev
-          mkdir -p ~/bin
+            libncurses-dev zram-tools
           curl -s https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
           chmod a+x ~/bin/repo
           sudo ln -sf ~/bin/repo /usr/bin/repo
           git config --global user.name "AERA Builder"
           git config --global user.email "builder@users.noreply.github.com"
-          # manifest 里保留了 ssh pushurl，统一改走 https，免密钥
           git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"
           git config --global url."https://github.com/".insteadOf "git@github.com:"
           repo --version
 
-          # 16G 内存是这台 runner 的真正瓶颈：两次运行都在编译开始后
-          # 47 分 14 秒 / 47 分 18 秒失联，与 -j 数量几乎无关，典型的
-          # 「内存吃穿 -> 疯狂换页到 loop 上的磁盘 swap -> runner 心跳
-          # 上报超时 -> 被判失联」。这里加一层 zram（压缩内存盘）当高速
-          # swap，压缩后 8-10G 的交换空间只占约 3G 物理内存，换页延迟比
-          # 磁盘 swap 快两个数量级。
-          sudo apt-get install -y --no-install-recommends zram-tools || true
           printf 'ALGO=zstd\nPERCENT=60\nPRIORITY=100\n' | sudo tee /etc/default/zramswap >/dev/null
           sudo systemctl restart zramswap 2>/dev/null || sudo /usr/sbin/zramswap start 2>/dev/null || true
-          echo "--- swap 布局 ---"
           swapon --show || true
 
-      - name: Init and sync AERA manifest
+      - name: Sync manifest
         run: |
           set -euo pipefail
           mkdir -p "$WORKDIR"
           cd "$WORKDIR"
           repo init --depth=1 -u "$MANIFEST_URL" -b "$MANIFEST_BRANCH"
           find .repo/manifests -name '*.xml' -exec sed -i 's|ssh://git@github.com/|https://github.com/|g' {} +
-          # 注意：repo 2.7x 已移除 --optimize-fetch，别再加回来（会直接 no such option 退出）
           repo sync -c -j8 --no-clone-bundle --no-tags --fail-fast \
-            || { echo "::warning::sync failed, retrying once"; repo sync -c -j8 --fail-fast; }
+            || repo sync -c -j8 --fail-fast
           df -h "$WORKDIR"
 
       - name: Add device tree
         run: |
           cd "$WORKDIR"
-          git clone --depth=1 \
-            -b "${{ github.event.inputs.device_tree_branch }}" \
-            "${{ github.event.inputs.device_tree_url }}" \
-            "${{ github.event.inputs.device_path }}"
-          ls -la "${{ github.event.inputs.device_path }}" | head -40
+          git clone --depth=1 -b "${{ inputs.device_tree_ref }}" \
+            "${{ inputs.device_tree }}" "${{ inputs.device_path }}"
+          ls -la "${{ inputs.device_path }}"
 
-      - name: Drop .repo and unrelated projects
+      # test/ 与 sdk/ 被 Android.bp 引用（csuite_test 等模块类型），不能删
+      - name: Trim source tree
         run: |
           cd "$WORKDIR"
-          du -sh .repo || true
-          rm -rf .repo
-          # 只删确实没人引用的子树。注意 test/ 不能删：
-          # art/test 与 frameworks/base 的 Android.bp 里用了 csuite_test 这个模块类型，
-          # 定义就在 test/ 下，删掉会让 soong 直接报
-          # `unrecognized module type "csuite_test"`。sdk/ 同理保守保留。
-          du -sh cts platform_testing developers pdk 2>/dev/null || true
-          rm -rf cts platform_testing developers pdk
+          rm -rf .repo cts platform_testing developers pdk
           df -h "$WORKDIR"
 
-      - name: Build recovery image
+      - name: Build recovery
         run: |
-          # 不能用 set -u：build/envsetup.sh 里 TOP 等变量在赋值前就被引用，
-          # 开 nounset 会直接 `TOP: unbound variable` 挂掉
           set -eo pipefail
           cd "$WORKDIR"
-          DEV="${{ github.event.inputs.device_code }}"
+          DEV="${{ inputs.device }}"
           export AERA_BUILD_DEVICE="$DEV"
           source build/envsetup.sh
 
-          # lunch 组合名随分支的 release config 变化，逐个回退，避免卡在这一步
           ok=0
-          for combo in "${{ github.event.inputs.lunch_target }}" "twrp_${DEV}-trunk_staging-eng" "twrp_${DEV}-eng" "aera_${DEV}-bp2a-eng"; do
-            if lunch "$combo" >/tmp/lunch.log 2>&1; then echo "lunch OK: $combo"; ok=1; break; fi
-            echo "lunch failed: $combo"; tail -n 15 /tmp/lunch.log
+          for target in "${{ inputs.lunch }}" "twrp_${DEV}-trunk_staging-eng" "twrp_${DEV}-eng" "aera_${DEV}-bp2a-eng"; do
+            if lunch "$target" >/tmp/lunch.log 2>&1; then
+              echo "lunch: $target"
+              ok=1
+              break
+            fi
+            tail -n 15 /tmp/lunch.log
           done
-          if [ "$ok" -ne 1 ]; then echo "::error::no usable lunch combo"; lunch 2>&1 | tail -n 60; exit 1; fi
+          if [ "$ok" -ne 1 ]; then
+            echo "::error::no usable lunch target"
+            exit 1
+          fi
 
-          df -h "$WORKDIR"; free -h
-          # 看门狗必须在本 step 里起：runner 在每个 step 结束时清理孤儿进程，
-          # 单独放一个 step 里启动的话活不过 2 分钟。
-          # 它每 30 秒把磁盘/内存/PSI/OOM/日志尾部推到 ci-status 分支，
-          # 这样即使 runner 整机消失，失败现场也留在 GitHub 上。
-          rm -f "$WORKDIR/build.done"
-          nohup bash "$GITHUB_WORKSPACE/scripts/watchdog.sh" \
-            "${{ github.repository }}" "${{ secrets.GITHUB_TOKEN }}" \
-            "$WORKDIR" "$WORKDIR/build.log" > /tmp/monitor.log 2>&1 &
-          # 关闭 OOM 打分：内存紧张时内核优先干掉它，心跳就会断在关键时刻
-          sudo sh -c "echo -1000 > /proc/$!/oom_score_adj" 2>/dev/null || true
+          df -h "$WORKDIR"
+          free -h
+
+          if [ "${{ inputs.debug }}" = "true" ] && [ -f "$GITHUB_WORKSPACE/scripts/watchdog.sh" ]; then
+            rm -f "$WORKDIR/build.done"
+            nohup bash "$GITHUB_WORKSPACE/scripts/watchdog.sh" "${{ github.repository }}" \
+              "${{ secrets.GITHUB_TOKEN }}" "$WORKDIR" "$WORKDIR/build.log" \
+              >/tmp/watchdog.log 2>&1 &
+            sudo sh -c "echo -1000 > /proc/$!/oom_score_adj" 2>/dev/null || true
+          fi
+
           set +e
-          m ${{ github.event.inputs.make_targets }} -j${{ github.event.inputs.jobs }} 2>&1 \
-            | tee "$WORKDIR/build.log" | tail -n 250
+          m ${{ inputs.targets }} -j${{ inputs.jobs }} 2>&1 | tee "$WORKDIR/build.log" | tail -n 250
           rc=${PIPESTATUS[0]}
-          touch "$WORKDIR/build.done"   # 通知心跳脚本收工
+          touch "$WORKDIR/build.done"
+
           mkdir -p "$GITHUB_WORKSPACE/artifacts"
-          cp -v "$WORKDIR/build.log" "$GITHUB_WORKSPACE/artifacts/" || true
+          cp "$WORKDIR/build.log" "$GITHUB_WORKSPACE/artifacts/" || true
+
           if [ "$rc" -ne 0 ]; then
-            echo "::error::build failed (rc=$rc), last errors:"
+            echo "::error::build failed (rc=$rc)"
             grep -i -E "error:|fatal error|failed" "$WORKDIR/build.log" | tail -n 40
-            df -h "$WORKDIR"; free -h
+            df -h "$WORKDIR"
+            free -h
             exit 1
           fi
 
           find "out/target/product/$DEV" -maxdepth 1 \
-            \( -name '*.img' -o -name '*.zip' \) -exec cp -v {} "$GITHUB_WORKSPACE/artifacts/" \;
+            \( -name '*.img' -o -name '*.zip' \) \
+            -exec cp {} "$GITHUB_WORKSPACE/artifacts/" \;
           ls -lh "$GITHUB_WORKSPACE/artifacts"
 
       - name: Upload artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: aera-${{ github.event.inputs.device_code }}-${{ github.run_number }}
+          name: aera-${{ inputs.device }}-${{ github.run_number }}
           path: |
             artifacts/*.img
             artifacts/*.zip
@@ -221,14 +202,15 @@ jobs:
         if: success()
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: AERA-${{ github.event.inputs.device_code }}-${{ github.run_number }}
-          name: AERA Recovery · ${{ github.event.inputs.device_code }} · build ${{ github.run_number }}
+          tag_name: AERA-${{ inputs.device }}-${{ github.run_number }}
+          name: AERA Recovery ${{ inputs.device }} build ${{ github.run_number }}
           body: |
-            由 GitHub Actions 自动编译的 AERA Recovery（Android 16 / bp2a），未在真机验证。
+            Device: `${{ inputs.device }}`
+            Lunch: `${{ inputs.lunch }}`
+            Device tree: ${{ inputs.device_tree }} @ `${{ inputs.device_tree_ref }}`
+            AOSP: ${{ env.MANIFEST_BRANCH }}
 
-            - 机型代号：`${{ github.event.inputs.device_code }}`
-            - lunch：`${{ github.event.inputs.lunch_target }}`
-            - 设备树：${{ github.event.inputs.device_tree_url }} @ `${{ github.event.inputs.device_tree_branch }}`
+            Built by GitHub Actions. Test on hardware before flashing.
           files: |
             artifacts/*.img
             artifacts/*.zip
