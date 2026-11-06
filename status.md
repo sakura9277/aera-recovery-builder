@@ -2,21 +2,21 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:22:05Z |
-| 已运行 | **32 分钟** |
-| ninja 进度 | `11391/28037` |
+| 采样时刻 | 2026-11-06 17:22:37Z |
+| 已运行 | **33 分钟** |
+| ninja 进度 | `11556/28037` |
 | 工作卷 | `66G used, 30G avail, 70%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2469M used / 13514M avail | swap 3792M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.04 total=95103386 full avg10=0.00 avg60=0.00 avg300=0.03 total=87908795 ` |
+| 内存 | `2551M used / 13432M avail | swap 3781M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.03 total=95103387 full avg10=0.00 avg60=0.00 avg300=0.03 total=87908797 ` |
 
 ### 内存占用 Top6
 
 ```
-   543M  ninja
-   126M  provjobd2880998
-   121M  clang++.real
-   113M  clang++.real
+   546M  ninja
+   132M  clang++.real
+   122M  provjobd2880998
+    99M  clang++.real
     89M  soong_ui
     59M  Runner.Listener
 ```
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 40% 11367/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang setflags.c (priority: 16)
-[ 40% 11368/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang setversion.c (priority: 16)
-[ 40% 11369/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang uuid.c (priority: 16)
-[ 40% 11370/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang ostype.c (priority: 16)
-[ 40% 11371/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang percent.c (priority: 16)
-[ 40% 11372/28037] //external/e2fsprogs/lib/e2p:libext2_e2p strip libext2_e2p.so (priority: 16)
-[ 40% 11373/28037] //external/e2fsprogs/misc:libext2_misc strip libext2_misc.so (priority: 16)
-[ 40% 11374/28037] //external/e2fsprogs/lib/uuid:libext2_uuid static link libext2_uuid.a (priority: 16)
-[ 40% 11375/28037] //system/extras/libfec:libfec generate toc libfec.so (priority: 16)
-[ 40% 11376/28037] //system/extras/f2fs_utils:libf2fs_sparseblock strip libf2fs_sparseblock.so (priority: 16)
-[ 40% 11377/28037] //system/core/fs_mgr/libfs_avb:libfs_avb static link libfs_avb.a (priority: 16)
-[ 40% 11378/28037] //system/core/fs_mgr:libfs_mgr generate toc libfs_mgr.so (priority: 16)
-[ 40% 11379/28037] //system/core/fs_mgr:libfs_mgr clang++ file_wait.cpp (priority: 16)
-[ 40% 11380/28037] //system/core/fs_mgr:libfs_mgr clang++ blockdev.cpp (priority: 16)
-[ 40% 11381/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_format.cpp (priority: 16)
-[ 40% 11382/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr.cpp (priority: 16)
-[ 40% 11383/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_dm_linear.cpp (priority: 16)
-[ 40% 11384/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_roots.cpp (priority: 16)
-[ 40% 11385/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_overlayfs_control.cpp (priority: 16)
-[ 40% 11386/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_overlayfs_mount.cpp (priority: 16)
-[ 40% 11387/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_vendor_overlay.cpp (priority: 16)
-[ 40% 11388/28037] //system/core/fs_mgr:libfs_mgr clang++ fiemap_status.cpp (priority: 16)
-[ 40% 11389/28037] //system/core/fs_mgr:libfs_mgr clang++ fiemap_writer.cpp (priority: 16)
-[ 40% 11390/28037] //system/core/fs_mgr:libfs_mgr clang++ image_manager.cpp (priority: 16)
-[ 40% 11391/28037] //system/core/fs_mgr:libfs_mgr clang++ metadata.cpp (priority: 16)
+[ 41% 11532/28037] //system/unwinding/libunwindstack:libunwindstack clang++ AndroidUnwinder.cpp (priority: 16)
+[ 41% 11533/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Demangle.cpp (priority: 16)
+[ 41% 11534/28037] //system/unwinding/libunwindstack:libunwindstack clang++ ArmExidx.cpp (priority: 16)
+[ 41% 11535/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DexFiles.cpp (priority: 16)
+[ 41% 11536/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DwarfCfa.cpp (priority: 16)
+[ 41% 11537/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DwarfEhFrameWithHdr.cpp (priority: 16)
+[ 41% 11538/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DwarfMemory.cpp (priority: 16)
+[ 41% 11539/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DwarfOp.cpp (priority: 16)
+[ 41% 11540/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DwarfSection.cpp (priority: 16)
+[ 41% 11541/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Elf.cpp (priority: 16)
+[ 41% 11542/28037] //system/unwinding/libunwindstack:libunwindstack clang++ ElfInterfaceArm.cpp (priority: 16)
+[ 41% 11543/28037] //system/unwinding/libunwindstack:libunwindstack clang++ ElfInterface.cpp (priority: 16)
+[ 41% 11544/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Global.cpp (priority: 16)
+[ 41% 11545/28037] //system/unwinding/libunwindstack:libunwindstack clang++ JitDebug.cpp (priority: 16)
+[ 41% 11546/28037] //system/unwinding/libunwindstack:libunwindstack clang++ MapInfo.cpp (priority: 16)
+[ 41% 11547/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Maps.cpp (priority: 16)
+[ 41% 11548/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Memory.cpp (priority: 16)
+[ 41% 11549/28037] //system/unwinding/libunwindstack:libunwindstack clang++ MemoryMte.cpp (priority: 16)
+[ 41% 11550/28037] //system/unwinding/libunwindstack:libunwindstack clang++ MemoryXz.cpp (priority: 16)
+[ 41% 11551/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Regs.cpp (priority: 16)
+[ 41% 11552/28037] //system/unwinding/libunwindstack:libunwindstack clang++ RegsArm.cpp (priority: 16)
+[ 41% 11553/28037] //system/unwinding/libunwindstack:libunwindstack clang++ RegsArm64.cpp (priority: 16)
+[ 41% 11554/28037] //system/unwinding/libunwindstack:libunwindstack clang++ RegsX86.cpp (priority: 16)
+[ 41% 11555/28037] //system/unwinding/libunwindstack:libunwindstack clang++ RegsX86_64.cpp (priority: 16)
+[ 41% 11556/28037] //system/unwinding/libunwindstack:libunwindstack clang++ RegsRiscv64.cpp (priority: 16)
 ```
