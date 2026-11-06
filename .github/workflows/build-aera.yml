@@ -105,11 +105,14 @@ jobs:
 
       - name: Init and sync AERA manifest
         run: |
+          set -euo pipefail
           mkdir -p "$WORKDIR"
           cd "$WORKDIR"
           repo init --depth=1 -u "$MANIFEST_URL" -b "$MANIFEST_BRANCH"
           find .repo/manifests -name '*.xml' -exec sed -i 's|ssh://git@github.com/|https://github.com/|g' {} +
-          repo sync -c -j8 --no-clone-bundle --no-tags --optimize-fetch
+          # 注意：repo 2.7x 已移除 --optimize-fetch，别再加回来（会直接 no such option 退出）
+          repo sync -c -j8 --no-clone-bundle --no-tags --fail-fast \
+            || { echo "::warning::sync failed, retrying once"; repo sync -c -j8 --fail-fast; }
           df -h "$WORKDIR"
 
       - name: Add device tree
