@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:18:58Z |
-| 已运行 | **29 分钟** |
-| ninja 进度 | `10019/28037` |
+| 采样时刻 | 2026-11-06 17:19:30Z |
+| 已运行 | **30 分钟** |
+| ninja 进度 | `10266/28037` |
 | 工作卷 | `66G used, 30G avail, 69%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2349M used / 13634M avail | swap 3821M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.10 total=95088636 full avg10=0.00 avg60=0.00 avg300=0.09 total=87894759 ` |
+| 内存 | `2291M used / 13692M avail | swap 3817M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.09 total=95089465 full avg10=0.00 avg60=0.00 avg300=0.08 total=87895587 ` |
 
 ### 内存占用 Top6
 
 ```
-   511M  ninja
-   180M  ld.lld
-   122M  provjobd2880998
-   115M  clang++.real
-    83M  soong_ui
+   515M  ninja
+   120M  provjobd2880998
+    85M  soong_ui
     59M  Runner.Listener
+    43M  Runner.Worker
+    43M  multipathd
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 35% 9995/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/label_file.c (priority: 18)
-[ 35% 9996/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/lgetfilecon.c (priority: 18)
-[ 35% 9997/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/load_policy.c (priority: 18)
-[ 35% 9998/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/lsetfilecon.c (priority: 18)
-[ 35% 9999/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/mapping.c (priority: 18)
-[ 35% 10000/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/matchpathcon.c (priority: 18)
-[ 35% 10001/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/policyvers.c (priority: 18)
-[ 35% 10002/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/procattr.c (priority: 18)
-[ 35% 10003/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/regex.c (priority: 18)
-[ 35% 10004/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/reject_unknown.c (priority: 18)
-[ 35% 10005/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/selinux_internal.c (priority: 18)
-[ 35% 10006/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/sestatus.c (priority: 18)
-[ 35% 10007/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/setenforce.c (priority: 18)
-[ 35% 10008/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/setfilecon.c (priority: 18)
-[ 35% 10009/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/setrans_client.c (priority: 18)
-[ 35% 10010/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/sha1.c (priority: 18)
-[ 35% 10011/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/stringrep.c (priority: 18)
-[ 35% 10012/28037] //external/selinux/libselinux:libselinux header-abi-dumper src/android/android_device.c (priority: 18)
-[ 35% 10013/28037] //external/selinux/libselinux:libselinux link libselinux.so [linux_glibc] (priority: 18)
-[ 35% 10014/28037] //external/rust/android-crates-io/crates/smallvec:libsmallvec rustc src/lib.rs (priority: 18)
-[ 35% 10015/28037] //external/selinux/libselinux:libselinux link libselinux.so (priority: 18)
-[ 35% 10016/28037] //external/sqlite/android:libsqlite3_android clang++ PhoneNumberUtils.cpp (priority: 18)
-[ 35% 10017/28037] //external/sqlite/android:libsqlite3_android clang++ OldPhoneNumberUtils.cpp (priority: 18)
-[ 35% 10018/28037] //external/sqlite/android:libsqlite3_android clang++ sqlite3_android.cpp (priority: 18)
-[ 35% 10019/28037] //system/logging/rust:libstructured_log clippy structured_logger.rs (priority: 18)
+[ 36% 10243/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/ISupplicantStaIfaceCallback.aidl (priority: 17)
+[ 36% 10244/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/ISupplicantStaNetwork.aidl (priority: 17)
+[ 36% 10245/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/ISupplicantStaNetworkCallback.aidl (priority: 17)
+[ 36% 10246/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/IfaceInfo.aidl (priority: 17)
+[ 36% 10247/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/IfaceType.aidl (priority: 17)
+[ 36% 10248/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/IpVersion.aidl (priority: 17)
+[ 36% 10249/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/KeyMgmtMask.aidl (priority: 17)
+[ 36% 10250/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/LegacyMode.aidl (priority: 17)
+[ 36% 10251/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/MacAddress.aidl (priority: 17)
+[ 36% 10252/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/MboAssocDisallowedReasonCode.aidl (priority: 17)
+[ 36% 10253/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/MboCellularDataConnectionPrefValue.aidl (priority: 17)
+[ 36% 10254/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/MboTransitionReasonCode.aidl (priority: 17)
+[ 36% 10255/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/MiracastMode.aidl (priority: 17)
+[ 36% 10256/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/MloLink.aidl (priority: 17)
+[ 36% 10257/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/MloLinksInfo.aidl (priority: 17)
+[ 36% 10258/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/MscsParams.aidl (priority: 17)
+[ 36% 10259/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/MsduDeliveryInfo.aidl (priority: 17)
+[ 36% 10260/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/NetworkRequestEapSimGsmAuthParams.aidl (priority: 17)
+[ 36% 10261/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/NetworkRequestEapSimUmtsAuthParams.aidl (priority: 17)
+[ 36% 10262/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/NetworkResponseEapSimGsmAuthParams.aidl (priority: 17)
+[ 36% 10263/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/NetworkResponseEapSimUmtsAuthParams.aidl (priority: 17)
+[ 36% 10264/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/OceRssiBasedAssocRejectAttr.aidl (priority: 17)
+[ 36% 10265/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/OcspType.aidl (priority: 17)
+[ 36% 10266/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/OsuMethod.aidl (priority: 17)
+[ 36% 10267/28037] AIDL ndk hardware/interfaces/wifi/supplicant/aidl/aidl_api/android.hardware.wifi.supplicant/4/android/hardware/wifi/supplicant/P2pAddGroupConfigurationParams.aidl (priority: 17)
 ```
