@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:27:18Z |
+| 采样时刻 | 2026-11-06 17:27:49Z |
 | 已运行 | **38 分钟** |
-| ninja 进度 | `13611/28037` |
+| ninja 进度 | `13881/28037` |
 | 工作卷 | `67G used, 29G avail, 70%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2817M used / 13166M avail | swap 3744M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95129002 full avg10=0.00 avg60=0.00 avg300=0.00 total=87934211 ` |
+| 内存 | `2635M used / 13348M avail | swap 3742M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95129003 full avg10=0.00 avg60=0.00 avg300=0.00 total=87934212 ` |
 
 ### 内存占用 Top6
 
 ```
-   574M  ninja
-   154M  clang++.real
-   139M  provjobd2880998
+   576M  ninja
    133M  soong_ui
-    70M  Runner.Worker
-    60M  Runner.Listener
+   115M  provjobd2880998
+   110M  clang++.real
+    99M  clang++.real
+    71M  Runner.Worker
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 48% 13594/28037] //system/core/init:libinit clang++ interprocess_fifo.cpp (priority: 14)
-[ 48% 13595/28037] //system/core/init:libinit clang++ keychords.cpp (priority: 14)
-[ 48% 13596/28037] //system/core/init:libinit clang++ parser.cpp (priority: 14)
-[ 48% 13597/28037] //system/core/init:libinit clang++ property_type.cpp (priority: 14)
-[ 48% 13598/28037] //system/core/init:libinit clang++ rlimit_parser.cpp (priority: 14)
-[ 48% 13599/28037] //system/core/init:libinit clang++ service.cpp (priority: 14)
-system/core/init/service.cpp:490:14: warning: 'setProcessGroupSwappiness' is deprecated: Unsupported in memcg v2 [-Wdeprecated-declarations]
-  490 |         if (!setProcessGroupSwappiness(uid(), pid_, swappiness_)) {
-      |              ^
-system/core/libprocessgroup/include/processgroup/processgroup.h:82:3: note: 'setProcessGroupSwappiness' has been explicitly marked deprecated here
-   82 | [[deprecated("Unsupported in memcg v2")]]
-      |   ^
-1 warning generated.
-[ 48% 13600/28037] //system/core/init:libinit clang++ service_list.cpp (priority: 14)
-[ 48% 13601/28037] //system/core/init:libinit clang++ service_utils.cpp (priority: 14)
-[ 48% 13602/28037] //system/core/init:libinit clang++ service_parser.cpp (priority: 14)
-[ 48% 13603/28037] //system/core/init:libinit clang++ subcontext.cpp (priority: 14)
-[ 48% 13604/28037] //system/core/init:libinit clang++ proto/system/core/init/subcontext.pb.cc (priority: 14)
-[ 48% 13605/28037] //system/core/init:libinit clang++ tokenizer.cpp (priority: 14)
-[ 48% 13606/28037] //system/core/init:libinit clang++ apex_init_util.cpp (priority: 14)
-[ 48% 13607/28037] //system/core/init:libinit clang++ util.cpp (priority: 14)
-[ 48% 13608/28037] //system/core/init:libinit clang++ block_dev_initializer.cpp (priority: 14)
-[ 48% 13609/28037] //system/core/init:libinit clang++ bootchart.cpp (priority: 14)
-[ 48% 13610/28037] //system/core/init:libinit clang++ devices.cpp (priority: 14)
-[ 48% 13611/28037] //system/core/init:libinit clang++ builtins.cpp (priority: 14)
+[ 49% 13857/28037] //system/core/libprocessgroup:libprocessgroup link libprocessgroup.so (priority: 14)
+[ 49% 13858/28037] //system/core/libprocessgroup/setup:libprocessgroup_setup strip libprocessgroup_setup.so (priority: 14)
+[ 49% 13859/28037] //system/core/property_service/libpropertyinfoparser:libpropertyinfoparser clang++ property_info_parser.cpp (priority: 14)
+[ 49% 13860/28037] //system/core/property_service/libpropertyinfoparser:libpropertyinfoparser clang++ property_info_parser.cpp (priority: 14)
+[ 49% 13861/28037] //system/core/property_service/libpropertyinfoserializer:libpropertyinfoserializer clang++ property_info_file.cpp (priority: 14)
+[ 49% 13862/28037] //system/core/property_service/libpropertyinfoserializer:libpropertyinfoserializer clang++ property_info_serializer.cpp (priority: 14)
+[ 49% 13863/28037] //system/core/property_service/libpropertyinfoserializer:libpropertyinfoserializer clang++ trie_builder.cpp (priority: 14)
+[ 49% 13864/28037] //external/perfetto:libperfetto_c link libperfetto_c.so (priority: 14)
+[ 49% 13865/28037] //external/protobuf:libprotobuf-cpp-lite static link libprotobuf-cpp-lite.a (priority: 14)
+[ 49% 13866/28037] //external/protobuf:libprotobuf-cpp-lite static link libprotobuf-cpp-lite.a (priority: 14)
+[ 49% 13867/28037] //bootable/recovery:librecovery_fastboot static link librecovery_fastboot.a (priority: 14)
+[ 49% 13868/28037] //bootable/recovery/recovery_utils:librecovery_utils static link librecovery_utils.a (priority: 14)
+[ 49% 13869/28037] //system/core/property_service/libpropertyinfoserializer:libpropertyinfoserializer clang++ trie_serializer.cpp (priority: 14)
+[ 49% 13870/28037] //external/magisk-prebuilt/resetprop:libresetprop clang++ persist.cpp (priority: 14)
+[ 49% 13871/28037] //external/magisk-prebuilt/resetprop:libresetprop clang++ resetprop.cpp (priority: 14)
+[ 49% 13872/28037] //external/magisk-prebuilt/resetprop:libresetprop clang++ persist.cpp (priority: 14)
+[ 49% 13873/28037] //external/magisk-prebuilt/resetprop:libresetprop clang++ resetprop.cpp (priority: 14)
+[ 49% 13874/28037] //external/selinux/libselinux:libselinux clang stub.c (priority: 14)
+[ 49% 13875/28037] //frameworks/base/libs/services:libservices gen aidl_library (priority: 14)
+[ 49% 13876/28037] //external/rust/android-crates-io/crates/rustc-demangle:librustc_demangle rustc src/lib.rs (priority: 14)
+[ 49% 13877/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/cow_compress.cpp (priority: 14)
+[ 49% 13878/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/cow_decompress.cpp (priority: 14)
+[ 49% 13879/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/cow_format.cpp (priority: 14)
+[ 49% 13880/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/cow_reader.cpp (priority: 14)
+[ 49% 13881/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/parser_v2.cpp (priority: 14)
 ```
