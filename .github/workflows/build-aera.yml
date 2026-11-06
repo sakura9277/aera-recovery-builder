@@ -32,9 +32,9 @@ on:
         required: true
         default: 'adbd recoveryimage'
       jobs:
-        description: '并行任务数（免费 runner 4 核 16G，实测 4 会 OOM，3 比较稳）'
+        description: '并行任务数（4 核 16G，实测 -j3/-j4 都在同一分钟失联，先降到 2 压峰值）'
         required: true
-        default: '3'
+        default: '2'
 
 permissions:
   contents: write
@@ -64,13 +64,13 @@ jobs:
       - name: Expand disk space
         uses: easimon/maximize-build-space@master
         with:
-          # 上一次跑到 48 分钟时 runner 直接消失、日志也没留下，
-          # 典型特征是体积型撑爆：把保留区压到最小，尽可能多留给 out/
-          root-reserve-mb: 2048
+          # 前几轮都跑到编译约 47 分钟时 runner 失联，日志一并丢失，无法判断
+          # 是磁盘写满还是 OOM。这里换成 4G/1G/8G 的保守组合，工作卷约 135G，
+          # 保证即使 out/ 涨到 70G 也不会把卷写满；同时 swap 放大到 8G 作为
+          # 内存尖峰的缓冲。
+          root-reserve-mb: 4096
           temp-reserve-mb: 1024
-          # 实测 -j4/-j3 的失败时间点完全一致，内存不是瓶颈（失败时也只用了 6-14 G），
-          # 所以把 swap 从 8 G 压到 4 G，让出的 4 G 全部给 out/
-          swap-size-mb: 4096
+          swap-size-mb: 8192
           remove-dotnet: 'true'
           remove-android: 'true'
           remove-haskell: 'true'
@@ -165,10 +165,12 @@ jobs:
           if [ "$ok" -ne 1 ]; then echo "::error::no usable lunch combo"; lunch 2>&1 | tail -n 60; exit 1; fi
 
           df -h "$WORKDIR"; free -h
-          # 心跳必须在本 step 里起：runner 在每个 step 结束时清理孤儿进程，
-          # 单独放一个 step 里启动的话活不过 2 分钟
+          # 看门狗必须在本 step 里起：runner 在每个 step 结束时清理孤儿进程，
+          # 单独放一个 step 里启动的话活不过 2 分钟。
+          # 它每 30 秒把磁盘/内存/PSI/OOM/日志尾部推到 ci-status 分支，
+          # 这样即使 runner 整机消失，失败现场也留在 GitHub 上。
           rm -f "$WORKDIR/build.done"
-          nohup bash "$GITHUB_WORKSPACE/scripts/heartbeat.sh" \
+          nohup bash "$GITHUB_WORKSPACE/scripts/watchdog.sh" \
             "${{ github.repository }}" "${{ secrets.GITHUB_TOKEN }}" \
             "$WORKDIR" "$WORKDIR/build.log" > /tmp/monitor.log 2>&1 &
           # 关闭 OOM 打分：内存紧张时内核优先干掉它，心跳就会断在关键时刻
