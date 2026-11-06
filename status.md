@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:35:05Z |
-| 已运行 | **45 分钟** |
-| ninja 进度 | `17622/28037` |
+| 采样时刻 | 2026-11-06 17:35:37Z |
+| 已运行 | **46 分钟** |
+| ninja 进度 | `17681/28037` |
 | 工作卷 | `68G used, 28G avail, 71%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2709M used / 13274M avail | swap 3720M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95268863 full avg10=0.00 avg60=0.00 avg300=0.00 total=88070074 ` |
+| 内存 | `2982M used / 13001M avail | swap 3719M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95276834 full avg10=0.00 avg60=0.00 avg300=0.00 total=88078041 ` |
 
 ### 内存占用 Top6
 
 ```
-   609M  ninja
+   610M  ninja
+   527M  clang++.real
+   163M  clang++.real
    147M  soong_ui
-   125M  provjobd2880998
-   121M  clang++.real
-    84M  clang++.real
+   110M  provjobd2880998
     71M  Runner.Worker
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 62% 17598/28037] //bootable/recovery/aeraui:libaeraui clang++ components/wallpaper.cpp (priority: 12)
-[ 62% 17599/28037] //bootable/recovery/aeraui:libaeraui clang++ features/developer/kernel_settings.cpp (priority: 12)
-[ 62% 17600/28037] //bootable/recovery/aeraui:libaeraui clang++ core/gpu_renderer.cpp (priority: 12)
-[ 62% 17601/28037] //bootable/recovery/aeraui:libaeraui clang++ core/runner.cpp (priority: 12)
-[ 62% 17602/28037] //bootable/recovery/aeraui:libaeraui clang++ core/status_bar.cpp (priority: 12)
-[ 62% 17603/28037] //bootable/recovery/aeraui:libaeraui clang++ core/engine.cpp (priority: 12)
-[ 62% 17604/28037] //bootable/recovery/aeraui:libaeraui clang++ features/artillery/game.cpp (priority: 12)
-[ 62% 17605/28037] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration.cpp (priority: 12)
-[ 62% 17606/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/mobile_data_scene.cpp (priority: 12)
-[ 62% 17607/28037] //bootable/recovery/aeraui:libaeraui clang++ features/backup/incremental_apks.cpp (priority: 12)
-[ 62% 17608/28037] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration_io.cpp (priority: 12)
-[ 62% 17609/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/launcher.cpp (priority: 12)
-[ 62% 17610/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/runtime.cpp (priority: 12)
-[ 62% 17611/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/session.cpp (priority: 12)
-[ 62% 17612/28037] //bootable/recovery/aeraui:libaeraui clang++ features/doom/launcher.cpp (priority: 12)
-[ 62% 17613/28037] //bootable/recovery/aeraui:libaeraui clang++ features/doom/session.cpp (priority: 12)
-[ 62% 17614/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/web_scene.cpp (priority: 12)
-[ 62% 17615/28037] //bootable/recovery/aeraui:libaeraui clang++ features/files/file_manager.cpp (priority: 12)
-[ 62% 17616/28037] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/fontsource.cpp (priority: 12)
-[ 62% 17617/28037] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/font_library.cpp (priority: 12)
-[ 62% 17618/28037] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/fontsource_download.cpp (priority: 12)
-[ 62% 17619/28037] //bootable/recovery/aeraui:libaeraui clang++ features/media/session.cpp (priority: 12)
-[ 62% 17620/28037] //bootable/recovery/aeraui:libaeraui clang++ features/media/launcher.cpp (priority: 12)
-[ 62% 17621/28037] //bootable/recovery/aeraui:libaeraui clang++ features/plugin_api/launcher.cpp (priority: 12)
-[ 62% 17622/28037] //bootable/recovery/aeraui:libaeraui clang++ features/nas/smb_browser.cpp (priority: 12)
+[ 62% 17657/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/gallery_scene.cpp (priority: 12)
+[ 62% 17658/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/font_browser.cpp (priority: 12)
+[ 62% 17659/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/generic_plugin_scene.cpp (priority: 12)
+[ 62% 17660/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/launcher_scene.cpp (priority: 12)
+[ 62% 17661/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/lock_scene.cpp (priority: 12)
+[ 62% 17662/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/media_scene.cpp (priority: 12)
+[ 62% 17663/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/nas_scene.cpp (priority: 12)
+[ 63% 17664/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/home_scene.cpp (priority: 12)
+[ 63% 17665/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/operation_scene.cpp (priority: 12)
+[ 63% 17666/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/plugin_scene.cpp (priority: 12)
+[ 63% 17667/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/package_review.cpp (priority: 12)
+[ 63% 17668/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/reboot_scene.cpp (priority: 12)
+[ 63% 17669/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/recorder_scene.cpp (priority: 12)
+[ 63% 17670/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/retroarch_scene.cpp (priority: 12)
+[ 63% 17671/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/sideload_scene.cpp (priority: 12)
+[ 63% 17672/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/root_manager_scene.cpp (priority: 12)
+[ 63% 17673/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/streams_scene.cpp (priority: 12)
+[ 63% 17674/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/terminal_scene.cpp (priority: 12)
+[ 63% 17675/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/telegram_scene.cpp (priority: 12)
+[ 63% 17676/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/update_scene.cpp (priority: 12)
+[ 63% 17677/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/wifi_scene.cpp (priority: 12)
+[ 63% 17678/28037] //frameworks/native/libs/android_runtime_lazy:libandroid_runtime_lazy clang++ android_runtime_lazy.cpp (priority: 12)
+[ 63% 17679/28037] //frameworks/base/libs/androidfw:libandroidfw strip libandroidfw.so (priority: 12)
+[ 63% 17680/28037] //external/icu/libandroidicu:libandroidicu strip libandroidicu.so (priority: 12)
+[ 63% 17681/28037] //bootable/recovery:libaosprecovery strip libaosprecovery.so (priority: 12)
 ```
