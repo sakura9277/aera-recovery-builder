@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:33:01Z |
-| 已运行 | **43 分钟** |
-| ninja 进度 | `16507/28037` |
-| 工作卷 | `68G used, 29G avail, 71%` |
+| 采样时刻 | 2026-11-06 17:33:32Z |
+| 已运行 | **44 分钟** |
+| ninja 进度 | `17028/28037` |
+| 工作卷 | `68G used, 28G avail, 71%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2491M used / 13492M avail | swap 3727M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95194457 full avg10=0.00 avg60=0.00 avg300=0.00 total=87999010 ` |
+| 内存 | `2686M used / 13296M avail | swap 3724M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95217060 full avg10=0.00 avg60=0.00 avg300=0.00 total=88021479 ` |
 
 ### 内存占用 Top6
 
 ```
-   598M  ninja
-   142M  soong_ui
-   114M  clang++.real
-   109M  provjobd2880998
-    76M  clang++.real
+   602M  ninja
+   150M  clang++.real
+   143M  soong_ui
+   110M  provjobd2880998
     71M  Runner.Worker
+    68M  clang++.real
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 58% 16483/28037] //external/zstd:libzstd clang lib/legacy/zstd_v05.c (priority: 13)
-[ 58% 16484/28037] //external/zstd:libzstd clang lib/legacy/zstd_v06.c (priority: 13)
-[ 58% 16485/28037] //external/zstd:libzstd clang lib/legacy/zstd_v07.c (priority: 13)
-[ 58% 16486/28037] //external/zucchini:libzucchini clang++ abs32_utils.cc (priority: 13)
-[ 58% 16487/28037] //external/zucchini:libzucchini clang++ address_translator.cc (priority: 13)
-[ 58% 16488/28037] //external/zucchini:libzucchini clang++ arm_utils.cc (priority: 13)
-[ 58% 16489/28037] //external/zucchini:libzucchini clang++ binary_data_histogram.cc (priority: 13)
-[ 58% 16490/28037] //external/zucchini:libzucchini clang++ buffer_sink.cc (priority: 13)
-[ 58% 16491/28037] //external/zucchini:libzucchini clang++ buffer_source.cc (priority: 13)
-[ 58% 16492/28037] //external/zucchini:libzucchini clang++ crc32.cc (priority: 13)
-[ 58% 16493/28037] //external/zucchini:libzucchini clang++ disassembler.cc (priority: 13)
-[ 58% 16494/28037] //external/zucchini:libzucchini clang++ disassembler_dex.cc (priority: 13)
-[ 58% 16495/28037] //external/zucchini:libzucchini clang++ disassembler_no_op.cc (priority: 13)
-[ 58% 16496/28037] //external/zucchini:libzucchini clang++ disassembler_elf.cc (priority: 13)
-[ 58% 16497/28037] //external/zucchini:libzucchini clang++ disassembler_win32.cc (priority: 13)
-[ 58% 16498/28037] //external/zucchini:libzucchini clang++ disassembler_ztf.cc (priority: 13)
-[ 58% 16499/28037] //external/zucchini:libzucchini clang++ element_detection.cc (priority: 13)
-[ 58% 16500/28037] //external/zucchini:libzucchini clang++ encoded_view.cc (priority: 13)
-[ 58% 16501/28037] //external/zucchini:libzucchini clang++ ensemble_matcher.cc (priority: 13)
-[ 58% 16502/28037] //external/zucchini:libzucchini clang++ equivalence_map.cc (priority: 13)
-[ 58% 16503/28037] //external/zucchini:libzucchini clang++ heuristic_ensemble_matcher.cc (priority: 13)
-[ 58% 16504/28037] //external/zucchini:libzucchini clang++ image_index.cc (priority: 13)
-[ 58% 16505/28037] //external/zucchini:libzucchini clang++ imposed_ensemble_matcher.cc (priority: 13)
-[ 58% 16506/28037] //external/zucchini:libzucchini clang++ io_utils.cc (priority: 13)
-[ 58% 16507/28037] //external/zucchini:libzucchini clang++ mapped_file.cc (priority: 13)
+[ 60% 17004/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/BtCoexistenceMode.cpp (priority: 12)
+[ 60% 17005/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/BssTmData.cpp (priority: 12)
+[ 60% 17006/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DebugLevel.cpp (priority: 12)
+[ 60% 17007/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DppAkm.cpp (priority: 12)
+[ 60% 17008/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/ConnectionCapabilities.cpp (priority: 12)
+[ 60% 17009/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DppConfigurationData.cpp (priority: 12)
+[ 60% 17010/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DppCurve.cpp (priority: 12)
+[ 60% 17011/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DppEventType.cpp (priority: 12)
+[ 60% 17012/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DppFailureCode.cpp (priority: 12)
+[ 60% 17013/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DppNetRole.cpp (priority: 12)
+[ 60% 17014/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DppProgressCode.cpp (priority: 12)
+[ 60% 17015/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DppConnectionKeys.cpp (priority: 12)
+[ 60% 17016/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DppStatusErrorCode.cpp (priority: 12)
+[ 60% 17017/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/EapErrorCode.cpp (priority: 12)
+[ 60% 17018/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/EapMethod.cpp (priority: 12)
+[ 60% 17019/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/EapPhase2Method.cpp (priority: 12)
+[ 60% 17020/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/ExtRadioWorkDefaults.cpp (priority: 12)
+[ 60% 17021/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/DppResponderBootstrapInfo.cpp (priority: 12)
+[ 60% 17022/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/GroupCipherMask.cpp (priority: 12)
+[ 60% 17023/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/GroupMgmtCipherMask.cpp (priority: 12)
+[ 60% 17024/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/FreqRange.cpp (priority: 12)
+[ 60% 17025/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/GsmRand.cpp (priority: 12)
+[ 60% 17026/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/Hs20AnqpSubtypes.cpp (priority: 12)
+[ 60% 17027/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/Hs20AnqpData.cpp (priority: 12)
+[ 60% 17028/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/INonStandardCertCallback.cpp (priority: 12)
 ```
