@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:08:02Z |
-| 已运行 | **18 分钟** |
-| ninja 进度 | `4414/28037` |
-| 工作卷 | `65G used, 32G avail, 68%` |
+| 采样时刻 | 2026-11-06 17:08:34Z |
+| 已运行 | **19 分钟** |
+| ninja 进度 | `5019/28037` |
+| 工作卷 | `65G used, 31G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2173M used / 13810M avail | swap 3933M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=1.31 total=94894147 full avg10=0.00 avg60=0.00 avg300=1.22 total=87711578 ` |
+| 内存 | `2319M used / 13664M avail | swap 3903M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=1.17 total=94894148 full avg10=0.00 avg60=0.00 avg300=1.09 total=87711579 ` |
 
 ### 内存占用 Top6
 
 ```
-   400M  ninja
-   149M  clang++.real
+   431M  ninja
+   130M  clang++.real
    109M  provjobd2880998
+    60M  clang++.real
     56M  Runner.Listener
-    55M  clang++.real
-    48M  soong_ui
+    52M  soong_ui
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 15% 4390/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/dynamic_message.cc [linux_glibc] (priority: 26)
-[ 15% 4391/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/empty.pb.cc [linux_glibc] (priority: 26)
-[ 15% 4392/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/field_mask.pb.cc [linux_glibc] (priority: 26)
-[ 15% 4393/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/extension_set_heavy.cc [linux_glibc] (priority: 26)
-[ 15% 4394/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/generated_message_bases.cc [linux_glibc] (priority: 26)
-[ 15% 4395/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/generated_message_tctable_full.cc [linux_glibc] (priority: 26)
-[ 15% 4396/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/gzip_stream.cc [linux_glibc] (priority: 26)
-[ 15% 4397/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/generated_message_reflection.cc [linux_glibc] (priority: 26)
-[ 15% 4398/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/printer.cc [linux_glibc] (priority: 26)
-[ 15% 4399/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/tokenizer.cc [linux_glibc] (priority: 26)
-[ 15% 4400/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/map_field.cc [linux_glibc] (priority: 26)
-[ 15% 4401/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/message.cc [linux_glibc] (priority: 26)
-[ 15% 4402/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/service.cc [linux_glibc] (priority: 26)
-[ 15% 4403/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/reflection_ops.cc [linux_glibc] (priority: 26)
-[ 15% 4404/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/source_context.pb.cc [linux_glibc] (priority: 26)
-[ 15% 4405/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/substitute.cc [linux_glibc] (priority: 26)
-[ 15% 4406/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/struct.pb.cc [linux_glibc] (priority: 26)
-[ 15% 4407/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/timestamp.pb.cc [linux_glibc] (priority: 26)
-[ 15% 4408/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/text_format.cc [linux_glibc] (priority: 26)
-[ 15% 4409/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/type.pb.cc [linux_glibc] (priority: 26)
-[ 15% 4410/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/util/delimited_message_util.cc [linux_glibc] (priority: 26)
-[ 15% 4411/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/unknown_field_set.cc [linux_glibc] (priority: 26)
-[ 15% 4412/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/util/field_comparator.cc [linux_glibc] (priority: 26)
-[ 15% 4413/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/util/field_mask_util.cc [linux_glibc] (priority: 26)
-[ 15% 4414/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/util/internal/datapiece.cc [linux_glibc] (priority: 26)
+[ 17% 4995/28037] //external/libevent:libevent clang event_tagging.c (priority: 25)
+[ 17% 4996/28037] //external/libevent:libevent clang evrpc.c (priority: 25)
+[ 17% 4997/28037] //external/libevent:libevent clang http.c (priority: 25)
+[ 17% 4998/28037] //external/libevent:libevent clang poll.c (priority: 25)
+[ 17% 4999/28037] //external/libevent:libevent clang select.c (priority: 25)
+[ 17% 5000/28037] //external/libevent:libevent clang epoll.c (priority: 25)
+[ 17% 5001/28037] //external/e2fsprogs/lib/blkid:libext2_blkid link libext2_blkid.so (priority: 25)
+[ 17% 5002/28037] //external/e2fsprogs/lib/et:libext2_com_err strip libext2_com_err.so (priority: 25)
+[ 17% 5003/28037] //external/e2fsprogs/lib/uuid:libext2_uuid strip libext2_uuid.so (priority: 25)
+[ 17% 5004/28037] //external/boringssl:libcrypto link libcrypto.so (priority: 25)
+[ 17% 5005/28037] //system/extras/ext4_utils:libext4_utils generate toc libext4_utils.so (priority: 25)
+[ 17% 5006/28037] //system/extras/libfec:libfec clang++ fec_open.cpp (priority: 25)
+[ 17% 5007/28037] //external/e2fsprogs/lib/ext2fs:libext2fs link libext2fs.so (priority: 25)
+[ 17% 5008/28037] //system/extras/libfec:libfec clang++ fec_read.cpp (priority: 25)
+[ 17% 5009/28037] //system/extras/libfec:libfec clang++ fec_verity.cpp (priority: 25)
+[ 17% 5010/28037] //system/extras/libfec:libfec clang++ fec_process.cpp (priority: 25)
+[ 17% 5011/28037] //external/fec:libfec_rs static link libfec_rs.a (priority: 25)
+[ 17% 5012/28037] //system/libhidl:libhidlbase strip libhidlbase.so (priority: 25)
+[ 17% 5013/28037] //system/extras/libfec:libfec clang++ avb_utils.cpp (priority: 25)
+[ 17% 5014/28037] //system/libhwbinder:libhwbinder-impl-internal clang++ Binder.cpp (priority: 25)
+[ 17% 5015/28037] //system/libhwbinder:libhwbinder-impl-internal clang++ BpHwBinder.cpp (priority: 25)
+[ 17% 5016/28037] //system/libhwbinder:libhwbinder-impl-internal clang++ BufferedTextOutput.cpp (priority: 25)
+[ 17% 5017/28037] //system/libhwbinder:libhwbinder-impl-internal clang++ Debug.cpp (priority: 25)
+[ 17% 5018/28037] //system/libhwbinder:libhwbinder-impl-internal clang++ IInterface.cpp (priority: 25)
+[ 17% 5019/28037] //system/libhwbinder:libhwbinder-impl-internal clang++ IPCThreadState.cpp (priority: 25)
 ```
