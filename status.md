@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:26:15Z |
-| 已运行 | **36 分钟** |
-| ninja 进度 | `13293/28037` |
+| 采样时刻 | 2026-11-06 17:26:47Z |
+| 已运行 | **37 分钟** |
+| ninja 进度 | `13464/28037` |
 | 工作卷 | `67G used, 29G avail, 70%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2520M used / 13463M avail | swap 3750M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95108552 full avg10=0.00 avg60=0.00 avg300=0.00 total=87913961 ` |
+| 内存 | `2726M used / 13257M avail | swap 3745M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95111572 full avg10=0.00 avg60=0.00 avg300=0.00 total=87916902 ` |
 
 ### 内存占用 Top6
 
 ```
-   567M  ninja
+   572M  ninja
+   157M  clang++.real
+   134M  clang++.real
    133M  soong_ui
-   111M  provjobd2880998
-    86M  clang++.real
-    78M  clang++.real
+   128M  provjobd2880998
     70M  Runner.Worker
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 47% 13273/28037] Copy: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libkeymaster4_1support_intermediates/libkeymaster4_1support.so.toc (priority: 14)
-[ 47% 13274/28037] Copy: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libkeyutils_intermediates/libkeyutils.so.toc (priority: 14)
-[ 47% 13275/28037] Copy: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libhwbinder_intermediates/libhwbinder.so.toc (priority: 14)
-[ 47% 13276/28037] Copy: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libchrome_intermediates/libchrome.so.toc (priority: 14)
-[ 47% 13277/28037] Copy: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libbootloader_message_intermediates/libbootloader_message.so.toc (priority: 14)
-[ 47% 13278/28037] Copy: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libgatekeeper_aidl_intermediates/libgatekeeper_aidl.so.toc (priority: 14)
-[ 47% 13279/28037] Copy: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libsysutils_intermediates/libsysutils.so.toc (priority: 14)
-[ 47% 13280/28037] target Prebuilt: libscrypt_static (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/STATIC_LIBRARIES/libscrypt_static_intermediates/libscrypt_static.a) (priority: 14)
-[ 47% 13281/28037] target Prebuilt: libvold (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/STATIC_LIBRARIES/libvold_intermediates/libvold.a) (priority: 14)
-[ 47% 13282/28037] target Prebuilt: libasync_safe (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/STATIC_LIBRARIES/libasync_safe_intermediates/libasync_safe.a) (priority: 14)
-[ 47% 13283/28037] target SharedLib: libtwadbbu (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libtwadbbu_intermediates/LINKED/libtwadbbu.so) (priority: 14)
-[ 47% 13284/28037] target  C++: libtwrpmtp-ffs <= bootable/recovery/mtp/ffs/MtpDebug.cpp (priority: 14)
-[ 47% 13285/28037] target  C++: libtwrpmtp-ffs <= bootable/recovery/mtp/ffs/MtpDataPacket.cpp (priority: 14)
-[ 47% 13286/28037] target  C++: libtwrpmtp-ffs <= bootable/recovery/mtp/ffs/MtpDevice.cpp (priority: 14)
-bootable/recovery/mtp/ffs/MtpDevice.cpp:162:38: warning: variable 'ep_ss_ep_comp_desc' set but not used [-Wunused-but-set-variable]
-  162 |                         struct usb_ss_ep_comp_descriptor *ep_ss_ep_comp_desc = NULL;
-      |                                                           ^
-1 warning generated.
-[ 47% 13287/28037] target  C++: libtwrpmtp-ffs <= bootable/recovery/mtp/ffs/MtpDevHandle.cpp (priority: 14)
-[ 47% 13288/28037] target  C++: libtwrpmtp-ffs <= bootable/recovery/mtp/ffs/MtpDeviceInfo.cpp (priority: 14)
-[ 47% 13289/28037] target  C++: libtwrpmtp-ffs <= bootable/recovery/mtp/ffs/MtpEventPacket.cpp (priority: 14)
-[ 47% 13290/28037] target  C++: libtwrpmtp-ffs <= bootable/recovery/mtp/ffs/MtpObjectInfo.cpp (priority: 14)
-[ 47% 13291/28037] target  C++: libtwrpmtp-ffs <= bootable/recovery/mtp/ffs/MtpPacket.cpp (priority: 14)
-[ 47% 13292/28037] target  C++: libtwrpmtp-ffs <= bootable/recovery/mtp/ffs/MtpProperty.cpp (priority: 14)
-[ 47% 13293/28037] target  C++: libtwrpmtp-ffs <= bootable/recovery/mtp/ffs/MtpRequestPacket.cpp (priority: 14)
+      |                                      ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:37:49: note: in instantiation of template class 'std::is_copy_constructible<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
+   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
+      |                                                 ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
+ 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
+      |                                         ^
+frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
+  285 |   std::variant<Static, Dynamic> vector_;
+      |                                 ^
+frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
+  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
+      |                                        ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
+  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
+      |                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
+  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
+      |                                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+2 warnings generated.
+[ 48% 13463/28037] //frameworks/base/libs/androidfw:libandroidfw clang++ BigBuffer.cpp (priority: 14)
+[ 48% 13464/28037] //frameworks/base/libs/androidfw:libandroidfw clang++ BigBufferStream.cpp (priority: 14)
 ```
