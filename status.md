@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:17:25Z |
+| 采样时刻 | 2026-11-06 17:17:56Z |
 | 已运行 | **28 分钟** |
-| ninja 进度 | `9421/28037` |
+| ninja 进度 | `9587/28037` |
 | 工作卷 | `66G used, 31G avail, 69%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2407M used / 13576M avail | swap 3831M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.16 total=95064979 full avg10=0.00 avg60=0.00 avg300=0.14 total=87871501 ` |
+| 内存 | `2746M used / 13237M avail | swap 3829M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.13 total=95064979 full avg10=0.00 avg60=0.00 avg300=0.12 total=87871501 ` |
 
 ### 内存占用 Top6
 
 ```
-   501M  ninja
-   168M  clang++.real
+   502M  ninja
+   423M  rustc
+   135M  rustc
    110M  provjobd2880998
-   108M  clang++.real
-    81M  soong_ui
+    82M  soong_ui
     59M  Runner.Listener
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 33% 9397/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/coded_stream.cc (priority: 19)
-[ 33% 9398/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/strtod.cc (priority: 19)
-[ 33% 9399/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/zero_copy_stream.cc (priority: 19)
-[ 33% 9400/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/zero_copy_stream_impl.cc (priority: 19)
-[ 33% 9401/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/zero_copy_stream_impl_lite.cc (priority: 19)
-[ 33% 9402/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/map.cc (priority: 19)
-[ 33% 9403/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/message_lite.cc (priority: 19)
-[ 33% 9404/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/parse_context.cc (priority: 19)
-[ 33% 9405/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/repeated_ptr_field.cc (priority: 19)
-[ 33% 9406/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/repeated_field.cc (priority: 19)
-[ 33% 9407/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/bytestream.cc (priority: 19)
-[ 33% 9408/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/common.cc (priority: 19)
-[ 33% 9409/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/int128.cc (priority: 19)
-[ 33% 9410/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/status.cc (priority: 19)
-[ 33% 9411/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/statusor.cc (priority: 19)
-[ 33% 9412/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/stringpiece.cc (priority: 19)
-[ 33% 9413/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/stringprintf.cc (priority: 19)
-[ 33% 9414/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/structurally_valid.cc (priority: 19)
-[ 33% 9415/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/strutil.cc (priority: 19)
-[ 33% 9416/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/time.cc (priority: 19)
-[ 33% 9417/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/wire_format_lite.cc (priority: 19)
-[ 33% 9418/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/any.cc (priority: 19)
-[ 33% 9419/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/any.pb.cc (priority: 19)
-[ 33% 9420/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/api.pb.cc (priority: 19)
-[ 33% 9421/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/compiler/importer.cc (priority: 19)
+[ 34% 9563/28037] //external/selinux/libselinux:libselinux clang src/setfilecon.c [linux_glibc] (priority: 19)
+[ 34% 9564/28037] //external/selinux/libselinux:libselinux clang src/setrans_client.c [linux_glibc] (priority: 19)
+[ 34% 9565/28037] //external/selinux/libselinux:libselinux clang src/sha1.c [linux_glibc] (priority: 19)
+[ 34% 9566/28037] //external/selinux/libselinux:libselinux clang src/stringrep.c [linux_glibc] (priority: 19)
+[ 34% 9567/28037] //external/selinux/libselinux:libselinux_bindgen rustc bindings.rs (priority: 19)
+[ 34% 9568/28037] //system/core/fs_mgr/libsnapshot:libsnapshot clang++ proto/android/snapshot/snapshot.pb.cc (priority: 19)
+[ 34% 9569/28037] //system/core/fs_mgr/libsnapshot:libsnapshot clang++ device_info.cpp (priority: 19)
+[ 34% 9570/28037] //system/core/fs_mgr/libsnapshot:libsnapshot clang++ snapshot_stats.cpp (priority: 19)
+[ 34% 9571/28037] //system/core/fs_mgr/libsnapshot:libsnapshot clang++ snapshot_stub.cpp (priority: 19)
+[ 34% 9572/28037] //system/core/fs_mgr/libsnapshot:libsnapshot clang++ snapshot.cpp (priority: 19)
+[ 34% 9573/28037] //system/core/fs_mgr/libsnapshot:libsnapshot clang++ snapshot_metadata_updater.cpp (priority: 19)
+[ 34% 9574/28037] //system/core/fs_mgr/libsnapshot:libsnapshot clang++ return.cpp (priority: 19)
+[ 34% 9575/28037] //system/core/fs_mgr/libsnapshot:libsnapshot clang++ partition_cow_creator.cpp (priority: 19)
+[ 34% 9576/28037] //system/core/fs_mgr/libsnapshot:libsnapshot clang++ utility.cpp (priority: 19)
+[ 34% 9577/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_cow static link libsnapshot_cow.a (priority: 19)
+[ 34% 9578/28037] //system/core/fs_mgr/libsnapshot/snapuserd:libsnapuserd_client static link libsnapuserd_client.a (priority: 19)
+[ 34% 9579/28037] //external/sqlite/dist:libsqlite generate toc libsqlite.so (priority: 19)
+[ 34% 9580/28037] //system/extras/squashfs_utils:libsquashfs_utils generate toc libsquashfs_utils.so (priority: 19)
+[ 34% 9581/28037] //external/boringssl:libssl generate toc libssl.so (priority: 19)
+[ 34% 9582/28037] //system/librustutils:libsystem_properties_bindgen_sys rustc bindings.rs (priority: 19)
+[ 34% 9583/28037] //system/core/fs_mgr/libsnapshot:libsnapshot clang++ scratch_super.cpp (priority: 19)
+[ 34% 9584/28037] //external/tinyxml2:libtinyxml2 clang++ tinyxml2.cpp [linux_glibc] (priority: 19)
+[ 34% 9585/28037] //system/vold:libvold_binder raw aidl.sbox.textproto (priority: 19)
+[ 34% 9586/28037] //external/zlib:libz static link libz.a (priority: 19)
+[ 34% 9587/28037] //external/rust/android-crates-io/crates/zeroize_derive:libzeroize_derive rustc src/lib.rs [linux_glibc] (priority: 19)
 ```
