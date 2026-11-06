@@ -63,8 +63,10 @@ jobs:
       - name: Expand disk space
         uses: easimon/maximize-build-space@master
         with:
-          root-reserve-mb: 8192
-          temp-reserve-mb: 4096
+          # 上一次跑到 48 分钟时 runner 直接消失、日志也没留下，
+          # 典型特征是体积型撑爆：把保留区压到最小，尽可能多留给 out/
+          root-reserve-mb: 2048
+          temp-reserve-mb: 1024
           swap-size-mb: 8192
           remove-dotnet: 'true'
           remove-android: 'true'
@@ -131,6 +133,15 @@ jobs:
           rm -rf .repo
           df -h "$WORKDIR"
 
+      - name: Start build telemetry
+        run: |
+          rm -f "$WORKDIR/build.done"
+          nohup python3 scripts/ci_monitor.py \
+            "${{ github.repository }}" "${{ secrets.GITHUB_TOKEN }}" \
+            "$WORKDIR" "$WORKDIR/build.log" > /tmp/monitor.log 2>&1 &
+          disown || true
+          echo "telemetry pid $!"
+
       - name: Build recovery image
         run: |
           # 不能用 set -u：build/envsetup.sh 里 TOP 等变量在赋值前就被引用，
@@ -149,12 +160,21 @@ jobs:
           done
           if [ "$ok" -ne 1 ]; then echo "::error::no usable lunch combo"; lunch 2>&1 | tail -n 60; exit 1; fi
 
-          # pipefail 必须开，否则 m 失败会被 tail 的退出码吃掉
-          set -o pipefail
-          m ${{ github.event.inputs.make_targets }} -j${{ github.event.inputs.jobs }} 2>&1 | tee /tmp/build.log | tail -n 250 || {
-            echo "::error::build failed, last errors:"; grep -i -E "error:|failed|FAILED" /tmp/build.log | tail -n 40; exit 1; }
-
+          df -h "$WORKDIR"; free -h
+          set +e
+          m ${{ github.event.inputs.make_targets }} -j${{ github.event.inputs.jobs }} 2>&1 \
+            | tee "$WORKDIR/build.log" | tail -n 250
+          rc=${PIPESTATUS[0]}
+          touch "$WORKDIR/build.done"   # 通知心跳脚本收工
           mkdir -p "$GITHUB_WORKSPACE/artifacts"
+          cp -v "$WORKDIR/build.log" "$GITHUB_WORKSPACE/artifacts/" || true
+          if [ "$rc" -ne 0 ]; then
+            echo "::error::build failed (rc=$rc), last errors:"
+            grep -i -E "error:|fatal error|failed" "$WORKDIR/build.log" | tail -n 40
+            df -h "$WORKDIR"; free -h
+            exit 1
+          fi
+
           find "out/target/product/$DEV" -maxdepth 1 \
             \( -name '*.img' -o -name '*.zip' \) -exec cp -v {} "$GITHUB_WORKSPACE/artifacts/" \;
           ls -lh "$GITHUB_WORKSPACE/artifacts"
@@ -167,6 +187,7 @@ jobs:
           path: |
             artifacts/*.img
             artifacts/*.zip
+            artifacts/build.log
           if-no-files-found: warn
           retention-days: 14
 
