@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:22:37Z |
+| 采样时刻 | 2026-11-06 17:23:08Z |
 | 已运行 | **33 分钟** |
-| ninja 进度 | `11556/28037` |
+| ninja 进度 | `11815/28037` |
 | 工作卷 | `66G used, 30G avail, 70%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2551M used / 13432M avail | swap 3781M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.03 total=95103387 full avg10=0.00 avg60=0.00 avg300=0.03 total=87908797 ` |
+| 内存 | `2746M used / 13237M avail | swap 3763M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.02 total=95103387 full avg10=0.00 avg60=0.00 avg300=0.02 total=87908797 ` |
 
 ### 内存占用 Top6
 
 ```
-   546M  ninja
-   132M  clang++.real
-   122M  provjobd2880998
-    99M  clang++.real
-    89M  soong_ui
-    59M  Runner.Listener
+   551M  ninja
+   241M  clang++.real
+   110M  provjobd2880998
+    95M  clang++.real
+    91M  soong_ui
+    68M  Runner.Worker
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 41% 11532/28037] //system/unwinding/libunwindstack:libunwindstack clang++ AndroidUnwinder.cpp (priority: 16)
-[ 41% 11533/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Demangle.cpp (priority: 16)
-[ 41% 11534/28037] //system/unwinding/libunwindstack:libunwindstack clang++ ArmExidx.cpp (priority: 16)
-[ 41% 11535/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DexFiles.cpp (priority: 16)
-[ 41% 11536/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DwarfCfa.cpp (priority: 16)
-[ 41% 11537/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DwarfEhFrameWithHdr.cpp (priority: 16)
-[ 41% 11538/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DwarfMemory.cpp (priority: 16)
-[ 41% 11539/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DwarfOp.cpp (priority: 16)
-[ 41% 11540/28037] //system/unwinding/libunwindstack:libunwindstack clang++ DwarfSection.cpp (priority: 16)
-[ 41% 11541/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Elf.cpp (priority: 16)
-[ 41% 11542/28037] //system/unwinding/libunwindstack:libunwindstack clang++ ElfInterfaceArm.cpp (priority: 16)
-[ 41% 11543/28037] //system/unwinding/libunwindstack:libunwindstack clang++ ElfInterface.cpp (priority: 16)
-[ 41% 11544/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Global.cpp (priority: 16)
-[ 41% 11545/28037] //system/unwinding/libunwindstack:libunwindstack clang++ JitDebug.cpp (priority: 16)
-[ 41% 11546/28037] //system/unwinding/libunwindstack:libunwindstack clang++ MapInfo.cpp (priority: 16)
-[ 41% 11547/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Maps.cpp (priority: 16)
-[ 41% 11548/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Memory.cpp (priority: 16)
-[ 41% 11549/28037] //system/unwinding/libunwindstack:libunwindstack clang++ MemoryMte.cpp (priority: 16)
-[ 41% 11550/28037] //system/unwinding/libunwindstack:libunwindstack clang++ MemoryXz.cpp (priority: 16)
-[ 41% 11551/28037] //system/unwinding/libunwindstack:libunwindstack clang++ Regs.cpp (priority: 16)
-[ 41% 11552/28037] //system/unwinding/libunwindstack:libunwindstack clang++ RegsArm.cpp (priority: 16)
-[ 41% 11553/28037] //system/unwinding/libunwindstack:libunwindstack clang++ RegsArm64.cpp (priority: 16)
-[ 41% 11554/28037] //system/unwinding/libunwindstack:libunwindstack clang++ RegsX86.cpp (priority: 16)
-[ 41% 11555/28037] //system/unwinding/libunwindstack:libunwindstack clang++ RegsX86_64.cpp (priority: 16)
-[ 41% 11556/28037] //system/unwinding/libunwindstack:libunwindstack clang++ RegsRiscv64.cpp (priority: 16)
+[ 42% 11791/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk strip android.hardware.health-V4-ndk.so (priority: 15)
+[ 42% 11792/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryCapacityLevel.cpp (priority: 15)
+[ 42% 11793/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryChargingPolicy.cpp (priority: 15)
+[ 42% 11794/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryChargingState.cpp (priority: 15)
+[ 42% 11795/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryHealth.cpp (priority: 15)
+[ 42% 11796/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryHealthData.cpp (priority: 15)
+[ 42% 11797/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryPartStatus.cpp (priority: 15)
+[ 42% 11798/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryStatus.cpp (priority: 15)
+[ 42% 11799/28037] //hardware/interfaces/fastboot/1.1:android.hardware.fastboot@1.1 clang++ android/hardware/fastboot/1.1/FastbootAll.cpp (priority: 15)
+[ 42% 11800/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/DiskStats.cpp (priority: 15)
+[ 42% 11801/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/HealthInfo.cpp (priority: 15)
+[ 42% 11802/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/HingeInfo.cpp (priority: 15)
+[ 42% 11803/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/IHealth.cpp (priority: 15)
+[ 42% 11804/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/IHealthInfoCallback.cpp (priority: 15)
+[ 42% 11805/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/StorageInfo.cpp (priority: 15)
+[ 42% 11806/28037] //hardware/interfaces/health/storage/aidl:android.hardware.health.storage-V1-ndk clang++ android/hardware/health/storage/IGarbageCollectCallback.cpp (priority: 15)
+[ 42% 11807/28037] //hardware/interfaces/health/storage/aidl:android.hardware.health.storage-V1-ndk clang++ android/hardware/health/storage/Result.cpp (priority: 15)
+[ 42% 11808/28037] //hardware/interfaces/health/storage/aidl:android.hardware.health.storage-V1-ndk clang++ android/hardware/health/storage/IStorage.cpp (priority: 15)
+[ 42% 11809/28037] //hardware/interfaces/health/storage/1.0:android.hardware.health.storage@1.0 clang++ android/hardware/health/storage/1.0/GarbageCollectCallbackAll.cpp (priority: 15)
+[ 42% 11810/28037] //hardware/interfaces/health/storage/1.0:android.hardware.health.storage@1.0 clang++ android/hardware/health/storage/1.0/StorageAll.cpp (priority: 15)
+[ 42% 11811/28037] //hardware/interfaces/health/2.0:android.hardware.health@2.0 strip android.hardware.health@2.0.so (priority: 15)
+[ 42% 11812/28037] //hardware/interfaces/health/2.0:android.hardware.health@2.0 generate toc android.hardware.health@2.0.so (priority: 15)
+[ 42% 11813/28037] //hardware/interfaces/health/storage/1.0:android.hardware.health.storage@1.0 clang++ android/hardware/health/storage/1.0/types.cpp (priority: 15)
+[ 42% 11814/28037] //hardware/interfaces/health/2.1:android.hardware.health@2.1 strip android.hardware.health@2.1.so (priority: 15)
+[ 42% 11815/28037] //hardware/interfaces/health/2.1:android.hardware.health@2.1 clang++ android/hardware/health/2.1/HealthInfoCallbackAll.cpp (priority: 15)
 ```
