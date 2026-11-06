@@ -133,15 +133,6 @@ jobs:
           rm -rf .repo
           df -h "$WORKDIR"
 
-      - name: Start build telemetry
-        run: |
-          rm -f "$WORKDIR/build.done"
-          nohup python3 scripts/ci_monitor.py \
-            "${{ github.repository }}" "${{ secrets.GITHUB_TOKEN }}" \
-            "$WORKDIR" "$WORKDIR/build.log" > /tmp/monitor.log 2>&1 &
-          disown || true
-          echo "telemetry pid $!"
-
       - name: Build recovery image
         run: |
           # 不能用 set -u：build/envsetup.sh 里 TOP 等变量在赋值前就被引用，
@@ -161,6 +152,12 @@ jobs:
           if [ "$ok" -ne 1 ]; then echo "::error::no usable lunch combo"; lunch 2>&1 | tail -n 60; exit 1; fi
 
           df -h "$WORKDIR"; free -h
+          # 心跳必须在本 step 里起：runner 在每个 step 结束时清理孤儿进程，
+          # 单独放一个 step 里启动的话活不过 2 分钟
+          rm -f "$WORKDIR/build.done"
+          nohup python3 "$GITHUB_WORKSPACE/scripts/ci_monitor.py" \
+            "${{ github.repository }}" "${{ secrets.GITHUB_TOKEN }}" \
+            "$WORKDIR" "$WORKDIR/build.log" > /tmp/monitor.log 2>&1 &
           set +e
           m ${{ github.event.inputs.make_targets }} -j${{ github.event.inputs.jobs }} 2>&1 \
             | tee "$WORKDIR/build.log" | tail -n 250
