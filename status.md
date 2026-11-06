@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:07:31Z |
+| 采样时刻 | 2026-11-06 17:08:02Z |
 | 已运行 | **18 分钟** |
-| ninja 进度 | `4352/28037` |
+| ninja 进度 | `4414/28037` |
 | 工作卷 | `65G used, 32G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2291M used / 13692M avail | swap 3934M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=1.45 total=94892900 full avg10=0.00 avg60=0.00 avg300=1.35 total=87710331 ` |
+| 内存 | `2173M used / 13810M avail | swap 3933M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=1.31 total=94894147 full avg10=0.00 avg60=0.00 avg300=1.22 total=87711578 ` |
 
 ### 内存占用 Top6
 
 ```
-   399M  ninja
+   400M  ninja
+   149M  clang++.real
    109M  provjobd2880998
-    98M  clang++.real
-    60M  clang++.real
     56M  Runner.Listener
+    55M  clang++.real
     48M  soong_ui
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 15% 4328/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/src/s_sinl.c (priority: 26)
-[ 15% 4329/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/src/s_truncl.c (priority: 26)
-[ 15% 4330/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/src/s_tanl.c (priority: 26)
-[ 15% 4331/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/invtrig.c (priority: 26)
-[ 15% 4332/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/e_lgammal_r.c (priority: 26)
-[ 15% 4333/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/e_powl.c (priority: 26)
-[ 15% 4334/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/k_cosl.c (priority: 26)
-[ 15% 4335/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/k_sinl.c (priority: 26)
-[ 15% 4336/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/k_tanl.c (priority: 26)
-[ 15% 4337/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/s_exp2l.c (priority: 26)
-[ 15% 4338/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/s_erfl.c (priority: 26)
-[ 15% 4339/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/s_expl.c (priority: 26)
-[ 15% 4340/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/s_logl.c (priority: 26)
-[ 15% 4341/28037] //bionic/libm:libm clang upstream-freebsd/lib/msun/ld128/s_nanl.c (priority: 26)
-[ 15% 4342/28037] //external/libchrome:libmojo_jni_headers raw genrule.sbox.textproto (priority: 26)
-[ 15% 4343/28037] //system/core/libpackagelistparser:libpackagelistparser strip libpackagelistparser.so (priority: 26)
-[ 15% 4344/28037] //bionic/libm:libm.arm64.map generate libm.arm64.map.txt (priority: 26)
-[ 15% 4345/28037] //prebuilts/rust:libpanic_abort.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/panic_abort/src/lib.rs (priority: 26)
-[ 15% 4346/28037] //external/pcre:libpcre2 strip libpcre2.so (priority: 26)
-[ 15% 4347/28037] //prebuilts/rust:libprofiler_builtins.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/profiler_builtins/src/lib.rs (priority: 26)
-[ 15% 4348/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/any_lite.cc [linux_glibc] (priority: 26)
-[ 15% 4349/28037] //external/rust/android-crates-io/crates/paste:libpaste rustc src/lib.rs [linux_glibc] (priority: 26)
-[ 15% 4350/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/arena.cc [linux_glibc] (priority: 26)
-[ 15% 4351/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/arenaz_sampler.cc [linux_glibc] (priority: 26)
-[ 15% 4352/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/arenastring.cc [linux_glibc] (priority: 26)
+[ 15% 4390/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/dynamic_message.cc [linux_glibc] (priority: 26)
+[ 15% 4391/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/empty.pb.cc [linux_glibc] (priority: 26)
+[ 15% 4392/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/field_mask.pb.cc [linux_glibc] (priority: 26)
+[ 15% 4393/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/extension_set_heavy.cc [linux_glibc] (priority: 26)
+[ 15% 4394/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/generated_message_bases.cc [linux_glibc] (priority: 26)
+[ 15% 4395/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/generated_message_tctable_full.cc [linux_glibc] (priority: 26)
+[ 15% 4396/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/gzip_stream.cc [linux_glibc] (priority: 26)
+[ 15% 4397/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/generated_message_reflection.cc [linux_glibc] (priority: 26)
+[ 15% 4398/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/printer.cc [linux_glibc] (priority: 26)
+[ 15% 4399/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/io/tokenizer.cc [linux_glibc] (priority: 26)
+[ 15% 4400/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/map_field.cc [linux_glibc] (priority: 26)
+[ 15% 4401/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/message.cc [linux_glibc] (priority: 26)
+[ 15% 4402/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/service.cc [linux_glibc] (priority: 26)
+[ 15% 4403/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/reflection_ops.cc [linux_glibc] (priority: 26)
+[ 15% 4404/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/source_context.pb.cc [linux_glibc] (priority: 26)
+[ 15% 4405/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/stubs/substitute.cc [linux_glibc] (priority: 26)
+[ 15% 4406/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/struct.pb.cc [linux_glibc] (priority: 26)
+[ 15% 4407/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/timestamp.pb.cc [linux_glibc] (priority: 26)
+[ 15% 4408/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/text_format.cc [linux_glibc] (priority: 26)
+[ 15% 4409/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/type.pb.cc [linux_glibc] (priority: 26)
+[ 15% 4410/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/util/delimited_message_util.cc [linux_glibc] (priority: 26)
+[ 15% 4411/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/unknown_field_set.cc [linux_glibc] (priority: 26)
+[ 15% 4412/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/util/field_comparator.cc [linux_glibc] (priority: 26)
+[ 15% 4413/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/util/field_mask_util.cc [linux_glibc] (priority: 26)
+[ 15% 4414/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/util/internal/datapiece.cc [linux_glibc] (priority: 26)
 ```
