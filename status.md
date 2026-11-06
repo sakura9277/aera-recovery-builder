@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:43:56Z |
-| 已运行 | **54 分钟** |
-| ninja 进度 | `28034/28037` |
-| 工作卷 | `71G used, 26G avail, 74%` |
+| 采样时刻 | 2026-11-06 17:44:27Z |
+| 已运行 | **55 分钟** |
+| ninja 进度 | `28037/28037` |
+| 工作卷 | `71G used, 25G avail, 75%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2455M used / 13528M avail | swap 3669M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95585354 full avg10=0.00 avg60=0.00 avg300=0.00 total=88359210 ` |
+| 内存 | `1070M used / 14913M avail | swap 115M/17782M` |
+| PSI | `some avg10=0.01 avg60=0.02 avg300=0.00 total=95651412 full avg10=0.01 avg60=0.02 avg300=0.00 total=88424447 ` |
 
 ### 内存占用 Top6
 
 ```
-   661M  ninja
-   208M  soong_ui
-   112M  provjobd2880998
+   119M  provjobd2880998
+    94M  Runner.Worker
+    89M  MainThread
     83M  Runner.Listener
-    73M  Runner.Worker
     43M  multipathd
+    30M  python3
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,32 @@
 ### 编译日志尾部
 
 ```
--- Symlinking "resetprop" ...
--- This build will use magiskboot for patching boot images ...
--- Backing up /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/recovery/root//sbin/magiskboot to: /tmp/fox_build_tmp/ ...
--- Copying the "dmsetup" binary ...
--- Replacing any built-in "lzma" command with our own full version ...
--- Copying bash ...
--- Cleaning up any bash stragglers...
--- Cleaning up any ash stragglers...
--- Copying the GNU "tar" binary (gnutar) ...
--- Copying the GNU "sed" binary (gnused) ...
--- Copying the GNU "grep" binary ...
--- Copying the "zstd" binary ...
--- Copying the "lz4" binary ...
--- Copying the GNU "date" binary (gnudate) ...
--- Copying the AERA InfoZip "zip" binary ...
--- Copying the "fsck.erofs" binary ...
--- Copying the "patchelf" binary ...
--- This build will use /data/recovery for its internal settings ... 
--- This build will use /sdcard for its stuff ... 
--- Copying the AERA Root Manager ksud binary ...
--- Omitting the aapt binary (it is useless if the app manager is not enabled) ...
--- Generating the build ID 
--- Saving some original file sizes 
--- Building the recovery image, using the official AOSP recovery image builder ...
-[ 99% 28034/28037] ----- Making uncompressed recovery ramdisk ------ (priority: 4)
+
+
+
+        █████╗ ███████╗██████╗  █████╗
+       ██╔══██╗██╔════╝██╔══██╗██╔══██╗
+       ███████║█████╗  ██████╔╝███████║
+       ██╔══██║██╔══╝  ██╔══██╗██╔══██║
+       ██║  ██║███████╗██║  ██║██║  ██║
+       ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
+
+                 RECOVERY PROJECT R1.0
+
+
+=================Finished building AERA R1.0=================
+
+Recovery image: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/AERA-R1.0-Beta-Official-hummer.img
+          MD5: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/AERA-R1.0-Beta-Official-hummer.img.md5
+
+Recovery zip: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/AERA-R1.0-Beta-Official-hummer.zip
+          MD5: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/AERA-R1.0-Beta-Official-hummer.zip.md5
+
+==================================================================
+
+#### build completed successfully (54:59 (mm:ss)) ####
 ```
+
+
+---
+**构建已结束（build.done 出现）**
