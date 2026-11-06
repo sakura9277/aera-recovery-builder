@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:01:17Z |
+| 采样时刻 | 2026-11-06 17:01:48Z |
 | 已运行 | **12 分钟** |
-| ninja 进度 | `1552/28037` |
+| ninja 进度 | `1905/28037` |
 | 工作卷 | `64G used, 33G avail, 67%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2051M used / 13931M avail | swap 4050M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.18 avg300=5.35 total=94790989 full avg10=0.00 avg60=0.18 avg300=4.98 total=87611189 ` |
+| 内存 | `2301M used / 13682M avail | swap 4046M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.10 avg300=4.79 total=94790993 full avg10=0.00 avg60=0.10 avg300=4.46 total=87611194 ` |
 
 ### 内存占用 Top6
 
 ```
-   290M  ninja
+   292M  ninja
    108M  provjobd2880998
-    62M  clang++.real
-    53M  clang++.real
+    66M  clang++.real
+    45M  Runner.Listener
     43M  multipathd
-    40M  Runner.Listener
+    31M  soong_ui
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  5% 1528/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_object.cc [linux_glibc] (priority: 47)
-[  5% 1529/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_strex.cc [linux_glibc] (priority: 47)
-[  5% 1530/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_strnid.cc [linux_glibc] (priority: 47)
-[  5% 1531/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_time.cc [linux_glibc] (priority: 47)
-[  5% 1532/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_type.cc [linux_glibc] (priority: 47)
-[  5% 1533/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_utctm.cc [linux_glibc] (priority: 47)
-[  5% 1534/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/asn1_lib.cc [linux_glibc] (priority: 47)
-[  5% 1535/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/asn1_par.cc [linux_glibc] (priority: 47)
-[  5% 1536/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/asn_pack.cc [linux_glibc] (priority: 47)
-[  5% 1537/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/f_int.cc [linux_glibc] (priority: 47)
-[  5% 1538/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/f_string.cc [linux_glibc] (priority: 47)
-[  5% 1539/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/posix_time.cc [linux_glibc] (priority: 47)
-[  5% 1540/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_dec.cc [linux_glibc] (priority: 47)
-[  5% 1541/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_enc.cc [linux_glibc] (priority: 47)
-[  5% 1542/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_fre.cc [linux_glibc] (priority: 47)
-[  5% 1543/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_new.cc [linux_glibc] (priority: 47)
-[  5% 1544/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_typ.cc [linux_glibc] (priority: 47)
-[  5% 1545/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_utl.cc [linux_glibc] (priority: 47)
-[  5% 1546/28037] //external/boringssl:libcrypto clang++ src/crypto/base64/base64.cc [linux_glibc] (priority: 47)
-[  5% 1547/28037] //external/boringssl:libcrypto clang++ src/crypto/bio/bio_mem.cc [linux_glibc] (priority: 47)
-[  5% 1548/28037] //external/boringssl:libcrypto clang++ src/crypto/bio/bio.cc [linux_glibc] (priority: 47)
-[  5% 1549/28037] //external/boringssl:libcrypto clang++ src/crypto/bio/errno.cc [linux_glibc] (priority: 47)
-[  5% 1550/28037] //external/boringssl:libcrypto clang++ src/crypto/bio/connect.cc [linux_glibc] (priority: 47)
-[  5% 1551/28037] //external/boringssl:libcrypto clang++ src/crypto/bio/fd.cc [linux_glibc] (priority: 47)
-[  5% 1552/28037] //external/boringssl:libcrypto clang++ src/crypto/bio/file.cc [linux_glibc] (priority: 47)
+[  6% 1882/28037] //external/boringssl:libcrypto clang src/gen/test_support/trampoline-x86_64-linux.S [linux_glibc] (priority: 47)
+[  6% 1883/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_curve25519_adx_mul.S [linux_glibc] (priority: 47)
+[  6% 1884/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_curve25519_adx_square.S [linux_glibc] (priority: 47)
+[  6% 1885/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_p256_adx_mul.S [linux_glibc] (priority: 47)
+[  6% 1886/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_p256_adx_sqr.S [linux_glibc] (priority: 47)
+[  6% 1887/28037] //system/core/libcutils:libcutils strip libcutils.so (priority: 47)
+[  6% 1888/28037] //system/tools/hidl:libhidl-gen clang++ Annotation.cpp [linux_glibc] (priority: 47)
+[  6% 1889/28037] //system/tools/hidl:libhidl-gen clang++ ArrayType.cpp [linux_glibc] (priority: 47)
+[  6% 1890/28037] //system/tools/hidl:libhidl-gen clang++ ConstantExpression.cpp [linux_glibc] (priority: 47)
+[  6% 1891/28037] //system/tools/hidl:libhidl-gen clang++ DeathRecipientType.cpp [linux_glibc] (priority: 47)
+[  6% 1892/28037] //system/tools/hidl:libhidl-gen clang++ DocComment.cpp [linux_glibc] (priority: 47)
+[  6% 1893/28037] //system/tools/hidl:libhidl-gen clang++ CompoundType.cpp [linux_glibc] (priority: 47)
+[  6% 1894/28037] //system/tools/hidl:libhidl-gen clang++ EnumType.cpp [linux_glibc] (priority: 47)
+[  6% 1895/28037] //system/tools/hidl:libhidl-gen clang++ FmqType.cpp [linux_glibc] (priority: 47)
+[  6% 1896/28037] //system/tools/hidl:libhidl-gen clang++ HandleType.cpp [linux_glibc] (priority: 47)
+[  6% 1897/28037] //system/tools/hidl:libhidl-gen clang++ HidlTypeAssertion.cpp [linux_glibc] (priority: 47)
+[  6% 1898/28037] //system/tools/hidl:libhidl-gen clang++ Location.cpp [linux_glibc] (priority: 47)
+[  6% 1899/28037] //system/tools/hidl:libhidl-gen clang++ MemoryType.cpp [linux_glibc] (priority: 47)
+[  6% 1900/28037] //system/tools/hidl:libhidl-gen clang++ Method.cpp [linux_glibc] (priority: 47)
+[  6% 1901/28037] //system/tools/hidl:libhidl-gen clang++ Interface.cpp [linux_glibc] (priority: 47)
+[  6% 1902/28037] //system/tools/hidl:libhidl-gen clang++ NamedType.cpp [linux_glibc] (priority: 47)
+[  6% 1903/28037] //system/tools/hidl:libhidl-gen clang++ PointerType.cpp [linux_glibc] (priority: 47)
+[  6% 1904/28037] //system/tools/hidl:libhidl-gen clang++ ScalarType.cpp [linux_glibc] (priority: 47)
+[  6% 1905/28037] //system/tools/hidl:libhidl-gen clang++ StringType.cpp [linux_glibc] (priority: 47)
+[  6% 1906/28037] //system/tools/hidl:libhidl-gen clang++ Scope.cpp [linux_glibc] (priority: 47)
 ```
