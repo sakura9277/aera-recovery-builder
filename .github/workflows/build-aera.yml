@@ -138,10 +138,12 @@ jobs:
           cd "$WORKDIR"
           du -sh .repo || true
           rm -rf .repo
-          # recovery 用不到这些子树，AOSP 16 里合计 8-15 G；
-          # 编译时靠 ALLOW_MISSING_DEPENDENCIES=true 容忍缺失
-          du -sh cts test platform_testing developers pdk sdk 2>/dev/null || true
-          rm -rf cts test platform_testing developers pdk sdk
+          # 只删确实没人引用的子树。注意 test/ 不能删：
+          # art/test 与 frameworks/base 的 Android.bp 里用了 csuite_test 这个模块类型，
+          # 定义就在 test/ 下，删掉会让 soong 直接报
+          # `unrecognized module type "csuite_test"`。sdk/ 同理保守保留。
+          du -sh cts platform_testing developers pdk 2>/dev/null || true
+          rm -rf cts platform_testing developers pdk
           df -h "$WORKDIR"
 
       - name: Build recovery image
