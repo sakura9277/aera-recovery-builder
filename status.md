@@ -2,21 +2,21 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 16:58:41Z |
+| 采样时刻 | 2026-11-06 16:59:12Z |
 | 已运行 | **9 分钟** |
-| ninja 进度 | `879/28037` |
+| ninja 进度 | `935/28037` |
 | 工作卷 | `63G used, 33G avail, 66%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2498M used / 13485M avail | swap 3820M/17782M` |
-| PSI | `some avg10=0.20 avg60=1.93 avg300=9.05 total=94579350 full avg10=0.20 avg60=1.89 avg300=8.42 total=87399836 ` |
+| 内存 | `2317M used / 13666M avail | swap 3819M/17782M` |
+| PSI | `some avg10=0.00 avg60=1.17 avg300=8.16 total=94579351 full avg10=0.00 avg60=1.14 avg300=7.59 total=87399837 ` |
 
 ### 内存占用 Top6
 
 ```
-   521M  ninja
-   197M  clang++.real
+   522M  ninja
+   124M  clang++.real
    107M  provjobd2880998
-    96M  clang++.real
+    75M  clang++.real
     43M  multipathd
     34M  Runner.Listener
 ```
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  3% 855/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/datapiece.cc [linux_glibc] (priority: 55)
-[  3% 856/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/default_value_objectwriter.cc [linux_glibc] (priority: 55)
-[  3% 857/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/error_listener.cc [linux_glibc] (priority: 55)
-[  3% 858/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/json_escaping.cc [linux_glibc] (priority: 55)
-[  3% 859/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/field_mask_utility.cc [linux_glibc] (priority: 55)
-[  3% 860/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/json_objectwriter.cc [linux_glibc] (priority: 55)
-[  3% 861/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/json_stream_parser.cc [linux_glibc] (priority: 55)
-[  3% 862/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/object_writer.cc [linux_glibc] (priority: 55)
-[  3% 863/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/proto_writer.cc [linux_glibc] (priority: 55)
-[  3% 864/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/protostream_objectsource.cc [linux_glibc] (priority: 55)
-[  3% 865/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/protostream_objectwriter.cc [linux_glibc] (priority: 55)
-[  3% 866/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/type_info.cc [linux_glibc] (priority: 55)
-[  3% 867/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/json_util.cc [linux_glibc] (priority: 55)
-[  3% 868/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/utility.cc [linux_glibc] (priority: 55)
-[  3% 869/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/time_util.cc [linux_glibc] (priority: 55)
-[  3% 870/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/type_resolver_util.cc [linux_glibc] (priority: 55)
-[  3% 871/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/util/message_differencer.cc [linux_glibc] (priority: 55)
-[  3% 872/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/wrappers.pb.cc [linux_glibc] (priority: 55)
-[  3% 873/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/wire_format.cc [linux_glibc] (priority: 55)
-[  3% 874/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/code_generator.cc [linux_glibc] (priority: 55)
-[  3% 875/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/enum.cc [linux_glibc] (priority: 55)
-[  3% 876/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/command_line_interface.cc [linux_glibc] (priority: 55)
-[  3% 877/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/enum_field.cc [linux_glibc] (priority: 55)
-[  3% 878/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/extension.cc [linux_glibc] (priority: 55)
-[  3% 879/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/field.cc [linux_glibc] (priority: 55)
+[  3% 911/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/enum_field_lite.cc [linux_glibc] (priority: 55)
+[  3% 912/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/enum_lite.cc [linux_glibc] (priority: 55)
+[  3% 913/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/extension.cc [linux_glibc] (priority: 55)
+[  3% 914/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/extension_lite.cc [linux_glibc] (priority: 55)
+[  3% 915/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/field.cc [linux_glibc] (priority: 55)
+[  3% 916/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/file.cc [linux_glibc] (priority: 55)
+[  3% 917/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/generator.cc [linux_glibc] (priority: 55)
+[  3% 918/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/generator_factory.cc [linux_glibc] (priority: 55)
+[  3% 919/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/kotlin_generator.cc [linux_glibc] (priority: 55)
+[  3% 920/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/helpers.cc [linux_glibc] (priority: 55)
+[  3% 921/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/map_field.cc [linux_glibc] (priority: 55)
+[  3% 922/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/map_field_lite.cc [linux_glibc] (priority: 55)
+[  3% 923/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_builder.cc [linux_glibc] (priority: 55)
+[  3% 924/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message.cc [linux_glibc] (priority: 55)
+[  3% 925/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_builder_lite.cc [linux_glibc] (priority: 55)
+[  3% 926/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_field.cc [linux_glibc] (priority: 55)
+[  3% 927/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_field_lite.cc [linux_glibc] (priority: 55)
+[  3% 928/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_lite.cc [linux_glibc] (priority: 55)
+[  3% 929/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/name_resolver.cc [linux_glibc] (priority: 55)
+[  3% 930/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/primitive_field.cc [linux_glibc] (priority: 55)
+[  3% 931/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/primitive_field_lite.cc [linux_glibc] (priority: 55)
+[  3% 932/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/service.cc [linux_glibc] (priority: 55)
+[  3% 933/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/shared_code_generator.cc [linux_glibc] (priority: 55)
+[  3% 934/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/string_field.cc [linux_glibc] (priority: 55)
+[  3% 935/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/string_field_lite.cc [linux_glibc] (priority: 55)
 ```
