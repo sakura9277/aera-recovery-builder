@@ -2,20 +2,20 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:03:21Z |
+| 采样时刻 | 2026-11-06 17:03:53Z |
 | 已运行 | **14 分钟** |
-| ninja 进度 | `2235/28037` |
+| ninja 进度 | `2406/28037` |
 | 工作卷 | `64G used, 32G avail, 67%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2221M used / 13762M avail | swap 3995M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.01 avg300=3.46 total=94795804 full avg10=0.00 avg60=0.01 avg300=3.22 total=87616003 ` |
+| 内存 | `2261M used / 13722M avail | swap 3988M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=3.12 total=94801887 full avg10=0.00 avg60=0.00 avg300=2.90 total=87622082 ` |
 
 ### 内存占用 Top6
 
 ```
-   341M  ninja
-   154M  clang++.real
-   137M  clang++.real
+   348M  ninja
+   122M  rustc
+   115M  clang++.real
    109M  provjobd2880998
     49M  Runner.Listener
     43M  multipathd
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  7% 2211/28037] //system/keymaster:libcppcose_rkp generate toc libcppcose_rkp.so (priority: 37)
-[  7% 2212/28037] //external/fmtlib:fmtlib clang++ src/format.cc (priority: 37)
-[  7% 2213/28037] //system/libhidl:libhidlbase generate toc libhidlbase.so (priority: 37)
-[  7% 2214/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/android_keymaster.cpp (priority: 37)
-[  7% 2215/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/android_keymaster_messages.cpp (priority: 37)
-[  7% 2216/28037] //external/rust/android-crates-io/crates/displaydoc:libdisplaydoc rustc src/lib.rs [linux_glibc] (priority: 37)
-[  7% 2217/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/android_keymaster_utils.cpp (priority: 37)
-[  7% 2218/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/authorization_set.cpp (priority: 37)
-[  7% 2219/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/keymaster_tags.cpp (priority: 37)
-[  7% 2220/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/logger.cpp (priority: 37)
-[  7% 2221/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/operation.cpp (priority: 37)
-[  7% 2222/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/keymaster_enforcement.cpp (priority: 37)
-[  7% 2223/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/operation_table.cpp (priority: 37)
-[  7% 2224/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/pure_soft_secure_key_storage.cpp (priority: 37)
-[  7% 2225/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/serializable.cpp (priority: 37)
-[  7% 2226/28037] //system/keymaster:libkeymaster_portable clang++ key_blob_utils/auth_encrypted_key_blob.cpp (priority: 37)
-[  7% 2227/28037] //system/keymaster:libkeymaster_portable clang++ android_keymaster/remote_provisioning_utils.cpp (priority: 37)
-[  7% 2228/28037] //system/keymaster:libkeymaster_portable clang key_blob_utils/ocb.c (priority: 37)
-[  7% 2229/28037] //system/keymaster:libkeymaster_portable clang++ key_blob_utils/integrity_assured_key_blob.cpp (priority: 37)
-[  7% 2230/28037] //system/keymaster:libkeymaster_portable clang++ key_blob_utils/ocb_utils.cpp (priority: 37)
-[  7% 2231/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/aes_key.cpp (priority: 37)
-[  7% 2232/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/aes_operation.cpp (priority: 37)
-[  7% 2233/28037] //system/keymaster:libkeymaster_portable clang++ key_blob_utils/software_keyblobs.cpp (priority: 37)
-[  7% 2234/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/asymmetric_key_factory.cpp (priority: 37)
-[  7% 2235/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/asymmetric_key.cpp (priority: 37)
+[  8% 2382/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/security/sharedsecret/aidl/android.hardware.security.sharedsecret-V1-ndk-source/gen/timestamp (priority: 34)
+[  8% 2383/28037] AIDL CHECK API: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/security/sharedsecret/aidl/android.hardware.security.sharedsecret_interface/dump against hardware/interfaces/security/sharedsecret/aidl/aidl_api/android.hardware.security.sharedsecret/current (priority: 34)
+[  8% 2384/28037] Verify hardware/interfaces/security/sharedsecret/aidl/aidl_api/android.hardware.security.sharedsecret/1 files have not been modified (priority: 34)
+[  8% 2385/28037] AIDL CHECK API: hardware/interfaces/security/sharedsecret/aidl/aidl_api/android.hardware.security.sharedsecret/current against hardware/interfaces/security/sharedsecret/aidl/aidl_api/android.hardware.security.sharedsecret/1 (priority: 34)
+[  8% 2386/28037]  (priority: 34)
+[  8% 2387/28037] //external/rust/android-crates-io/crates/clang-sys:copy_clang-sys_build_out raw genrule.sbox.textproto (priority: 34)
+[  8% 2388/28037] //bionic/libc:crt_pad_segment clang arch-common/bionic/crt_pad_segment.S (priority: 34)
+[  8% 2389/28037] //bionic/libc:crtbegin_so link crtbegin_so.o (priority: 34)
+[  8% 2390/28037] //bionic/libc:crtend_so clang arch-common/bionic/crtend_so.S (priority: 34)
+[  8% 2391/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V4-ndk clang++ android/hardware/security/keymint/KeyParameterValue.cpp (priority: 34)
+[  8% 2392/28037] //bionic/libc/async_safe:libasync_safe clang++ async_safe_log.cpp (priority: 34)
+[  8% 2393/28037] //system/libbase:libbase strip libbase.so (priority: 34)
+[  8% 2394/28037] //bionic/libc:libc link libc.so (priority: 34)
+[  8% 2395/28037] //prebuilts/clang/host/linux-x86:libc++ prebuilt shared library (priority: 34)
+[  8% 2396/28037] //system/core/libcutils:libcutils_sockets clang++ sockets.cpp (priority: 34)
+[  8% 2397/28037] //system/core/libcutils:libcutils_sockets clang++ android_get_control_file.cpp (priority: 34)
+[  8% 2398/28037] //external/fmtlib:fmtlib clang++ src/format.cc (priority: 34)
+[  8% 2399/28037] //system/core/libcutils:libcutils_sockets clang++ socket_inaddr_any_server_unix.cpp (priority: 34)
+[  8% 2400/28037] //system/core/libcutils:libcutils_sockets clang++ socket_local_client_unix.cpp (priority: 34)
+[  8% 2401/28037] //system/core/libcutils:libcutils_sockets clang++ socket_local_server_unix.cpp (priority: 34)
+[  8% 2402/28037] //system/core/libcutils:libcutils_sockets clang++ socket_network_client_unix.cpp (priority: 34)
+[  8% 2403/28037] //bionic/libdl:libdl link libdl.so (priority: 34)
+[  8% 2404/28037] //system/core/libcutils:libcutils_sockets clang++ sockets_unix.cpp (priority: 34)
+[  8% 2405/28037] //bionic/libdl:libdl_android link libdl_android.so (priority: 34)
+[  8% 2406/28037] //hardware/libhardware:libhardware clang hardware.c (priority: 34)
 ```
