@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:23:08Z |
-| 已运行 | **33 分钟** |
-| ninja 进度 | `11815/28037` |
+| 采样时刻 | 2026-11-06 17:23:39Z |
+| 已运行 | **34 分钟** |
+| ninja 进度 | `11985/28037` |
 | 工作卷 | `66G used, 30G avail, 70%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2746M used / 13237M avail | swap 3763M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.02 total=95103387 full avg10=0.00 avg60=0.00 avg300=0.02 total=87908797 ` |
+| 内存 | `2666M used / 13317M avail | swap 3762M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.02 total=95103387 full avg10=0.00 avg60=0.00 avg300=0.01 total=87908797 ` |
 
 ### 内存占用 Top6
 
 ```
-   551M  ninja
-   241M  clang++.real
-   110M  provjobd2880998
-    95M  clang++.real
-    91M  soong_ui
+   553M  ninja
+   111M  provjobd2880998
+    98M  clang++.real
+    93M  soong_ui
     68M  Runner.Worker
+    59M  Runner.Listener
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 42% 11791/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk strip android.hardware.health-V4-ndk.so (priority: 15)
-[ 42% 11792/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryCapacityLevel.cpp (priority: 15)
-[ 42% 11793/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryChargingPolicy.cpp (priority: 15)
-[ 42% 11794/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryChargingState.cpp (priority: 15)
-[ 42% 11795/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryHealth.cpp (priority: 15)
-[ 42% 11796/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryHealthData.cpp (priority: 15)
-[ 42% 11797/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryPartStatus.cpp (priority: 15)
-[ 42% 11798/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryStatus.cpp (priority: 15)
-[ 42% 11799/28037] //hardware/interfaces/fastboot/1.1:android.hardware.fastboot@1.1 clang++ android/hardware/fastboot/1.1/FastbootAll.cpp (priority: 15)
-[ 42% 11800/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/DiskStats.cpp (priority: 15)
-[ 42% 11801/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/HealthInfo.cpp (priority: 15)
-[ 42% 11802/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/HingeInfo.cpp (priority: 15)
-[ 42% 11803/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/IHealth.cpp (priority: 15)
-[ 42% 11804/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/IHealthInfoCallback.cpp (priority: 15)
-[ 42% 11805/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/StorageInfo.cpp (priority: 15)
-[ 42% 11806/28037] //hardware/interfaces/health/storage/aidl:android.hardware.health.storage-V1-ndk clang++ android/hardware/health/storage/IGarbageCollectCallback.cpp (priority: 15)
-[ 42% 11807/28037] //hardware/interfaces/health/storage/aidl:android.hardware.health.storage-V1-ndk clang++ android/hardware/health/storage/Result.cpp (priority: 15)
-[ 42% 11808/28037] //hardware/interfaces/health/storage/aidl:android.hardware.health.storage-V1-ndk clang++ android/hardware/health/storage/IStorage.cpp (priority: 15)
-[ 42% 11809/28037] //hardware/interfaces/health/storage/1.0:android.hardware.health.storage@1.0 clang++ android/hardware/health/storage/1.0/GarbageCollectCallbackAll.cpp (priority: 15)
-[ 42% 11810/28037] //hardware/interfaces/health/storage/1.0:android.hardware.health.storage@1.0 clang++ android/hardware/health/storage/1.0/StorageAll.cpp (priority: 15)
-[ 42% 11811/28037] //hardware/interfaces/health/2.0:android.hardware.health@2.0 strip android.hardware.health@2.0.so (priority: 15)
-[ 42% 11812/28037] //hardware/interfaces/health/2.0:android.hardware.health@2.0 generate toc android.hardware.health@2.0.so (priority: 15)
-[ 42% 11813/28037] //hardware/interfaces/health/storage/1.0:android.hardware.health.storage@1.0 clang++ android/hardware/health/storage/1.0/types.cpp (priority: 15)
-[ 42% 11814/28037] //hardware/interfaces/health/2.1:android.hardware.health@2.1 strip android.hardware.health@2.1.so (priority: 15)
-[ 42% 11815/28037] //hardware/interfaces/health/2.1:android.hardware.health@2.1 clang++ android/hardware/health/2.1/HealthInfoCallbackAll.cpp (priority: 15)
+[ 42% 11964/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/QosPolicyStatus.cpp (priority: 15)
+[ 42% 11965/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/StaIfaceCallbackState.cpp (priority: 15)
+[ 42% 11966/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/StaIfaceReasonCode.cpp (priority: 15)
+[ 42% 11967/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/StaIfaceStatusCode.cpp (priority: 15)
+[ 42% 11968/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/SignalPollResult.cpp (priority: 15)
+[ 42% 11969/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/SupplicantStatusCode.cpp (priority: 15)
+[ 42% 11970/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/TlsVersion.cpp (priority: 15)
+[ 42% 11971/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/TransitionDisableIndication.cpp (priority: 15)
+[ 42% 11972/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/SupplicantStateChangeData.cpp (priority: 15)
+[ 42% 11973/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/UsdBaseConfig.cpp (priority: 15)
+[ 42% 11974/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/UsdCapabilities.cpp (priority: 15)
+[ 42% 11975/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/UsdMessageInfo.cpp (priority: 15)
+[ 42% 11976/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/UsdPublishTransmissionType.cpp (priority: 15)
+[ 42% 11977/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/UsdPublishConfig.cpp (priority: 15)
+[ 42% 11978/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/UsdServiceProtoType.cpp (priority: 15)
+[ 42% 11979/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/UsdServiceDiscoveryInfo.cpp (priority: 15)
+[ 42% 11980/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/UsdTerminateReasonCode.cpp (priority: 15)
+[ 42% 11981/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/WifiChannelWidthInMhz.cpp (priority: 15)
+[ 42% 11982/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/WifiTechnology.cpp (priority: 15)
+[ 42% 11983/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/WpaDriverCapabilitiesMask.cpp (priority: 15)
+[ 42% 11984/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/WpsConfigError.cpp (priority: 15)
+[ 42% 11985/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/WpsConfigMethods.cpp (priority: 15)
+[ 42% 11986/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/WpsDevPasswordId.cpp (priority: 15)
+[ 42% 11987/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/WpsErrorIndication.cpp (priority: 15)
+[ 42% 11988/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/WpsProvisionMethod.cpp (priority: 15)
 ```
