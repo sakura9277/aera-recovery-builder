@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:37:10Z |
-| 已运行 | **47 分钟** |
-| ninja 进度 | `19119/28037` |
+| 采样时刻 | 2026-11-06 17:37:41Z |
+| 已运行 | **48 分钟** |
+| ninja 进度 | `19205/28037` |
 | 工作卷 | `69G used, 28G avail, 72%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2663M used / 13319M avail | swap 3712M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.01 avg300=0.00 total=95359706 full avg10=0.00 avg60=0.01 avg300=0.00 total=88157977 ` |
+| 内存 | `2717M used / 13266M avail | swap 3711M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95362726 full avg10=0.00 avg60=0.00 avg300=0.00 total=88160997 ` |
 
 ### 内存占用 Top6
 
 ```
-   621M  ninja
-   156M  soong_ui
-   124M  clang++.real
+   622M  ninja
+   157M  soong_ui
    110M  provjobd2880998
-    98M  clang++.real
+    92M  clang++.real
     71M  Runner.Worker
+    61M  Runner.Listener
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 68% 19095/28037] //external/libxml2:libxml2 clang xmlwriter.c (priority: 12)
-[ 68% 19096/28037] //external/libxml2:libxml2 clang xpath.c (priority: 12)
-[ 68% 19097/28037] //external/libxml2:libxml2 clang xpointer.c (priority: 12)
-[ 68% 19098/28037] //external/libxml2:libxml2 clang xmlschemas.c (priority: 12)
-[ 68% 19099/28037] //external/xz-embedded:libxz clang linux/lib/xz/xz_crc32.c (priority: 12)
-[ 68% 19100/28037] //external/xz-embedded:libxz clang linux/lib/xz/xz_dec_bcj.c (priority: 12)
-[ 68% 19101/28037] //external/xz-embedded:libxz clang linux/lib/xz/xz_dec_lzma2.c (priority: 12)
-[ 68% 19102/28037] //external/xz-embedded:libxz static link libxz.a (priority: 12)
-[ 68% 19103/28037] //external/zlib:libz static link libz.a (priority: 12)
-[ 68% 19104/28037] //external/xz-embedded:libxz clang linux/lib/xz/xz_dec_stream.c (priority: 12)
-[ 68% 19105/28037] //system/libziparchive:libziparchive static link libziparchive.a (priority: 12)
-[ 68% 19106/28037] //external/zstd:libzstd static link libzstd.a (priority: 12)
-[ 68% 19107/28037] //external/zstd:libzstd static link libzstd.a (priority: 12)
-[ 68% 19108/28037] //bionic/linker:linker.recovery clang++ dlfcn.cpp (priority: 12)
-[ 68% 19109/28037] //bionic/linker:linker.recovery clang++ linker_auxv.cpp (priority: 12)
-[ 68% 19110/28037] //bionic/linker:linker.recovery clang++ linker_block_allocator.cpp (priority: 12)
-[ 68% 19111/28037] //bionic/linker:linker.recovery clang++ linker_dlwarning.cpp (priority: 12)
-[ 68% 19112/28037] //bionic/linker:linker.recovery clang++ linker.cpp (priority: 12)
-[ 68% 19113/28037] //bionic/linker:linker.recovery clang++ linker_cfi.cpp (priority: 12)
-[ 68% 19114/28037] //bionic/linker:linker.recovery clang++ linker_debug.cpp (priority: 12)
-[ 68% 19115/28037] //bionic/linker:linker.recovery clang++ linker_gdb_support.cpp (priority: 12)
-[ 68% 19116/28037] //bionic/linker:linker.recovery clang++ linker_config.cpp (priority: 12)
-[ 68% 19117/28037] //bionic/linker:linker.recovery clang linker_libc_support.c (priority: 12)
-[ 68% 19118/28037] //bionic/linker:linker.recovery clang++ linker_libcxx_support.cpp (priority: 12)
-[ 68% 19119/28037] //bionic/linker:linker.recovery clang++ linker_globals.cpp (priority: 12)
+[ 68% 19181/28037] //system/linkerconfig:linkerconfig_modules clang++ modules/stringutil.cc [linux_glibc] (priority: 12)
+[ 68% 19182/28037] //system/linkerconfig:linkerconfig_modules clang++ modules/variables.cc [linux_glibc] (priority: 12)
+[ 68% 19183/28037] //system/linkerconfig:linkerconfig_modules clang++ cpp/com_android_apex.cpp [linux_glibc] (priority: 12)
+[ 68% 19184/28037] //system/linkerconfig:linkerconfig_modules clang++ cpp/com_android_apex_enums.cpp [linux_glibc] (priority: 12)
+[ 68% 19185/28037] //system/logging/logcat:logcat clang++ proto/system/logging/logcat/logcat.pb.cc (priority: 12)
+[ 68% 19186/28037] //system/logging/logcat:logcat clang++ process_names.cpp (priority: 12)
+[ 68% 19187/28037] //system/logging/logcat:logcat clang++ logcat.cpp (priority: 12)
+[ 68% 19188/28037] //system/logging/logd:logd clang++ CommandListener.cpp (priority: 12)
+[ 68% 19189/28037] //system/logging/logd:logd clang++ main.cpp (priority: 12)
+[ 68% 19190/28037] //system/logging/logd:logd clang++ LogdNativeService.cpp (priority: 12)
+[ 68% 19191/28037] //system/logging/logd:logd clang++ LogAudit.cpp (priority: 12)
+[ 68% 19192/28037] //system/logging/logd:logd clang++ LogKlog.cpp (priority: 12)
+[ 68% 19193/28037] //system/logging/logd:logd clang++ LogListener.cpp (priority: 12)
+[ 68% 19194/28037] //system/logging/logd:logd clang++ LogPermissions.cpp (priority: 12)
+[ 68% 19195/28037] //system/logging/logd:logd clang++ TrustyLog.cpp (priority: 12)
+[ 68% 19196/28037] //system/logging/logd:logd clang++ LogReader.cpp (priority: 12)
+[ 68% 19197/28037] //system/logging/logd:logd clang++ PkgIds.cpp (priority: 12)
+[ 68% 19198/28037] //system/logging/logd:logd clang++ android/os/logcat/ILogcatManagerService.cpp (priority: 12)
+[ 68% 19199/28037] //system/extras/partition_tools:lpadd clang++ lpadd.cc (priority: 12)
+[ 68% 19200/28037] //system/extras/partition_tools:lpdumpd link lpdumpd (priority: 12)
+[ 68% 19201/28037] //system/extras/partition_tools:lpdump clang++ lpdump_target.cc (priority: 12)
+[ 68% 19202/28037] //system/extras/partition_tools:lpflash clang++ lpflash.cc (priority: 12)
+[ 68% 19203/28037] //system/extras/partition_tools:lpmake clang++ lpmake.cc (priority: 12)
+[ 68% 19204/28037] //external/lptools:lptools clang++ lptools.cc (priority: 12)
+[ 68% 19205/28037] //system/update_engine:lz4diff-protos static link lz4diff-protos.a (priority: 12)
 ```
