@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:01:48Z |
-| 已运行 | **12 分钟** |
-| ninja 进度 | `1905/28037` |
-| 工作卷 | `64G used, 33G avail, 67%` |
+| 采样时刻 | 2026-11-06 17:02:19Z |
+| 已运行 | **13 分钟** |
+| ninja 进度 | `2017/28037` |
+| 工作卷 | `64G used, 32G avail, 67%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2301M used / 13682M avail | swap 4046M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.10 avg300=4.79 total=94790993 full avg10=0.00 avg60=0.10 avg300=4.46 total=87611194 ` |
+| 内存 | `2163M used / 13820M avail | swap 4035M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.05 avg300=4.29 total=94794204 full avg10=0.00 avg60=0.05 avg300=3.99 total=87614404 ` |
 
 ### 内存占用 Top6
 
 ```
-   292M  ninja
+   304M  ninja
    108M  provjobd2880998
-    66M  clang++.real
-    45M  Runner.Listener
+   102M  clang++.real
+    44M  Runner.Listener
     43M  multipathd
-    31M  soong_ui
+    32M  soong_ui
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  6% 1882/28037] //external/boringssl:libcrypto clang src/gen/test_support/trampoline-x86_64-linux.S [linux_glibc] (priority: 47)
-[  6% 1883/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_curve25519_adx_mul.S [linux_glibc] (priority: 47)
-[  6% 1884/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_curve25519_adx_square.S [linux_glibc] (priority: 47)
-[  6% 1885/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_p256_adx_mul.S [linux_glibc] (priority: 47)
-[  6% 1886/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_p256_adx_sqr.S [linux_glibc] (priority: 47)
-[  6% 1887/28037] //system/core/libcutils:libcutils strip libcutils.so (priority: 47)
-[  6% 1888/28037] //system/tools/hidl:libhidl-gen clang++ Annotation.cpp [linux_glibc] (priority: 47)
-[  6% 1889/28037] //system/tools/hidl:libhidl-gen clang++ ArrayType.cpp [linux_glibc] (priority: 47)
-[  6% 1890/28037] //system/tools/hidl:libhidl-gen clang++ ConstantExpression.cpp [linux_glibc] (priority: 47)
-[  6% 1891/28037] //system/tools/hidl:libhidl-gen clang++ DeathRecipientType.cpp [linux_glibc] (priority: 47)
-[  6% 1892/28037] //system/tools/hidl:libhidl-gen clang++ DocComment.cpp [linux_glibc] (priority: 47)
-[  6% 1893/28037] //system/tools/hidl:libhidl-gen clang++ CompoundType.cpp [linux_glibc] (priority: 47)
-[  6% 1894/28037] //system/tools/hidl:libhidl-gen clang++ EnumType.cpp [linux_glibc] (priority: 47)
-[  6% 1895/28037] //system/tools/hidl:libhidl-gen clang++ FmqType.cpp [linux_glibc] (priority: 47)
-[  6% 1896/28037] //system/tools/hidl:libhidl-gen clang++ HandleType.cpp [linux_glibc] (priority: 47)
-[  6% 1897/28037] //system/tools/hidl:libhidl-gen clang++ HidlTypeAssertion.cpp [linux_glibc] (priority: 47)
-[  6% 1898/28037] //system/tools/hidl:libhidl-gen clang++ Location.cpp [linux_glibc] (priority: 47)
-[  6% 1899/28037] //system/tools/hidl:libhidl-gen clang++ MemoryType.cpp [linux_glibc] (priority: 47)
-[  6% 1900/28037] //system/tools/hidl:libhidl-gen clang++ Method.cpp [linux_glibc] (priority: 47)
-[  6% 1901/28037] //system/tools/hidl:libhidl-gen clang++ Interface.cpp [linux_glibc] (priority: 47)
-[  6% 1902/28037] //system/tools/hidl:libhidl-gen clang++ NamedType.cpp [linux_glibc] (priority: 47)
-[  6% 1903/28037] //system/tools/hidl:libhidl-gen clang++ PointerType.cpp [linux_glibc] (priority: 47)
-[  6% 1904/28037] //system/tools/hidl:libhidl-gen clang++ ScalarType.cpp [linux_glibc] (priority: 47)
-[  6% 1905/28037] //system/tools/hidl:libhidl-gen clang++ StringType.cpp [linux_glibc] (priority: 47)
-[  6% 1906/28037] //system/tools/hidl:libhidl-gen clang++ Scope.cpp [linux_glibc] (priority: 47)
+[  7% 1994/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/IClientCallback.cpp (priority: 43)
+[  7% 1995/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/IServiceCallback.cpp (priority: 43)
+[  7% 1996/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/Service.cpp (priority: 43)
+[  7% 1997/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/IServiceManager.cpp (priority: 43)
+[  7% 1998/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/ServiceWithMetadata.cpp (priority: 43)
+[  7% 1999/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/ServiceDebugInfo.cpp (priority: 43)
+[  7% 2000/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/IAccessor.cpp (priority: 43)
+[  7% 2001/28037] //frameworks/native/libs/binder:libbinder clang++ IPermissionController.cpp (priority: 43)
+[  7% 2002/28037] //frameworks/native/libs/binder:libbinder clang++ PermissionController.cpp (priority: 43)
+[  7% 2003/28037] //frameworks/native/libs/binder:libbinder clang++ PermissionCache.cpp (priority: 43)
+[  7% 2004/28037] //frameworks/native/libs/binder:libbinder clang++ OS_android.cpp (priority: 43)
+[  7% 2005/28037] //frameworks/native/libs/binder:libbinder clang++ OS_unix_base.cpp (priority: 43)
+[  7% 2006/28037] //frameworks/native/libs/binder:libbinder clang++ Binder.cpp (priority: 43)
+[  7% 2007/28037] //frameworks/native/libs/binder:libbinder clang++ BpBinder.cpp (priority: 43)
+[  7% 2008/28037] //frameworks/native/libs/binder:libbinder clang++ Debug.cpp (priority: 43)
+[  7% 2009/28037] //frameworks/native/libs/binder:libbinder clang++ FdTrigger.cpp (priority: 43)
+[  7% 2010/28037] //frameworks/native/libs/binder:libbinder clang++ IInterface.cpp (priority: 43)
+[  7% 2011/28037] //frameworks/native/libs/binder:libbinder clang++ IResultReceiver.cpp (priority: 43)
+[  7% 2012/28037] //frameworks/native/libs/binder:libbinder clang++ ParcelFileDescriptor.cpp (priority: 43)
+[  7% 2013/28037] //frameworks/native/libs/binder:libbinder clang++ RecordedTransaction.cpp (priority: 43)
+[  7% 2014/28037] //frameworks/native/libs/binder:libbinder clang++ Parcel.cpp (priority: 43)
+[  7% 2015/28037] //frameworks/native/libs/binder:libbinder clang++ RpcSession.cpp (priority: 43)
+[  7% 2016/28037] //frameworks/native/libs/binder:libbinder clang++ RpcServer.cpp (priority: 43)
+[  7% 2017/28037] //frameworks/native/libs/binder:libbinder clang++ RpcTransportRaw.cpp (priority: 43)
+[  7% 2018/28037] //frameworks/native/libs/binder:libbinder clang++ RpcState.cpp (priority: 43)
 ```
