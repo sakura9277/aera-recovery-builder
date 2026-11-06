@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:28:20Z |
+| 采样时刻 | 2026-11-06 17:28:51Z |
 | 已运行 | **39 分钟** |
-| ninja 进度 | `14145/28037` |
-| 工作卷 | `67G used, 29G avail, 70%` |
+| ninja 进度 | `14484/28037` |
+| 工作卷 | `67G used, 29G avail, 71%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2646M used / 13337M avail | swap 3739M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95140791 full avg10=0.00 avg60=0.00 avg300=0.00 total=87945795 ` |
+| 内存 | `2504M used / 13479M avail | swap 3737M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95141969 full avg10=0.00 avg60=0.00 avg300=0.00 total=87946947 ` |
 
 ### 内存占用 Top6
 
 ```
-   580M  ninja
-   156M  clang++.real
-   146M  clang++.real
+   582M  ninja
    134M  soong_ui
-   116M  provjobd2880998
+   109M  provjobd2880998
     71M  Runner.Worker
+    60M  Runner.Listener
+    45M  clang++.real
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 50% 14137/28037] //system/security/keystore:keystore_cli_v2 clang++ keystore_cli_v2.cpp (priority: 13)
-system/security/keystore/keystore_cli_v2.cpp:704:9: warning: variable 'test_count' set but not used [-Wunused-but-set-variable]
-  704 |     int test_count = 0;
-      |         ^
-system/security/keystore/keystore_cli_v2.cpp:864:25: warning: 'listEntries' is deprecated: use listEntriesBatched instead. [-Wdeprecated-declarations]
-  864 |     auto rc = keystore->listEntries(ks2::Domain::APP, -1 /* nspace ignored */, &key_list);
-      |                         ^
-/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/hardware/interfaces/keystore2/aidl/android.system.keystore2-V5-ndk-source/gen/include/aidl/android/system/keystore2/IKeystoreService.h:66:210: note: 'listEntries' has been explicitly marked deprecated here
-   66 |   virtual ::ndk::ScopedAStatus listEntries(::aidl::android::system::keystore2::Domain in_domain, int64_t in_nspace, std::vector<::aidl::android::system::keystore2::KeyDescriptor>* _aidl_return) __attribute__((deprecated("use listEntriesBatched instead."))) = 0;
-      |                                                                                                                                                                                                                  ^
-system/security/keystore/keystore_cli_v2.cpp:1002:33: warning: 'AServiceManager_getService' is deprecated: this polls 5s, use AServiceManager_waitForService or AServiceManager_checkService [-Wdeprecated-declarations]
- 1002 |     ::ndk::SpAIBinder apcBinder(AServiceManager_getService("android.security.apc"));
-      |                                 ^
-frameworks/native/libs/binder/ndk/include_platform/android/binder_manager.h:107:3: note: 'AServiceManager_getService' has been explicitly marked deprecated here
-  107 | [[deprecated("this polls 5s, use AServiceManager_waitForService or AServiceManager_checkService")]]
-      |   ^
-3 warnings generated.
-[ 50% 14138/28037] //packages/modules/adb:libadbd_core clang++ adb_io.cpp (priority: 13)
-[ 50% 14139/28037] //packages/modules/adb:libadbd_core clang++ adb.cpp (priority: 13)
-[ 50% 14140/28037] //packages/modules/adb:libadbd_core clang++ adb_mdns.cpp (priority: 13)
-[ 50% 14141/28037] //packages/modules/adb:libadbd_core clang++ adb_listeners.cpp (priority: 13)
-[ 50% 14142/28037] //packages/modules/adb:libadbd_core clang++ adb_unique_fd.cpp (priority: 13)
-[ 50% 14143/28037] //packages/modules/adb:libadbd_core clang++ adb_trace.cpp (priority: 13)
-[ 50% 14144/28037] //packages/modules/adb:libadbd_core clang++ adb_utils.cpp (priority: 13)
-[ 50% 14145/28037] //packages/modules/adb:libadbd_core clang++ apacket_reader.cpp (priority: 13)
+[ 51% 14461/28037] //bionic/libc:libc_bionic clang++ bionic/lchown.cpp (priority: 13)
+[ 51% 14462/28037] //bionic/libc:libc_bionic clang++ bionic/lfs64_support.cpp (priority: 13)
+[ 51% 14463/28037] //bionic/libc:libc_bionic clang++ bionic/libgen.cpp (priority: 13)
+[ 51% 14464/28037] //bionic/libc:libc_bionic clang++ bionic/libc_init_common.cpp (priority: 13)
+[ 51% 14465/28037] //bionic/libc:libc_bionic clang++ bionic/link.cpp (priority: 13)
+[ 51% 14466/28037] //bionic/libc:libc_bionic clang++ bionic/locale.cpp (priority: 13)
+[ 51% 14467/28037] //bionic/libc:libc_bionic clang++ bionic/lockf.cpp (priority: 13)
+[ 51% 14468/28037] //bionic/libc:libc_bionic clang++ bionic/lstat.cpp (priority: 13)
+[ 51% 14469/28037] //bionic/libc:libc_bionic clang++ bionic/mblen.cpp (priority: 13)
+[ 51% 14470/28037] //bionic/libc:libc_bionic clang++ bionic/mbrtoc16.cpp (priority: 13)
+[ 51% 14471/28037] //bionic/libc:libc_bionic clang++ bionic/mbrtoc32.cpp (priority: 13)
+[ 51% 14472/28037] //bionic/libc:libc_bionic clang++ bionic/mempcpy.cpp (priority: 13)
+[ 51% 14473/28037] //bionic/libc:libc_bionic clang++ bionic/memset_explicit.cpp (priority: 13)
+[ 51% 14474/28037] //bionic/libc:libc_bionic clang++ bionic/mkdir.cpp (priority: 13)
+[ 51% 14475/28037] //bionic/libc:libc_bionic clang++ bionic/mkfifo.cpp (priority: 13)
+[ 51% 14476/28037] //bionic/libc:libc_bionic clang++ bionic/mknod.cpp (priority: 13)
+[ 51% 14477/28037] //bionic/libc:libc_bionic clang++ bionic/netdb.cpp (priority: 13)
+[ 51% 14478/28037] //bionic/libc:libc_bionic clang++ bionic/mntent.cpp (priority: 13)
+[ 51% 14479/28037] //bionic/libc:libc_bionic clang++ bionic/netinet_ether.cpp (priority: 13)
+[ 51% 14480/28037] //bionic/libc:libc_bionic clang++ bionic/net_if.cpp (priority: 13)
+[ 51% 14481/28037] //bionic/libc:libc_bionic clang++ bionic/nl_types.cpp (priority: 13)
+[ 51% 14482/28037] //bionic/libc:libc_bionic clang++ bionic/netinet_in.cpp (priority: 13)
+[ 51% 14483/28037] //bionic/libc:libc_bionic clang++ bionic/pathconf.cpp (priority: 13)
+[ 51% 14484/28037] //bionic/libc:libc_bionic clang++ bionic/open.cpp (priority: 13)
+[ 51% 14485/28037] //bionic/libc:libc_bionic clang++ bionic/pause.cpp (priority: 13)
 ```
