@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:09:05Z |
-| 已运行 | **19 分钟** |
-| ninja 进度 | `5226/28037` |
+| 采样时刻 | 2026-11-06 17:09:36Z |
+| 已运行 | **20 分钟** |
+| ninja 进度 | `5415/28037` |
 | 工作卷 | `65G used, 31G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2271M used / 13712M avail | swap 3898M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=1.05 total=94917909 full avg10=0.00 avg60=0.00 avg300=0.97 total=87735253 ` |
+| 内存 | `2277M used / 13706M avail | swap 3896M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.94 total=94940793 full avg10=0.00 avg60=0.00 avg300=0.87 total=87757623 ` |
 
 ### 内存占用 Top6
 
 ```
-   436M  ninja
-   126M  provjobd2880998
-    81M  clang++.real
+   437M  ninja
+   122M  provjobd2880998
+   117M  rustc
+   100M  ld.lld
     56M  Runner.Listener
-    53M  soong_ui
-    51M  clang++.real
+    54M  soong_ui
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 18% 5202/28037] //system/libbase:libbase generate toc libbase.so [linux_glibc] (priority: 24)
-[ 18% 5203/28037] //frameworks/native/libs/binder:libbinder clang++ BufferedTextOutput.cpp (priority: 24)
-[ 18% 5204/28037] //build/make/tools/aconfig/aconfig_storage_file:libaconfig_storage_file rustc src/lib.rs [linux_glibc] (priority: 24)
-[ 18% 5205/28037] //frameworks/native/libs/binder:libbinder clang++ IPCThreadState.cpp (priority: 24)
-[ 18% 5206/28037] //frameworks/native/libs/binder:libbinder clang++ BackendUnifiedServiceManager.cpp (priority: 24)
-[ 18% 5207/28037] //frameworks/native/libs/binder:libbinder clang++ IServiceManagerFFI.cpp (priority: 24)
-[ 18% 5208/28037] //frameworks/native/libs/binder:libbinder clang++ IServiceManager.cpp (priority: 24)
-[ 18% 5209/28037] //frameworks/native/libs/binder:libbinder clang++ ProcessState.cpp (priority: 24)
-[ 18% 5210/28037] //frameworks/native/libs/binder:libbinder clang++ Static.cpp (priority: 24)
-[ 18% 5211/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/ConnectionInfo.cpp (priority: 24)
-[ 18% 5212/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/IClientCallback.cpp (priority: 24)
-[ 18% 5213/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/IServiceCallback.cpp (priority: 24)
-[ 18% 5214/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/IServiceManager.cpp (priority: 24)
-[ 18% 5215/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/Service.cpp (priority: 24)
-[ 18% 5216/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/ServiceWithMetadata.cpp (priority: 24)
-[ 18% 5217/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/ServiceDebugInfo.cpp (priority: 24)
-[ 18% 5218/28037] //frameworks/native/libs/binder:libbinder clang++ android/os/IAccessor.cpp (priority: 24)
-[ 18% 5219/28037] //frameworks/native/libs/binder:libbinder clang++ IPermissionController.cpp (priority: 24)
-[ 18% 5220/28037] //frameworks/native/libs/binder:libbinder clang++ PermissionCache.cpp (priority: 24)
-[ 18% 5221/28037] //frameworks/native/libs/binder:libbinder clang++ PermissionController.cpp (priority: 24)
-[ 18% 5222/28037] //frameworks/native/libs/binder:libbinder clang++ OS_android.cpp (priority: 24)
-[ 18% 5223/28037] //frameworks/native/libs/binder:libbinder clang++ OS_unix_base.cpp (priority: 24)
-[ 18% 5224/28037] //frameworks/native/libs/binder:libbinder clang++ Binder.cpp (priority: 24)
-[ 18% 5225/28037] //frameworks/native/libs/binder:libbinder clang++ BpBinder.cpp (priority: 24)
-[ 18% 5226/28037] //frameworks/native/libs/binder:libbinder clang++ Debug.cpp (priority: 24)
+[ 19% 5391/28037] //system/libhidl:libhidlbase clang++ android/hidl/manager/1.0/ServiceManagerAll.cpp (priority: 24)
+[ 19% 5392/28037] //system/libhidl:libhidlbase clang++ android/hidl/manager/1.0/ServiceNotificationAll.cpp (priority: 24)
+[ 19% 5393/28037] //system/libhidl:libhidlbase clang++ android/hidl/manager/1.1/ServiceManagerAll.cpp (priority: 24)
+[ 19% 5394/28037] //system/libhidl:libhidlbase clang++ android/hidl/manager/1.2/ClientCallbackAll.cpp (priority: 24)
+[ 19% 5395/28037] //system/libhidl:libhidlbase clang++ android/hidl/manager/1.2/ServiceManagerAll.cpp (priority: 24)
+[ 19% 5396/28037] //system/libhidl:libhidlbase clang++ android/hidl/base/1.0/BaseAll.cpp (priority: 24)
+[ 19% 5397/28037] //system/libhwbinder:libhwbinder-impl-internal static link libhwbinder-impl-internal.a (priority: 24)
+[ 19% 5398/28037] //system/security/keystore:libkeystore-attestation-application-id link libkeystore-attestation-application-id.so (priority: 24)
+[ 19% 5399/28037] //system/libhidl:libhidlbase clang++ android/hidl/base/1.0/types.cpp (priority: 24)
+[ 19% 5400/28037] //system/logging/liblog:liblog header-abi-dumper log_event_list.cpp (priority: 24)
+[ 19% 5401/28037] //system/logging/liblog:liblog header-abi-dumper log_event_write.cpp (priority: 24)
+[ 19% 5402/28037] //system/logging/liblog:liblog header-abi-dumper logger_name.cpp (priority: 24)
+[ 19% 5403/28037] //system/logging/liblog:liblog header-abi-dumper logger_read.cpp (priority: 24)
+[ 19% 5404/28037] //system/security/keystore2/src/km_compat:libkm_compat link libkm_compat.so (priority: 24)
+[ 19% 5405/28037] //system/logging/liblog:liblog header-abi-dumper logger_write.cpp (priority: 24)
+[ 19% 5406/28037] //system/logging/liblog:liblog header-abi-dumper logprint.cpp (priority: 24)
+[ 19% 5407/28037] //system/logging/liblog:liblog header-abi-dumper properties.cpp (priority: 24)
+[ 19% 5408/28037] //system/logging/liblog:liblog header-abi-dumper event_tag_map.cpp (priority: 24)
+[ 19% 5409/28037] //system/logging/liblog:liblog header-abi-dumper log_time.cpp (priority: 24)
+[ 19% 5410/28037] //system/logging/liblog:liblog header-abi-dumper pmsg_reader.cpp (priority: 24)
+[ 19% 5411/28037] //system/logging/liblog:liblog header-abi-dumper pmsg_writer.cpp (priority: 24)
+[ 19% 5412/28037] //system/logging/liblog:liblog header-abi-dumper logd_reader.cpp (priority: 24)
+[ 19% 5413/28037] //system/logging/liblog:liblog header-abi-dumper logd_writer.cpp (priority: 24)
+[ 19% 5414/28037] //external/rust/android-crates-io/crates/log:liblog_rust rustc src/lib.rs (priority: 24)
+[ 19% 5415/28037] //bionic/libm:libm strip libm.so (priority: 24)
 ```
