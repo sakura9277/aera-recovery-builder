@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:06:29Z |
+| 采样时刻 | 2026-11-06 17:07:00Z |
 | 已运行 | **17 分钟** |
-| ninja 进度 | `3555/28037` |
+| ninja 进度 | `3688/28037` |
 | 工作卷 | `65G used, 32G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2491M used / 13492M avail | swap 3941M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.03 avg300=1.82 total=94888914 full avg10=0.00 avg60=0.03 avg300=1.69 total=87706510 ` |
+| 内存 | `2213M used / 13770M avail | swap 3938M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.01 avg300=1.63 total=94888914 full avg10=0.00 avg60=0.01 avg300=1.51 total=87706510 ` |
 
 ### 内存占用 Top6
 
 ```
-   402M  rustc
-   391M  ninja
-   131M  clang++.real
+   394M  ninja
    108M  provjobd2880998
+    71M  clang++.real
+    69M  clang++.real
     56M  Runner.Listener
-    43M  multipathd
+    43M  soong_ui
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 12% 3531/28037] //external/e2fsprogs/lib/et:libext2_com_err clang error_message.c (priority: 27)
-[ 12% 3532/28037] //external/e2fsprogs/lib/et:libext2_com_err clang et_name.c (priority: 27)
-[ 12% 3533/28037] //external/e2fsprogs/lib/et:libext2_com_err clang init_et.c (priority: 27)
-[ 12% 3534/28037] //external/e2fsprogs/lib/et:libext2_com_err clang com_err.c (priority: 27)
-[ 12% 3535/28037] //external/e2fsprogs/lib/et:libext2_com_err clang com_right.c (priority: 27)
-[ 12% 3536/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang clear.c (priority: 27)
-[ 12% 3537/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang compare.c (priority: 27)
-[ 12% 3538/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang copy.c (priority: 27)
-[ 12% 3539/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang gen_uuid.c (priority: 27)
-[ 12% 3540/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang isnull.c (priority: 27)
-[ 12% 3541/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang pack.c (priority: 27)
-[ 12% 3542/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang parse.c (priority: 27)
-[ 12% 3543/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang unpack.c (priority: 27)
-[ 12% 3544/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang unparse.c (priority: 27)
-[ 12% 3545/28037] //external/e2fsprogs/lib/uuid:libext2_uuid clang uuid_time.c (priority: 27)
-[ 12% 3546/28037] //system/extras/ext4_utils:libext4_utils link libext4_utils.so (priority: 27)
-[ 12% 3547/28037] //system/libhidl:libhidlbase clang++ base/HidlInternal.cpp (priority: 27)
-[ 12% 3548/28037] //system/libhidl:libhidlbase clang++ base/HidlSupport.cpp (priority: 27)
-[ 12% 3549/28037] //system/libhidl:libhidlbase clang++ base/Status.cpp (priority: 27)
-[ 12% 3550/28037] //system/libhidl:libhidlbase clang++ base/TaskRunner.cpp (priority: 27)
-[ 12% 3551/28037] //system/libhidl:libhidlbase clang++ transport/HidlBinderSupport.cpp (priority: 27)
-[ 12% 3552/28037] //system/libhidl:libhidlbase clang++ transport/HidlLazyUtils.cpp (priority: 27)
-[ 12% 3553/28037] //system/libhidl:libhidlbase clang++ transport/HidlPassthroughSupport.cpp (priority: 27)
-[ 12% 3554/28037] //system/libhidl:libhidlbase clang++ transport/HidlTransportSupport.cpp (priority: 27)
-[ 12% 3555/28037] //system/libhidl:libhidlbase clang++ transport/HidlTransportUtils.cpp (priority: 27)
+[ 13% 3664/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_int.cc (priority: 26)
+[ 13% 3665/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_mbstr.cc (priority: 26)
+[ 13% 3666/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_object.cc (priority: 26)
+[ 13% 3667/28037] //external/rust/android-crates-io/crates/bindgen-cli:libbindgen_cli rustc options.rs [linux_glibc] (priority: 26)
+[ 13% 3668/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_octet.cc (priority: 26)
+[ 13% 3669/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_strex.cc (priority: 26)
+[ 13% 3670/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_strnid.cc (priority: 26)
+[ 13% 3671/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_time.cc (priority: 26)
+[ 13% 3672/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_type.cc (priority: 26)
+[ 13% 3673/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_utctm.cc (priority: 26)
+[ 13% 3674/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/asn1_lib.cc (priority: 26)
+[ 13% 3675/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/asn1_par.cc (priority: 26)
+[ 13% 3676/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/asn_pack.cc (priority: 26)
+[ 13% 3677/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/f_int.cc (priority: 26)
+[ 13% 3678/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/f_string.cc (priority: 26)
+[ 13% 3679/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/posix_time.cc (priority: 26)
+[ 13% 3680/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_dec.cc (priority: 26)
+[ 13% 3681/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_enc.cc (priority: 26)
+[ 13% 3682/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_fre.cc (priority: 26)
+[ 13% 3683/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_new.cc (priority: 26)
+[ 13% 3684/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_typ.cc (priority: 26)
+[ 13% 3685/28037] //external/boringssl:libcrypto clang++ src/crypto/base64/base64.cc (priority: 26)
+[ 13% 3686/28037] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_utl.cc (priority: 26)
+[ 13% 3687/28037] //external/boringssl:libcrypto clang++ src/crypto/bio/bio.cc (priority: 26)
+[ 13% 3688/28037] //external/boringssl:libcrypto clang++ src/crypto/bio/bio_mem.cc (priority: 26)
 ```
