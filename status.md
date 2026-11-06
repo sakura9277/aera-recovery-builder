@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:12:44Z |
+| 采样时刻 | 2026-11-06 17:13:15Z |
 | 已运行 | **23 分钟** |
-| ninja 进度 | `6411/28037` |
-| 工作卷 | `65G used, 31G avail, 68%` |
+| ninja 进度 | `6646/28037` |
+| 工作卷 | `65G used, 31G avail, 69%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2463M used / 13520M avail | swap 3878M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.47 total=95040610 full avg10=0.00 avg60=0.00 avg300=0.44 total=87848518 ` |
+| 内存 | `2335M used / 13648M avail | swap 3874M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.42 total=95040620 full avg10=0.00 avg60=0.00 avg300=0.39 total=87848529 ` |
 
 ### 内存占用 Top6
 
 ```
-   455M  ninja
-   110M  provjobd2880998
-    64M  clang++.real
-    60M  soong_ui
+   460M  ninja
+   109M  provjobd2880998
+    61M  soong_ui
     58M  Runner.Listener
     43M  multipathd
+    32M  Runner.Worker
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 22% 6388/28037] //external/pcre:libpcre2 clang src/pcre2_serialize.c (priority: 22)
-[ 22% 6389/28037] //external/pcre:libpcre2 clang src/pcre2_string_utils.c (priority: 22)
-[ 22% 6390/28037] //external/pcre:libpcre2 clang src/pcre2_study.c (priority: 22)
-[ 22% 6391/28037] //external/pcre:libpcre2 clang src/pcre2_substitute.c (priority: 22)
-[ 22% 6392/28037] //external/pcre:libpcre2 clang src/pcre2_substring.c (priority: 22)
-[ 22% 6393/28037] //external/pcre:libpcre2 clang src/pcre2_tables.c (priority: 22)
-[ 22% 6394/28037] //external/pcre:libpcre2 clang src/pcre2_ucd.c (priority: 22)
-[ 22% 6395/28037] //external/pcre:libpcre2 clang src/pcre2_valid_utf.c (priority: 22)
-[ 22% 6396/28037] //external/pcre:libpcre2 clang src/pcre2_xclass.c (priority: 22)
-[ 22% 6397/28037] //external/pcre:libpcre2 clang src/pcre2_match.c (priority: 22)
-[ 22% 6398/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/any_lite.cc (priority: 22)
-[ 22% 6399/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arena.cc (priority: 22)
-[ 22% 6400/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arenaz_sampler.cc (priority: 22)
-[ 22% 6401/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arenastring.cc (priority: 22)
-[ 22% 6402/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_enum_util.cc (priority: 22)
-[ 22% 6403/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/extension_set.cc (priority: 22)
-[ 22% 6404/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_message_util.cc (priority: 22)
-[ 22% 6405/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_message_tctable_lite.cc (priority: 22)
-[ 22% 6406/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/implicit_weak_message.cc (priority: 22)
-[ 22% 6407/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/inlined_string_field.cc (priority: 22)
-[ 22% 6408/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/io_win32.cc (priority: 22)
-[ 22% 6409/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/coded_stream.cc (priority: 22)
-[ 22% 6410/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/strtod.cc (priority: 22)
-[ 22% 6411/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream.cc (priority: 22)
-[ 22% 6412/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream_impl.cc (priority: 22)
+[ 23% 6622/28037]  (priority: 21)
+[ 23% 6623/28037] AIDL CHECK API: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/contexthub/aidl/android.hardware.contexthub_interface/dump against hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/current (priority: 21)
+[ 23% 6624/28037]  (priority: 21)
+[ 23% 6625/28037] Verify hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/1 files have not been modified (priority: 21)
+[ 23% 6626/28037] Verify hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/2 files have not been modified (priority: 21)
+[ 23% 6627/28037] Verify hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/3 files have not been modified (priority: 21)
+[ 23% 6628/28037] AIDL CHECK API: hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/2 against hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/1 (priority: 21)
+[ 23% 6629/28037] Verify hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/4 files have not been modified (priority: 21)
+[ 23% 6630/28037] AIDL CHECK API: hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/3 against hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/2 (priority: 21)
+[ 23% 6631/28037] AIDL CHECK API: hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/4 against hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/3 (priority: 21)
+[ 23% 6632/28037] AIDL CHECK API: hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/current against hardware/interfaces/contexthub/aidl/aidl_api/android.hardware.contexthub/4 (priority: 21)
+[ 23% 6633/28037] AIDL CHECK API: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/drm/common/aidl/android.hardware.drm.common_interface/dump against hardware/interfaces/drm/common/aidl/aidl_api/android.hardware.drm.common/current (priority: 21)
+[ 23% 6634/28037] Verify hardware/interfaces/drm/common/aidl/aidl_api/android.hardware.drm.common/1 files have not been modified (priority: 21)
+[ 23% 6635/28037] AIDL CHECK API: hardware/interfaces/drm/common/aidl/aidl_api/android.hardware.drm.common/current against hardware/interfaces/drm/common/aidl/aidl_api/android.hardware.drm.common/1 (priority: 21)
+[ 23% 6636/28037]  (priority: 21)
+[ 23% 6637/28037]  (priority: 21)
+[ 23% 6638/28037]  (priority: 21)
+[ 23% 6639/28037]  (priority: 21)
+[ 23% 6640/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/gatekeeper/aidl/android.hardware.gatekeeper-V1-ndk-source/gen/timestamp (priority: 21)
+[ 23% 6641/28037] AIDL CHECK API: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/gatekeeper/aidl/android.hardware.gatekeeper_interface/dump against hardware/interfaces/gatekeeper/aidl/aidl_api/android.hardware.gatekeeper/current (priority: 21)
+[ 23% 6642/28037] Verify hardware/interfaces/gatekeeper/aidl/aidl_api/android.hardware.gatekeeper/1 files have not been modified (priority: 21)
+[ 23% 6643/28037]  (priority: 21)
+[ 23% 6644/28037] AIDL CHECK API: hardware/interfaces/gatekeeper/aidl/aidl_api/android.hardware.gatekeeper/current against hardware/interfaces/gatekeeper/aidl/aidl_api/android.hardware.gatekeeper/1 (priority: 21)
+[ 23% 6645/28037]  (priority: 21)
+[ 23% 6646/28037]  (priority: 21)
 ```
