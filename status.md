@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:41:51Z |
-| 已运行 | **52 分钟** |
-| ninja 进度 | `26070/28037` |
+| 采样时刻 | 2026-11-06 17:42:22Z |
+| 已运行 | **53 分钟** |
+| ninja 进度 | `26500/28037` |
 | 工作卷 | `70G used, 26G avail, 73%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2659M used / 13324M avail | swap 3679M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.01 avg300=0.00 total=95561940 full avg10=0.00 avg60=0.00 avg300=0.00 total=88335870 ` |
+| 内存 | `2666M used / 13317M avail | swap 3677M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95570901 full avg10=0.00 avg60=0.00 avg300=0.00 total=88344808 ` |
 
 ### 内存占用 Top6
 
 ```
-   648M  ninja
+   651M  ninja
    207M  soong_ui
-   113M  provjobd2880998
+   112M  provjobd2880998
+    89M  clang++.real
     83M  Runner.Listener
     72M  Runner.Worker
-    64M  clang.real
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 92% 26046/28037] //system/libbase:libbase clang++ process.cpp [linux_glibc x86] (priority: 9)
-[ 92% 26047/28037] //system/libbase:libbase clang++ parsenetaddress.cpp [linux_glibc x86] (priority: 9)
-[ 92% 26048/28037] //system/libbase:libbase clang++ properties.cpp [linux_glibc x86] (priority: 9)
-[ 92% 26049/28037] //system/libbase:libbase clang++ result.cpp [linux_glibc x86] (priority: 9)
-[ 92% 26050/28037] //system/libbase:libbase clang++ stringprintf.cpp [linux_glibc x86] (priority: 9)
-[ 92% 26051/28037] //system/libbase:libbase clang++ threads.cpp [linux_glibc x86] (priority: 9)
-[ 92% 26052/28037] //system/libbase:libbase clang++ strings.cpp [linux_glibc x86] (priority: 9)
-[ 92% 26053/28037] //system/libbase:libbase clang++ test_utils.cpp [linux_glibc x86] (priority: 9)
-[ 92% 26054/28037] //external/brotli:libbrotli clang c/common/constants.c [apex31] (priority: 9)
-[ 92% 26055/28037] //external/brotli:libbrotli clang c/common/context.c [apex31] (priority: 9)
-[ 92% 26056/28037] //external/brotli:libbrotli clang c/common/dictionary.c [apex31] (priority: 9)
-[ 92% 26057/28037] //external/brotli:libbrotli clang c/common/platform.c [apex31] (priority: 9)
-[ 92% 26058/28037] //external/brotli:libbrotli clang c/common/transform.c [apex31] (priority: 9)
-[ 92% 26059/28037] //external/brotli:libbrotli clang c/dec/bit_reader.c [apex31] (priority: 9)
-[ 92% 26060/28037] //system/libbase:libbase clang++ errors_unix.cpp [linux_glibc x86] (priority: 9)
-[ 92% 26061/28037] //external/brotli:libbrotli clang c/dec/huffman.c [apex31] (priority: 9)
-[ 92% 26062/28037] //external/brotli:libbrotli clang c/dec/state.c [apex31] (priority: 9)
-[ 92% 26063/28037] //external/brotli:libbrotli clang c/dec/decode.c [apex31] (priority: 9)
-[ 92% 26064/28037] //external/brotli:libbrotli clang c/enc/backward_references_hq.c [apex31] (priority: 9)
-[ 92% 26065/28037] //external/brotli:libbrotli clang c/enc/bit_cost.c [apex31] (priority: 9)
-[ 92% 26066/28037] //external/brotli:libbrotli clang c/enc/backward_references.c [apex31] (priority: 9)
-[ 92% 26067/28037] //external/brotli:libbrotli clang c/enc/block_splitter.c [apex31] (priority: 9)
-[ 92% 26068/28037] //external/brotli:libbrotli clang c/enc/brotli_bit_stream.c [apex31] (priority: 9)
-[ 92% 26069/28037] //external/brotli:libbrotli clang c/enc/command.c [apex31] (priority: 9)
-[ 92% 26070/28037] //external/brotli:libbrotli clang c/enc/cluster.c [apex31] (priority: 9)
+[ 94% 26476/28037] //external/boringssl:libcrypto clang src/gen/crypto/md5-586-linux.S [linux_glibc x86] (priority: 9)
+[ 94% 26477/28037] //external/boringssl:libcrypto clang src/gen/crypto/md5-x86_64-apple.S [linux_glibc x86] (priority: 9)
+[ 94% 26478/28037] //external/boringssl:libcrypto clang src/gen/crypto/md5-x86_64-linux.S [linux_glibc x86] (priority: 9)
+[ 94% 26479/28037] //external/boringssl:libcrypto clang src/gen/test_support/trampoline-armv4-linux.S [linux_glibc x86] (priority: 9)
+[ 94% 26480/28037] //external/boringssl:libcrypto clang src/gen/test_support/trampoline-armv8-apple.S [linux_glibc x86] (priority: 9)
+[ 94% 26481/28037] //external/boringssl:libcrypto clang src/gen/test_support/trampoline-armv8-linux.S [linux_glibc x86] (priority: 9)
+[ 94% 26482/28037] //external/boringssl:libcrypto clang src/gen/test_support/trampoline-armv8-win.S [linux_glibc x86] (priority: 9)
+[ 94% 26483/28037] //external/boringssl:libcrypto clang src/gen/test_support/trampoline-x86-apple.S [linux_glibc x86] (priority: 9)
+[ 94% 26484/28037] //external/boringssl:libcrypto clang src/gen/test_support/trampoline-x86-linux.S [linux_glibc x86] (priority: 9)
+[ 94% 26485/28037] //external/boringssl:libcrypto clang src/gen/test_support/trampoline-x86_64-linux.S [linux_glibc x86] (priority: 9)
+[ 94% 26486/28037] //external/boringssl:libcrypto clang src/gen/test_support/trampoline-x86_64-apple.S [linux_glibc x86] (priority: 9)
+[ 94% 26487/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_curve25519_adx_square.S [linux_glibc x86] (priority: 9)
+[ 94% 26488/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_curve25519_adx_mul.S [linux_glibc x86] (priority: 9)
+[ 94% 26489/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_p256_adx_mul.S [linux_glibc x86] (priority: 9)
+[ 94% 26490/28037] //external/boringssl:libcrypto clang src/third_party/fiat/asm/fiat_p256_adx_sqr.S [linux_glibc x86] (priority: 9)
+[ 94% 26491/28037] //external/boringssl:libcrypto_static clang++ src/crypto/asn1/a_bitstr.cc [linux_glibc] (priority: 9)
+[ 94% 26492/28037] //external/boringssl:libcrypto_static clang++ src/crypto/asn1/a_bool.cc [linux_glibc] (priority: 9)
+[ 94% 26493/28037] //external/boringssl:libcrypto_static clang++ src/crypto/asn1/a_d2i_fp.cc [linux_glibc] (priority: 9)
+[ 94% 26494/28037] //external/boringssl:libcrypto_static clang++ src/crypto/asn1/a_dup.cc [linux_glibc] (priority: 9)
+[ 94% 26495/28037] //external/boringssl:libcrypto_static clang++ src/crypto/asn1/a_i2d_fp.cc [linux_glibc] (priority: 9)
+[ 94% 26496/28037] //external/boringssl:libcrypto_static clang++ src/crypto/asn1/a_gentm.cc [linux_glibc] (priority: 9)
+[ 94% 26497/28037] //external/boringssl:libcrypto_static clang++ src/crypto/asn1/a_mbstr.cc [linux_glibc] (priority: 9)
+[ 94% 26498/28037] //external/boringssl:libcrypto_static clang++ src/crypto/asn1/a_int.cc [linux_glibc] (priority: 9)
+[ 94% 26499/28037] //external/boringssl:libcrypto_static clang++ src/crypto/asn1/a_octet.cc [linux_glibc] (priority: 9)
+[ 94% 26500/28037] //external/boringssl:libcrypto_static clang++ src/crypto/asn1/a_object.cc [linux_glibc] (priority: 9)
 ```
