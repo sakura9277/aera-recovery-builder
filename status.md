@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:24:11Z |
-| 已运行 | **34 分钟** |
-| ninja 进度 | `12178/28037` |
+| 采样时刻 | 2026-11-06 17:24:42Z |
+| 已运行 | **35 分钟** |
+| ninja 进度 | `12523/28037` |
 | 工作卷 | `67G used, 30G avail, 70%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2994M used / 12989M avail | swap 3758M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.01 total=95103387 full avg10=0.00 avg60=0.00 avg300=0.00 total=87908797 ` |
+| 内存 | `2633M used / 13350M avail | swap 3755M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=95108551 full avg10=0.00 avg60=0.00 avg300=0.00 total=87913960 ` |
 
 ### 内存占用 Top6
 
 ```
-   607M  rustc
-   557M  ninja
+   560M  ninja
+   149M  clang++.real
+   132M  clang++.real
    111M  provjobd2880998
-    93M  soong_ui
+   102M  soong_ui
     69M  Runner.Worker
-    59M  Runner.Listener
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 43% 12155/28037] //external/lz4/lib:liblz4 strip liblz4.so (priority: 15)
-[ 43% 12156/28037] //external/lz4/lib:liblz4 static link liblz4.a [linux_glibc] (priority: 15)
-[ 43% 12157/28037] //external/lzma:liblzma generate toc liblzma.so (priority: 15)
-[ 43% 12158/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ context_node.cpp (priority: 15)
-[ 43% 12159/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ contexts_serialized.cpp (priority: 15)
-[ 43% 12160/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ contexts_split.cpp (priority: 15)
-[ 43% 12161/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ prop_area.cpp (priority: 15)
-[ 43% 12162/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ prop_info.cpp (priority: 15)
-[ 43% 12163/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ system_properties.cpp (priority: 15)
-[ 43% 12164/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ system_property_api.cpp (priority: 15)
-[ 43% 12165/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ system_property_set.cpp (priority: 15)
-[ 43% 12166/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ property_info_parser.cpp (priority: 15)
-[ 43% 12167/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ context_node.cpp (priority: 15)
-[ 43% 12168/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ contexts_serialized.cpp (priority: 15)
-[ 43% 12169/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ contexts_split.cpp (priority: 15)
-[ 43% 12170/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ prop_area.cpp (priority: 15)
-[ 43% 12171/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ prop_info.cpp (priority: 15)
-[ 43% 12172/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ system_properties.cpp (priority: 15)
-[ 43% 12173/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ system_property_api.cpp (priority: 15)
-[ 43% 12174/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ system_property_set.cpp (priority: 15)
-[ 43% 12175/28037] //external/magisk-prebuilt/systemproperties:libmagisksystemproperties clang++ property_info_parser.cpp (priority: 15)
-[ 43% 12176/28037] //external/magisk-prebuilt/utils:libmagiskutils clang++ new.cpp (priority: 15)
-[ 43% 12177/28037] //external/magisk-prebuilt/utils:libmagiskutils clang++ files.cpp (priority: 15)
-[ 43% 12178/28037] //external/magisk-prebuilt/utils:libmagiskutils clang++ misc.cpp (priority: 15)
-[ 43% 12179/28037] //external/magisk-prebuilt/utils:libmagiskutils clang++ selinux.cpp (priority: 15)
+[ 44% 12499/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/android_input_event_config.pbzero.cc (priority: 15)
+[ 44% 12500/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/android_log_config.pbzero.cc (priority: 15)
+[ 44% 12501/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/android_polled_state_config.pbzero.cc (priority: 15)
+[ 44% 12502/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/android_sdk_sysprop_guard_config.pbzero.cc (priority: 15)
+[ 44% 12503/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/android_system_property_config.pbzero.cc (priority: 15)
+[ 44% 12504/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/app_wakelock_config.pbzero.cc (priority: 15)
+[ 44% 12505/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/kernel_wakelocks_config.pbzero.cc (priority: 15)
+[ 44% 12506/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/network_trace_config.pbzero.cc (priority: 15)
+[ 44% 12507/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/packages_list_config.pbzero.cc (priority: 15)
+[ 44% 12508/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/pixel_modem_config.pbzero.cc (priority: 15)
+[ 44% 12509/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/protolog_config.pbzero.cc (priority: 15)
+[ 44% 12510/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/surfaceflinger_layers_config.pbzero.cc (priority: 15)
+[ 44% 12511/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/surfaceflinger_transactions_config.pbzero.cc (priority: 15)
+[ 44% 12512/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/windowmanager_config.pbzero.cc (priority: 15)
+[ 44% 12513/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/android/windowmanager_config.gen.cc (priority: 15)
+[ 44% 12514/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/chrome/chrome_config.gen.cc (priority: 15)
+[ 44% 12515/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/chrome/histogram_samples.gen.cc (priority: 15)
+[ 44% 12516/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/chrome/system_metrics.gen.cc (priority: 15)
+[ 44% 12517/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/chrome/scenario_config.gen.cc (priority: 15)
+[ 44% 12518/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/chrome/v8_config.gen.cc (priority: 15)
+[ 44% 12519/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/data_source_config.gen.cc (priority: 15)
+[ 44% 12520/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/etw/etw_config.gen.cc (priority: 15)
+[ 44% 12521/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/interceptor_config.gen.cc (priority: 15)
+[ 44% 12522/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/test_config.gen.cc (priority: 15)
+[ 44% 12523/28037] //external/perfetto:libperfetto_c clang++ external/perfetto/protos/perfetto/config/stress_test_config.gen.cc (priority: 15)
 ```
