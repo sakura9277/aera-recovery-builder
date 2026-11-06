@@ -1,0 +1,168 @@
+name: Build AERA Recovery
+
+# 用法：Actions → Build AERA Recovery → Run workflow
+# 默认参数编的是一加 13 (dodge)，用来验证流水线能跑通、能出 recovery.img。
+# 换机型只改下面 5 个 input，不需要改 workflow 本身。
+
+on:
+  workflow_dispatch:
+    inputs:
+      device_code:
+        description: '机型代号（TARGET_DEVICE，例如 dodge / hummer）'
+        required: true
+        default: 'dodge'
+      device_tree_url:
+        description: '设备树仓库 Git 地址'
+        required: true
+        default: 'https://github.com/AERA-Recovery/android_device_oneplus_dodge-AERA'
+      device_tree_branch:
+        description: '设备树分支'
+        required: true
+        default: 'aera-16.0'
+      device_path:
+        description: '设备树在源码树中的路径'
+        required: true
+        default: 'device/oneplus/dodge'
+      lunch_target:
+        description: 'lunch 目标（Android 16 是 <product>-bp2a-eng）'
+        required: true
+        default: 'twrp_dodge-bp2a-eng'
+      make_targets:
+        description: '编译目标'
+        required: true
+        default: 'adbd recoveryimage'
+      jobs:
+        description: '并行任务数（免费 runner 4 核，别开太大）'
+        required: true
+        default: '4'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aera-${{ github.event.inputs.device_code }}
+  cancel-in-progress: false
+
+env:
+  WORKDIR: ${{ github.workspace }}/aera_workspace
+  MANIFEST_URL: https://github.com/AERA-Recovery/android_manifest.git
+  MANIFEST_BRANCH: aera-16.0
+  GOGC: '50'
+  GOMEMLIMIT: '10GiB'
+  ALLOW_MISSING_DEPENDENCIES: 'true'
+
+jobs:
+  build:
+    name: AERA · ${{ github.event.inputs.device_code }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+
+    steps:
+      - name: Checkout builder
+        uses: actions/checkout@v4
+
+      - name: Expand disk space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 8192
+          temp-reserve-mb: 4096
+          swap-size-mb: 8192
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+          remove-codeql: 'true'
+          remove-docker-images: 'true'
+
+      - name: Report host resources
+        run: |
+          df -h
+          free -h
+          nproc
+
+      - name: Install build dependencies
+        run: |
+          export DEBIAN_FRONTEND=noninteractive
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            git-core gnupg flex bison build-essential zip unzip curl wget \
+            zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \
+            lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc fontconfig \
+            python3 python-is-python3 rsync lz4 bc ccache libssl-dev \
+            libncurses-dev
+          mkdir -p ~/bin
+          curl -s https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+          chmod a+x ~/bin/repo
+          sudo ln -sf ~/bin/repo /usr/bin/repo
+          git config --global user.name "AERA Builder"
+          git config --global user.email "builder@users.noreply.github.com"
+          # manifest 里保留了 ssh pushurl，统一改走 https，免密钥
+          git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"
+          git config --global url."https://github.com/".insteadOf "git@github.com:"
+          repo --version
+
+      - name: Init and sync AERA manifest
+        run: |
+          mkdir -p "$WORKDIR"
+          cd "$WORKDIR"
+          repo init --depth=1 -u "$MANIFEST_URL" -b "$MANIFEST_BRANCH"
+          find .repo/manifests -name '*.xml' -exec sed -i 's|ssh://git@github.com/|https://github.com/|g' {} +
+          repo sync -c -j8 --no-clone-bundle --no-tags --optimize-fetch
+          df -h "$WORKDIR"
+
+      - name: Add device tree
+        run: |
+          cd "$WORKDIR"
+          git clone --depth=1 \
+            -b "${{ github.event.inputs.device_tree_branch }}" \
+            "${{ github.event.inputs.device_tree_url }}" \
+            "${{ github.event.inputs.device_path }}"
+          ls -la "${{ github.event.inputs.device_path }}" | head -40
+
+      - name: Drop .repo to free disk
+        run: |
+          cd "$WORKDIR"
+          du -sh .repo || true
+          rm -rf .repo
+          df -h "$WORKDIR"
+
+      - name: Build recovery image
+        run: |
+          cd "$WORKDIR"
+          export AERA_BUILD_DEVICE="${{ github.event.inputs.device_code }}"
+          source build/envsetup.sh
+          lunch "${{ github.event.inputs.lunch_target }}"
+          m ${{ github.event.inputs.make_targets }} -j${{ github.event.inputs.jobs }} 2>&1 | tail -n 250
+          mkdir -p "$GITHUB_WORKSPACE/artifacts"
+          find "out/target/product/${{ github.event.inputs.device_code }}" -maxdepth 1 \
+            \( -name '*.img' -o -name '*.zip' \) -exec cp -v {} "$GITHUB_WORKSPACE/artifacts/" \;
+          ls -lh "$GITHUB_WORKSPACE/artifacts"
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aera-${{ github.event.inputs.device_code }}-${{ github.run_number }}
+          path: |
+            artifacts/*.img
+            artifacts/*.zip
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Publish release
+        if: success()
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: AERA-${{ github.event.inputs.device_code }}-${{ github.run_number }}
+          name: AERA Recovery · ${{ github.event.inputs.device_code }} · build ${{ github.run_number }}
+          body: |
+            由 GitHub Actions 自动编译的 AERA Recovery（Android 16 / bp2a），未在真机验证。
+
+            - 机型代号：`${{ github.event.inputs.device_code }}`
+            - lunch：`${{ github.event.inputs.lunch_target }}`
+            - 设备树：${{ github.event.inputs.device_tree_url }} @ `${{ github.event.inputs.device_tree_branch }}`
+          files: |
+            artifacts/*.img
+            artifacts/*.zip
+          fail_on_unmatched_files: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
