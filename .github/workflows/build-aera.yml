@@ -133,7 +133,9 @@ jobs:
 
       - name: Build recovery image
         run: |
-          set -euo pipefail
+          # 不能用 set -u：build/envsetup.sh 里 TOP 等变量在赋值前就被引用，
+          # 开 nounset 会直接 `TOP: unbound variable` 挂掉
+          set -eo pipefail
           cd "$WORKDIR"
           DEV="${{ github.event.inputs.device_code }}"
           export AERA_BUILD_DEVICE="$DEV"
