@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:21:34Z |
+| 采样时刻 | 2026-11-06 17:22:05Z |
 | 已运行 | **32 分钟** |
-| ninja 进度 | `11127/28037` |
-| 工作卷 | `66G used, 30G avail, 69%` |
+| ninja 进度 | `11391/28037` |
+| 工作卷 | `66G used, 30G avail, 70%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2356M used / 13627M avail | swap 3808M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.05 total=95103386 full avg10=0.00 avg60=0.00 avg300=0.04 total=87908795 ` |
+| 内存 | `2469M used / 13514M avail | swap 3792M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.04 total=95103386 full avg10=0.00 avg60=0.00 avg300=0.03 total=87908795 ` |
 
 ### 内存占用 Top6
 
 ```
-   526M  ninja
-   112M  provjobd2880998
+   543M  ninja
+   126M  provjobd2880998
+   121M  clang++.real
+   113M  clang++.real
     89M  soong_ui
     59M  Runner.Listener
-    44M  Runner.Worker
-    43M  multipathd
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 39% 11103/28037] //external/perfetto:perfetto_protos_perfetto_trace_interned_data_zero_gen_headers generate interned_data.pbzero.h (priority: 17)
-[ 39% 11104/28037] //external/perfetto:perfetto_protos_perfetto_trace_non_minimal_zero_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11105/28037] //external/perfetto:perfetto_protos_perfetto_trace_perfetto_zero_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11106/28037] //external/perfetto:perfetto_protos_perfetto_trace_minimal_zero_gen_headers generate (priority: 17)
-[ 39% 11107/28037] //external/perfetto:perfetto_protos_perfetto_trace_power_zero_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11108/28037] //external/perfetto:perfetto_protos_perfetto_trace_perfetto_zero_gen_headers generate (priority: 17)
-[ 39% 11109/28037] //external/perfetto:perfetto_protos_perfetto_trace_profiling_zero_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11110/28037] //external/perfetto:perfetto_protos_perfetto_trace_power_zero_gen_headers generate (priority: 17)
-[ 39% 11111/28037] //external/perfetto:perfetto_protos_perfetto_trace_ps_zero_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11112/28037] //external/perfetto:perfetto_protos_perfetto_trace_ps_zero_gen_headers generate (priority: 17)
-[ 39% 11113/28037] //external/perfetto:perfetto_protos_perfetto_trace_profiling_zero_gen_headers generate (priority: 17)
-[ 39% 11114/28037] //external/perfetto:perfetto_protos_perfetto_trace_statsd_zero_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11115/28037] //external/perfetto:perfetto_protos_perfetto_trace_sys_stats_zero_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11116/28037] //external/perfetto:perfetto_protos_perfetto_trace_statsd_zero_gen_headers generate statsd_atom.pbzero.h (priority: 17)
-[ 39% 11117/28037] //external/perfetto:perfetto_protos_perfetto_trace_system_info_zero_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11118/28037] //external/perfetto:perfetto_protos_perfetto_trace_sys_stats_zero_gen_headers generate sys_stats.pbzero.h (priority: 17)
-[ 39% 11119/28037] //external/perfetto:perfetto_protos_perfetto_trace_track_event_cpp_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11120/28037] //external/perfetto:perfetto_protos_perfetto_trace_track_event_zero_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11121/28037] //external/perfetto:perfetto_protos_perfetto_trace_translation_zero_gen raw genrule.sbox.textproto (priority: 17)
-[ 39% 11122/28037] //external/perfetto:perfetto_protos_perfetto_trace_system_info_zero_gen_headers generate cpu_info.pbzero.h (priority: 17)
-[ 39% 11123/28037] //external/perfetto:perfetto_protos_perfetto_trace_translation_zero_gen_headers generate translation_table.pbzero.h (priority: 17)
-[ 39% 11124/28037] //system/sepolicy:plat_mapping_file Versioning mapping file plat_mapping_file (priority: 17)
-[ 39% 11125/28037] //system/sepolicy:plat_pub_versioned.cil Versioning mapping file plat_pub_versioned.cil (priority: 17)
-[ 39% 11126/28037] //external/perfetto:perfetto_src_base_version_gen_h generate perfetto_version.gen.h (priority: 17)
-[ 39% 11127/28037] //system/server_configurable_flags/libflags:server_configurable_flags link server_configurable_flags.so (priority: 17)
+[ 40% 11367/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang setflags.c (priority: 16)
+[ 40% 11368/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang setversion.c (priority: 16)
+[ 40% 11369/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang uuid.c (priority: 16)
+[ 40% 11370/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang ostype.c (priority: 16)
+[ 40% 11371/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang percent.c (priority: 16)
+[ 40% 11372/28037] //external/e2fsprogs/lib/e2p:libext2_e2p strip libext2_e2p.so (priority: 16)
+[ 40% 11373/28037] //external/e2fsprogs/misc:libext2_misc strip libext2_misc.so (priority: 16)
+[ 40% 11374/28037] //external/e2fsprogs/lib/uuid:libext2_uuid static link libext2_uuid.a (priority: 16)
+[ 40% 11375/28037] //system/extras/libfec:libfec generate toc libfec.so (priority: 16)
+[ 40% 11376/28037] //system/extras/f2fs_utils:libf2fs_sparseblock strip libf2fs_sparseblock.so (priority: 16)
+[ 40% 11377/28037] //system/core/fs_mgr/libfs_avb:libfs_avb static link libfs_avb.a (priority: 16)
+[ 40% 11378/28037] //system/core/fs_mgr:libfs_mgr generate toc libfs_mgr.so (priority: 16)
+[ 40% 11379/28037] //system/core/fs_mgr:libfs_mgr clang++ file_wait.cpp (priority: 16)
+[ 40% 11380/28037] //system/core/fs_mgr:libfs_mgr clang++ blockdev.cpp (priority: 16)
+[ 40% 11381/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_format.cpp (priority: 16)
+[ 40% 11382/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr.cpp (priority: 16)
+[ 40% 11383/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_dm_linear.cpp (priority: 16)
+[ 40% 11384/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_roots.cpp (priority: 16)
+[ 40% 11385/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_overlayfs_control.cpp (priority: 16)
+[ 40% 11386/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_overlayfs_mount.cpp (priority: 16)
+[ 40% 11387/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_vendor_overlay.cpp (priority: 16)
+[ 40% 11388/28037] //system/core/fs_mgr:libfs_mgr clang++ fiemap_status.cpp (priority: 16)
+[ 40% 11389/28037] //system/core/fs_mgr:libfs_mgr clang++ fiemap_writer.cpp (priority: 16)
+[ 40% 11390/28037] //system/core/fs_mgr:libfs_mgr clang++ image_manager.cpp (priority: 16)
+[ 40% 11391/28037] //system/core/fs_mgr:libfs_mgr clang++ metadata.cpp (priority: 16)
 ```
