@@ -32,9 +32,9 @@ on:
         required: true
         default: 'adbd recoveryimage'
       jobs:
-        description: '并行任务数（免费 runner 4 核，别开太大）'
+        description: '并行任务数（免费 runner 4 核 16G，实测 4 会 OOM，3 比较稳）'
         required: true
-        default: '4'
+        default: '3'
 
 permissions:
   contents: write
@@ -47,8 +47,9 @@ env:
   WORKDIR: ${{ github.workspace }}/aera_workspace
   MANIFEST_URL: https://github.com/AERA-Recovery/android_manifest.git
   MANIFEST_BRANCH: aera-16.0
-  GOGC: '50'
-  GOMEMLIMIT: '10GiB'
+  # 16G 内存的 runner 上，GOMEMLIMIT=10GiB 会让 soong_build 把内存吃到见底
+  GOGC: '40'
+  GOMEMLIMIT: '3GiB'
   ALLOW_MISSING_DEPENDENCIES: 'true'
 
 jobs:

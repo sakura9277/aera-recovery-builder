@@ -82,27 +82,28 @@ def main():
     ensure_branch()
     sha = None
     while not os.path.exists(SENTINEL):
-        mins = int((time.time() - START) / 60)
-        cur, last = progress()
-        df = sh(["df", "-h", WORKDIR]).splitlines()[-1:] or [""]
-        mem = sh(["free", "-h"]).splitlines()[:2]
-        body = "\n".join(
-            [
-                "# 构建心跳（每分钟自动更新）",
-                "",
-                "| 项 | 值 |",
-                "| --- | --- |",
-                "| 已运行 | **%d 分钟** |" % mins,
-                "| ninja 进度 | `%s` |" % cur,
-                "| 磁盘 | `%s` |" % (df[0] if df else ""),
-                "| 内存 | `%s` |" % (" / ".join(m.strip() for m in mem)),
-                "",
-                "```",
-                last or "(还没有输出)",
-                "```",
-            ]
-        )
+        # 整段包在 try 里：一次网络抖动不能把心跳线程搞死
         try:
+            mins = int((time.time() - START) / 60)
+            cur, last = progress()
+            df = sh(["df", "-h", WORKDIR]).splitlines()[-1:] or [""]
+            mem = sh(["free", "-h"]).splitlines()[:2]
+            body = "\n".join(
+                [
+                    "# 构建心跳（每 2 分钟自动更新）",
+                    "",
+                    "| 项 | 值 |",
+                    "| --- | --- |",
+                    "| 已运行 | **%d 分钟** |" % mins,
+                    "| ninja 进度 | `%s` |" % cur,
+                    "| 磁盘 | `%s` |" % (df[0] if df else ""),
+                    "| 内存 | `%s` |" % (" / ".join(m.strip() for m in mem)),
+                    "",
+                    "```",
+                    last or "(还没有输出)",
+                    "```",
+                ]
+            )
             payload = {
                 "message": "ci: heartbeat %dm %s" % (mins, cur),
                 "content": base64.b64encode(body.encode()).decode(),
@@ -118,8 +119,9 @@ def main():
                     pass
             r = call(API, "PUT", payload)
             sha = r.get("content", {}).get("sha", sha)
+            print("heartbeat %dm %s" % (mins, cur), flush=True)
         except Exception as e:
-            print("heartbeat failed:", e, flush=True)
+            print("heartbeat error:", e, flush=True)
         time.sleep(120)
 
 
