@@ -94,9 +94,10 @@ jobs:
             lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc fontconfig \
             python3 python-is-python3 rsync lz4 bc ccache libssl-dev \
             libncurses-dev zram-tools
-          curl -s https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-          chmod a+x ~/bin/repo
-          sudo ln -sf ~/bin/repo /usr/bin/repo
+          mkdir -p "$HOME/bin"
+          curl -fsSL https://storage.googleapis.com/git-repo-downloads/repo -o "$HOME/bin/repo"
+          chmod a+x "$HOME/bin/repo"
+          sudo ln -sf "$HOME/bin/repo" /usr/bin/repo
           git config --global user.name "AERA Builder"
           git config --global user.email "builder@users.noreply.github.com"
           git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"

@@ -118,12 +118,14 @@ adb shell su -c "dd if=/dev/block/by-name/recovery of=/sdcard/stock_recovery.img
 ```
 .
 ├── .github/workflows/build-aera.yml   # 流水线
-├── device/oneplus/hummer/             # 一加 Ace 5 Pro 设备树（421 个文件）
+├── device/oneplus/hummer/             # 一加 Ace 5 Pro 设备树
 ├── scripts/watchdog.sh                # 构建遥测，debug 开关控制
 ├── scripts/build-local.sh             # 本地编译，需要 150 GB 磁盘
 ├── docs/PORTING-hummer.md             # 移植路线与改动清单
 └── README.md
 ```
+
+设备树里 `recovery/root/vendor/lib64/libllvm-qgl.so` 有 21 MB，超过 Git Data API 单次请求上限，仓库内以 `libllvm-qgl.so.xz` 存放，构建时自动解压回原位，不影响产物。
 
 本仓库只负责把源码编成镜像。显示、触控、解密这些属于设备树本身的适配，流水线改不了；BootLoader 解锁和分区操作也不在范围内。
 
