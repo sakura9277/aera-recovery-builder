@@ -2,4 +2,6 @@ aera_workspace/
 out-artifacts/
 /*.img
 /*.zip
+__pycache__/
+*.pyc
 .DS_Store
