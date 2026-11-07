@@ -1,6 +1,6 @@
 # 把 AERA Recovery 移植到一加 Ace 5 Pro（hummer / PKH110）
 
-> 这篇是「怎么做」，不是「已经做好了」。AERA 官方目前没有这台机器的设备树，下面是基于公开资料 + AERA 官方示例树可复现的移植路线。移植完成的标志是：编译出 `recovery.img` → `fastboot boot` 能进界面 → 触控/解密/存储可用。**没走完最后一步之前，别 `fastboot flash`。**
+> 这篇是「怎么做」，不是「已经做好了」。AERA 官方目前没有这台机器的设备树，下面是基于公开资料 + AERA 官方示例树可复现的移植路线。移植完成的标志是：编译出 `recovery.img` → 刷入 `recovery` 分区后能进界面 → 触控/解密/存储可用。镜像不含内核，`fastboot boot` 验证不了，只能刷分区试，**刷之前务必备份原厂 recovery**。
 
 ---
 
@@ -15,6 +15,8 @@
 为什么推荐 B：这棵树本身就是 **SM87xx 统一树**，靠 `libinit` 读 `ro.boot.prjname` 在运行时识别机型，README 里明确写了支持 **OnePlus Ace 5 Pro (CN)**；它的 fstab、init rc、解密链路、厂商库都是给这一代 OPLUS 机器准备的，而且基线已经是 Android 16（`twrp-16.0`），和 AERA 的 `bp2a` 对得上。
 
 仓库：`https://github.com/kmiit/twrp_device_oplus_sm87xx`（分支 `twrp-16.0`，放置路径 `device/oplus/sm87xx`）
+
+> 本文其余章节按路线 B 写。本仓库里现成的 `device/oneplus/hummer/` 实际走的是 **路线 C**——以 AERA 官方 `dodge` 树为骨架改参数，因为同是 SM8750 + Adreno 830，GPU/KGSL/音频这些二进制可以直接复用，不用自己凑厂商库。两条路的改造清单大同小异，变量对照表通用。
 
 ---
 
@@ -147,12 +149,12 @@ adb shell uname -r          # 或看 vendor_boot 里的 kernel 版本
 设备树改完后，直接用本仓库的流水线（不用改 workflow）：
 
 ```
-device_code        : sm87xx
-device_tree_url    : <你 fork 后的仓库地址>
-device_tree_branch : twrp-16.0     # 或你自己拉的分支
-device_path        : device/oplus/sm87xx
-lunch_target       : twrp_sm87xx-bp2a-eng
-make_targets       : adbd recoveryimage
+device           : sm87xx
+device_tree      : <你 fork 后的仓库地址>   # 填 local 则用本仓库里的树
+device_tree_ref  : twrp-16.0               # 或你自己拉的分支
+device_path      : device/oplus/sm87xx
+lunch            : twrp_sm87xx-bp2a-eng
+targets          : adbd recoveryimage
 ```
 
 本地：
@@ -166,14 +168,14 @@ make_targets       : adbd recoveryimage
 ## 五、验证清单（按顺序，别跳）
 
 1. **编译通过**，产物 `out/target/product/sm87xx/recovery.img`，体积 < 分区大小（100 MiB，留 5% 余量给 AVB）。
-2. `fastboot boot recovery.img` **临时启动**，不落盘。
+2. `fastboot flash recovery recovery.img` 刷入后 `fastboot reboot recovery`。AERA 的镜像不含内核（`kernel_size = 0`），`fastboot boot` 起不来，只能刷进分区。
 3. 界面出得来、不花屏、方向正确（不对就调 `AERA_SCREEN_H` / `AERA_UI_ADAPTIVE_RESOLUTION`）。
 4. **触控**能点（不行 = 触摸模块没加载，查 `AERA_LOAD_VENDOR_MODULES` 与 init rc）。
 5. 亮度可调（`AERA_BRIGHTNESS_PATH` / 最大值）。
 6. **解密**：带 PIN 和不带 PIN 各试一次；失败看 keymaster/gatekeeper 服务与 `fstab` 的 `keydirectory`。
 7. 存储：`/data`、内置存储、OTG 能挂。
 8. fastbootd、sideload、MTP 正常。
-9. 以上都 OK 再 `fastboot flash recovery recovery.img`。
+9. 以上都 OK 再当日常使用。刷之前先备份原厂 `recovery` 分区。
 
 ---
 
