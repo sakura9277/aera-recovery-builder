@@ -1,18 +1,23 @@
 # AERA Recovery 编译流水线
 
-在 GitHub Actions 上编译 [AERA Recovery](https://aera-recovery.com/)（AOSP 16 / `bp2a` 基线，LVGL 原生界面）的 recovery.img。任何 AERA 设备树都能直接使用，不需要本地环境。
+在 GitHub Actions 上编译 [AERA Recovery](https://aera-recovery.com/)（AOSP 16 / `bp2a` 基线，LVGL 界面）的 `recovery.img`。
 
-当前仓库已为 **一加 Ace 5 Pro（`hummer` / PKH110）** 编译出可用产物，源码见 [aera-device-hummer](https://github.com/sakura9277/aera-device-hummer)。
+仓库内置 **一加 Ace 5 Pro（`hummer` / PKH110）** 设备树，Fork 之后不需要任何配置就能出包。也可以把 `device/oneplus/hummer/` 换成自己的设备树，编译任意 AERA 支持的机型。
 
 ---
 
-## 快速开始
+## 用法
 
-1. Fork 或新建仓库，包含 `.github/workflows/build-aera.yml`。
-2. Settings → Actions → General → Workflow permissions 选 **Read and write**（发布 Release 需要）。
-3. Actions → **Build AERA Recovery** → Run workflow，填机型参数。
+1. 点右上角 **Fork**。
+2. 在自己仓库里进入 **Settings → Actions → General**，把 **Workflow permissions** 设为 **Read and write**。发布 Release 需要这个权限，默认是只读。
+3. 进入 **Actions → Build AERA Recovery → Run workflow**，直接点绿色的运行按钮。
 
-产物在 **Artifacts**（保留 14 天）和 **Releases**（永久）中。
+所有参数都有默认值，不用改。产物在两处：
+
+- **Artifacts**：保留 14 天，进 workflow 页面底部下载
+- **Releases**：永久保存，tag 为 `AERA-<device>-<run_number>`
+
+单次运行约 80 分钟，其中源码同步 16 分钟、编译 55 分钟。
 
 ---
 
@@ -20,31 +25,49 @@
 
 | 参数 | 说明 | 默认值 |
 | :--- | :--- | :--- |
-| `device` | 机型代号，即 `TARGET_DEVICE` | `dodge` |
-| `device_tree` | 设备树仓库地址 | AERA 官方 dodge 树 |
-| `device_tree_ref` | 设备树分支或 tag | `aera-16.0` |
-| `device_path` | 设备树在源码树中的路径 | `device/oneplus/dodge` |
-| `lunch` | lunch 目标，失败时自动回退到 `twrp_<device>-eng` 等组合 | `twrp_dodge-bp2a-eng` |
+| `device` | 机型代号，即 `TARGET_DEVICE` | `hummer` |
+| `device_tree` | 设备树来源。填 `local` 用本仓库内的树，也可填 Git 仓库 URL | `local` |
+| `device_tree_ref` | 设备树分支或 tag，`local` 时忽略 | `main` |
+| `device_path` | 设备树放入源码树的路径 | `device/oneplus/hummer` |
+| `lunch` | lunch 目标，失败时自动回退到 `twrp_<device>-eng`、`twrp_<device>-trunk_staging-eng`、`aera_<device>-bp2a-eng` | `twrp_hummer-bp2a-eng` |
 | `targets` | make 目标 | `adbd recoveryimage` |
-| `jobs` | 并行数 | `2` |
-| `debug` | 把构建遥测写入 `ci-status` 分支 | `false` |
+| `jobs` | 并行数，2 核以上建议保持 2 | `2` |
+| `debug` | 每 30 秒把构建遥测推到 `ci-status` 分支 | `false` |
 
-`debug` 打开后，`scripts/watchdog.sh` 每 30 秒把磁盘、内存、PSI、内核 OOM 记录、ninja 进度和日志尾部推到 `ci-status` 分支。runner 意外中断时仍能读到最后一帧状态，用于排查失败原因。关闭时不产生任何额外提交。
+`debug` 打开后，`scripts/watchdog.sh` 会记录磁盘余量、内存、`/proc/pressure/memory`、内核 OOM 日志、ninja 进度和日志尾部。托管 runner 中途掉线时，`ci-status` 分支上仍能读到最后一帧状态。日常编译不需要开。
 
 ---
 
-## 资源
+## 换机型
 
-实测数据来自 4 核 16 GB 的标准 `ubuntu-24.04` runner：
+**情况一：目标机型已有 AERA 官方设备树**
 
-| 项目 | 实测 |
+把 `device_tree` 填成仓库地址，`device_tree_ref` 填分支，`device_path` 填官方要求的路径，`lunch` 填对应目标。例如编译一加 13（`dodge`）：
+
+```
+device           dodge
+device_tree      https://github.com/AERA-Recovery/android_device_oneplus_dodge-AERA
+device_tree_ref  aera-16.0
+device_path      device/oneplus/dodge
+lunch            twrp_dodge-bp2a-eng
+```
+
+**情况二：自己维护设备树**
+
+把树放进本仓库 `device/oneplus/<codename>/`，保持 `device_tree` 为 `local`，改 `device`、`device_path`、`lunch` 三个参数即可。放进仓库的好处是 Fork 的人不用再去找仓库地址，也不会因为上游改了分支而编不出来。
+
+新建设备树的路线和变量对照见 [`docs/PORTING-hummer.md`](docs/PORTING-hummer.md)。AERA 的显示参数按 1080 宽参考空间计算，不是物理像素：
+
+| 变量 | 含义 |
 | :--- | :--- |
-| 磁盘 | 源码同步后 58 GB，编译完 71 GB；流水线扩容到约 135 GB |
-| 内存 | 编译结束时空闲 14.9 GB，峰值未触发 OOM |
-| 时间 | 同步 16 分钟，编译 55 分钟（`-j2`） |
-| 环境 | `GOGC=40`、`GOMEMLIMIT=3GiB`、zram 60% zstd swap |
+| `AERA_SCREEN_H` | 界面逻辑高度，`1080 × 物理高 / 物理宽` |
+| `AERA_STATUS_H` | 状态栏高度 |
+| `AERA_STATUS_INDENT_LEFT` / `RIGHT` | 状态栏左右内缩 |
+| `AERA_DYNAMIC_FULL_SIZE` | super 分区可用大小 |
+| `AERA_DEFAULT_BRIGHTNESS` / `AERA_MAX_BRIGHTNESS` | 屏幕亮度范围 |
+| `AERA_BUILD_DEVICE` | 构建时指定的机型代号 |
 
-高于这个配置的机器会更快，低于 16 GB 内存容易在链接阶段被 OOM killer 打断。
+填成物理像素是最常见的错误：画布会变成 1440 宽，画面被竖直压扁。
 
 ---
 
@@ -56,47 +79,37 @@
 | `AERA-R1.0-Beta-Official-<device>.zip` | 卡刷包，在已有第三方 recovery 中刷入 |
 | `ramdisk-recovery.img` | 单独取出的 ramdisk，排障用 |
 
-AERA 的 recovery.img 设置了 `BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE`，镜像内 `kernel_size = 0`，内核来自设备本身的 boot 分区。因此只能刷入分区后重启进入，不能用 `fastboot boot` 直接引导。
+AERA 的设备树设置了 `BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE`，镜像里 `kernel_size = 0`，内核取自设备自身的 boot 分区。**不能用 `fastboot boot` 试启动**，必须刷进分区再重启。
 
 ```bash
 fastboot flash recovery recovery.img
 fastboot reboot recovery
 ```
 
-刷入前请先备份原厂 recovery：
+刷之前备份原厂 recovery：
 
 ```bash
 adb shell su -c "dd if=/dev/block/by-name/recovery of=/sdcard/stock_recovery.img"
 ```
 
-没有 root 的话，从 ColorOS 全量包中提取 `recovery.img` 备用。
+没有 root 就从 ColorOS 全量包里提取对应的 `recovery.img`。
 
 ---
 
-## 移植新机型
+## 资源占用
 
-1. 参照 [`docs/PORTING-hummer.md`](docs/PORTING-hummer.md) 建立设备树，或使用已有的 AERA 设备树。
-2. 设备树推送到独立仓库，填写上表中的 `device_tree` / `device_path` / `lunch`。
-3. 首次编译建议先用 `dodge` 官方树验证流水线，排除环境问题后再换自建树。
+数据来自 4 核 16 GB 的 `ubuntu-24.04` 标准 runner：
 
-AERA 依赖的机型变量：
-
-| 变量 | 含义 |
+| 项目 | 实测 |
 | :--- | :--- |
-| `AERA_SCREEN_H` | 界面逻辑高度，按 1080 宽参考空间换算 |
-| `AERA_STATUS_H` | 状态栏高度 |
-| `AERA_STATUS_INDENT_LEFT` / `RIGHT` | 状态栏左右内缩 |
-| `AERA_DYNAMIC_FULL_SIZE` | super 分区可用大小 |
-| `AERA_DEFAULT_BRIGHTNESS` / `AERA_MAX_BRIGHTNESS` | 屏幕亮度范围 |
-| `AERA_BUILD_DEVICE` | 构建时指定的机型代号 |
+| 磁盘 | 同步完 58 GB，编译完 71 GB；流水线扩容到约 135 GB |
+| 内存 | 编译结束时剩余 14.9 GB，未触发 OOM |
+| 时间 | 同步 16 分钟，编译 55 分钟（`-j2`） |
+| 环境 | `GOGC=40`、`GOMEMLIMIT=3GiB`、zram 60% zstd swap |
 
----
+低于 16 GB 内存时链接阶段容易被 OOM killer 打断。
 
-## 不在本仓库范围内的
-
-- 设备树的显示、触控、解密适配：属于设备树本身，改这里没用。
-- BootLoader 解锁、分区表修改、root 方案：与本流水线无关。
-- 产物未经真机验证的机型，刷入前请确认有回滚手段。
+源码同步后只删除 `cts`、`platform_testing`、`developers`、`pdk`。`test/` 和 `sdk/` 必须保留，`Android.bp` 会引用其中的 `csuite_test` 等模块类型，删掉会在解析阶段报 `unrecognized module type`。
 
 ---
 
@@ -104,9 +117,20 @@ AERA 依赖的机型变量：
 
 ```
 .
-├── .github/workflows/build-aera.yml   # Actions 流水线
+├── .github/workflows/build-aera.yml   # 流水线
+├── device/oneplus/hummer/             # 一加 Ace 5 Pro 设备树（421 个文件）
 ├── scripts/watchdog.sh                # 构建遥测，debug 开关控制
-├── scripts/build-local.sh             # 本地编译，需要 200 GB 磁盘
+├── scripts/build-local.sh             # 本地编译，需要 150 GB 磁盘
 ├── docs/PORTING-hummer.md             # 移植路线与改动清单
 └── README.md
 ```
+
+本仓库只负责把源码编成镜像。显示、触控、解密这些属于设备树本身的适配，流水线改不了；BootLoader 解锁和分区操作也不在范围内。
+
+---
+
+## 许可
+
+设备树中的二进制 blobs 版权归原厂所有，仅用于设备恢复。流水线脚本部分可自由使用。
+
+AERA Recovery 本身遵循其上游许可，使用前请阅读 [AERA-Recovery](https://github.com/AERA-Recovery) 的说明。

@@ -6,23 +6,23 @@ on:
       device:
         description: Device codename (TARGET_DEVICE)
         required: true
-        default: dodge
+        default: hummer
       device_tree:
-        description: Device tree repository URL
+        description: Device tree repo URL, or "local" to use the tree in this repository
         required: true
-        default: https://github.com/AERA-Recovery/android_device_oneplus_dodge-AERA
+        default: local
       device_tree_ref:
-        description: Device tree branch or tag
+        description: Device tree branch or tag (ignored when device_tree is "local")
         required: true
-        default: aera-16.0
+        default: main
       device_path:
         description: Device tree path inside the source tree
         required: true
-        default: device/oneplus/dodge
+        default: device/oneplus/hummer
       lunch:
         description: Lunch target
         required: true
-        default: twrp_dodge-bp2a-eng
+        default: twrp_hummer-bp2a-eng
       targets:
         description: Make targets
         required: true
@@ -119,11 +119,22 @@ jobs:
           df -h "$WORKDIR"
 
       - name: Add device tree
+        env:
+          TREE_SRC: ${{ inputs.device_tree }}
+          TREE_REF: ${{ inputs.device_tree_ref }}
+          TREE_PATH: ${{ inputs.device_path }}
         run: |
+          set -euo pipefail
           cd "$WORKDIR"
-          git clone --depth=1 -b "${{ inputs.device_tree_ref }}" \
-            "${{ inputs.device_tree }}" "${{ inputs.device_path }}"
-          ls -la "${{ inputs.device_path }}"
+          mkdir -p "$(dirname "$TREE_PATH")"
+          if [ "$TREE_SRC" = "local" ]; then
+            cp -a "$GITHUB_WORKSPACE/$TREE_PATH" "$TREE_PATH"
+          else
+            git clone --depth=1 -b "$TREE_REF" "$TREE_SRC" "$TREE_PATH"
+          fi
+          # blobs above the API request limit are stored as .xz in this repository
+          find "$TREE_PATH" -name '*.xz' -print -exec xz -d {} \;
+          ls -la "$TREE_PATH"
 
       # test/ 与 sdk/ 被 Android.bp 引用（csuite_test 等模块类型），不能删
       - name: Trim source tree
@@ -207,7 +218,7 @@ jobs:
           body: |
             Device: `${{ inputs.device }}`
             Lunch: `${{ inputs.lunch }}`
-            Device tree: ${{ inputs.device_tree }} @ `${{ inputs.device_tree_ref }}`
+            Device tree: `${{ inputs.device_path }}` (${{ inputs.device_tree == 'local' && github.repository || inputs.device_tree }})
             AOSP: ${{ env.MANIFEST_BRANCH }}
 
             Built by GitHub Actions. Test on hardware before flashing.

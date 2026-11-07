@@ -1,5 +1,5 @@
 aera_workspace/
 out-artifacts/
-*.img
-*.zip
+/*.img
+/*.zip
 .DS_Store
