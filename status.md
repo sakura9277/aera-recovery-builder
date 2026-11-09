@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:58:36Z |
+| 采样时刻 | 2026-11-09 23:59:07Z |
 | 已运行 | **28 分钟** |
-| ninja 进度 | `9096/28037` |
+| ninja 进度 | `9388/28037` |
 | 工作卷 | `66G used, 31G avail, 69%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2379M used / 13604M avail | swap 3786M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.15 total=94278798 full avg10=0.00 avg60=0.00 avg300=0.14 total=87070223 ` |
+| 内存 | `2683M used / 13300M avail | swap 3784M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.13 total=94278801 full avg10=0.00 avg60=0.00 avg300=0.12 total=87070226 ` |
 
 ### 内存占用 Top6
 
 ```
-   543M  ninja
-   113M  provjobd3626103
-    76M  soong_ui
-    69M  clang++.real
+   545M  ninja
+   393M  rustc
+   157M  clang++.real
+   109M  provjobd3626103
+    79M  soong_ui
     67M  Runner.Worker
-    56M  Runner.Listener
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 32% 9073/28037] //external/boringssl:libcrypto clang++ src/crypto/thread_win.cc (priority: 19)
-[ 32% 9074/28037] //external/boringssl:libcrypto clang++ src/crypto/trust_token/pmbtoken.cc (priority: 19)
-[ 32% 9075/28037] //external/boringssl:libcrypto clang++ src/crypto/trust_token/trust_token.cc (priority: 19)
-[ 32% 9076/28037] //external/boringssl:libcrypto clang++ src/crypto/trust_token/voprf.cc (priority: 19)
-[ 32% 9077/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/a_digest.cc (priority: 19)
-[ 32% 9078/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/a_sign.cc (priority: 19)
-[ 32% 9079/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/a_verify.cc (priority: 19)
-[ 32% 9080/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/algorithm.cc (priority: 19)
-[ 32% 9081/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/asn1_gen.cc (priority: 19)
-[ 32% 9082/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/by_dir.cc (priority: 19)
-[ 32% 9083/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/by_file.cc (priority: 19)
-[ 32% 9084/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/i2d_pr.cc (priority: 19)
-[ 32% 9085/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/name_print.cc (priority: 19)
-[ 32% 9086/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/policy.cc (priority: 19)
-[ 32% 9087/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/rsa_pss.cc (priority: 19)
-[ 32% 9088/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/t_crl.cc (priority: 19)
-[ 32% 9089/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/t_req.cc (priority: 19)
-[ 32% 9090/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/t_x509.cc (priority: 19)
-[ 32% 9091/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/t_x509a.cc (priority: 19)
-[ 32% 9092/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_akey.cc (priority: 19)
-[ 32% 9093/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_akeya.cc (priority: 19)
-[ 32% 9094/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_alt.cc (priority: 19)
-[ 32% 9095/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_bcons.cc (priority: 19)
-[ 32% 9096/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_bitst.cc (priority: 19)
-[ 32% 9097/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_conf.cc (priority: 19)
+[ 33% 9364/28037] //external/lzma:liblzma clang C/LzmaEnc.c (priority: 19)
+[ 33% 9365/28037] //external/lzma:liblzma clang C/Ppmd7Dec.c (priority: 19)
+[ 33% 9366/28037] //external/lzma:liblzma clang C/Ppmd7Enc.c (priority: 19)
+[ 33% 9367/28037] //external/lzma:liblzma clang C/Sha256.c (priority: 19)
+[ 33% 9368/28037] //external/lzma:liblzma clang C/Sort.c (priority: 19)
+[ 33% 9369/28037] //external/lzma:liblzma clang C/Sha256Opt.c (priority: 19)
+[ 33% 9370/28037] //external/lzma:liblzma clang C/Xz.c (priority: 19)
+[ 33% 9371/28037] //external/lzma:liblzma clang C/XzCrc64.c (priority: 19)
+[ 33% 9372/28037] //external/lzma:liblzma clang C/XzCrc64Opt.c (priority: 19)
+[ 33% 9373/28037] //external/lzma:liblzma clang C/XzEnc.c (priority: 19)
+[ 33% 9374/28037] //external/lzma:liblzma clang C/XzDec.c (priority: 19)
+[ 33% 9375/28037] //external/lzma:liblzma clang C/XzIn.c (priority: 19)
+[ 33% 9376/28037] //system/security/keystore2/message_macro:libmessage_macro rustc src/lib.rs (priority: 19)
+[ 33% 9377/28037] //system/core/libpackagelistparser:libpackagelistparser generate toc libpackagelistparser.so (priority: 19)
+[ 33% 9378/28037] //external/pcre:libpcre2 generate toc libpcre2.so (priority: 19)
+[ 33% 9379/28037] //external/pcre:libpcre2 generate toc libpcre2.so [linux_glibc] (priority: 19)
+[ 33% 9380/28037] //external/libpng:libpng link libpng.so (priority: 19)
+[ 33% 9381/28037] //external/rust/android-crates-io/crates/ppv-lite86:libppv_lite86 rustc src/lib.rs (priority: 19)
+[ 33% 9382/28037] //system/core/libprocessgroup/util:libprocessgroup_util clang++ cgroup_controller.cpp (priority: 19)
+[ 33% 9383/28037] //system/core/libprocessgroup/util:libprocessgroup_util clang++ cgroup_descriptor.cpp (priority: 19)
+[ 33% 9384/28037] //system/core/libprocessgroup/util:libprocessgroup_util clang++ util.cpp (priority: 19)
+[ 33% 9385/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/any_lite.cc (priority: 19)
+[ 33% 9386/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/arena.cc (priority: 19)
+[ 33% 9387/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/arenastring.cc (priority: 19)
+[ 33% 9388/28037] //external/protobuf:libprotobuf-cpp-full clang++ src/google/protobuf/arenaz_sampler.cc (priority: 19)
 ```
