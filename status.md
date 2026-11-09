@@ -2,21 +2,21 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:50:49Z |
+| 采样时刻 | 2026-11-09 23:51:21Z |
 | 已运行 | **20 分钟** |
-| ninja 进度 | `5269/28037` |
+| ninja 进度 | `5497/28037` |
 | 工作卷 | `65G used, 31G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2237M used / 13746M avail | swap 3859M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.91 total=94193568 full avg10=0.00 avg60=0.00 avg300=0.85 total=86987397 ` |
+| 内存 | `2423M used / 13560M avail | swap 3857M/17782M` |
+| PSI | `some avg10=0.02 avg60=0.02 avg300=0.83 total=94240530 full avg10=0.02 avg60=0.02 avg300=0.77 total=87034319 ` |
 
 ### 内存占用 Top6
 
 ```
-   483M  ninja
-   151M  rustc
-   114M  rustc
-   113M  provjobd3626103
+   485M  ninja
+   208M  clang++.real
+   126M  clang++.real
+   108M  provjobd3626103
     55M  Runner.Listener
     54M  soong_ui
 ```
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 18% 5245/28037] //frameworks/native/libs/binder:libbinder clang++ LazyServiceRegistrar.cpp (priority: 24)
-[ 18% 5246/28037] //frameworks/native/libs/binder:libbinder clang++ MemoryDealer.cpp (priority: 24)
-[ 18% 5247/28037] //frameworks/native/libs/binder:libbinder clang++ MemoryHeapBase.cpp (priority: 24)
-[ 18% 5248/28037] //frameworks/native/libs/binder:libbinder clang++ ParcelableHolder.cpp (priority: 24)
-[ 18% 5249/28037] //frameworks/native/libs/binder/ndk:libbinder_ndk generate toc libbinder_ndk.so (priority: 24)
-[ 18% 5250/28037] //frameworks/native/libs/binder/rust:libbinder_ndk_sys rustc sys/lib.rs (priority: 24)
-[ 18% 5251/28037] //bionic/libc:libc clang arch-common/bionic/crtbegin_so.c (priority: 24)
-[ 18% 5252/28037] //bionic/libc:libc clang arch-common/bionic/crtbrand.S (priority: 24)
-[ 18% 5253/28037] //bionic/libc:libc clang++ bionic/android_mallopt.cpp (priority: 24)
-[ 18% 5254/28037] //bionic/libc:libc clang++ bionic/gwp_asan_wrappers.cpp (priority: 24)
-[ 18% 5255/28037] //bionic/libc:libc clang++ bionic/heap_tagging.cpp (priority: 24)
-[ 18% 5256/28037] //bionic/libc:libc clang++ bionic/malloc_common.cpp (priority: 24)
-[ 18% 5257/28037] //bionic/libc:libc clang++ bionic/malloc_common_dynamic.cpp (priority: 24)
-[ 18% 5258/28037] //bionic/libc:libc clang++ bionic/android_profiling_dynamic.cpp (priority: 24)
-[ 18% 5259/28037] //bionic/libc:libc clang++ bionic/malloc_heapprofd.cpp (priority: 24)
-[ 18% 5260/28037] //bionic/libc:libc clang++ bionic/malloc_limit.cpp (priority: 24)
-[ 18% 5261/28037] //bionic/libc:libc clang++ bionic/ndk_cruft.cpp (priority: 24)
-[ 18% 5262/28037] //bionic/libc:libc clang++ bionic/ndk_cruft_data.cpp (priority: 24)
-[ 18% 5263/28037] //bionic/libc:libc clang++ bionic/NetdClient.cpp (priority: 24)
-[ 18% 5264/28037] //bionic/libc:libc clang arch-common/bionic/crtend_so.S (priority: 24)
-[ 18% 5265/28037] //frameworks/native/libs/binder:libbinder clang++ PersistableBundle.cpp (priority: 24)
-[ 18% 5266/28037] //bionic/libc:libc_common_shared static link libc_common_shared.a (priority: 24)
-[ 18% 5267/28037] //bionic/libc:libc_init_dynamic static link libc_init_dynamic.a (priority: 24)
-[ 18% 5268/28037] //external/rust/android-crates-io/crates/cfg-if:libcfg_if rustc src/lib.rs (priority: 24)
-[ 18% 5269/28037] //bionic/libc:libc rustc generated_rust_staticlib/librustlibs.rs (priority: 24)
+[ 19% 5473/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_list.c [linux_glibc] (priority: 24)
+[ 19% 5474/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_log.c [linux_glibc] (priority: 24)
+[ 19% 5475/28037] //external/selinux/libsepol:libsepol clang lex/external/selinux/libsepol/cil/src/cil_lexer.c [linux_glibc] (priority: 24)
+[ 19% 5476/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_mem.c [linux_glibc] (priority: 24)
+[ 19% 5477/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_parser.c [linux_glibc] (priority: 24)
+[ 19% 5478/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_policy.c [linux_glibc] (priority: 24)
+[ 19% 5479/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_post.c [linux_glibc] (priority: 24)
+[ 19% 5480/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_reset_ast.c [linux_glibc] (priority: 24)
+[ 19% 5481/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_stack.c [linux_glibc] (priority: 24)
+[ 19% 5482/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_strpool.c [linux_glibc] (priority: 24)
+[ 19% 5483/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_symtab.c [linux_glibc] (priority: 24)
+[ 19% 5484/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_tree.c [linux_glibc] (priority: 24)
+[ 19% 5485/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_resolve_ast.c [linux_glibc] (priority: 24)
+[ 19% 5486/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_verify.c [linux_glibc] (priority: 24)
+[ 19% 5487/28037] //external/selinux/libsepol:libsepol clang cil/src/cil_write_ast.c [linux_glibc] (priority: 24)
+[ 19% 5488/28037] //system/core/libsparse:libsparse generate toc libsparse.so (priority: 24)
+[ 19% 5489/28037] //external/rust/android-crates-io/crates/stable_deref_trait:libstable_deref_trait rustc src/lib.rs (priority: 24)
+[ 19% 5490/28037] //bionic/libc:libstdc++.arm64.map raw genrule.sbox.textproto (priority: 24)
+[ 19% 5491/28037] //system/core/libutils:libutils generate toc libutils.so (priority: 24)
+[ 19% 5492/28037] //external/rust/android-crates-io/crates/zerocopy:libzerocopy rustc src/lib.rs (priority: 24)
+[ 19% 5493/28037] //external/rust/android-crates-io/crates/zerofrom:libzerofrom rustc src/lib.rs (priority: 24)
+[ 19% 5494/28037] //external/rust/android-crates-io/crates/libsqlite3-sys/android:sqlite3_bindgen_build clippy build.rs [linux_glibc] (priority: 24)
+[ 19% 5495/28037] //external/rust/android-crates-io/crates/serde:libserde rustc src/lib.rs (priority: 24)
+[ 19% 5496/28037] //system/tools/sysprop:sysprop_cpp clang++ proto/system/tools/sysprop/sysprop.pb.cc [linux_glibc] (priority: 24)
+[ 19% 5497/28037] //system/tools/sysprop:sysprop_cpp clang++ CodeWriter.cpp [linux_glibc] (priority: 24)
 ```
