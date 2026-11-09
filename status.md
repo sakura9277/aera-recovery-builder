@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:53:56Z |
+| 采样时刻 | 2026-11-09 23:54:27Z |
 | 已运行 | **23 分钟** |
-| ninja 进度 | `6274/28037` |
+| ninja 进度 | `6423/28037` |
 | 工作卷 | `65G used, 31G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2511M used / 13472M avail | swap 3827M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.47 total=94268954 full avg10=0.00 avg60=0.00 avg300=0.43 total=87060386 ` |
+| 内存 | `2399M used / 13584M avail | swap 3825M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.41 total=94268954 full avg10=0.00 avg60=0.00 avg300=0.38 total=87060386 ` |
 
 ### 内存占用 Top6
 
 ```
-   499M  ninja
-   118M  clang++.real
+   501M  ninja
    109M  provjobd3626103
-    78M  clang++.real
+    81M  clang++.real
     64M  Runner.Worker
-    60M  soong_ui
+    61M  soong_ui
+    58M  clang++.real
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 22% 6250/28037] //external/libchrome:libchrome clang++ base/threading/thread_local_storage_posix.cc (priority: 22)
-[ 22% 6251/28037] //external/libchrome:libchrome clang++ base/threading/thread_restrictions.cc (priority: 22)
-[ 22% 6252/28037] //external/libchrome:libchrome clang++ base/threading/thread_task_runner_handle.cc (priority: 22)
-[ 22% 6253/28037] //external/libchrome:libchrome clang++ base/time/clock.cc (priority: 22)
-[ 22% 6254/28037] //external/libchrome:libchrome clang++ base/time/default_clock.cc (priority: 22)
-[ 22% 6255/28037] //external/libchrome:libchrome clang++ base/time/default_tick_clock.cc (priority: 22)
-[ 22% 6256/28037] //external/libchrome:libchrome clang++ base/time/tick_clock.cc (priority: 22)
-[ 22% 6257/28037] //external/libchrome:libchrome clang++ base/time/time.cc (priority: 22)
-[ 22% 6258/28037] //external/libchrome:libchrome clang++ base/time/time_conversion_posix.cc (priority: 22)
-[ 22% 6259/28037] //external/libchrome:libchrome clang++ base/time/time_exploded_posix.cc (priority: 22)
-[ 22% 6260/28037] //external/libchrome:libchrome clang++ base/time/time_now_posix.cc (priority: 22)
-[ 22% 6261/28037] //external/libchrome:libchrome clang++ base/time/time_override.cc (priority: 22)
-[ 22% 6262/28037] //external/libchrome:libchrome clang++ base/timer/elapsed_timer.cc (priority: 22)
-[ 22% 6263/28037] //external/libchrome:libchrome clang++ base/timer/timer.cc (priority: 22)
-[ 22% 6264/28037] //external/libchrome:libchrome clang++ base/token.cc (priority: 22)
-[ 22% 6265/28037] //external/libchrome:libchrome clang++ base/unguessable_token.cc (priority: 22)
-[ 22% 6266/28037] //external/libchrome:libchrome clang++ base/value_iterators.cc (priority: 22)
-[ 22% 6267/28037] //external/libchrome:libchrome clang++ base/version.cc (priority: 22)
-[ 22% 6268/28037] //external/libchrome:libchrome clang++ base/values.cc (priority: 22)
-[ 22% 6269/28037] //external/libchrome:libchrome clang++ base/vlog.cc (priority: 22)
-[ 22% 6270/28037] //external/libchrome:libchrome clang++ device/bluetooth/bluetooth_advertisement.cc (priority: 22)
-[ 22% 6271/28037] //external/libchrome:libchrome clang++ device/bluetooth/bluetooth_uuid.cc (priority: 22)
-[ 22% 6272/28037] //external/libchrome:libchrome clang++ device/bluetooth/bluez/bluetooth_service_attribute_value_bluez.cc (priority: 22)
-[ 22% 6273/28037] //external/libchrome:libchrome clang++ ui/gfx/geometry/insets.cc (priority: 22)
-[ 22% 6274/28037] //external/libchrome:libchrome clang++ ui/gfx/geometry/insets_f.cc (priority: 22)
+[ 22% 6399/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arena.cc (priority: 22)
+[ 22% 6400/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arenaz_sampler.cc (priority: 22)
+[ 22% 6401/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arenastring.cc (priority: 22)
+[ 22% 6402/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_enum_util.cc (priority: 22)
+[ 22% 6403/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/extension_set.cc (priority: 22)
+[ 22% 6404/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_message_util.cc (priority: 22)
+[ 22% 6405/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_message_tctable_lite.cc (priority: 22)
+[ 22% 6406/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/implicit_weak_message.cc (priority: 22)
+[ 22% 6407/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/inlined_string_field.cc (priority: 22)
+[ 22% 6408/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/io_win32.cc (priority: 22)
+[ 22% 6409/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/coded_stream.cc (priority: 22)
+[ 22% 6410/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/strtod.cc (priority: 22)
+[ 22% 6411/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream.cc (priority: 22)
+[ 22% 6412/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream_impl.cc (priority: 22)
+[ 22% 6413/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream_impl_lite.cc (priority: 22)
+[ 22% 6414/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/map.cc (priority: 22)
+[ 22% 6415/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/message_lite.cc (priority: 22)
+[ 22% 6416/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/parse_context.cc (priority: 22)
+[ 22% 6417/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/repeated_ptr_field.cc (priority: 22)
+[ 22% 6418/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/repeated_field.cc (priority: 22)
+[ 22% 6419/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/bytestream.cc (priority: 22)
+[ 22% 6420/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/common.cc (priority: 22)
+[ 22% 6421/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/int128.cc (priority: 22)
+[ 22% 6422/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/status.cc (priority: 22)
+[ 22% 6423/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/statusor.cc (priority: 22)
 ```
