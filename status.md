@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:44:04Z |
-| 已运行 | **13 分钟** |
-| ninja 进度 | `2140/28037` |
+| 采样时刻 | 2026-11-09 23:44:35Z |
+| 已运行 | **14 分钟** |
+| ninja 进度 | `2261/28037` |
 | 工作卷 | `64G used, 32G avail, 67%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2358M used / 13625M avail | swap 3955M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.02 avg300=3.79 total=93987364 full avg10=0.00 avg60=0.02 avg300=3.53 total=86789756 ` |
+| 内存 | `2034M used / 13949M avail | swap 3950M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.01 avg300=3.39 total=94031385 full avg10=0.00 avg60=0.01 avg300=3.16 total=86833381 ` |
 
 ### 内存占用 Top6
 
 ```
-   384M  ninja
-   198M  clang++.real
+   389M  ninja
    108M  provjobd3626103
-    70M  clang++.real
+    60M  clang++.real
     54M  Runner.Listener
-    44M  Runner.Worker
+    45M  Runner.Worker
+    43M  multipathd
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  7% 2116/28037] //frameworks/native/libs/binder/ndk:libbinder_ndk clang++ service_manager.cpp (priority: 40)
-[  7% 2117/28037] //bionic/libc:libc link libc.so (priority: 40)
-[  7% 2118/28037] //prebuilts/clang/host/linux-x86:libc++ prebuilt shared library (priority: 40)
-[  7% 2119/28037] //prebuilts/rust:libcfg_if.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/cfg-if/src/lib.rs (priority: 40)
-[  7% 2120/28037] //system/libcppbor:libcppbor generate toc libcppbor.so (priority: 40)
-[  7% 2121/28037] //frameworks/native/libs/binder/ndk:libbinder_ndk clang++ binder_rpc.cpp (priority: 40)
-[  7% 2122/28037] //bionic/libdl:libdl link libdl.so (priority: 40)
-[  7% 2123/28037] //system/libhidl:libhidlbase clang++ base/HidlInternal.cpp (priority: 40)
-[  7% 2124/28037] //system/keymaster:libcppcose_rkp clang++ cppcose/cppcose.cpp (priority: 40)
-[  7% 2125/28037] //system/libhidl:libhidlbase clang++ base/HidlSupport.cpp (priority: 40)
-[  7% 2126/28037] //system/libhidl:libhidlbase clang++ base/Status.cpp (priority: 40)
-[  7% 2127/28037] //system/libhidl:libhidlbase clang++ base/TaskRunner.cpp (priority: 40)
-[  7% 2128/28037] //system/libhidl:libhidlbase clang++ transport/HidlBinderSupport.cpp (priority: 40)
-[  7% 2129/28037] //system/libhidl:libhidlbase clang++ transport/HidlLazyUtils.cpp (priority: 40)
-[  7% 2130/28037] //system/libhidl:libhidlbase clang++ transport/HidlPassthroughSupport.cpp (priority: 40)
-[  7% 2131/28037] //system/libhidl:libhidlbase clang++ transport/HidlTransportUtils.cpp (priority: 40)
-[  7% 2132/28037] //system/libhidl:libhidlbase clang++ transport/HidlTransportSupport.cpp (priority: 40)
-[  7% 2133/28037] //system/libhidl:libhidlbase clang++ transport/LegacySupport.cpp (priority: 40)
-[  7% 2134/28037] //system/libhidl:libhidlbase clang++ transport/Static.cpp (priority: 40)
-[  7% 2135/28037] //system/libhidl:libhidlbase clang++ transport/ServiceManagement.cpp (priority: 40)
-[  7% 2136/28037] //system/libhidl:libhidlbase clang++ android/hidl/manager/1.0/ServiceManagerAll.cpp (priority: 40)
-[  7% 2137/28037] //system/libhidl:libhidlbase clang++ android/hidl/manager/1.0/ServiceNotificationAll.cpp (priority: 40)
-[  7% 2138/28037] //system/libhidl:libhidlbase clang++ android/hidl/manager/1.1/ServiceManagerAll.cpp (priority: 40)
-[  7% 2139/28037] //system/libhidl:libhidlbase clang++ android/hidl/manager/1.2/ClientCallbackAll.cpp (priority: 40)
-[  7% 2140/28037] //system/libhidl:libhidlbase clang++ android/hidl/manager/1.2/ServiceManagerAll.cpp (priority: 40)
+[  7% 2238/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/block_cipher_operation.cpp (priority: 37)
+[  7% 2239/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/certificate_utils.cpp (priority: 37)
+[  7% 2240/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/ckdf.cpp (priority: 37)
+[  7% 2241/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/curve25519_key.cpp (priority: 37)
+[  7% 2242/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/ec_key.cpp (priority: 37)
+[  8% 2243/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/ecdh_operation.cpp (priority: 37)
+[  8% 2244/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/ec_key_factory.cpp (priority: 37)
+[  8% 2245/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/ecdsa_operation.cpp (priority: 37)
+[  8% 2246/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/ecies_kem.cpp (priority: 37)
+[  8% 2247/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/hkdf.cpp (priority: 37)
+[  8% 2248/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/hmac.cpp (priority: 37)
+[  8% 2249/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/hmac_key.cpp (priority: 37)
+[  8% 2250/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/hmac_operation.cpp (priority: 37)
+[  8% 2251/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/iso18033kdf.cpp (priority: 37)
+[  8% 2252/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/kdf.cpp (priority: 37)
+[  8% 2253/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/openssl_err.cpp (priority: 37)
+[  8% 2254/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/nist_curve_key_exchange.cpp (priority: 37)
+[  8% 2255/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/openssl_utils.cpp (priority: 37)
+[  8% 2256/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/rsa_key.cpp (priority: 37)
+[  8% 2257/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/rsa_key_factory.cpp (priority: 37)
+[  8% 2258/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/rsa_operation.cpp (priority: 37)
+[  8% 2259/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/software_random_source.cpp (priority: 37)
+[  8% 2260/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/triple_des_key.cpp (priority: 37)
+[  8% 2261/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/triple_des_operation.cpp (priority: 37)
+[  8% 2262/28037] //system/keymaster:libkeymaster_portable clang++ km_openssl/symmetric_key.cpp (priority: 37)
 ```
