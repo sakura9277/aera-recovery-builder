@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:53:25Z |
-| 已运行 | **22 分钟** |
-| ninja 进度 | `6166/28037` |
+| 采样时刻 | 2026-11-09 23:53:56Z |
+| 已运行 | **23 分钟** |
+| ninja 进度 | `6274/28037` |
 | 工作卷 | `65G used, 31G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2497M used / 13486M avail | swap 3828M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.52 total=94268954 full avg10=0.00 avg60=0.00 avg300=0.48 total=87060386 ` |
+| 内存 | `2511M used / 13472M avail | swap 3827M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.47 total=94268954 full avg10=0.00 avg60=0.00 avg300=0.43 total=87060386 ` |
 
 ### 内存占用 Top6
 
 ```
-   498M  ninja
+   499M  ninja
+   118M  clang++.real
    109M  provjobd3626103
-    87M  clang++.real
+    78M  clang++.real
     64M  Runner.Worker
-    59M  soong_ui
-    58M  clang++.real
+    60M  soong_ui
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 21% 6142/28037] //external/libchrome:libchrome clang++ base/memory/aligned_memory.cc (priority: 22)
-[ 21% 6143/28037] //external/libchrome:libchrome clang++ base/memory/platform_shared_memory_region.cc (priority: 22)
-[ 21% 6144/28037] //external/libchrome:libchrome clang++ base/memory/read_only_shared_memory_region.cc (priority: 22)
-[ 21% 6145/28037] //external/libchrome:libchrome clang++ base/memory/ref_counted.cc (priority: 22)
-[ 21% 6146/28037] //external/libchrome:libchrome clang++ base/memory/ref_counted_memory.cc (priority: 22)
-[ 21% 6147/28037] //external/libchrome:libchrome clang++ base/memory/shared_memory_handle.cc (priority: 22)
-[ 21% 6148/28037] //external/libchrome:libchrome clang++ base/memory/shared_memory_helper.cc (priority: 22)
-[ 21% 6149/28037] //external/libchrome:libchrome clang++ base/memory/shared_memory_mapping.cc (priority: 22)
-[ 21% 6150/28037] //external/libchrome:libchrome clang++ base/memory/weak_ptr.cc (priority: 22)
-[ 21% 6151/28037] //external/libchrome:libchrome clang++ base/memory/unsafe_shared_memory_region.cc (priority: 22)
-[ 21% 6152/28037] //external/libchrome:libchrome clang++ base/memory/writable_shared_memory_region.cc (priority: 22)
-[ 21% 6153/28037] //external/libchrome:libchrome clang++ base/message_loop/incoming_task_queue.cc (priority: 22)
-[ 21% 6154/28037] //external/libchrome:libchrome clang++ base/message_loop/message_loop_current.cc (priority: 22)
-[ 21% 6155/28037] //external/libchrome:libchrome clang++ base/message_loop/message_loop.cc (priority: 22)
-[ 21% 6156/28037] //external/libchrome:libchrome clang++ base/message_loop/message_pump.cc (priority: 22)
-[ 21% 6157/28037] //external/libchrome:libchrome clang++ base/message_loop/message_loop_task_runner.cc (priority: 22)
-[ 21% 6158/28037] //external/libchrome:libchrome clang++ base/message_loop/message_pump_default.cc (priority: 22)
-[ 21% 6159/28037] //external/libchrome:libchrome clang++ base/message_loop/message_pump_libevent.cc (priority: 22)
-[ 21% 6160/28037] //external/libchrome:libchrome clang++ base/message_loop/watchable_io_message_pump_posix.cc (priority: 22)
-[ 21% 6161/28037] //external/libchrome:libchrome clang++ base/metrics/bucket_ranges.cc (priority: 22)
-[ 21% 6162/28037] //external/libchrome:libchrome clang++ base/metrics/dummy_histogram.cc (priority: 22)
-[ 21% 6163/28037] //external/libchrome:libchrome clang++ base/metrics/field_trial.cc (priority: 22)
-[ 21% 6164/28037] //external/libchrome:libchrome clang++ base/metrics/field_trial_param_associator.cc (priority: 22)
-[ 21% 6165/28037] //external/libchrome:libchrome clang++ base/metrics/histogram_base.cc (priority: 22)
-[ 21% 6166/28037] //external/libchrome:libchrome clang++ base/metrics/histogram.cc (priority: 22)
+[ 22% 6250/28037] //external/libchrome:libchrome clang++ base/threading/thread_local_storage_posix.cc (priority: 22)
+[ 22% 6251/28037] //external/libchrome:libchrome clang++ base/threading/thread_restrictions.cc (priority: 22)
+[ 22% 6252/28037] //external/libchrome:libchrome clang++ base/threading/thread_task_runner_handle.cc (priority: 22)
+[ 22% 6253/28037] //external/libchrome:libchrome clang++ base/time/clock.cc (priority: 22)
+[ 22% 6254/28037] //external/libchrome:libchrome clang++ base/time/default_clock.cc (priority: 22)
+[ 22% 6255/28037] //external/libchrome:libchrome clang++ base/time/default_tick_clock.cc (priority: 22)
+[ 22% 6256/28037] //external/libchrome:libchrome clang++ base/time/tick_clock.cc (priority: 22)
+[ 22% 6257/28037] //external/libchrome:libchrome clang++ base/time/time.cc (priority: 22)
+[ 22% 6258/28037] //external/libchrome:libchrome clang++ base/time/time_conversion_posix.cc (priority: 22)
+[ 22% 6259/28037] //external/libchrome:libchrome clang++ base/time/time_exploded_posix.cc (priority: 22)
+[ 22% 6260/28037] //external/libchrome:libchrome clang++ base/time/time_now_posix.cc (priority: 22)
+[ 22% 6261/28037] //external/libchrome:libchrome clang++ base/time/time_override.cc (priority: 22)
+[ 22% 6262/28037] //external/libchrome:libchrome clang++ base/timer/elapsed_timer.cc (priority: 22)
+[ 22% 6263/28037] //external/libchrome:libchrome clang++ base/timer/timer.cc (priority: 22)
+[ 22% 6264/28037] //external/libchrome:libchrome clang++ base/token.cc (priority: 22)
+[ 22% 6265/28037] //external/libchrome:libchrome clang++ base/unguessable_token.cc (priority: 22)
+[ 22% 6266/28037] //external/libchrome:libchrome clang++ base/value_iterators.cc (priority: 22)
+[ 22% 6267/28037] //external/libchrome:libchrome clang++ base/version.cc (priority: 22)
+[ 22% 6268/28037] //external/libchrome:libchrome clang++ base/values.cc (priority: 22)
+[ 22% 6269/28037] //external/libchrome:libchrome clang++ base/vlog.cc (priority: 22)
+[ 22% 6270/28037] //external/libchrome:libchrome clang++ device/bluetooth/bluetooth_advertisement.cc (priority: 22)
+[ 22% 6271/28037] //external/libchrome:libchrome clang++ device/bluetooth/bluetooth_uuid.cc (priority: 22)
+[ 22% 6272/28037] //external/libchrome:libchrome clang++ device/bluetooth/bluez/bluetooth_service_attribute_value_bluez.cc (priority: 22)
+[ 22% 6273/28037] //external/libchrome:libchrome clang++ ui/gfx/geometry/insets.cc (priority: 22)
+[ 22% 6274/28037] //external/libchrome:libchrome clang++ ui/gfx/geometry/insets_f.cc (priority: 22)
 ```
