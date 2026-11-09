@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:58:05Z |
-| 已运行 | **27 分钟** |
-| ninja 进度 | `8847/28037` |
+| 采样时刻 | 2026-11-09 23:58:36Z |
+| 已运行 | **28 分钟** |
+| ninja 进度 | `9096/28037` |
 | 工作卷 | `66G used, 31G avail, 69%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2489M used / 13494M avail | swap 3787M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.18 total=94278798 full avg10=0.00 avg60=0.00 avg300=0.16 total=87070223 ` |
+| 内存 | `2379M used / 13604M avail | swap 3786M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.15 total=94278798 full avg10=0.00 avg60=0.00 avg300=0.14 total=87070223 ` |
 
 ### 内存占用 Top6
 
 ```
-   541M  ninja
-   123M  provjobd3626103
+   543M  ninja
+   113M  provjobd3626103
     76M  soong_ui
+    69M  clang++.real
     67M  Runner.Worker
-    56M  clang++.real
     56M  Runner.Listener
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 31% 8823/28037] //external/guava:guava-both javac [linux_glibc common] (priority: 19)
-[ 31% 8824/28037] //system/tools/hidl/metadata:hidl_metadata_parser link hidl_metadata_parser [linux_glibc] (priority: 19)
-[ 31% 8825/28037] //external/perfetto:ipc_plugin clang++ src/base/default_platform.cc [linux_glibc] (priority: 19)
-[ 31% 8826/28037] Joining JSON objects into array /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hidl_inheritance_hierarchy.json (priority: 19)
-[ 31% 8827/28037] //external/perfetto:ipc_plugin clang++ src/base/android_utils.cc [linux_glibc] (priority: 19)
-[ 31% 8828/28037] //external/perfetto:ipc_plugin clang++ src/base/crash_keys.cc [linux_glibc] (priority: 19)
-[ 31% 8829/28037] //external/perfetto:ipc_plugin clang++ src/base/base64.cc [linux_glibc] (priority: 19)
-[ 31% 8830/28037] //external/perfetto:ipc_plugin clang++ src/base/ctrl_c_handler.cc [linux_glibc] (priority: 19)
-[ 31% 8831/28037] //external/perfetto:ipc_plugin clang++ src/base/event_fd.cc [linux_glibc] (priority: 19)
-[ 31% 8832/28037] //external/perfetto:ipc_plugin clang++ src/base/file_utils.cc [linux_glibc] (priority: 19)
-[ 31% 8833/28037] //external/perfetto:ipc_plugin clang++ src/base/getopt_compat.cc [linux_glibc] (priority: 19)
-[ 31% 8834/28037] //external/perfetto:ipc_plugin clang++ src/base/logging.cc [linux_glibc] (priority: 19)
-[ 31% 8835/28037] //external/perfetto:ipc_plugin clang++ src/base/metatrace.cc [linux_glibc] (priority: 19)
-[ 31% 8836/28037] //external/perfetto:ipc_plugin clang++ src/base/paged_memory.cc [linux_glibc] (priority: 19)
-[ 31% 8837/28037] //external/perfetto:ipc_plugin clang++ src/base/pipe.cc [linux_glibc] (priority: 19)
-[ 31% 8838/28037] //external/perfetto:ipc_plugin clang++ src/base/periodic_task.cc [linux_glibc] (priority: 19)
-[ 31% 8839/28037] //external/perfetto:ipc_plugin clang++ src/base/scoped_mmap.cc [linux_glibc] (priority: 19)
-[ 31% 8840/28037] //external/perfetto:ipc_plugin clang++ src/base/status.cc [linux_glibc] (priority: 19)
-[ 31% 8841/28037] //external/perfetto:ipc_plugin clang++ src/base/string_splitter.cc [linux_glibc] (priority: 19)
-[ 31% 8842/28037] //external/perfetto:ipc_plugin clang++ src/base/string_utils.cc [linux_glibc] (priority: 19)
-[ 31% 8843/28037] //external/perfetto:ipc_plugin clang++ src/base/string_view.cc [linux_glibc] (priority: 19)
-[ 31% 8844/28037] //external/perfetto:ipc_plugin clang++ src/base/string_view_splitter.cc [linux_glibc] (priority: 19)
-[ 31% 8845/28037] //external/perfetto:ipc_plugin clang++ src/base/subprocess.cc [linux_glibc] (priority: 19)
-[ 31% 8846/28037] //external/perfetto:ipc_plugin clang++ src/base/subprocess_posix.cc [linux_glibc] (priority: 19)
-[ 31% 8847/28037] //external/perfetto:ipc_plugin clang++ src/base/subprocess_windows.cc [linux_glibc] (priority: 19)
+[ 32% 9073/28037] //external/boringssl:libcrypto clang++ src/crypto/thread_win.cc (priority: 19)
+[ 32% 9074/28037] //external/boringssl:libcrypto clang++ src/crypto/trust_token/pmbtoken.cc (priority: 19)
+[ 32% 9075/28037] //external/boringssl:libcrypto clang++ src/crypto/trust_token/trust_token.cc (priority: 19)
+[ 32% 9076/28037] //external/boringssl:libcrypto clang++ src/crypto/trust_token/voprf.cc (priority: 19)
+[ 32% 9077/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/a_digest.cc (priority: 19)
+[ 32% 9078/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/a_sign.cc (priority: 19)
+[ 32% 9079/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/a_verify.cc (priority: 19)
+[ 32% 9080/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/algorithm.cc (priority: 19)
+[ 32% 9081/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/asn1_gen.cc (priority: 19)
+[ 32% 9082/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/by_dir.cc (priority: 19)
+[ 32% 9083/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/by_file.cc (priority: 19)
+[ 32% 9084/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/i2d_pr.cc (priority: 19)
+[ 32% 9085/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/name_print.cc (priority: 19)
+[ 32% 9086/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/policy.cc (priority: 19)
+[ 32% 9087/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/rsa_pss.cc (priority: 19)
+[ 32% 9088/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/t_crl.cc (priority: 19)
+[ 32% 9089/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/t_req.cc (priority: 19)
+[ 32% 9090/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/t_x509.cc (priority: 19)
+[ 32% 9091/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/t_x509a.cc (priority: 19)
+[ 32% 9092/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_akey.cc (priority: 19)
+[ 32% 9093/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_akeya.cc (priority: 19)
+[ 32% 9094/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_alt.cc (priority: 19)
+[ 32% 9095/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_bcons.cc (priority: 19)
+[ 32% 9096/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_bitst.cc (priority: 19)
+[ 32% 9097/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_conf.cc (priority: 19)
 ```
