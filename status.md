@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:45:06Z |
-| 已运行 | **14 分钟** |
-| ninja 进度 | `2427/28037` |
+| 采样时刻 | 2026-11-09 23:45:37Z |
+| 已运行 | **15 分钟** |
+| ninja 进度 | `2584/28037` |
 | 工作卷 | `64G used, 32G avail, 67%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2020M used / 13963M avail | swap 3943M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=3.06 total=94044561 full avg10=0.00 avg60=0.00 avg300=2.84 total=86846549 ` |
+| 内存 | `2303M used / 13680M avail | swap 3933M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=2.74 total=94048890 full avg10=0.00 avg60=0.00 avg300=2.54 total=86850879 ` |
 
 ### 内存占用 Top6
 
 ```
-   396M  ninja
+   406M  ninja
+   132M  rustc
    108M  provjobd3626103
+    78M  clang++.real
     54M  Runner.Listener
     45M  Runner.Worker
-    43M  multipathd
-    35M  soong_ui
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  8% 2403/28037] //system/core/libcutils:libcutils_sockets clang++ sockets_unix.cpp (priority: 34)
-[  8% 2404/28037] //bionic/libdl:libdl link libdl.so (priority: 34)
-[  8% 2405/28037] //bionic/libdl:libdl_android link libdl_android.so (priority: 34)
-[  8% 2406/28037] //hardware/libhardware:libhardware clang hardware.c (priority: 34)
-[  8% 2407/28037] //system/keymaster:libkeymaster_messages clang++ android_keymaster/android_keymaster_messages.cpp (priority: 34)
-[  8% 2408/28037] //system/keymaster:libkeymaster_messages clang++ android_keymaster/android_keymaster_utils.cpp (priority: 34)
-[  8% 2409/28037] //external/rust/android-crates-io/crates/icu_provider:libicu_provider rustc src/lib.rs (priority: 34)
-[  8% 2410/28037] //system/keymaster:libkeymaster_messages clang++ android_keymaster/keymaster_tags.cpp (priority: 34)
-[  8% 2411/28037] //system/keymaster:libkeymaster_messages clang++ android_keymaster/logger.cpp (priority: 34)
-[  8% 2412/28037] //system/keymaster:libkeymaster_messages clang++ android_keymaster/authorization_set.cpp (priority: 34)
-[  8% 2413/28037] //system/keymaster:libkeymaster_portable generate toc libkeymaster_portable.so (priority: 34)
-[  8% 2414/28037] //system/logging/liblog:liblog link liblog.so (priority: 34)
-[  8% 2415/28037] //bionic/libm:libm link libm.so (priority: 34)
-[  8% 2416/28037] //system/keymaster:libkeymaster_messages clang++ android_keymaster/serializable.cpp (priority: 34)
-[  8% 2417/28037] //system/keymaster:libsoft_attestation_cert clang++ contexts/soft_attestation_cert.cpp (priority: 34)
-[  8% 2418/28037] //external/rust/android-crates-io/crates/zerovec:libzerovec rustc src/lib.rs (priority: 34)
-[  8% 2419/28037] HIDL c++-sources: hardware/interfaces/boot/1.0/types.hal hardware/interfaces/boot/1.0/IBootControl.hal hardware/interfaces/current.txt => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/boot/1.0/android.hardware.boot@1.0_genc++/gen/android/hardware/boot/1.0/BootControlAll.cpp' (priority: 33)
-[  8% 2420/28037] HIDL c++-headers: hardware/interfaces/boot/1.0/types.hal hardware/interfaces/boot/1.0/IBootControl.hal hardware/interfaces/current.txt => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/boot/1.0/android.hardware.boot@1.0_genc++_headers/gen/android/hardware/boot/1.0/IBootControl.h' (priority: 33)
-[  8% 2421/28037] //external/rust/android-crates-io/crates/zerotrie:libzerotrie rustc src/lib.rs (priority: 34)
-[  8% 2422/28037] HIDL c++-sources: hardware/interfaces/keymaster/4.1/types.hal hardware/interfaces/keymaster/4.1/IKeymasterDevice.hal hardware/interfaces/current.txt => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/keymaster/4.1/android.hardware.keymaster@4.1_genc++/gen/android/hardware/keymaster/4.1/KeymasterDeviceAll.cpp' (priority: 33)
-[  8% 2423/28037] HIDL c++-headers: hardware/interfaces/keymaster/4.1/types.hal hardware/interfaces/keymaster/4.1/IKeymasterDevice.hal hardware/interfaces/current.txt => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/keymaster/4.1/android.hardware.keymaster@4.1_genc++_headers/gen/android/hardware/keymaster/4.1/IKeymasterDevice.h' (priority: 33)
-[  8% 2424/28037] //hardware/interfaces/keymaster/4.0:android.hardware.keymaster@4.0 link android.hardware.keymaster@4.0.so (priority: 33)
-[  8% 2425/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint_interface export types for android.hardware.security.keymint/4 (priority: 33)
-[  8% 2426/28037] AIDL ndk hardware/interfaces/security/rkp/aidl/aidl_api/android.hardware.security.rkp/3/android/hardware/security/keymint/DeviceInfo.aidl (priority: 33)
-[  8% 2427/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V4-ndk link android.hardware.security.keymint-V4-ndk.so (priority: 33)
+[  9% 2560/28037] //hardware/interfaces/security/rkp/aidl:android.hardware.security.rkp-V3-ndk clang++ android/hardware/security/keymint/ProtectedData.cpp (priority: 31)
+[  9% 2561/28037] //hardware/interfaces/security/rkp/aidl:android.hardware.security.rkp-V3-ndk clang++ android/hardware/security/keymint/RpcHardwareInfo.cpp (priority: 31)
+[  9% 2562/28037] //hardware/interfaces/security/sharedsecret/aidl:android.hardware.security.sharedsecret-V1-ndk clang++ android/hardware/security/sharedsecret/ISharedSecret.cpp (priority: 31)
+[  9% 2563/28037] //hardware/interfaces/security/sharedsecret/aidl:android.hardware.security.sharedsecret_interface export types for android.hardware.security.sharedsecret/1 (priority: 31)
+[  9% 2564/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/base/keystore/aaid/aidl/android.security.aaid_aidl-cpp-source/gen/timestamp (priority: 31)
+[  9% 2565/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/security/keystore2/aidl/android.security.compat-ndk-source/gen/timestamp (priority: 31)
+[  9% 2566/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/hardware/interfaces/keystore2/aidl/android.system.keystore2-V5-ndk-source/gen/timestamp (priority: 31)
+[  9% 2567/28037] AIDL CHECK API: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/hardware/interfaces/keystore2/aidl/android.system.keystore2_interface/dump against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/current (priority: 31)
+[  9% 2568/28037] Verify system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/1 files have not been modified (priority: 31)
+[  9% 2569/28037] Verify system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/2 files have not been modified (priority: 31)
+[  9% 2570/28037] AIDL CHECK API: system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/2 against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/1 (priority: 31)
+[  9% 2571/28037] Verify system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/3 files have not been modified (priority: 31)
+[  9% 2572/28037] AIDL CHECK API: system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/3 against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/2 (priority: 31)
+[  9% 2573/28037] Verify system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/4 files have not been modified (priority: 31)
+[  9% 2574/28037] AIDL CHECK API: system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/4 against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/3 (priority: 31)
+[  9% 2575/28037] Verify system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/5 files have not been modified (priority: 31)
+[  9% 2576/28037] AIDL CHECK API: system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/5 against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/4 (priority: 31)
+[  9% 2577/28037] AIDL CHECK API: system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/current against system/hardware/interfaces/keystore2/aidl/aidl_api/android.system.keystore2/5 (priority: 31)
+[  9% 2578/28037] //hardware/interfaces/security/sharedsecret/aidl:android.hardware.security.sharedsecret-V1-ndk clang++ android/hardware/security/sharedsecret/SharedSecretParameters.cpp (priority: 31)
+[  9% 2579/28037]  (priority: 31)
+[  9% 2580/28037] //bionic/tools:generate-version-script python library archive [linux_glibc] (priority: 31)
+[  9% 2581/28037] //bionic/libc:generated_android_ids raw genrule.sbox.textproto (priority: 31)
+[  9% 2582/28037] //build/make/tools/fs_config:fs_config_generator embedded python archive [linux_glibc] (priority: 31)
+[  9% 2583/28037] //bionic/linker:ld-android clang++ ld_android.cpp (priority: 31)
+[  9% 2584/28037] //bionic/libc/tools:gensyscalls Precompile the python sources of gensyscalls [linux_glibc] (priority: 31)
 ```
