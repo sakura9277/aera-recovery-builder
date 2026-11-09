@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:46:40Z |
+| 采样时刻 | 2026-11-09 23:47:11Z |
 | 已运行 | **16 分钟** |
-| ninja 进度 | `2798/28037` |
-| 工作卷 | `64G used, 32G avail, 68%` |
+| ninja 进度 | `2832/28037` |
+| 工作卷 | `65G used, 32G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `3521M used / 12462M avail | swap 3912M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=2.20 total=94079049 full avg10=0.00 avg60=0.00 avg300=2.05 total=86880996 ` |
+| 内存 | `3594M used / 12389M avail | swap 3911M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=1.97 total=94110194 full avg10=0.00 avg60=0.00 avg300=1.83 total=86906212 ` |
 
 ### 内存占用 Top6
 
 ```
-  1490M  rustc
+  1586M  rustc
    427M  ninja
-   145M  clang++.real
+   151M  clang++.real
+   108M  ld.lld
    108M  provjobd3626103
-    54M  Runner.Listener
-    46M  Runner.Worker
+    55M  Runner.Listener
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  9% 2774/28037] //external/e2fsprogs/lib/et:libext2_com_err clang com_err.c (priority: 29)
-[  9% 2775/28037] //external/e2fsprogs/lib/et:libext2_com_err clang com_right.c (priority: 29)
-[  9% 2776/28037] //external/e2fsprogs/lib/uuid:libext2_uuid strip libext2_uuid.so (priority: 29)
-[  9% 2777/28037] //bionic/libc:libicu4x_bionic clippy bionic/icu4x.rs (priority: 29)
-[  9% 2778/28037] //external/rust/android-crates-io/crates/icu_collections:libicu_collections rustc src/lib.rs (priority: 29)
-[  9% 2779/28037] //external/rust/android-crates-io/crates/icu_properties_data:libicu_properties_data rustc src/lib.rs (priority: 29)
-[  9% 2780/28037] //hardware/interfaces/keymaster/4.0/support:libkeymaster4support strip libkeymaster4support.so (priority: 29)
-[  9% 2781/28037] //system/keymaster:libpuresoftkeymasterdevice strip libpuresoftkeymasterdevice.so (priority: 29)
-[  9% 2782/28037] //system/core/libsparse:libsparse clang++ backed_block.cpp (priority: 29)
-[  9% 2783/28037] //system/core/libsparse:libsparse clang++ output_file.cpp (priority: 29)
-[  9% 2784/28037] //system/core/libsparse:libsparse clang++ sparse.cpp (priority: 29)
-[  9% 2785/28037] //system/core/libsparse:libsparse clang++ sparse_crc32.cpp (priority: 29)
-[  9% 2786/28037] //system/core/libsparse:libsparse clang++ sparse_err.cpp (priority: 29)
-[  9% 2787/28037] //system/core/libsparse:libsparse clang++ sparse_read.cpp (priority: 29)
-[  9% 2788/28037] //external/rust/android-crates-io/crates/unicode-bidi:libunicode_bidi rustc src/lib.rs (priority: 29)
-[  9% 2789/28037] //system/core/libutils:libutils link libutils.so (priority: 29)
-[  9% 2790/28037] //system/core/libvndksupport:libvndksupport clang stub.c (priority: 29)
-[  9% 2791/28037] //external/zlib:libz generate toc libz.so (priority: 29)
-[  9% 2792/28037] //external/zlib:libz link libz.so (priority: 29)
-[  9% 2793/28037] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong_javac_wrapper/linux_glibc_x86_64/obj/soong_javac_wrapper.a (priority: 29)
-[  9% 2794/28037] //bionic/libc:syscalls-arm64 generate syscalls-arm64.S (priority: 29)
-[  9% 2795/28037] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/zipsync/linux_glibc_x86_64/obj/zipsync.a (priority: 29)
-[  9% 2796/28037] Install: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/symbols_map (priority: 28)
-[  9% 2797/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/boot/aidl/android.hardware.boot-V1-ndk-source/gen/timestamp (priority: 28)
-[  9% 2798/28037] //hardware/interfaces/boot/1.0:android.hardware.boot@1.0 generate toc android.hardware.boot@1.0.so (priority: 28)
+[ 10% 2808/28037] AIDL CHECK API: hardware/interfaces/confirmationui/aidl/aidl_api/android.hardware.confirmationui/current against hardware/interfaces/confirmationui/aidl/aidl_api/android.hardware.confirmationui/1 (priority: 28)
+[ 10% 2809/28037]  (priority: 28)
+[ 10% 2810/28037] //hardware/interfaces/keymaster/4.1:android.hardware.keymaster@4.1 generate toc android.hardware.keymaster@4.1.so (priority: 28)
+[ 10% 2811/28037] //hardware/interfaces/security/rkp/aidl:android.hardware.security.rkp-V3-ndk generate toc android.hardware.security.rkp-V3-ndk.so (priority: 28)
+[ 10% 2812/28037] //hardware/interfaces/security/sharedsecret/aidl:android.hardware.security.sharedsecret-V1-ndk generate toc android.hardware.security.sharedsecret-V1-ndk.so (priority: 28)
+[ 10% 2813/28037] //frameworks/base/keystore/aaid/aidl:android.security.aaid_aidl-cpp clang++ android/security/keystore/IKeyAttestationApplicationIdProvider.cpp (priority: 28)
+[ 10% 2814/28037] //frameworks/base/keystore/aaid/aidl:android.security.aaid_aidl-cpp clang++ android/security/keystore/KeyAttestationApplicationId.cpp (priority: 28)
+[ 10% 2815/28037] //frameworks/base/keystore/aaid/aidl:android.security.aaid_aidl-cpp clang++ android/security/keystore/KeyAttestationPackageInfo.cpp (priority: 28)
+[ 10% 2816/28037] //frameworks/base/keystore/aaid/aidl:android.security.aaid_aidl-cpp clang++ android/security/keystore/Signature.cpp (priority: 28)
+[ 10% 2817/28037] //system/security/keystore2/aidl:android.security.compat-ndk clang++ android/security/compat/IKeystoreCompatService.cpp (priority: 28)
+[ 10% 2818/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/AuthenticatorSpec.cpp (priority: 28)
+[ 10% 2819/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/Authorization.cpp (priority: 28)
+[ 10% 2820/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/CreateOperationResponse.cpp (priority: 28)
+[ 10% 2821/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/Domain.cpp (priority: 28)
+[ 10% 2822/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/EphemeralStorageKeyResponse.cpp (priority: 28)
+[ 10% 2823/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/IKeystoreOperation.cpp (priority: 28)
+[ 10% 2824/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/IKeystoreSecurityLevel.cpp (priority: 28)
+[ 10% 2825/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/IKeystoreService.cpp (priority: 28)
+[ 10% 2826/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/KeyDescriptor.cpp (priority: 28)
+[ 10% 2827/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/KeyEntryResponse.cpp (priority: 28)
+[ 10% 2828/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/KeyMetadata.cpp (priority: 28)
+[ 10% 2829/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/KeyParameters.cpp (priority: 28)
+[ 10% 2830/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/KeyPermission.cpp (priority: 28)
+[ 10% 2831/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/OperationChallenge.cpp (priority: 28)
+[ 10% 2832/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/ResponseCode.cpp (priority: 28)
 ```
