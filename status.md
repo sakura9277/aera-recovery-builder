@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:54:59Z |
-| 已运行 | **24 分钟** |
-| ninja 进度 | `6704/28037` |
+| 采样时刻 | 2026-11-09 23:55:30Z |
+| 已运行 | **25 分钟** |
+| ninja 进度 | `7020/28037` |
 | 工作卷 | `65G used, 31G avail, 69%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2429M used / 13554M avail | swap 3820M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.37 total=94272339 full avg10=0.00 avg60=0.00 avg300=0.34 total=87063770 ` |
+| 内存 | `2225M used / 13758M avail | swap 3807M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.33 total=94273207 full avg10=0.00 avg60=0.00 avg300=0.30 total=87064636 ` |
 
 ### 内存占用 Top6
 
 ```
-   507M  ninja
-   109M  provjobd3626103
-    69M  clang++.real
+   520M  ninja
+   124M  provjobd3626103
+    66M  soong_ui
     65M  Runner.Worker
-    62M  soong_ui
-    61M  clang++.real
+    56M  Runner.Listener
+    43M  multipathd
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 23% 6680/28037]  (priority: 21)
-[ 23% 6681/28037] //hardware/interfaces/health/1.0:android.hardware.health@1.0 clang++ android/hardware/health/1.0/types.cpp (priority: 21)
-[ 23% 6682/28037]  (priority: 21)
-[ 23% 6683/28037]  (priority: 21)
-[ 23% 6684/28037]  (priority: 21)
-[ 23% 6685/28037]  (priority: 21)
-[ 23% 6686/28037]  (priority: 21)
-[ 23% 6687/28037]  (priority: 21)
-[ 23% 6688/28037]  (priority: 21)
-[ 23% 6689/28037]  (priority: 21)
-[ 23% 6690/28037] AIDL CHECK API: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/security/authgraph/aidl/android.hardware.security.authgraph_interface/dump against hardware/interfaces/security/authgraph/aidl/aidl_api/android.hardware.security.authgraph/current (priority: 21)
-[ 23% 6691/28037]  (priority: 21)
-[ 23% 6692/28037] Verify hardware/interfaces/security/authgraph/aidl/aidl_api/android.hardware.security.authgraph/1 files have not been modified (priority: 21)
-[ 23% 6693/28037] AIDL CHECK API: hardware/interfaces/security/authgraph/aidl/aidl_api/android.hardware.security.authgraph/current against hardware/interfaces/security/authgraph/aidl/aidl_api/android.hardware.security.authgraph/1 (priority: 21)
-[ 23% 6694/28037]  (priority: 21)
-[ 23% 6695/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/Algorithm.cpp (priority: 21)
-[ 23% 6696/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/AttestationKey.cpp (priority: 21)
-[ 23% 6697/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/BlockMode.cpp (priority: 21)
-[ 23% 6698/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/BeginResult.cpp (priority: 21)
-[ 23% 6699/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/Digest.cpp (priority: 21)
-[ 23% 6700/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/EcCurve.cpp (priority: 21)
-[ 23% 6701/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/ErrorCode.cpp (priority: 21)
-[ 23% 6702/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/Certificate.cpp (priority: 21)
-[ 23% 6703/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/HardwareAuthenticatorType.cpp (priority: 21)
-[ 23% 6704/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/HardwareAuthToken.cpp (priority: 21)
+[ 24% 6996/28037] HIDL inheritance hierarchy: android.frameworks.cameraservice.service@2.0::ICameraServiceListener => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/cameraservice/service/2.0/android.frameworks.cameraservice.service@2.0-inheritance-hierarchy/gen/ICameraServiceListener_inheritance_hierarchy.json' (priority: 20)
+[ 24% 6997/28037] HIDL inheritance hierarchy: android.frameworks.cameraservice.service@2.1::ICameraService => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/cameraservice/service/2.1/android.frameworks.cameraservice.service@2.1-inheritance-hierarchy/gen/ICameraService_inheritance_hierarchy.json' (priority: 20)
+[ 24% 6998/28037] HIDL inheritance hierarchy: android.frameworks.cameraservice.service@2.1::ICameraServiceListener => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/cameraservice/service/2.1/android.frameworks.cameraservice.service@2.1-inheritance-hierarchy/gen/ICameraServiceListener_inheritance_hierarchy.json' (priority: 20)
+[ 24% 6999/28037] HIDL inheritance hierarchy: android.frameworks.cameraservice.service@2.2::ICameraService => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/cameraservice/service/2.2/android.frameworks.cameraservice.service@2.2-inheritance-hierarchy/gen/ICameraService_inheritance_hierarchy.json' (priority: 20)
+[ 24% 7000/28037]  (priority: 20)
+[ 24% 7001/28037]  (priority: 20)
+[ 24% 7002/28037] HIDL inheritance hierarchy: android.frameworks.displayservice@1.0::IDisplayService => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/displayservice/1.0/android.frameworks.displayservice@1.0-inheritance-hierarchy/gen/IDisplayService_inheritance_hierarchy.json' (priority: 20)
+[ 24% 7003/28037] HIDL inheritance hierarchy: android.frameworks.displayservice@1.0::IDisplayEventReceiver => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/displayservice/1.0/android.frameworks.displayservice@1.0-inheritance-hierarchy/gen/IDisplayEventReceiver_inheritance_hierarchy.json' (priority: 20)
+[ 24% 7004/28037]  (priority: 20)
+[ 24% 7005/28037] HIDL inheritance hierarchy: android.frameworks.displayservice@1.0::IEventCallback => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/displayservice/1.0/android.frameworks.displayservice@1.0-inheritance-hierarchy/gen/IEventCallback_inheritance_hierarchy.json' (priority: 20)
+[ 24% 7006/28037] HIDL inheritance hierarchy: android.frameworks.schedulerservice@1.0::ISchedulingPolicyService => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/schedulerservice/1.0/android.frameworks.schedulerservice@1.0-inheritance-hierarchy/gen/ISchedulingPolicyService_inheritance_hierarchy.json' (priority: 20)
+[ 24% 7007/28037] HIDL inheritance hierarchy: android.frameworks.sensorservice@1.0::IDirectReportChannel => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/sensorservice/1.0/android.frameworks.sensorservice@1.0-inheritance-hierarchy/gen/IDirectReportChannel_inheritance_hierarchy.json' (priority: 20)
+[ 24% 7008/28037] HIDL inheritance hierarchy: android.frameworks.sensorservice@1.0::IEventQueue => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/sensorservice/1.0/android.frameworks.sensorservice@1.0-inheritance-hierarchy/gen/IEventQueue_inheritance_hierarchy.json' (priority: 20)
+[ 24% 7009/28037] HIDL inheritance hierarchy: android.frameworks.sensorservice@1.0::IEventQueueCallback => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/sensorservice/1.0/android.frameworks.sensorservice@1.0-inheritance-hierarchy/gen/IEventQueueCallback_inheritance_hierarchy.json' (priority: 20)
+[ 25% 7010/28037] HIDL inheritance hierarchy: android.frameworks.sensorservice@1.0::ISensorManager => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/sensorservice/1.0/android.frameworks.sensorservice@1.0-inheritance-hierarchy/gen/ISensorManager_inheritance_hierarchy.json' (priority: 20)
+[ 25% 7011/28037]  (priority: 20)
+[ 25% 7012/28037] HIDL inheritance hierarchy: android.frameworks.stats@1.0::IStats => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/stats/1.0/android.frameworks.stats@1.0-inheritance-hierarchy/gen/IStats_inheritance_hierarchy.json' (priority: 20)
+[ 25% 7013/28037]  (priority: 20)
+[ 25% 7014/28037]  (priority: 20)
+[ 25% 7015/28037] HIDL inheritance hierarchy: android.frameworks.vr.composer@1.0::IVrComposerClient => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/vr/composer/1.0/android.frameworks.vr.composer@1.0-inheritance-hierarchy/gen/IVrComposerClient_inheritance_hierarchy.json' (priority: 20)
+[ 25% 7016/28037] HIDL inheritance hierarchy: android.frameworks.vr.composer@2.0::IVrComposerClient => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/vr/composer/2.0/android.frameworks.vr.composer@2.0-inheritance-hierarchy/gen/IVrComposerClient_inheritance_hierarchy.json' (priority: 20)
+[ 25% 7017/28037] HIDL inheritance hierarchy: android.hardware.atrace@1.0::IAtraceDevice => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/atrace/1.0/android.hardware.atrace@1.0-inheritance-hierarchy/gen/IAtraceDevice_inheritance_hierarchy.json' (priority: 20)
+[ 25% 7018/28037]  (priority: 20)
+[ 25% 7019/28037] HIDL inheritance hierarchy: android.hardware.audio.effect@2.0::IAcousticEchoCancelerEffect => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/audio/effect/2.0/android.hardware.audio.effect@2.0-inheritance-hierarchy/gen/IAcousticEchoCancelerEffect_inheritance_hierarchy.json' (priority: 20)
+[ 25% 7020/28037] HIDL inheritance hierarchy: android.hardware.audio.effect@2.0::IAutomaticGainControlEffect => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/audio/effect/2.0/android.hardware.audio.effect@2.0-inheritance-hierarchy/gen/IAutomaticGainControlEffect_inheritance_hierarchy.json' (priority: 20)
 ```
