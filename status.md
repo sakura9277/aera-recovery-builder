@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:35:14Z |
-| 已运行 | **4 分钟** |
-| ninja 进度 | `130/131` |
-| 工作卷 | `60G used, 37G avail, 63%` |
+| 采样时刻 | 2026-11-09 23:35:45Z |
+| 已运行 | **5 分钟** |
+| ninja 进度 | `133/145` |
+| 工作卷 | `61G used, 35G avail, 64%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `14787M used / 1196M avail | swap 9183M/17782M` |
-| PSI | `some avg10=46.93 avg60=38.77 avg300=19.08 total=84863150 full avg10=43.26 avg60=36.39 avg300=17.77 total=78364066 ` |
+| 内存 | `4385M used / 11598M avail | swap 220M/17782M` |
+| PSI | `some avg10=5.82 avg60=28.58 avg300=18.81 total=89515793 full avg10=5.14 avg60=26.22 avg300=17.34 total=82325964 ` |
 
 ### 内存占用 Top6
 
 ```
- 12679M  soong_build
-    77M  provjobd3626103
+  3102M  ckati
+    98M  provjobd3626103
     43M  multipathd
+    33M  Runner.Listener
+    22M  Runner.Worker
     19M  python3
-    17M  Runner.Worker
-    17M  php-fpm8.3
 ```
 
 ### 内核 OOM 记录
@@ -30,18 +30,6 @@
 ### 编译日志尾部
 
 ```
-[ 80% 106/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-rust/pkg/android/soong/rust.a
-[ 81% 107/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-rust-prebuilts/pkg/android/soong/prebuilts/rust/rustprebuilts.a
-[ 82% 108/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-vold_defaults/pkg/system/vold.a
-[ 83% 109/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-java/pkg/android/soong/java.a
-[ 83% 110/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/hidl-soong-rules/pkg/android/soong/hidl.a
-[ 84% 111/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/aidl-soong-rules/pkg/android/soong/aidl.a
-[ 85% 112/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-aconfig-codegen/pkg/android/soong/aconfig/codegen.a
-[ 86% 113/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-api/pkg/android/soong/api.a
-[ 87% 114/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-csuite/pkg/android/soong/csuite.a
-[ 87% 115/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-sh/pkg/android/soong/sh.a
-[ 88% 116/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-filesystem/pkg/android/soong/filesystem.a
-[ 89% 117/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-suite-harness/pkg/android/soong/tradefed/suite_harness.a
 [ 90% 118/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-fsgen/pkg/android/soong/fsgen.a
 [ 90% 119/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-sysprop/pkg/android/soong/sysprop.a
 [ 91% 120/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong-apex/pkg/android/soong/apex.a
@@ -55,4 +43,16 @@
 [ 97% 128/131] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
 [ 98% 129/131] link /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/soong_build/obj/soong_build
 [ 99% 130/131] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/soong_build
+[100% 131/131] analyzing Android.bp files and generating ninja file at /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/build.twrp_hummer.ninja
+Warning: Module 'CameraExtensionsProxy' depends on non-existing optional_uses_libs 'androidx.camera.extensions.impl'
+Warning: Module 'androidx.test.uiautomator_uiautomator' depends on non-existing optional_uses_libs 'com.android.extensions.xr'
+Warning: Module 'androidx.wear_wear' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.compose_compose-foundation' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface-complications-data' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface-complications-data-source' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface' depends on non-existing optional_uses_libs 'wear-sdk'
+/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/build-twrp_hummer-cleanspec.ninja is missing, regenerating...
+/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/build-twrp_hummer.ninja is missing, regenerating...
+[100% 132/132] initializing legacy Make module parser ...
+[ 91% 133/145] including /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/installs-twrp_hummer.mk ...
 ```
