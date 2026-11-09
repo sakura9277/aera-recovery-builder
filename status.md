@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:52:54Z |
+| 采样时刻 | 2026-11-09 23:53:25Z |
 | 已运行 | **22 分钟** |
-| ninja 进度 | `6081/28037` |
+| ninja 进度 | `6166/28037` |
 | 工作卷 | `65G used, 31G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2380M used / 13603M avail | swap 3829M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.59 total=94268954 full avg10=0.00 avg60=0.00 avg300=0.54 total=87060386 ` |
+| 内存 | `2497M used / 13486M avail | swap 3828M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.52 total=94268954 full avg10=0.00 avg60=0.00 avg300=0.48 total=87060386 ` |
 
 ### 内存占用 Top6
 
 ```
-   496M  ninja
-   126M  clang++.real
-   115M  rustc
+   498M  ninja
    109M  provjobd3626103
-    66M  Runner.Worker
-    58M  soong_ui
+    87M  clang++.real
+    64M  Runner.Worker
+    59M  soong_ui
+    58M  clang++.real
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 21% 6057/28037]  (priority: 22)
-[ 21% 6058/28037]  (priority: 22)
-[ 21% 6059/28037] //hardware/interfaces/wifi/common/aidl:android.hardware.wifi.common_interface export types for android.hardware.wifi.common/2 (priority: 22)
-[ 21% 6060/28037] //system/hardware/interfaces/media:android.media.audio.common.types_interface export types for android.media.audio.common.types/1 (priority: 22)
-[ 21% 6061/28037] AIDL CHECK API: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/hardware/interfaces/media/android.media.audio.eraser.types_interface/dump against system/hardware/interfaces/media/aidl_api/android.media.audio.eraser.types/current (priority: 22)
-[ 21% 6062/28037] Verify system/hardware/interfaces/media/aidl_api/android.media.audio.eraser.types/1 files have not been modified (priority: 22)
-[ 21% 6063/28037] //build/make/tools/aconfig/aconfig:aconfig rustc src/main.rs [linux_glibc] (priority: 22)
-[ 21% 6064/28037] AIDL CHECK API: system/hardware/interfaces/media/aidl_api/android.media.audio.eraser.types/current against system/hardware/interfaces/media/aidl_api/android.media.audio.eraser.types/1 (priority: 22)
-[ 21% 6065/28037]  (priority: 22)
-[ 21% 6066/28037]  (priority: 22)
-[ 21% 6067/28037]  (priority: 22)
-[ 21% 6068/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/security/keystore2/aidl/android.security.compat-rust-source/gen/timestamp (priority: 22)
-[ 21% 6069/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/security/keystore2/aidl/android.security.postprocessor-rust-source/gen/timestamp (priority: 22)
-[ 21% 6070/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/base/core/java/android.security.rkp_aidl-rust-source/gen/timestamp (priority: 22)
-[ 21% 6071/28037] //system/hardware/interfaces/media:android.media.soundtrigger.types_interface export types for android.media.soundtrigger.types/3 (priority: 22)
-[ 21% 6072/28037]  (priority: 22)
-[ 21% 6073/28037]  (priority: 22)
-[ 21% 6074/28037] //external/libcap:cap_names.list.h generate cap_names.list.h (priority: 22)
-[ 21% 6075/28037] //system/sepolicy/build:build_sepolicy Precompile the python sources of build_sepolicy [linux_glibc] (priority: 22)
-[ 21% 6076/28037] //external/selinux/checkpolicy:checkpolicy link checkpolicy [linux_glibc] (priority: 22)
-[ 21% 6077/28037] //system/gsid:gsi_aidl_interface-cpp static link gsi_aidl_interface-cpp.a (priority: 22)
-[ 21% 6078/28037] //external/rust/cxx:cxx-bridge-header generate cxx.h (priority: 22)
-[ 21% 6079/28037] //system/security/keystore2/src/hal_instance_names:hal_names_bridge_code generate hal_names_cxx_generated.cc (priority: 22)
-[ 21% 6080/28037] //build/make/tools/aconfig/aconfig_storage_file:libaconfig_storage_file clippy src/lib.rs (priority: 22)
-[ 21% 6081/28037] //external/icu/libandroidicu:libandroidicu generate toc libandroidicu.so (priority: 22)
+[ 21% 6142/28037] //external/libchrome:libchrome clang++ base/memory/aligned_memory.cc (priority: 22)
+[ 21% 6143/28037] //external/libchrome:libchrome clang++ base/memory/platform_shared_memory_region.cc (priority: 22)
+[ 21% 6144/28037] //external/libchrome:libchrome clang++ base/memory/read_only_shared_memory_region.cc (priority: 22)
+[ 21% 6145/28037] //external/libchrome:libchrome clang++ base/memory/ref_counted.cc (priority: 22)
+[ 21% 6146/28037] //external/libchrome:libchrome clang++ base/memory/ref_counted_memory.cc (priority: 22)
+[ 21% 6147/28037] //external/libchrome:libchrome clang++ base/memory/shared_memory_handle.cc (priority: 22)
+[ 21% 6148/28037] //external/libchrome:libchrome clang++ base/memory/shared_memory_helper.cc (priority: 22)
+[ 21% 6149/28037] //external/libchrome:libchrome clang++ base/memory/shared_memory_mapping.cc (priority: 22)
+[ 21% 6150/28037] //external/libchrome:libchrome clang++ base/memory/weak_ptr.cc (priority: 22)
+[ 21% 6151/28037] //external/libchrome:libchrome clang++ base/memory/unsafe_shared_memory_region.cc (priority: 22)
+[ 21% 6152/28037] //external/libchrome:libchrome clang++ base/memory/writable_shared_memory_region.cc (priority: 22)
+[ 21% 6153/28037] //external/libchrome:libchrome clang++ base/message_loop/incoming_task_queue.cc (priority: 22)
+[ 21% 6154/28037] //external/libchrome:libchrome clang++ base/message_loop/message_loop_current.cc (priority: 22)
+[ 21% 6155/28037] //external/libchrome:libchrome clang++ base/message_loop/message_loop.cc (priority: 22)
+[ 21% 6156/28037] //external/libchrome:libchrome clang++ base/message_loop/message_pump.cc (priority: 22)
+[ 21% 6157/28037] //external/libchrome:libchrome clang++ base/message_loop/message_loop_task_runner.cc (priority: 22)
+[ 21% 6158/28037] //external/libchrome:libchrome clang++ base/message_loop/message_pump_default.cc (priority: 22)
+[ 21% 6159/28037] //external/libchrome:libchrome clang++ base/message_loop/message_pump_libevent.cc (priority: 22)
+[ 21% 6160/28037] //external/libchrome:libchrome clang++ base/message_loop/watchable_io_message_pump_posix.cc (priority: 22)
+[ 21% 6161/28037] //external/libchrome:libchrome clang++ base/metrics/bucket_ranges.cc (priority: 22)
+[ 21% 6162/28037] //external/libchrome:libchrome clang++ base/metrics/dummy_histogram.cc (priority: 22)
+[ 21% 6163/28037] //external/libchrome:libchrome clang++ base/metrics/field_trial.cc (priority: 22)
+[ 21% 6164/28037] //external/libchrome:libchrome clang++ base/metrics/field_trial_param_associator.cc (priority: 22)
+[ 21% 6165/28037] //external/libchrome:libchrome clang++ base/metrics/histogram_base.cc (priority: 22)
+[ 21% 6166/28037] //external/libchrome:libchrome clang++ base/metrics/histogram.cc (priority: 22)
 ```
