@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:47:11Z |
-| 已运行 | **16 分钟** |
-| ninja 进度 | `2832/28037` |
+| 采样时刻 | 2026-11-09 23:47:42Z |
+| 已运行 | **17 分钟** |
+| ninja 进度 | `3432/28037` |
 | 工作卷 | `65G used, 32G avail, 68%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `3594M used / 12389M avail | swap 3911M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=1.97 total=94110194 full avg10=0.00 avg60=0.00 avg300=1.83 total=86906212 ` |
+| 内存 | `2303M used / 13680M avail | swap 3905M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=1.77 total=94110202 full avg10=0.00 avg60=0.00 avg300=1.65 total=86906221 ` |
 
 ### 内存占用 Top6
 
 ```
-  1586M  rustc
-   427M  ninja
-   151M  clang++.real
-   108M  ld.lld
+   435M  ninja
    108M  provjobd3626103
+    77M  clang++.real
     55M  Runner.Listener
+    46M  Runner.Worker
+    43M  multipathd
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 10% 2808/28037] AIDL CHECK API: hardware/interfaces/confirmationui/aidl/aidl_api/android.hardware.confirmationui/current against hardware/interfaces/confirmationui/aidl/aidl_api/android.hardware.confirmationui/1 (priority: 28)
-[ 10% 2809/28037]  (priority: 28)
-[ 10% 2810/28037] //hardware/interfaces/keymaster/4.1:android.hardware.keymaster@4.1 generate toc android.hardware.keymaster@4.1.so (priority: 28)
-[ 10% 2811/28037] //hardware/interfaces/security/rkp/aidl:android.hardware.security.rkp-V3-ndk generate toc android.hardware.security.rkp-V3-ndk.so (priority: 28)
-[ 10% 2812/28037] //hardware/interfaces/security/sharedsecret/aidl:android.hardware.security.sharedsecret-V1-ndk generate toc android.hardware.security.sharedsecret-V1-ndk.so (priority: 28)
-[ 10% 2813/28037] //frameworks/base/keystore/aaid/aidl:android.security.aaid_aidl-cpp clang++ android/security/keystore/IKeyAttestationApplicationIdProvider.cpp (priority: 28)
-[ 10% 2814/28037] //frameworks/base/keystore/aaid/aidl:android.security.aaid_aidl-cpp clang++ android/security/keystore/KeyAttestationApplicationId.cpp (priority: 28)
-[ 10% 2815/28037] //frameworks/base/keystore/aaid/aidl:android.security.aaid_aidl-cpp clang++ android/security/keystore/KeyAttestationPackageInfo.cpp (priority: 28)
-[ 10% 2816/28037] //frameworks/base/keystore/aaid/aidl:android.security.aaid_aidl-cpp clang++ android/security/keystore/Signature.cpp (priority: 28)
-[ 10% 2817/28037] //system/security/keystore2/aidl:android.security.compat-ndk clang++ android/security/compat/IKeystoreCompatService.cpp (priority: 28)
-[ 10% 2818/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/AuthenticatorSpec.cpp (priority: 28)
-[ 10% 2819/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/Authorization.cpp (priority: 28)
-[ 10% 2820/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/CreateOperationResponse.cpp (priority: 28)
-[ 10% 2821/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/Domain.cpp (priority: 28)
-[ 10% 2822/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/EphemeralStorageKeyResponse.cpp (priority: 28)
-[ 10% 2823/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/IKeystoreOperation.cpp (priority: 28)
-[ 10% 2824/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/IKeystoreSecurityLevel.cpp (priority: 28)
-[ 10% 2825/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/IKeystoreService.cpp (priority: 28)
-[ 10% 2826/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/KeyDescriptor.cpp (priority: 28)
-[ 10% 2827/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/KeyEntryResponse.cpp (priority: 28)
-[ 10% 2828/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/KeyMetadata.cpp (priority: 28)
-[ 10% 2829/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/KeyParameters.cpp (priority: 28)
-[ 10% 2830/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/KeyPermission.cpp (priority: 28)
-[ 10% 2831/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/OperationChallenge.cpp (priority: 28)
-[ 10% 2832/28037] //system/hardware/interfaces/keystore2/aidl:android.system.keystore2-V5-ndk clang++ android/system/keystore2/ResponseCode.cpp (priority: 28)
+[ 12% 3410/28037] //external/scudo:libscudo clang++ standalone/report.cpp (priority: 28)
+[ 12% 3411/28037] //external/scudo:libscudo clang++ standalone/timing.cpp (priority: 28)
+[ 12% 3412/28037] //external/scudo:libscudo clang++ standalone/string_utils.cpp (priority: 28)
+[ 12% 3413/28037] //external/scudo:libscudo clang++ standalone/crc32_hw.cpp (priority: 28)
+[ 12% 3414/28037] //system/core/libsparse:libsparse link libsparse.so (priority: 28)
+[ 12% 3415/28037] //system/extras/squashfs_utils:libsquashfs_utils clang squashfs_utils.c (priority: 28)
+[ 12% 3416/28037] //bionic/libc:libstdc++ clang++ bionic/__cxa_guard.cpp (priority: 28)
+[ 12% 3417/28037] //bionic/libc:libstdc++ clang++ bionic/__cxa_pure_virtual.cpp (priority: 28)
+[ 12% 3418/28037] //bionic/libc:libstdc++ clang++ bionic/new.cpp (priority: 28)
+[ 12% 3419/28037] //bionic/libc/system_properties:libsystemproperties clang++ context_node.cpp (priority: 28)
+[ 12% 3420/28037] //bionic/libc/system_properties:libsystemproperties clang++ contexts_split.cpp (priority: 28)
+[ 12% 3421/28037] //bionic/libc/system_properties:libsystemproperties clang++ contexts_serialized.cpp (priority: 28)
+[ 12% 3422/28037] //bionic/libc/system_properties:libsystemproperties clang++ prop_area.cpp (priority: 28)
+[ 12% 3423/28037] //bionic/libc/system_properties:libsystemproperties clang++ prop_info.cpp (priority: 28)
+[ 12% 3424/28037] //bionic/libc/system_properties:libsystemproperties clang++ system_properties.cpp (priority: 28)
+[ 12% 3425/28037] //system/core/libutils:libutils strip libutils.so (priority: 28)
+[ 12% 3426/28037] //external/scudo:libscudo clang++ standalone/wrappers_c_bionic.cpp (priority: 28)
+[ 12% 3427/28037] //system/core/libutils/binder:libutils_binder clang++ Errors.cpp (priority: 28)
+[ 12% 3428/28037] //system/core/libutils/binder:libutils_binder clang++ SharedBuffer.cpp (priority: 28)
+[ 12% 3429/28037] //system/core/libutils/binder:libutils_binder clang++ RefBase.cpp (priority: 28)
+[ 12% 3430/28037] //system/core/libutils/binder:libutils_binder clang++ String16.cpp (priority: 28)
+[ 12% 3431/28037] //system/core/libutils/binder:libutils_binder clang++ StrongPointer.cpp (priority: 28)
+[ 12% 3432/28037] //system/core/libutils/binder:libutils_binder clang++ Unicode.cpp (priority: 28)
+[ 12% 3433/28037] //system/core/libutils/binder:libutils_binder clang++ String8.cpp (priority: 28)
+[ 12% 3434/28037] //system/core/libvndksupport:libvndksupport link libvndksupport.so (priority: 28)
 ```
