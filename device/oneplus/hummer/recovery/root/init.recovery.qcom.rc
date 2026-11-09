@@ -43,6 +43,16 @@ service aera-graphics-allocator /vendor/bin/hw/vendor.qti.hardware.display.alloc
     group root graphics
     capabilities SYS_NICE
 
+# AERA binds /data/media/0 on /sdcard once during startup. When userdata is
+# still locked at that point the bind is dropped and /sdcard stays empty.
+# This watcher waits for userdata and performs the bind itself.
+service aera-sdcard /system/bin/sh /sbin/aera-sdcard.sh
+    class core
+    user root
+    group root
+    oneshot
+    seclabel u:r:recovery:s0
+
 service post-boot-script /system/bin/sh -c /vendor/bin/init.kernel.post_boot-sun_default_6_2.sh
     user root
     group root
@@ -112,6 +122,7 @@ on init
     setprop sys.usb.configfs 1
     start vendor.boot-qti
     setprop prepdecrypt.setpatch true
+    start aera-sdcard
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
@@ -145,6 +156,7 @@ on property:twrp.fastboot.mode=1
 # FBE succeeds so it cannot interfere with prepdecrypt or gatekeeper/weaver.
 on property:post.decrypt.modules=true
     start aera-audio-bootstrap
+    start aera-sdcard
 
 on property:ro.crypto.state=encrypted && property:ro.boot.dynamic_partitions=true
     start prepdecrypt.vendor
@@ -156,3 +168,4 @@ on property:vendor.sys.listeners.registered=true && property:vendor.aera.crypto.
 # crypto.ready is a platform property: keep its trigger in the root init context.
 on property:crypto.ready=1
     start aera-crypto-prepare
+    start aera-sdcard
