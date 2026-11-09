@@ -197,7 +197,7 @@ AERA_INCLUDE_OMAPI := true
 #
 
 # Remove the old patched ODM alias after the root overlay is copied.
-BOARD_RECOVERY_IMAGE_PREPARE += rm -f $(TARGET_RECOVERY_ROOT_OUT)/vendor/odm/lib64/libesesbprovision.so;
+BOARD_RECOVERY_IMAGE_PREPARE += rm -f $(TARGET_RECOVERY_ROOT_OUT)/vendor/odm/lib64/libesesbprovision.so
 
 # Device-root overlays are copied after the generic image hook.
 # Keep optional sensor files out of flag-off incremental builds.
