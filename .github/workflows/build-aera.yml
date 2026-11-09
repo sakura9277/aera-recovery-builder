@@ -152,14 +152,20 @@ jobs:
           export AERA_BUILD_DEVICE="$DEV"
           source build/envsetup.sh
 
+          # Combo names depend on which release configs the manifest actually
+          # ships. Only bp2a is guaranteed here; trunk_staging is absent from
+          # some point releases and makes release_config abort the whole shell,
+          # so every attempt starts from a clean product/release pair.
           ok=0
-          for target in "${{ inputs.lunch }}" "twrp_${DEV}-trunk_staging-eng" "twrp_${DEV}-eng" "aera_${DEV}-bp2a-eng"; do
+          for target in "${{ inputs.lunch }}" "aera_${DEV}-bp2a-eng" "twrp_${DEV}-bp2a-eng" "twrp_${DEV}-eng"; do
+            unset TARGET_PRODUCT TARGET_RELEASE TARGET_BUILD_VARIANT
             if lunch "$target" >/tmp/lunch.log 2>&1; then
               echo "lunch: $target"
               ok=1
               break
             fi
-            tail -n 15 /tmp/lunch.log
+            echo "lunch failed: $target"
+            tail -n 10 /tmp/lunch.log
           done
           if [ "$ok" -ne 1 ]; then
             echo "::error::no usable lunch target"
