@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:37:19Z |
-| 已运行 | **6 分钟** |
-| ninja 进度 | `432/28037` |
+| 采样时刻 | 2026-11-09 23:37:50Z |
+| 已运行 | **7 分钟** |
+| ninja 进度 | `595/28037` |
 | 工作卷 | `63G used, 34G avail, 66%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `4803M used / 11180M avail | swap 761M/17782M` |
-| PSI | `some avg10=3.91 avg60=7.09 avg300=13.88 total=90417144 full avg10=3.91 avg60=6.60 avg300=12.81 total=83226364 ` |
+| 内存 | `4900M used / 11083M avail | swap 750M/17782M` |
+| PSI | `some avg10=0.19 avg60=4.30 avg300=12.52 total=90417200 full avg10=0.19 avg60=4.00 avg300=11.56 total=83226420 ` |
 
 ### 内存占用 Top6
 
 ```
-  3597M  ninja
+  3598M  ninja
    102M  provjobd3626103
-    61M  clang++.real
-    59M  clang++.real
+    49M  Runner.Listener
     43M  multipathd
-    32M  Runner.Listener
+    42M  clang++.real
+    31M  Runner.Worker
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  1% 408/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ csmatch.cpp [linux_glibc] (priority: 73)
-[  1% 409/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ csr2022.cpp [linux_glibc] (priority: 73)
-[  1% 410/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ csrecog.cpp [linux_glibc] (priority: 73)
-[  1% 411/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ csrmbcs.cpp [linux_glibc] (priority: 73)
-[  1% 412/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ csrucode.cpp [linux_glibc] (priority: 73)
-[  1% 413/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ csrsbcs.cpp [linux_glibc] (priority: 73)
-[  1% 414/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ csrutf8.cpp [linux_glibc] (priority: 73)
-[  1% 415/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ curramt.cpp [linux_glibc] (priority: 73)
-[  1% 416/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ currfmt.cpp [linux_glibc] (priority: 73)
-[  1% 417/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ currunit.cpp [linux_glibc] (priority: 73)
-[  1% 418/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ currpinf.cpp [linux_glibc] (priority: 73)
-[  1% 419/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ dangical.cpp [linux_glibc] (priority: 73)
-[  1% 420/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ datefmt.cpp [linux_glibc] (priority: 73)
-[  1% 421/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ dayperiodrules.cpp [linux_glibc] (priority: 73)
-[  1% 422/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ decContext.cpp [linux_glibc] (priority: 73)
-[  1% 423/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ dcfmtsym.cpp [linux_glibc] (priority: 73)
-[  1% 424/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ decimfmt.cpp [linux_glibc] (priority: 73)
-[  1% 425/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ decNumber.cpp [linux_glibc] (priority: 73)
-[  1% 426/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ displayoptions.cpp [linux_glibc] (priority: 73)
-[  1% 427/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-bignum-dtoa.cpp [linux_glibc] (priority: 73)
-[  1% 428/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-cached-powers.cpp [linux_glibc] (priority: 73)
-[  1% 429/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-double-to-string.cpp [linux_glibc] (priority: 73)
-[  1% 430/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-bignum.cpp [linux_glibc] (priority: 73)
-[  1% 431/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-fast-dtoa.cpp [linux_glibc] (priority: 73)
-[  1% 432/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-strtod.cpp [linux_glibc] (priority: 73)
+[  2% 573/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ transreg.cpp [linux_glibc] (priority: 73)
+[  2% 574/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ tridpars.cpp [linux_glibc] (priority: 73)
+[  2% 575/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ tzgnames.cpp [linux_glibc] (priority: 73)
+[  2% 576/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ tzfmt.cpp [linux_glibc] (priority: 73)
+[  2% 577/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ tznames.cpp [linux_glibc] (priority: 73)
+[  2% 578/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ tznames_impl.cpp [linux_glibc] (priority: 73)
+[  2% 579/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ tzrule.cpp [linux_glibc] (priority: 73)
+[  2% 580/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ tztrans.cpp [linux_glibc] (priority: 73)
+[  2% 581/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ ucal.cpp [linux_glibc] (priority: 73)
+[  2% 582/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ ucln_in.cpp [linux_glibc] (priority: 73)
+[  2% 583/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ ucol.cpp [linux_glibc] (priority: 73)
+[  2% 584/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ ucol_res.cpp [linux_glibc] (priority: 73)
+[  2% 585/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ ucol_sit.cpp [linux_glibc] (priority: 73)
+[  2% 586/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ ucoleitr.cpp [linux_glibc] (priority: 73)
+[  2% 587/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ ucsdet.cpp [linux_glibc] (priority: 73)
+[  2% 588/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ udateintervalformat.cpp [linux_glibc] (priority: 73)
+[  2% 589/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ udat.cpp [linux_glibc] (priority: 73)
+[  2% 590/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ ufieldpositer.cpp [linux_glibc] (priority: 73)
+[  2% 591/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ udatpg.cpp [linux_glibc] (priority: 73)
+[  2% 592/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ ulistformatter.cpp [linux_glibc] (priority: 73)
+[  2% 593/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ uitercollationiterator.cpp [linux_glibc] (priority: 73)
+[  2% 594/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ ulocdata.cpp [linux_glibc] (priority: 73)
+[  2% 595/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ umsg.cpp [linux_glibc] (priority: 73)
+[  2% 596/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ unesctrn.cpp [linux_glibc] (priority: 73)
+[  2% 597/28037] //external/icu/icu4c/source/i18n:libicui18n clang++ uni2name.cpp [linux_glibc] (priority: 73)
 ```
