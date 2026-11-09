@@ -2,21 +2,21 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:40:26Z |
-| 已运行 | **9 分钟** |
-| ninja 进度 | `950/28037` |
-| 工作卷 | `63G used, 33G avail, 66%` |
+| 采样时刻 | 2026-11-09 23:40:57Z |
+| 已运行 | **10 分钟** |
+| ninja 进度 | `1031/28037` |
+| 工作卷 | `63G used, 33G avail, 67%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2197M used / 13786M avail | swap 4020M/17782M` |
-| PSI | `some avg10=0.00 avg60=1.11 avg300=8.06 total=93963068 full avg10=0.00 avg60=1.09 avg300=7.50 total=86765488 ` |
+| 内存 | `2775M used / 13208M avail | swap 4014M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.65 avg300=7.21 total=93974926 full avg10=0.00 avg60=0.63 avg300=6.71 total=86777333 ` |
 
 ### 内存占用 Top6
 
 ```
-   323M  ninja
-   126M  clang++.real
+   880M  rustc
+   329M  ninja
+   117M  clang++.real
    107M  provjobd3626103
-    75M  clang++.real
     54M  Runner.Listener
     43M  multipathd
 ```
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  3% 926/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_field.cc [linux_glibc] (priority: 55)
-[  3% 927/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_field_lite.cc [linux_glibc] (priority: 55)
-[  3% 928/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_lite.cc [linux_glibc] (priority: 55)
-[  3% 929/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/name_resolver.cc [linux_glibc] (priority: 55)
-[  3% 930/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/primitive_field.cc [linux_glibc] (priority: 55)
-[  3% 931/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/primitive_field_lite.cc [linux_glibc] (priority: 55)
-[  3% 932/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/service.cc [linux_glibc] (priority: 55)
-[  3% 933/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/shared_code_generator.cc [linux_glibc] (priority: 55)
-[  3% 934/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/string_field.cc [linux_glibc] (priority: 55)
-[  3% 935/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/string_field_lite.cc [linux_glibc] (priority: 55)
-[  3% 936/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_enum.cc [linux_glibc] (priority: 55)
-[  3% 937/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc [linux_glibc] (priority: 55)
-[  3% 938/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_extension.cc [linux_glibc] (priority: 55)
-[  3% 939/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_field.cc [linux_glibc] (priority: 55)
-[  3% 940/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_generator.cc [linux_glibc] (priority: 55)
-[  3% 941/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_file.cc [linux_glibc] (priority: 55)
-[  3% 942/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_map_field.cc [linux_glibc] (priority: 55)
-[  3% 943/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_helpers.cc [linux_glibc] (priority: 55)
-[  3% 944/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_message.cc [linux_glibc] (priority: 55)
-[  3% 945/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_message_field.cc [linux_glibc] (priority: 55)
-[  3% 946/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_oneof.cc [linux_glibc] (priority: 55)
-[  3% 947/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_primitive_field.cc [linux_glibc] (priority: 55)
-[  3% 948/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/plugin.cc [linux_glibc] (priority: 55)
-[  3% 949/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/plugin.pb.cc [linux_glibc] (priority: 55)
-[  3% 950/28037] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/php/php_generator.cc [linux_glibc] (priority: 55)
+[  3% 1007/28037] //system/libbase:libbase clang++ posix_strerror_r.cpp (priority: 52)
+[  3% 1008/28037] //system/libbase:libbase clang++ process.cpp (priority: 52)
+[  3% 1009/28037] //system/libbase:libbase clang++ properties.cpp (priority: 52)
+[  3% 1010/28037] //system/libbase:libbase clang++ result.cpp (priority: 52)
+[  3% 1011/28037] //system/libbase:libbase clang++ stringprintf.cpp (priority: 52)
+[  3% 1012/28037] //system/libbase:libbase clang++ strings.cpp (priority: 52)
+[  3% 1013/28037] //system/libbase:libbase clang++ threads.cpp (priority: 52)
+[  3% 1014/28037] //system/libbase:libbase clang++ test_utils.cpp (priority: 52)
+[  3% 1015/28037] //system/libbase:libbase clang++ errors_unix.cpp (priority: 52)
+[  3% 1016/28037] //bionic/libdl:libdl_android generate stubs libdl_android.map.txt (priority: 52)
+[  3% 1017/28037] //system/logging/liblog:liblog generate toc liblog.so (priority: 52)
+[  3% 1018/28037] //external/rust/android-crates-io/crates/serde:libserde rustc src/lib.rs (priority: 52)
+[  3% 1019/28037] //external/rust/android-crates-io/crates/thiserror:libthiserror rustc src/lib.rs (priority: 52)
+[  3% 1020/28037] Install: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/dep_fixer (priority: 51)
+[  3% 1021/28037] Install: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/aprotoc (priority: 51)
+[  3% 1022/28037] //system/tools/aidl:libaidl-common lex aidl_language_l.ll [linux_glibc] (priority: 51)
+[  3% 1023/28037] //system/libbase:libbase link libbase.so (priority: 51)
+[  3% 1024/28037] //external/rust/android-crates-io/crates/bytes:libbytes rustc src/lib.rs (priority: 51)
+[  3% 1025/28037] //bionic/libdl:libdl_android clang stub.c (priority: 51)
+[  3% 1026/28037] //external/rust/android-crates-io/crates/once_cell:libonce_cell rustc src/lib.rs (priority: 51)
+[  3% 1027/28037] //external/rust/android-crates-io/crates/protobuf:libprotobuf cp out (priority: 51)
+[  3% 1028/28037] //external/rust/android-crates-io/crates/protobuf-codegen:libprotobuf_codegen rustc src/lib.rs [linux_glibc] (priority: 54)
+[  3% 1029/28037] //external/rust/android-crates-io/crates/protobuf-support:libprotobuf_support rustc src/lib.rs (priority: 51)
+[  3% 1030/28037] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/bssl_ar/linux_glibc_x86_64/pkg/boringssl.googlesource.com/boringssl/util/ar.a (priority: 50)
+[  3% 1031/28037] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/bssl_fipscommon/linux_glibc_x86_64/pkg/boringssl.googlesource.com/boringssl/util/fipstools/fipscommon.a (priority: 50)
 ```
