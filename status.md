@@ -2,21 +2,21 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:31:31Z |
+| 采样时刻 | 2026-11-09 23:32:02Z |
 | 已运行 | **1 分钟** |
 | ninja 进度 | `130/131` |
 | 工作卷 | `58G used, 39G avail, 60%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `6738M used / 9245M avail | swap 79M/17782M` |
-| PSI | `some avg10=0.47 avg60=0.19 avg300=0.16 total=8283705 full avg10=0.47 avg60=0.19 avg300=0.16 total=7310393 ` |
+| 内存 | `13699M used / 2284M avail | swap 76M/17782M` |
+| PSI | `some avg10=2.55 avg60=0.78 avg300=0.31 total=8879793 full avg10=2.38 avg60=0.69 avg300=0.27 total=7836858 ` |
 
 ### 内存占用 Top6
 
 ```
-  5681M  soong_build
+ 12610M  soong_build
    112M  provjobd3626103
-    96M  Runner.Worker
-    61M  Runner.Listener
+    97M  Runner.Worker
+    64M  Runner.Listener
     43M  multipathd
     41M  soong_ui
 ```
