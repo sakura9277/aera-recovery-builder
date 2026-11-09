@@ -2,20 +2,20 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:41:59Z |
-| 已运行 | **11 分钟** |
-| ninja 进度 | `1221/28037` |
+| 采样时刻 | 2026-11-09 23:42:31Z |
+| 已运行 | **12 分钟** |
+| ninja 进度 | `1639/28037` |
 | 工作卷 | `64G used, 33G avail, 67%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2203M used / 13780M avail | swap 4007M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.22 avg300=5.82 total=93980779 full avg10=0.00 avg60=0.22 avg300=5.42 total=86783178 ` |
+| 内存 | `2082M used / 13901M avail | swap 4005M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.13 avg300=5.21 total=93980781 full avg10=0.00 avg60=0.12 avg300=4.85 total=86783181 ` |
 
 ### 内存占用 Top6
 
 ```
-   336M  ninja
+   339M  ninja
    107M  provjobd3626103
-    88M  clang++.real
+    73M  clang++.real
     73M  clang++.real
     54M  Runner.Listener
     43M  multipathd
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[  4% 1197/28037] //external/boringssl:libcrypto clang++ src/crypto/bytestring/cbs.cc (priority: 47)
-[  4% 1198/28037] //external/boringssl:libcrypto clang++ src/crypto/bytestring/unicode.cc (priority: 47)
-[  4% 1199/28037] //external/boringssl:libcrypto clang++ src/crypto/chacha/chacha.cc (priority: 47)
-[  4% 1200/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/cipher_extra.cc (priority: 47)
-[  4% 1201/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/derive_key.cc (priority: 47)
-[  4% 1202/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_aesctrhmac.cc (priority: 47)
-[  4% 1203/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_aesgcmsiv.cc (priority: 47)
-[  4% 1204/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_chacha20poly1305.cc (priority: 47)
-[  4% 1205/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_des.cc (priority: 47)
-[  4% 1206/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_null.cc (priority: 47)
-[  4% 1207/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_rc2.cc (priority: 47)
-[  4% 1208/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_rc4.cc (priority: 47)
-[  4% 1209/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_tls.cc (priority: 47)
-[  4% 1210/28037] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/tls_cbc.cc (priority: 47)
-[  4% 1211/28037] //external/boringssl:libcrypto clang++ src/crypto/conf/conf.cc (priority: 47)
-[  4% 1212/28037] //external/boringssl:libcrypto clang++ src/crypto/cpu_aarch64_apple.cc (priority: 47)
-[  4% 1213/28037] //external/boringssl:libcrypto clang++ src/crypto/cpu_aarch64_fuchsia.cc (priority: 47)
-[  4% 1214/28037] //external/boringssl:libcrypto clang++ src/crypto/cpu_aarch64_linux.cc (priority: 47)
-[  4% 1215/28037] //external/boringssl:libcrypto clang++ src/crypto/cpu_aarch64_openbsd.cc (priority: 47)
-[  4% 1216/28037] //external/boringssl:libcrypto clang++ src/crypto/cpu_aarch64_sysreg.cc (priority: 47)
-[  4% 1217/28037] //external/boringssl:libcrypto clang++ src/crypto/cpu_aarch64_win.cc (priority: 47)
-[  4% 1218/28037] //external/boringssl:libcrypto clang++ src/crypto/cpu_arm_freebsd.cc (priority: 47)
-[  4% 1219/28037] //external/boringssl:libcrypto clang++ src/crypto/cpu_arm_linux.cc (priority: 47)
-[  4% 1220/28037] //external/boringssl:libcrypto clang++ src/crypto/cpu_intel.cc (priority: 47)
-[  4% 1221/28037] //external/boringssl:libcrypto clang++ src/crypto/crypto.cc (priority: 47)
+[  5% 1615/28037] //external/boringssl:libcrypto clang++ src/crypto/evp/p_ed25519_asn1.cc [linux_glibc] (priority: 47)
+[  5% 1616/28037] //external/boringssl:libcrypto clang++ src/crypto/evp/p_hkdf.cc [linux_glibc] (priority: 47)
+[  5% 1617/28037] //external/boringssl:libcrypto clang++ src/crypto/evp/p_rsa.cc [linux_glibc] (priority: 47)
+[  5% 1618/28037] //external/boringssl:libcrypto clang++ src/crypto/evp/p_rsa_asn1.cc [linux_glibc] (priority: 47)
+[  5% 1619/28037] //external/boringssl:libcrypto clang++ src/crypto/evp/p_x25519.cc [linux_glibc] (priority: 47)
+[  5% 1620/28037] //external/boringssl:libcrypto clang++ src/crypto/evp/p_x25519_asn1.cc [linux_glibc] (priority: 47)
+[  5% 1621/28037] //external/boringssl:libcrypto clang++ src/crypto/evp/pbkdf.cc [linux_glibc] (priority: 47)
+[  5% 1622/28037] //external/boringssl:libcrypto clang++ src/crypto/evp/print.cc [linux_glibc] (priority: 47)
+[  5% 1623/28037] //external/boringssl:libcrypto clang++ src/crypto/evp/scrypt.cc [linux_glibc] (priority: 47)
+[  5% 1624/28037] //external/boringssl:libcrypto clang++ src/crypto/evp/sign.cc [linux_glibc] (priority: 47)
+[  5% 1625/28037] //external/boringssl:libcrypto clang++ src/crypto/fipsmodule/fips_shared_support.cc [linux_glibc] (priority: 47)
+[  5% 1626/28037] //external/boringssl:libcrypto clang++ src/crypto/ex_data.cc [linux_glibc] (priority: 47)
+[  5% 1627/28037] //external/boringssl:libcrypto clang++ src/crypto/hpke/hpke.cc [linux_glibc] (priority: 47)
+[  5% 1628/28037] //external/boringssl:libcrypto clang++ src/crypto/hrss/hrss.cc [linux_glibc] (priority: 47)
+[  5% 1629/28037] //external/boringssl:libcrypto clang++ src/crypto/lhash/lhash.cc [linux_glibc] (priority: 47)
+[  5% 1630/28037] //external/boringssl:libcrypto clang++ src/crypto/kyber/kyber.cc [linux_glibc] (priority: 47)
+[  5% 1631/28037] //external/boringssl:libcrypto clang++ src/crypto/md4/md4.cc [linux_glibc] (priority: 47)
+[  5% 1632/28037] //external/boringssl:libcrypto clang++ src/crypto/md5/md5.cc [linux_glibc] (priority: 47)
+[  5% 1633/28037] //external/boringssl:libcrypto clang++ src/crypto/mldsa/mldsa.cc [linux_glibc] (priority: 47)
+[  5% 1634/28037] //external/boringssl:libcrypto clang++ src/crypto/mem.cc [linux_glibc] (priority: 47)
+[  5% 1635/28037] //external/boringssl:libcrypto clang++ src/crypto/mlkem/mlkem.cc [linux_glibc] (priority: 47)
+[  5% 1636/28037] //external/boringssl:libcrypto clang++ src/crypto/obj/obj.cc [linux_glibc] (priority: 47)
+[  5% 1637/28037] //external/boringssl:libcrypto clang++ src/crypto/obj/obj_xref.cc [linux_glibc] (priority: 47)
+[  5% 1638/28037] //external/boringssl:libcrypto clang++ src/crypto/pem/pem_all.cc [linux_glibc] (priority: 47)
+[  5% 1639/28037] //external/boringssl:libcrypto clang++ src/crypto/pem/pem_info.cc [linux_glibc] (priority: 47)
 ```
