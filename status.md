@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-06 17:44:27Z |
-| 已运行 | **55 分钟** |
-| ninja 进度 | `28037/28037` |
-| 工作卷 | `71G used, 25G avail, 75%` |
+| 采样时刻 | 2026-11-09 23:30:29Z |
+| 已运行 | **0 分钟** |
+| ninja 进度 | `n/a` |
+| 工作卷 | `57G used, 40G avail, 60%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `1070M used / 14913M avail | swap 115M/17782M` |
-| PSI | `some avg10=0.01 avg60=0.02 avg300=0.00 total=95651412 full avg10=0.01 avg60=0.02 avg300=0.00 total=88424447 ` |
+| 内存 | `1644M used / 14339M avail | swap 79M/17782M` |
+| PSI | `some avg10=0.01 avg60=0.28 avg300=0.19 total=8179813 full avg10=0.01 avg60=0.27 avg300=0.18 total=7225307 ` |
 
 ### 内存占用 Top6
 
 ```
-   119M  provjobd2880998
-    94M  Runner.Worker
-    89M  MainThread
-    83M  Runner.Listener
+   111M  provjobd3626103
+    96M  Runner.Worker
+    60M  Runner.Listener
     43M  multipathd
-    30M  python3
+    31M  php-fpm8.3
+    27M  python3
 ```
 
 ### 内核 OOM 记录
@@ -30,32 +30,5 @@
 ### 编译日志尾部
 
 ```
-
-
-
-        █████╗ ███████╗██████╗  █████╗
-       ██╔══██╗██╔════╝██╔══██╗██╔══██╗
-       ███████║█████╗  ██████╔╝███████║
-       ██╔══██║██╔══╝  ██╔══██╗██╔══██║
-       ██║  ██║███████╗██║  ██║██║  ██║
-       ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
-
-                 RECOVERY PROJECT R1.0
-
-
-=================Finished building AERA R1.0=================
-
-Recovery image: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/AERA-R1.0-Beta-Official-hummer.img
-          MD5: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/AERA-R1.0-Beta-Official-hummer.img.md5
-
-Recovery zip: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/AERA-R1.0-Beta-Official-hummer.zip
-          MD5: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/AERA-R1.0-Beta-Official-hummer.zip.md5
-
-==================================================================
-
-#### build completed successfully (54:59 (mm:ss)) ####
+（还没有输出）
 ```
-
-
----
-**构建已结束（build.done 出现）**
