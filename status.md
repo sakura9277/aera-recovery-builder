@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:32:02Z |
-| 已运行 | **1 分钟** |
+| 采样时刻 | 2026-11-09 23:32:34Z |
+| 已运行 | **2 分钟** |
 | ninja 进度 | `130/131` |
-| 工作卷 | `58G used, 39G avail, 60%` |
+| 工作卷 | `58G used, 39G avail, 61%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `13699M used / 2284M avail | swap 76M/17782M` |
-| PSI | `some avg10=2.55 avg60=0.78 avg300=0.31 total=8879793 full avg10=2.38 avg60=0.69 avg300=0.27 total=7836858 ` |
+| 内存 | `15114M used / 869M avail | swap 4295M/17782M` |
+| PSI | `some avg10=33.09 avg60=13.00 avg300=3.31 total=18825646 full avg10=31.08 avg60=12.23 avg300=3.11 total=17249949 ` |
 
 ### 内存占用 Top6
 
 ```
- 12610M  soong_build
-   112M  provjobd3626103
-    97M  Runner.Worker
-    64M  Runner.Listener
+ 13604M  soong_build
+    82M  provjobd3626103
     43M  multipathd
-    41M  soong_ui
+    22M  php-fpm8.3
+    19M  python3
+    18M  Runner.Worker
 ```
 
 ### 内核 OOM 记录
