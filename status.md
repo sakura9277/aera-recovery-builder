@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-09 23:54:27Z |
-| 已运行 | **23 分钟** |
-| ninja 进度 | `6423/28037` |
-| 工作卷 | `65G used, 31G avail, 68%` |
+| 采样时刻 | 2026-11-09 23:54:59Z |
+| 已运行 | **24 分钟** |
+| ninja 进度 | `6704/28037` |
+| 工作卷 | `65G used, 31G avail, 69%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2399M used / 13584M avail | swap 3825M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.41 total=94268954 full avg10=0.00 avg60=0.00 avg300=0.38 total=87060386 ` |
+| 内存 | `2429M used / 13554M avail | swap 3820M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.37 total=94272339 full avg10=0.00 avg60=0.00 avg300=0.34 total=87063770 ` |
 
 ### 内存占用 Top6
 
 ```
-   501M  ninja
+   507M  ninja
    109M  provjobd3626103
-    81M  clang++.real
-    64M  Runner.Worker
-    61M  soong_ui
-    58M  clang++.real
+    69M  clang++.real
+    65M  Runner.Worker
+    62M  soong_ui
+    61M  clang++.real
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 22% 6399/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arena.cc (priority: 22)
-[ 22% 6400/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arenaz_sampler.cc (priority: 22)
-[ 22% 6401/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arenastring.cc (priority: 22)
-[ 22% 6402/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_enum_util.cc (priority: 22)
-[ 22% 6403/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/extension_set.cc (priority: 22)
-[ 22% 6404/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_message_util.cc (priority: 22)
-[ 22% 6405/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_message_tctable_lite.cc (priority: 22)
-[ 22% 6406/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/implicit_weak_message.cc (priority: 22)
-[ 22% 6407/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/inlined_string_field.cc (priority: 22)
-[ 22% 6408/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/io_win32.cc (priority: 22)
-[ 22% 6409/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/coded_stream.cc (priority: 22)
-[ 22% 6410/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/strtod.cc (priority: 22)
-[ 22% 6411/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream.cc (priority: 22)
-[ 22% 6412/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream_impl.cc (priority: 22)
-[ 22% 6413/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream_impl_lite.cc (priority: 22)
-[ 22% 6414/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/map.cc (priority: 22)
-[ 22% 6415/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/message_lite.cc (priority: 22)
-[ 22% 6416/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/parse_context.cc (priority: 22)
-[ 22% 6417/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/repeated_ptr_field.cc (priority: 22)
-[ 22% 6418/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/repeated_field.cc (priority: 22)
-[ 22% 6419/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/bytestream.cc (priority: 22)
-[ 22% 6420/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/common.cc (priority: 22)
-[ 22% 6421/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/int128.cc (priority: 22)
-[ 22% 6422/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/status.cc (priority: 22)
-[ 22% 6423/28037] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/statusor.cc (priority: 22)
+[ 23% 6680/28037]  (priority: 21)
+[ 23% 6681/28037] //hardware/interfaces/health/1.0:android.hardware.health@1.0 clang++ android/hardware/health/1.0/types.cpp (priority: 21)
+[ 23% 6682/28037]  (priority: 21)
+[ 23% 6683/28037]  (priority: 21)
+[ 23% 6684/28037]  (priority: 21)
+[ 23% 6685/28037]  (priority: 21)
+[ 23% 6686/28037]  (priority: 21)
+[ 23% 6687/28037]  (priority: 21)
+[ 23% 6688/28037]  (priority: 21)
+[ 23% 6689/28037]  (priority: 21)
+[ 23% 6690/28037] AIDL CHECK API: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/security/authgraph/aidl/android.hardware.security.authgraph_interface/dump against hardware/interfaces/security/authgraph/aidl/aidl_api/android.hardware.security.authgraph/current (priority: 21)
+[ 23% 6691/28037]  (priority: 21)
+[ 23% 6692/28037] Verify hardware/interfaces/security/authgraph/aidl/aidl_api/android.hardware.security.authgraph/1 files have not been modified (priority: 21)
+[ 23% 6693/28037] AIDL CHECK API: hardware/interfaces/security/authgraph/aidl/aidl_api/android.hardware.security.authgraph/current against hardware/interfaces/security/authgraph/aidl/aidl_api/android.hardware.security.authgraph/1 (priority: 21)
+[ 23% 6694/28037]  (priority: 21)
+[ 23% 6695/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/Algorithm.cpp (priority: 21)
+[ 23% 6696/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/AttestationKey.cpp (priority: 21)
+[ 23% 6697/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/BlockMode.cpp (priority: 21)
+[ 23% 6698/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/BeginResult.cpp (priority: 21)
+[ 23% 6699/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/Digest.cpp (priority: 21)
+[ 23% 6700/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/EcCurve.cpp (priority: 21)
+[ 23% 6701/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/ErrorCode.cpp (priority: 21)
+[ 23% 6702/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/Certificate.cpp (priority: 21)
+[ 23% 6703/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/HardwareAuthenticatorType.cpp (priority: 21)
+[ 23% 6704/28037] //hardware/interfaces/security/keymint/aidl:android.hardware.security.keymint-V1-ndk clang++ android/hardware/security/keymint/HardwareAuthToken.cpp (priority: 21)
 ```
