@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:24:35Z |
+| 采样时刻 | 2026-11-10 00:25:06Z |
 | 已运行 | **54 分钟** |
-| ninja 进度 | `25353/28037` |
-| 工作卷 | `70G used, 27G avail, 73%` |
+| ninja 进度 | `25902/28037` |
+| 工作卷 | `70G used, 26G avail, 73%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2716M used / 13267M avail | swap 3656M/17782M` |
-| PSI | `some avg10=0.12 avg60=0.02 avg300=0.00 total=94834374 full avg10=0.12 avg60=0.02 avg300=0.00 total=87596338 ` |
+| 内存 | `3112M used / 12871M avail | swap 3654M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.01 avg300=0.00 total=94850237 full avg10=0.00 avg60=0.01 avg300=0.00 total=87610938 ` |
 
 ### 内存占用 Top6
 
 ```
-   687M  ninja
-   214M  ld.lld
-   206M  soong_ui
-   117M  provjobd3626103
+   690M  ninja
+   602M  ld.lld
+   207M  soong_ui
+   150M  clang++.real
+   112M  provjobd3626103
     76M  Runner.Listener
-    72M  Runner.Worker
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 90% 25330/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterm-xf86-v333 (priority: 10)
-[ 90% 25331/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterm-xf86-v40 (priority: 10)
-[ 90% 25332/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterm-xf86-v43 (priority: 10)
-[ 90% 25333/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterm-xf86-v44 (priority: 10)
-[ 90% 25334/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterm-xfree86 (priority: 10)
-[ 90% 25335/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterm-xi (priority: 10)
-[ 90% 25336/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterm.js (priority: 10)
-[ 90% 25337/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterm1 (priority: 10)
-[ 90% 25338/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xtermc (priority: 10)
-[ 90% 25339/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xtermm (priority: 10)
-[ 90% 25340/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterms (priority: 10)
-[ 90% 25341/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterms-sun (priority: 10)
-[ 90% 25342/28037] //system/netd/client:libnetd_client strip libnetd_client.so (priority: 10)
-[ 90% 25343/28037] //external/libnl:libnl strip libnl.so (priority: 10)
-[ 90% 25344/28037] //external/nos/host/generic/libnos_datagram:libnos_datagram strip libnos_datagram.so (priority: 10)
-[ 90% 25345/28037] //external/nos/host/generic/libnos_transport:libnos_transport strip libnos_transport.so (priority: 10)
-[ 90% 25346/28037] //system/core/libprocessgroup:libprocessgroup link libprocessgroup.so [apex31] (priority: 10)
-[ 90% 25347/28037] //system/core/libprocessgroup:libprocessgroup static link libprocessgroup.a (priority: 10)
-[ 90% 25348/28037] //system/core/libprocessgroup/setup:libprocessgroup_setup strip libprocessgroup_setup.so (priority: 10)
-[ 90% 25349/28037] //external/selinux/libselinux:libselinux clang stub.c (priority: 10)
-[ 90% 25350/28037] //frameworks/base/libs/services:libservices strip libservices.so (priority: 10)
-[ 90% 25351/28037] //system/core/fs_mgr/libsnapshot/snapuserd:libsnapuserd static link libsnapuserd.a (priority: 10)
-[ 90% 25352/28037] //system/core/fs_mgr/libsnapshot/snapuserd:libsnapuserd_client static link libsnapuserd_client.a (priority: 10)
-[ 90% 25353/28037] //system/keymaster:libsoftkeymasterdevice strip libsoftkeymasterdevice.so (priority: 10)
-[ 90% 25354/28037] //external/boringssl:libssl static link libssl.a (priority: 10)
+[ 92% 25878/28037] //device/oneplus/hummer/audio:aera-audio-service link aera-audio-service (priority: 9)
+[ 92% 25879/28037] //device/oneplus/hummer/mobile_data:aera-cellular-provider link aera-cellular-provider (priority: 9)
+[ 92% 25880/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/device/oneplus/hummer/mobile_data/aera-hummer-cn-static-nv/android_recovery_arm64_armv8-a/oplusstanvbk.img (priority: 9)
+[ 92% 25881/28037] //device/oneplus/hummer/mobile_data:aera-mobile-rmtfs strip aera-mobile-rmtfs (priority: 9)
+[ 92% 25882/28037] //device/oneplus/hummer/mobile_data:aera-mobile-tftp strip aera-mobile-tftp (priority: 9)
+[ 92% 25883/28037] //packages/modules/adb:adbd.recovery link adbd (priority: 9)
+[ 92% 25884/28037] //bootable/recovery/aeraui:aera-artillery-audio strip aera-artillery-audio (priority: 9)
+[ 92% 25885/28037] //bootable/recovery/aeraui:aera-browser-jail strip aera-browser-jail (priority: 9)
+[ 92% 25886/28037] //bootable/recovery/nas/native:aera-netfs strip aera-netfs (priority: 9)
+[ 92% 25887/28037] //bootable/recovery/third_party/htop:aera_htop strip htop (priority: 9)
+[ 92% 25888/28037] //external/aeracli:aeracli strip aera (priority: 9)
+[ 92% 25889/28037] //hardware/interfaces/biometrics/fingerprint/aidl:android.hardware.biometrics.fingerprint-V3-ndk strip android.hardware.biometrics.fingerprint-V3-ndk.so (priority: 9)
+[ 92% 25890/28037] //hardware/interfaces/health/2.1/default:android.hardware.health@2.1-impl strip android.hardware.health@2.0-impl-2.1.so (priority: 9)
+[ 92% 25891/28037] //frameworks/base:android_trade_in_mode_flags_cc_lib clang++ com_android_tradeinmode_flags.cc [apex31] (priority: 9)
+[ 92% 25892/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/boringssl/bcm_object/linux_glibc_x86/bcm_object.o (priority: 9)
+[ 92% 25893/28037] //system/core/healthd:charger link charger (priority: 9)
+[ 92% 25894/28037] //bionic/libc:crtbegin_dynamic link crtbegin_dynamic.o [apex31] (priority: 9)
+[ 92% 25895/28037] //bionic/libc:crtend_android clang arch-common/bionic/crtend.S [apex31] (priority: 9)
+[ 92% 25896/28037] //system/core/libnetutils:dhcptool strip dhcptool (priority: 9)
+[ 92% 25897/28037] //external/fmtlib:fmtlib clang++ src/format.cc [linux_glibc x86] (priority: 9)
+[ 92% 25898/28037] //system/linkerconfig:generate_recovery_linker_config generate ld.config.txt (priority: 9)
+[ 92% 25899/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/core/rootdir/init.environ.rc-soong/android_arm64_armv8-a/init.environ.rc (priority: 9)
+[ 92% 25900/28037] //packages/modules/adb/crypto:libadb_crypto clang++ key.cpp [apex31] (priority: 9)
+[ 92% 25901/28037] //packages/modules/adb/crypto:libadb_crypto clang++ rsa_2048_key.cpp [apex31] (priority: 9)
+[ 92% 25902/28037] //packages/modules/adb/crypto:libadb_crypto clang++ x509_generator.cpp [apex31] (priority: 9)
 ```
