@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:22:30Z |
+| 采样时刻 | 2026-11-10 00:23:02Z |
 | 已运行 | **52 分钟** |
-| ninja 进度 | `20113/28037` |
-| 工作卷 | `69G used, 27G avail, 72%` |
+| ninja 进度 | `22386/28037` |
+| 工作卷 | `69G used, 27G avail, 73%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `3684M used / 12299M avail | swap 3667M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94660390 full avg10=0.00 avg60=0.00 avg300=0.00 total=87440205 ` |
+| 内存 | `2629M used / 13353M avail | swap 3664M/17782M` |
+| PSI | `some avg10=0.01 avg60=0.01 avg300=0.00 total=94740314 full avg10=0.01 avg60=0.01 avg300=0.00 total=87509494 ` |
 
 ### 内存占用 Top6
 
 ```
-  1183M  rustc
-   674M  ninja
-   347M  ld.lld
-   165M  soong_ui
+   678M  ninja
+   174M  soong_ui
+   123M  clang++.real
    111M  provjobd3626103
+    91M  clang++.real
     76M  Runner.Listener
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-./out/build/make/backported_fixes/applied_fixes/ki350037023.binpb
-./out/build/make/backported_fixes/applied_fixes/ki385124056.binpb
-[ 71% 20091/28037] //build/make/backported_fixes:applied_backported_fixes raw genrule.sbox.textproto (priority: 11)
-[ 71% 20092/28037] //build/make/backported_fixes:applied_backported_fixes_property_writer for javac [linux_glibc common] (priority: 11)
-[ 71% 20093/28037] //system/hardware/interfaces/wifi/keystore/1.0:android.system.wifi.keystore@1.0 link android.system.wifi.keystore@1.0.so (priority: 11)
-[ 71% 20094/28037] //external/one-true-awk:awk link awk (priority: 11)
-[ 71% 20095/28037] //external/avb:avbctl link avbctl (priority: 11)
-[ 71% 20096/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/bash/bash-etc/android_arm64_armv8-a/bash_logout (priority: 11)
-[ 71% 20097/28037] //external/bc:bc link bc (priority: 11)
-[ 71% 20098/28037] //system/extras/bootctl:bootctl link bootctl (priority: 11)
-[ 71% 20099/28037] //system/core/healthd:charger link charger (priority: 11)
-[ 71% 20100/28037] //system/core/debuggerd:debuggerd link debuggerd (priority: 11)
-[ 71% 20101/28037] //system/core/libnetutils:dhcptool clang dhcptool.c (priority: 11)
-[ 71% 20102/28037] //external/e2fsprogs/e2fsck:e2fsck link e2fsck (priority: 11)
-[ 71% 20103/28037] //external/bash:bash link bash (priority: 11)
-[ 71% 20104/28037] //system/sepolicy:file_contexts_bin_gen generate file_contexts.bin (priority: 11)
-[ 71% 20105/28037] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/fileslist/linux_glibc_x86_64/obj/fileslist.a (priority: 11)
-[ 71% 20106/28037] //external/f2fs-tools:fsck.f2fs strip fsck.f2fs (priority: 11)
-[ 71% 20107/28037] //external/ntfs-3g:fsck.ntfs link fsck.ntfs (priority: 11)
-[ 71% 20108/28037] //system/vold:fscryptpolicyget link fscryptpolicyget (priority: 11)
-[ 71% 20109/28037] //external/libfuse:fusermount3 link fusermount3 (priority: 11)
-[ 71% 20110/28037] //system/hwservicemanager:hwservicemanager link hwservicemanager (priority: 11)
-[ 71% 20111/28037] //system/core/rootdir:init.environ.rc.gen raw genrule.sbox.textproto (priority: 11)
-[ 71% 20112/28037] //system/core/fastboot:fastbootd link fastbootd (priority: 11)
-[ 71% 20113/28037] //system/core/init:init_second_stage.recovery strip init (priority: 11)
+[ 79% 22362/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x/android_arm64_armv8-a/xterms-sun (priority: 11)
+[ 79% 22363/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x/android_arm64_armv8-a/xwsh (priority: 11)
+[ 79% 22364/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/libncurses/libncurses-terminfo-x-xterm_recovery/android_recovery_arm64_armv8-a/xterm (priority: 11)
+[ 79% 22365/28037] //external/libncurses:libncurses_recovery generate toc libncurses_recovery.so (priority: 11)
+[ 79% 22366/28037] //system/core/libnetutils:libnetutils generate toc libnetutils.so (priority: 11)
+[ 79% 22367/28037] //system/netd/client:libnetd_client link libnetd_client.so (priority: 11)
+[ 79% 22368/28037] //external/nos/host/generic/libnos_datagram:libnos_datagram link libnos_datagram.so (priority: 11)
+[ 79% 22369/28037] //external/nos/host/generic/libnos_transport:libnos_transport link libnos_transport.so (priority: 11)
+[ 79% 22370/28037] //external/libnl:libnl link libnl.so (priority: 11)
+[ 79% 22371/28037] //system/core/libprocessgroup:libprocessgroup clang++ processgroup.cpp [apex31] (priority: 11)
+[ 79% 22372/28037] //system/core/libprocessgroup:libprocessgroup clang++ cgroup_map.cpp [apex31] (priority: 11)
+[ 79% 22373/28037] //system/core/libprocessgroup:libprocessgroup clang++ sched_policy.cpp [apex31] (priority: 11)
+[ 79% 22374/28037] //system/core/libprocessgroup/setup:libprocessgroup_setup link libprocessgroup_setup.so (priority: 11)
+[ 79% 22375/28037] //system/core/libprocessgroup/util:libprocessgroup_util static link libprocessgroup_util.a [apex31] (priority: 11)
+[ 79% 22376/28037] //external/protobuf:libprotobuf-cpp-lite static link libprotobuf-cpp-lite.a [linux_glibc] (priority: 11)
+[ 79% 22377/28037] //external/magisk-prebuilt/resetprop:libresetprop generate toc libresetprop.so (priority: 11)
+[ 79% 22378/28037] //external/magisk-prebuilt/resetprop:libresetprop generate toc libresetprop.so (priority: 11)
+[ 79% 22379/28037] //external/selinux/libselinux:libselinux generate stubs exported.map.txt (priority: 11)
+[ 79% 22380/28037] //frameworks/base/libs/services:libservices link libservices.so (priority: 11)
+[ 79% 22381/28037] //external/libsmb2:libsmb2 static link libsmb2.a (priority: 11)
+[ 79% 22382/28037] //system/core/fs_mgr/libsnapshot:libsnapshot static link libsnapshot.a (priority: 11)
+[ 79% 22383/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder static link libsnapshot_nobinder.a (priority: 11)
+[ 79% 22384/28037] //system/core/libprocessgroup:libprocessgroup clang++ task_profiles.cpp [apex31] (priority: 11)
+[ 79% 22385/28037] //system/core/fs_mgr/libsnapshot/snapuserd:libsnapuserd clang++ dm_user_block_server.cpp (priority: 11)
+[ 79% 22386/28037] //system/core/fs_mgr/libsnapshot/snapuserd:libsnapuserd clang++ snapuserd_buffer.cpp (priority: 11)
 ```
