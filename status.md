@@ -2,21 +2,21 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:23:33Z |
+| 采样时刻 | 2026-11-10 00:24:04Z |
 | 已运行 | **53 分钟** |
-| ninja 进度 | `22652/28037` |
+| ninja 进度 | `25056/28037` |
 | 工作卷 | `69G used, 27G avail, 73%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `3004M used / 12979M avail | swap 3662M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94746710 full avg10=0.00 avg60=0.00 avg300=0.00 total=87515325 ` |
+| 内存 | `2789M used / 13194M avail | swap 3658M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94753770 full avg10=0.00 avg60=0.00 avg300=0.00 total=87520357 ` |
 
 ### 内存占用 Top6
 
 ```
-   680M  ninja
-   481M  ld.lld
-   305M  ld.lld
-   177M  soong_ui
+   684M  ninja
+   201M  soong_ui
+   173M  clang++.real
+   160M  clang++.real
    112M  provjobd3626103
     76M  Runner.Listener
 ```
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 80% 22628/28037] //external/toybox:toybox_recovery clang toys/posix/mkfifo.c (priority: 11)
-[ 80% 22629/28037] //external/toybox:toybox_recovery clang toys/posix/nice.c (priority: 11)
-[ 80% 22630/28037] //external/toybox:toybox_recovery clang toys/posix/nohup.c (priority: 11)
-[ 80% 22631/28037] //external/toybox:toybox_recovery clang toys/posix/renice.c (priority: 11)
-[ 80% 22632/28037] //external/toybox:toybox_recovery clang toys/posix/split.c (priority: 11)
-[ 80% 22633/28037] //external/toybox:toybox_recovery clang toys/posix/strings.c (priority: 11)
-[ 80% 22634/28037] //external/toybox:toybox_recovery clang toys/posix/time.c (priority: 11)
-[ 80% 22635/28037] //external/toybox:toybox_recovery clang toys/posix/tty.c (priority: 11)
-[ 80% 22636/28037] //external/toybox:toybox_recovery clang toys/posix/ulimit.c (priority: 11)
-[ 80% 22637/28037] //external/toybox:toybox_recovery clang toys/posix/unlink.c (priority: 11)
-[ 80% 22638/28037] //external/toybox:toybox_recovery clang toys/posix/uudecode.c (priority: 11)
-[ 80% 22639/28037] //external/toybox:toybox_recovery clang toys/posix/uuencode.c (priority: 11)
-[ 80% 22640/28037] //external/ttyd:ttyd_src clang src/android_lws_check.c (priority: 11)
-[ 80% 22641/28037] //external/ttyd:ttyd_src clang src/android_forkpty.c (priority: 11)
-[ 80% 22642/28037] //external/ttyd:ttyd_src clang src/utils.c (priority: 11)
-[ 80% 22643/28037] //external/ttyd:ttyd_src clang src/pty.c (priority: 11)
-[ 80% 22644/28037] //external/ttyd:ttyd_src clang src/protocol.c (priority: 11)
-[ 80% 22645/28037] //external/ttyd:ttyd_src clang src/server.c (priority: 11)
-[ 80% 22646/28037] //external/ttyd:ttyd_src clang src/http.c (priority: 11)
-[ 80% 22647/28037] //external/e2fsprogs/misc:tune2fs link tune2fs (priority: 11)
-[ 80% 22648/28037] //frameworks/native/cmds/service:vndservice strip vndservice (priority: 11)
-[ 80% 22649/28037] //frameworks/native/cmds/servicemanager:vndservicemanager link vndservicemanager (priority: 11)
-[ 80% 22650/28037] //system/vold:vold_prepare_subdirs link vold_prepare_subdirs (priority: 11)
-[ 80% 22651/28037] //system/core/watchdogd:watchdogd link watchdogd (priority: 11)
-[ 80% 22652/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_cli link wpa_cli (priority: 11)
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+In file included from bootable/recovery/twrp-functions.cpp:28:
+In file included from prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/vector:3022:
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/locale:3288:1: warning: 'wstring_convert<std::codecvt_utf8<wchar_t>>' is deprecated [-Wdeprecated-declarations]
+ 3288 | wstring_convert<_Codecvt, _Elem, _WideAlloc, _ByteAlloc>::to_bytes(const _Elem* __frm, const _Elem* __frm_end) {
+      | ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/locale:3192:12: note: in instantiation of member function 'std::wstring_convert<std::codecvt_utf8<wchar_t>>::to_bytes' requested here
+ 3192 |     return to_bytes(__wstr.data(), __wstr.data() + __wstr.size());
+      |            ^
+bootable/recovery/twrp-functions.cpp:1417:20: note: in instantiation of member function 'std::wstring_convert<std::codecvt_utf8<wchar_t>>::to_bytes' requested here
+ 1417 |   return converter.to_bytes(wstr);
+      |                    ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/locale:3145:28: note: 'wstring_convert<std::codecvt_utf8<wchar_t>>' has been explicitly marked deprecated here
+ 3145 | class _LIBCPP_TEMPLATE_VIS _LIBCPP_DEPRECATED_IN_CXX17 wstring_convert {
+      |                            ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:715:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
+  715 | #    define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+      |                                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+4 warnings generated.
+[ 89% 25056/28037] target  C++: recovery <= bootable/recovery/partitionmanager.cpp (priority: 10)
 ```
