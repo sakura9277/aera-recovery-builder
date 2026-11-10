@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:03:48Z |
+| 采样时刻 | 2026-11-10 00:04:19Z |
 | 已运行 | **33 分钟** |
-| ninja 进度 | `11215/28037` |
+| ninja 进度 | `11389/28037` |
 | 工作卷 | `66G used, 30G avail, 70%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2435M used / 13548M avail | swap 3743M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.03 total=94336943 full avg10=0.00 avg60=0.00 avg300=0.03 total=87127987 ` |
+| 内存 | `2589M used / 13394M avail | swap 3741M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.02 total=94359866 full avg10=0.00 avg60=0.00 avg300=0.02 total=87149779 ` |
 
 ### 内存占用 Top6
 
 ```
-   586M  ninja
-   112M  provjobd3626103
+   589M  ninja
+   153M  clang++.real
+   126M  provjobd3626103
+   124M  clang++.real
     89M  soong_ui
     67M  Runner.Worker
-    62M  Runner.Listener
-    43M  multipathd
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 39% 11191/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/android.hardware.weaver@1.0.so (priority: 16)
-[ 39% 11192/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/android.security.authorization-ndk.so (priority: 16)
-[ 39% 11193/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/android.system.keystore2-V4-ndk.so (priority: 16)
-[ 39% 11194/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libbootloader_message.so (priority: 16)
-[ 39% 11195/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libasyncio.so (priority: 16)
-[ 39% 11196/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libutil-linux.so (priority: 16)
-[ 39% 11197/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libfscrypt.so (priority: 16)
-[ 39% 11198/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libgatekeeper_aidl.so (priority: 16)
-[ 39% 11199/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libhwbinder.so (priority: 16)
-[ 39% 11200/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libkeyutils.so (priority: 16)
-[ 39% 11201/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libkeystoreinfo.so (priority: 16)
-[ 39% 11202/28037] target Strip: libtwrpdigest (/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/obj/SHARED_LIBRARIES/libtwrpdigest_intermediates/libtwrpdigest.so) (priority: 16)
-[ 39% 11203/28037] Copy symbols with mapping: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/symbols/system/lib64/libusbhost.so (priority: 16)
-[ 39% 11204/28037] Install: /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/fc_sort (priority: 16)
-[ 39% 11205/28037] HIDL c++-sources: frameworks/hardware/interfaces/stats/1.0/types.hal frameworks/hardware/interfaces/stats/1.0/IStats.hal frameworks/hardware/interfaces/current.txt => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/stats/1.0/android.frameworks.stats@1.0_genc++/gen/android/frameworks/stats/1.0/StatsAll.cpp' (priority: 16)
-[ 39% 11206/28037] HIDL c++-headers: frameworks/hardware/interfaces/stats/1.0/types.hal frameworks/hardware/interfaces/stats/1.0/IStats.hal frameworks/hardware/interfaces/current.txt => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/frameworks/hardware/interfaces/stats/1.0/android.frameworks.stats@1.0_genc++_headers/gen/android/frameworks/stats/1.0/IStats.h' (priority: 16)
-[ 39% 11207/28037]  (priority: 16)
-[ 39% 11208/28037] HIDL c++-sources: hardware/interfaces/authsecret/1.0/IAuthSecret.hal hardware/interfaces/current.txt => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/authsecret/1.0/android.hardware.authsecret@1.0_genc++/gen/android/hardware/authsecret/1.0/AuthSecretAll.cpp' (priority: 16)
-[ 39% 11209/28037] HIDL c++-headers: hardware/interfaces/authsecret/1.0/IAuthSecret.hal hardware/interfaces/current.txt => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/authsecret/1.0/android.hardware.authsecret@1.0_genc++_headers/gen/android/hardware/authsecret/1.0/IAuthSecret.h' (priority: 16)
-[ 39% 11210/28037] AIDL ndk hardware/interfaces/biometrics/common/aidl/aidl_api/android.hardware.biometrics.common/3/android/hardware/biometrics/common/AuthenticateReason.aidl (priority: 16)
-[ 39% 11211/28037] AIDL ndk hardware/interfaces/biometrics/common/aidl/aidl_api/android.hardware.biometrics.common/3/android/hardware/biometrics/common/CommonProps.aidl (priority: 16)
-[ 39% 11212/28037] AIDL ndk hardware/interfaces/biometrics/common/aidl/aidl_api/android.hardware.biometrics.common/3/android/hardware/biometrics/common/ComponentInfo.aidl (priority: 16)
-[ 39% 11213/28037] AIDL ndk hardware/interfaces/biometrics/common/aidl/aidl_api/android.hardware.biometrics.common/3/android/hardware/biometrics/common/DisplayState.aidl (priority: 16)
-[ 39% 11214/28037] AIDL ndk hardware/interfaces/biometrics/common/aidl/aidl_api/android.hardware.biometrics.common/3/android/hardware/biometrics/common/ICancellationSignal.aidl (priority: 16)
-[ 40% 11215/28037] AIDL ndk hardware/interfaces/biometrics/common/aidl/aidl_api/android.hardware.biometrics.common/3/android/hardware/biometrics/common/OperationContext.aidl (priority: 16)
+[ 40% 11365/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang pf.c (priority: 16)
+[ 40% 11366/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang ps.c (priority: 16)
+[ 40% 11367/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang setflags.c (priority: 16)
+[ 40% 11368/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang setversion.c (priority: 16)
+[ 40% 11369/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang uuid.c (priority: 16)
+[ 40% 11370/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang ostype.c (priority: 16)
+[ 40% 11371/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang percent.c (priority: 16)
+[ 40% 11372/28037] //external/e2fsprogs/misc:libext2_misc strip libext2_misc.so (priority: 16)
+[ 40% 11373/28037] //external/e2fsprogs/lib/e2p:libext2_e2p strip libext2_e2p.so (priority: 16)
+[ 40% 11374/28037] //external/e2fsprogs/lib/uuid:libext2_uuid static link libext2_uuid.a (priority: 16)
+[ 40% 11375/28037] //system/extras/libfec:libfec generate toc libfec.so (priority: 16)
+[ 40% 11376/28037] //system/extras/f2fs_utils:libf2fs_sparseblock strip libf2fs_sparseblock.so (priority: 16)
+[ 40% 11377/28037] //system/core/fs_mgr/libfs_avb:libfs_avb static link libfs_avb.a (priority: 16)
+[ 40% 11378/28037] //system/core/fs_mgr:libfs_mgr generate toc libfs_mgr.so (priority: 16)
+[ 40% 11379/28037] //system/core/fs_mgr:libfs_mgr clang++ file_wait.cpp (priority: 16)
+[ 40% 11380/28037] //system/core/fs_mgr:libfs_mgr clang++ blockdev.cpp (priority: 16)
+[ 40% 11381/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_format.cpp (priority: 16)
+[ 40% 11382/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr.cpp (priority: 16)
+[ 40% 11383/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_dm_linear.cpp (priority: 16)
+[ 40% 11384/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_roots.cpp (priority: 16)
+[ 40% 11385/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_overlayfs_control.cpp (priority: 16)
+[ 40% 11386/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_overlayfs_mount.cpp (priority: 16)
+[ 40% 11387/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_vendor_overlay.cpp (priority: 16)
+[ 40% 11388/28037] //system/core/fs_mgr:libfs_mgr clang++ fiemap_status.cpp (priority: 16)
+[ 40% 11389/28037] //system/core/fs_mgr:libfs_mgr clang++ fiemap_writer.cpp (priority: 16)
 ```
