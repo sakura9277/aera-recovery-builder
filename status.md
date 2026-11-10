@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:16:47Z |
+| 采样时刻 | 2026-11-10 00:17:18Z |
 | 已运行 | **46 分钟** |
-| ninja 进度 | `17051/28037` |
+| ninja 进度 | `17188/28037` |
 | 工作卷 | `68G used, 28G avail, 71%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2632M used / 13351M avail | swap 3686M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94495690 full avg10=0.00 avg60=0.00 avg300=0.00 total=87281574 ` |
+| 内存 | `2553M used / 13430M avail | swap 3685M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94528057 full avg10=0.00 avg60=0.00 avg300=0.00 total=87312396 ` |
 
 ### 内存占用 Top6
 
 ```
-   647M  ninja
+   648M  ninja
    144M  soong_ui
-   111M  provjobd3626103
-    78M  Runner.Listener
-    75M  clang++.real
+   128M  provjobd3626103
+    76M  Runner.Listener
     72M  Runner.Worker
+    52M  clang.real
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-      |                            ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:715:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
-  715 | #    define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
+   46 | # define gettext(Msgid) ((const char *) (Msgid))
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+external/bash/builtins/common.h:100:45: note: passing argument to parameter here
+  100 | extern void sh_erange PARAMS((char *, char *));
+      |                                             ^
+2 warnings generated.
+[ 61% 17183/28037] //external/bash:bash clang builtins/builtin.c (priority: 12)
+[ 61% 17184/28037] //external/bash:bash clang builtins/builtins.c (priority: 12)
+[ 61% 17185/28037] //external/bash:bash clang builtins/caller.c (priority: 12)
+[ 61% 17186/28037] //build/make/backported_fixes:backported_fixes_main_lib javac [linux_glibc common] (priority: 12)
+[ 61% 17187/28037] //external/bash:bash clang builtins/colon.c (priority: 12)
+[ 61% 17188/28037] //external/bash:bash clang builtins/cd.c (priority: 12)
+./cd.def:370:19: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  370 |       while (path = extract_colon_unit (cdpath, &path_index))
+      |              ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cd.def:370:19: note: place parentheses around the assignment to silence this warning
+  370 |       while (path = extract_colon_unit (cdpath, &path_index))
+      |                   ^                                         
+      |              (                                              )
+./cd.def:370:19: note: use '==' to turn this assignment into an equality comparison
+  370 |       while (path = extract_colon_unit (cdpath, &path_index))
+      |                   ^
+      |                   ==
 1 warning generated.
-[ 60% 17035/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/ISupplicantStaIfaceCallback.cpp (priority: 12)
-[ 60% 17036/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/ISupplicantStaNetworkCallback.cpp (priority: 12)
-[ 60% 17037/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/ISupplicantStaNetwork.cpp (priority: 12)
-[ 60% 17038/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/IfaceType.cpp (priority: 12)
-[ 60% 17039/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/IpVersion.cpp (priority: 12)
-[ 60% 17040/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/KeyMgmtMask.cpp (priority: 12)
-[ 60% 17041/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/LegacyMode.cpp (priority: 12)
-[ 60% 17042/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/IfaceInfo.cpp (priority: 12)
-[ 60% 17043/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MboAssocDisallowedReasonCode.cpp (priority: 12)
-[ 60% 17044/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MboCellularDataConnectionPrefValue.cpp (priority: 12)
-[ 60% 17045/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MboTransitionReasonCode.cpp (priority: 12)
-[ 60% 17046/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MiracastMode.cpp (priority: 12)
-[ 60% 17047/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MacAddress.cpp (priority: 12)
-[ 60% 17048/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MloLink.cpp (priority: 12)
-[ 60% 17049/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MloLinksInfo.cpp (priority: 12)
-[ 60% 17050/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MscsParams.cpp (priority: 12)
-[ 60% 17051/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MsduDeliveryInfo.cpp (priority: 12)
+[ 61% 17189/28037] //external/bash:bash clang builtins/command.c (priority: 12)
 ```
