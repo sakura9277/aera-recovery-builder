@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:16:16Z |
-| 已运行 | **45 分钟** |
-| ninja 进度 | `16524/28037` |
-| 工作卷 | `68G used, 29G avail, 71%` |
+| 采样时刻 | 2026-11-10 00:16:47Z |
+| 已运行 | **46 分钟** |
+| ninja 进度 | `17051/28037` |
+| 工作卷 | `68G used, 28G avail, 71%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2701M used / 13282M avail | swap 3689M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94489002 full avg10=0.00 avg60=0.00 avg300=0.00 total=87274962 ` |
+| 内存 | `2632M used / 13351M avail | swap 3686M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94495690 full avg10=0.00 avg60=0.00 avg300=0.00 total=87281574 ` |
 
 ### 内存占用 Top6
 
 ```
-   643M  ninja
-   140M  soong_ui
-   138M  clang++.real
+   647M  ninja
+   144M  soong_ui
    111M  provjobd3626103
-   110M  clang++.real
-    76M  Runner.Listener
+    78M  Runner.Listener
+    75M  clang++.real
+    72M  Runner.Worker
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 58% 16500/28037] //external/zucchini:libzucchini clang++ encoded_view.cc (priority: 13)
-[ 58% 16501/28037] //external/zucchini:libzucchini clang++ ensemble_matcher.cc (priority: 13)
-[ 58% 16502/28037] //external/zucchini:libzucchini clang++ equivalence_map.cc (priority: 13)
-[ 58% 16503/28037] //external/zucchini:libzucchini clang++ heuristic_ensemble_matcher.cc (priority: 13)
-[ 58% 16504/28037] //external/zucchini:libzucchini clang++ image_index.cc (priority: 13)
-[ 58% 16505/28037] //external/zucchini:libzucchini clang++ imposed_ensemble_matcher.cc (priority: 13)
-[ 58% 16506/28037] //external/zucchini:libzucchini clang++ io_utils.cc (priority: 13)
-[ 58% 16507/28037] //external/zucchini:libzucchini clang++ mapped_file.cc (priority: 13)
-[ 58% 16508/28037] //external/zucchini:libzucchini clang++ patch_reader.cc (priority: 13)
-[ 58% 16509/28037] //external/zucchini:libzucchini clang++ patch_writer.cc (priority: 13)
-[ 58% 16510/28037] //external/zucchini:libzucchini clang++ reference_bytes_mixer.cc (priority: 13)
-[ 58% 16511/28037] //external/zucchini:libzucchini clang++ reference_set.cc (priority: 13)
-[ 58% 16512/28037] //external/zucchini:libzucchini clang++ rel32_finder.cc (priority: 13)
-[ 58% 16513/28037] //external/zucchini:libzucchini clang++ rel32_utils.cc (priority: 13)
-[ 58% 16514/28037] //external/zucchini:libzucchini clang++ reloc_elf.cc (priority: 13)
-[ 58% 16515/28037] //external/zucchini:libzucchini clang++ reloc_win32.cc (priority: 13)
-[ 58% 16516/28037] //external/zucchini:libzucchini clang++ target_pool.cc (priority: 13)
-[ 58% 16517/28037] //external/zucchini:libzucchini clang++ targets_affinity.cc (priority: 13)
-[ 58% 16518/28037] //external/zucchini:libzucchini clang++ zucchini_apply.cc (priority: 13)
-[ 58% 16519/28037] //external/zucchini:libzucchini clang++ zucchini_gen.cc (priority: 13)
-[ 58% 16520/28037] //bionic/linker:linker.recovery raw librustlibs.rs (priority: 13)
-[ 58% 16521/28037] //external/llvm-libc:llvmlibc clang++ src/stdlib/bsearch.cpp (priority: 13)
-[ 58% 16522/28037] //external/llvm-libc:llvmlibc clang++ src/string/strlcat.cpp (priority: 13)
-[ 58% 16523/28037] //external/llvm-libc:llvmlibc clang++ src/string/strlcpy.cpp (priority: 13)
-[ 58% 16524/28037] //external/zucchini:libzucchini clang++ zucchini_tools.cc (priority: 13)
+      |                            ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:715:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
+  715 | #    define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+      |                                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+1 warning generated.
+[ 60% 17035/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/ISupplicantStaIfaceCallback.cpp (priority: 12)
+[ 60% 17036/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/ISupplicantStaNetworkCallback.cpp (priority: 12)
+[ 60% 17037/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/ISupplicantStaNetwork.cpp (priority: 12)
+[ 60% 17038/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/IfaceType.cpp (priority: 12)
+[ 60% 17039/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/IpVersion.cpp (priority: 12)
+[ 60% 17040/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/KeyMgmtMask.cpp (priority: 12)
+[ 60% 17041/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/LegacyMode.cpp (priority: 12)
+[ 60% 17042/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/IfaceInfo.cpp (priority: 12)
+[ 60% 17043/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MboAssocDisallowedReasonCode.cpp (priority: 12)
+[ 60% 17044/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MboCellularDataConnectionPrefValue.cpp (priority: 12)
+[ 60% 17045/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MboTransitionReasonCode.cpp (priority: 12)
+[ 60% 17046/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MiracastMode.cpp (priority: 12)
+[ 60% 17047/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MacAddress.cpp (priority: 12)
+[ 60% 17048/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MloLink.cpp (priority: 12)
+[ 60% 17049/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MloLinksInfo.cpp (priority: 12)
+[ 60% 17050/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MscsParams.cpp (priority: 12)
+[ 60% 17051/28037] //hardware/interfaces/wifi/supplicant/aidl:android.hardware.wifi.supplicant-V4-ndk clang++ android/hardware/wifi/supplicant/MsduDeliveryInfo.cpp (priority: 12)
 ```
