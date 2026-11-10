@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:21:58Z |
-| 已运行 | **51 分钟** |
-| ninja 进度 | `19706/28037` |
-| 工作卷 | `69G used, 28G avail, 72%` |
+| 采样时刻 | 2026-11-10 00:22:30Z |
+| 已运行 | **52 分钟** |
+| ninja 进度 | `20113/28037` |
+| 工作卷 | `69G used, 27G avail, 72%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2496M used / 13487M avail | swap 3670M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94630934 full avg10=0.00 avg60=0.00 avg300=0.00 total=87412685 ` |
+| 内存 | `3684M used / 12299M avail | swap 3667M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94660390 full avg10=0.00 avg60=0.00 avg300=0.00 total=87440205 ` |
 
 ### 内存占用 Top6
 
 ```
-   671M  ninja
-   162M  soong_ui
+  1183M  rustc
+   674M  ninja
+   347M  ld.lld
+   165M  soong_ui
    111M  provjobd3626103
     76M  Runner.Listener
-    72M  Runner.Worker
-    67M  clang.real
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 70% 19682/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eap_peer/eap_sim.c (priority: 12)
-[ 70% 19683/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eap_peer/eap_tls_common.c (priority: 12)
-[ 70% 19684/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eap_peer/eap_ttls.c (priority: 12)
-[ 70% 19685/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eap_peer/mschapv2.c (priority: 12)
-[ 70% 19686/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eap_peer/eap_wsc.c (priority: 12)
-[ 70% 19687/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eap_server/eap_server_identity.c (priority: 12)
-[ 70% 19688/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eap_server/eap_server_methods.c (priority: 12)
-[ 70% 19689/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eap_server/eap_server.c (priority: 12)
-[ 70% 19690/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eap_server/eap_server_wsc.c (priority: 12)
-[ 70% 19691/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eapol_auth/eapol_auth_sm.c (priority: 12)
-[ 70% 19692/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/eapol_supp/eapol_supp_sm.c (priority: 12)
-[ 70% 19693/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/l2_packet/l2_packet_linux.c (priority: 12)
-[ 70% 19694/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/p2p/p2p_build.c (priority: 12)
-[ 70% 19695/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/p2p/p2p_dev_disc.c (priority: 12)
-[ 70% 19696/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/p2p/p2p_go_neg.c (priority: 12)
-[ 70% 19697/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/p2p/p2p_group.c (priority: 12)
-[ 70% 19698/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/p2p/p2p.c (priority: 12)
-[ 70% 19699/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/p2p/p2p_invitation.c (priority: 12)
-[ 70% 19700/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/p2p/p2p_parse.c (priority: 12)
-[ 70% 19701/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/p2p/p2p_sd.c (priority: 12)
-[ 70% 19702/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/p2p/p2p_pd.c (priority: 12)
-[ 70% 19703/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/p2p/p2p_utils.c (priority: 12)
-[ 70% 19704/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/rsn_supp/preauth.c (priority: 12)
-[ 70% 19705/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/rsn_supp/pmksa_cache.c (priority: 12)
-[ 70% 19706/28037] //external/wpa_supplicant_8/wpa_supplicant:wpa_supplicant clang src/rsn_supp/tdls.c (priority: 12)
+./out/build/make/backported_fixes/applied_fixes/ki350037023.binpb
+./out/build/make/backported_fixes/applied_fixes/ki385124056.binpb
+[ 71% 20091/28037] //build/make/backported_fixes:applied_backported_fixes raw genrule.sbox.textproto (priority: 11)
+[ 71% 20092/28037] //build/make/backported_fixes:applied_backported_fixes_property_writer for javac [linux_glibc common] (priority: 11)
+[ 71% 20093/28037] //system/hardware/interfaces/wifi/keystore/1.0:android.system.wifi.keystore@1.0 link android.system.wifi.keystore@1.0.so (priority: 11)
+[ 71% 20094/28037] //external/one-true-awk:awk link awk (priority: 11)
+[ 71% 20095/28037] //external/avb:avbctl link avbctl (priority: 11)
+[ 71% 20096/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/bash/bash-etc/android_arm64_armv8-a/bash_logout (priority: 11)
+[ 71% 20097/28037] //external/bc:bc link bc (priority: 11)
+[ 71% 20098/28037] //system/extras/bootctl:bootctl link bootctl (priority: 11)
+[ 71% 20099/28037] //system/core/healthd:charger link charger (priority: 11)
+[ 71% 20100/28037] //system/core/debuggerd:debuggerd link debuggerd (priority: 11)
+[ 71% 20101/28037] //system/core/libnetutils:dhcptool clang dhcptool.c (priority: 11)
+[ 71% 20102/28037] //external/e2fsprogs/e2fsck:e2fsck link e2fsck (priority: 11)
+[ 71% 20103/28037] //external/bash:bash link bash (priority: 11)
+[ 71% 20104/28037] //system/sepolicy:file_contexts_bin_gen generate file_contexts.bin (priority: 11)
+[ 71% 20105/28037] compile /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/fileslist/linux_glibc_x86_64/obj/fileslist.a (priority: 11)
+[ 71% 20106/28037] //external/f2fs-tools:fsck.f2fs strip fsck.f2fs (priority: 11)
+[ 71% 20107/28037] //external/ntfs-3g:fsck.ntfs link fsck.ntfs (priority: 11)
+[ 71% 20108/28037] //system/vold:fscryptpolicyget link fscryptpolicyget (priority: 11)
+[ 71% 20109/28037] //external/libfuse:fusermount3 link fusermount3 (priority: 11)
+[ 71% 20110/28037] //system/hwservicemanager:hwservicemanager link hwservicemanager (priority: 11)
+[ 71% 20111/28037] //system/core/rootdir:init.environ.rc.gen raw genrule.sbox.textproto (priority: 11)
+[ 71% 20112/28037] //system/core/fastboot:fastbootd link fastbootd (priority: 11)
+[ 71% 20113/28037] //system/core/init:init_second_stage.recovery strip init (priority: 11)
 ```
