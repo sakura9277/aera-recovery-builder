@@ -2,21 +2,21 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:09:00Z |
-| 已运行 | **38 分钟** |
-| ninja 进度 | `13341/28037` |
+| 采样时刻 | 2026-11-10 00:09:31Z |
+| 已运行 | **39 分钟** |
+| ninja 进度 | `13485/28037` |
 | 工作卷 | `67G used, 29G avail, 70%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2643M used / 13339M avail | swap 3719M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94392951 full avg10=0.00 avg60=0.00 avg300=0.00 total=87182801 ` |
+| 内存 | `2773M used / 13210M avail | swap 3717M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94406047 full avg10=0.00 avg60=0.00 avg300=0.00 total=87194900 ` |
 
 ### 内存占用 Top6
 
 ```
-   615M  ninja
+   617M  ninja
    134M  soong_ui
+   118M  clang++.real
    112M  provjobd3626103
-   103M  clang++.real
     69M  Runner.Worker
     62M  Runner.Listener
 ```
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 47% 13317/28037] //frameworks/hardware/interfaces/stats/1.0:android.frameworks.stats@1.0 clang++ android/frameworks/stats/1.0/types.cpp (priority: 14)
-[ 47% 13318/28037] //frameworks/hardware/interfaces/stats/1.0:android.frameworks.stats@1.0 clang++ android/frameworks/stats/1.0/StatsAll.cpp (priority: 14)
-[ 47% 13319/28037] //hardware/interfaces/authsecret/1.0:android.hardware.authsecret@1.0 clang++ android/hardware/authsecret/1.0/AuthSecretAll.cpp (priority: 14)
-[ 47% 13320/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common-V3-ndk clang++ android/hardware/biometrics/common/AuthenticateReason.cpp (priority: 14)
-[ 47% 13321/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common-V3-ndk clang++ android/hardware/biometrics/common/CommonProps.cpp (priority: 14)
-[ 47% 13322/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common-V3-ndk clang++ android/hardware/biometrics/common/DisplayState.cpp (priority: 14)
-[ 47% 13323/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common-V3-ndk clang++ android/hardware/biometrics/common/ComponentInfo.cpp (priority: 14)
-[ 47% 13324/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common-V3-ndk clang++ android/hardware/biometrics/common/ICancellationSignal.cpp (priority: 14)
-[ 47% 13325/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common-V3-ndk clang++ android/hardware/biometrics/common/OperationReason.cpp (priority: 14)
-[ 47% 13326/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common-V3-ndk clang++ android/hardware/biometrics/common/SensorStrength.cpp (priority: 14)
-[ 47% 13327/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common-V3-ndk clang++ android/hardware/biometrics/common/WakeReason.cpp (priority: 14)
-[ 47% 13328/28037] //hardware/interfaces/boot/1.2:android.hardware.boot@1.2 link android.hardware.boot@1.2.so (priority: 14)
-[ 47% 13329/28037] //hardware/interfaces/fastboot/aidl:android.hardware.fastboot-V1-ndk link android.hardware.fastboot-V1-ndk.so (priority: 14)
-[ 47% 13330/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common-V3-ndk clang++ android/hardware/biometrics/common/OperationContext.cpp (priority: 14)
-[ 47% 13331/28037] //hardware/interfaces/health/aidl:android.hardware.health-V3-ndk clang++ android/hardware/health/BatteryCapacityLevel.cpp (priority: 14)
-[ 47% 13332/28037] //hardware/interfaces/health/aidl:android.hardware.health-V3-ndk clang++ android/hardware/health/BatteryChargingPolicy.cpp (priority: 14)
-[ 47% 13333/28037] //hardware/interfaces/health/aidl:android.hardware.health-V3-ndk clang++ android/hardware/health/BatteryChargingState.cpp (priority: 14)
-[ 47% 13334/28037] //hardware/interfaces/health/aidl:android.hardware.health-V3-ndk clang++ android/hardware/health/BatteryHealth.cpp (priority: 14)
-[ 47% 13335/28037] //hardware/interfaces/fastboot/1.1:android.hardware.fastboot@1.1 link android.hardware.fastboot@1.1.so (priority: 14)
-[ 47% 13336/28037] //hardware/interfaces/health/aidl:android.hardware.health-V3-ndk clang++ android/hardware/health/BatteryPartStatus.cpp (priority: 14)
-[ 47% 13337/28037] //hardware/interfaces/health/aidl:android.hardware.health-V3-ndk clang++ android/hardware/health/BatteryStatus.cpp (priority: 14)
-[ 47% 13338/28037] //hardware/interfaces/health/aidl:android.hardware.health-V3-ndk clang++ android/hardware/health/BatteryHealthData.cpp (priority: 14)
-[ 47% 13339/28037] //hardware/interfaces/health/aidl:android.hardware.health-V3-ndk clang++ android/hardware/health/DiskStats.cpp (priority: 14)
-[ 47% 13340/28037] //hardware/interfaces/health/aidl:android.hardware.health-V3-ndk clang++ android/hardware/health/HealthInfo.cpp (priority: 14)
-[ 47% 13341/28037] //hardware/interfaces/health/aidl:android.hardware.health-V3-ndk clang++ android/hardware/health/IHealth.cpp (priority: 14)
+   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
+      |                                                 ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
+ 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
+      |                                         ^
+frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
+  285 |   std::variant<Static, Dynamic> vector_;
+      |                                 ^
+frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
+  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
+      |                                        ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
+  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
+      |                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
+  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
+      |                                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+2 warnings generated.
+[ 48% 13482/28037] //frameworks/base/libs/androidfw:libandroidfw clang++ StreamingZipInflater.cpp (priority: 14)
+[ 48% 13483/28037] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceTypes.cpp (priority: 14)
+[ 48% 13484/28037] //frameworks/base/libs/androidfw:libandroidfw clang++ TypeWrappers.cpp (priority: 14)
+[ 48% 13485/28037] //frameworks/base/libs/androidfw:libandroidfw clang++ StringPool.cpp (priority: 14)
 ```
