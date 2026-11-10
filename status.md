@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:13:09Z |
-| 已运行 | **42 分钟** |
-| ninja 进度 | `15275/28037` |
+| 采样时刻 | 2026-11-10 00:13:40Z |
+| 已运行 | **43 分钟** |
+| ninja 进度 | `15585/28037` |
 | 工作卷 | `67G used, 29G avail, 71%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2536M used / 13446M avail | swap 3696M/17782M` |
+| 内存 | `2639M used / 13344M avail | swap 3695M/17782M` |
 | PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94466350 full avg10=0.00 avg60=0.00 avg300=0.00 total=87252347 ` |
 
 ### 内存占用 Top6
 
 ```
-   632M  ninja
+   635M  ninja
    136M  soong_ui
    111M  provjobd3626103
-   100M  clang++.real
     76M  Runner.Listener
+    74M  clang++.real
     71M  Runner.Worker
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 54% 15252/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/policy.cc (priority: 13)
-[ 54% 15253/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/rsa_pss.cc (priority: 13)
-[ 54% 15254/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/t_crl.cc (priority: 13)
-[ 54% 15255/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/t_req.cc (priority: 13)
-[ 54% 15256/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/t_x509.cc (priority: 13)
-[ 54% 15257/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/t_x509a.cc (priority: 13)
-[ 54% 15258/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_akey.cc (priority: 13)
-[ 54% 15259/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_akeya.cc (priority: 13)
-[ 54% 15260/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_alt.cc (priority: 13)
-[ 54% 15261/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_bcons.cc (priority: 13)
-[ 54% 15262/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_bitst.cc (priority: 13)
-[ 54% 15263/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_conf.cc (priority: 13)
-[ 54% 15264/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_cpols.cc (priority: 13)
-[ 54% 15265/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_crld.cc (priority: 13)
-[ 54% 15266/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_enum.cc (priority: 13)
-[ 54% 15267/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_extku.cc (priority: 13)
-[ 54% 15268/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_genn.cc (priority: 13)
-[ 54% 15269/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_ia5.cc (priority: 13)
-[ 54% 15270/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_info.cc (priority: 13)
-[ 54% 15271/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_int.cc (priority: 13)
-[ 54% 15272/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_lib.cc (priority: 13)
-[ 54% 15273/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_ncons.cc (priority: 13)
-[ 54% 15274/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_ocsp.cc (priority: 13)
-[ 54% 15275/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_pcons.cc (priority: 13)
-[ 54% 15276/28037] //external/boringssl:libcrypto_static clang++ src/crypto/x509/v3_pmaps.cc (priority: 13)
+[ 55% 15561/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_overlayfs_control.cpp (priority: 13)
+[ 55% 15562/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_overlayfs_mount.cpp (priority: 13)
+[ 55% 15563/28037] //system/core/fs_mgr:libfs_mgr clang++ fs_mgr_vendor_overlay.cpp (priority: 13)
+[ 55% 15564/28037] //system/core/fs_mgr:libfs_mgr clang++ fiemap_status.cpp (priority: 13)
+[ 55% 15565/28037] //system/core/fs_mgr:libfs_mgr clang++ fiemap_writer.cpp (priority: 13)
+[ 55% 15566/28037] //system/core/fs_mgr:libfs_mgr clang++ image_manager.cpp (priority: 13)
+[ 55% 15567/28037] //system/core/fs_mgr:libfs_mgr clang++ metadata.cpp (priority: 13)
+[ 55% 15568/28037] //system/core/fs_mgr:libfs_mgr clang++ utility.cpp (priority: 13)
+[ 55% 15569/28037] //system/core/fs_mgr:libfs_mgr clang++ split_fiemap_writer.cpp (priority: 13)
+[ 55% 15570/28037] //system/core/fs_mgr:libfs_mgr generate toc libfs_mgr.so (priority: 13)
+[ 55% 15571/28037] //system/core/fs_mgr:libfs_mgr clang++ passthrough.cpp (priority: 13)
+[ 55% 15572/28037] //system/extras/libfscrypt:libfscrypt clang++ fscrypt.cpp (priority: 13)
+[ 55% 15573/28037] //system/core/fs_mgr/libfstab:libfstab clang++ boot_config.cpp (priority: 13)
+[ 55% 15574/28037] //system/core/fs_mgr/libfstab:libfstab clang++ fstab.cpp (priority: 13)
+[ 55% 15575/28037] //external/ntfs-3g:libfuse-lite strip libfuse-lite.so (priority: 13)
+[ 55% 15576/28037] //system/core/fs_mgr/libfstab:libfstab clang++ slotselect.cpp (priority: 13)
+[ 55% 15577/28037] //bootable/recovery/fuse_sideload:libfusesideload clang++ fuse_sideload.cpp (priority: 13)
+[ 55% 15578/28037] //bootable/recovery/fuse_sideload:libfusesideload clang++ fuse_provider.cpp (priority: 13)
+[ 55% 15579/28037] //packages/modules/Gki/sysprop:libgkiprops clang++ sysprop/android/sysprop/GkiProperties.sysprop.cpp (priority: 13)
+[ 55% 15580/28037] //external/gptfdisk:libgptf clang++ crc32.cc (priority: 13)
+[ 55% 15581/28037] //external/gptfdisk:libgptf clang++ gptcl.cc (priority: 13)
+[ 55% 15582/28037] //external/gptfdisk:libgptf clang++ support.cc (priority: 13)
+[ 55% 15583/28037] //external/gptfdisk:libgptf clang++ guid.cc (priority: 13)
+[ 55% 15584/28037] //external/gptfdisk:libgptf clang++ gptpart.cc (priority: 13)
+[ 55% 15585/28037] //external/gptfdisk:libgptf clang++ mbrpart.cc (priority: 13)
 ```
