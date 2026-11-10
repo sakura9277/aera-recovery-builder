@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:28:13Z |
-| 已运行 | **57 分钟** |
-| ninja 进度 | `27167/28037` |
-| 工作卷 | `70G used, 26G avail, 73%` |
+| 采样时刻 | 2026-11-10 00:28:44Z |
+| 已运行 | **58 分钟** |
+| ninja 进度 | `28036/28037` |
+| 工作卷 | `71G used, 25G avail, 74%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2604M used / 13378M avail | swap 3649M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94866519 full avg10=0.00 avg60=0.00 avg300=0.00 total=87625570 ` |
+| 内存 | `2447M used / 13536M avail | swap 3642M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94909582 full avg10=0.00 avg60=0.00 avg300=0.00 total=87667977 ` |
 
 ### 内存占用 Top6
 
 ```
-   699M  ninja
+   705M  ninja
    207M  soong_ui
-   159M  ld.lld
    112M  provjobd3626103
     76M  Runner.Listener
     72M  Runner.Worker
+    43M  multipathd
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 96% 27144/28037] //external/zstd:libzstd clang lib/dictBuilder/cover.c [linux_glibc] (priority: 9)
-[ 96% 27145/28037] //external/zstd:libzstd clang lib/decompress/zstd_decompress_block.c [linux_glibc] (priority: 9)
-[ 96% 27146/28037] //external/zstd:libzstd clang lib/dictBuilder/fastcover.c [linux_glibc] (priority: 9)
-[ 96% 27147/28037] //external/zstd:libzstd clang lib/dictBuilder/divsufsort.c [linux_glibc] (priority: 9)
-[ 96% 27148/28037] //external/zstd:libzstd clang lib/dictBuilder/zdict.c [linux_glibc] (priority: 9)
-[ 96% 27149/28037] //external/zstd:libzstd clang lib/legacy/zstd_v01.c [linux_glibc] (priority: 9)
-[ 96% 27150/28037] //external/zstd:libzstd clang lib/legacy/zstd_v02.c [linux_glibc] (priority: 9)
-[ 96% 27151/28037] //external/zstd:libzstd clang lib/legacy/zstd_v03.c [linux_glibc] (priority: 9)
-[ 96% 27152/28037] //external/zstd:libzstd clang lib/legacy/zstd_v04.c [linux_glibc] (priority: 9)
-[ 96% 27153/28037] //external/zstd:libzstd clang lib/legacy/zstd_v05.c [linux_glibc] (priority: 9)
-[ 96% 27154/28037] //external/zstd:libzstd clang lib/legacy/zstd_v06.c [linux_glibc] (priority: 9)
-[ 96% 27155/28037] //bionic/linker:linker.recovery strip linker64 (priority: 9)
-[ 96% 27156/28037] //system/core/mkbootfs:mkbootfs link mkbootfs [linux_glibc] (priority: 9)
-[ 96% 27157/28037] //build/soong:odm-build.prop generating build.prop (priority: 9)
-[ 96% 27158/28037] //external/zstd:libzstd clang lib/legacy/zstd_v07.c [linux_glibc] (priority: 9)
-[ 96% 27159/28037] //build/soong:product-build.prop generating build.prop (priority: 9)
-[ 96% 27160/28037] //external/magisk-prebuilt/resetprop:resetprop strip resetprop (priority: 9)
-[ 96% 27161/28037] //system/sepolicy:recovery_sepolicy.cil Building cil for recovery_sepolicy.cil (priority: 9)
-[ 96% 27162/28037] //external/mksh:sh.recovery link sh (priority: 9)
-[ 96% 27163/28037] link /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/host/linux-x86/bin/go/symbol_inject/linux_glibc_x86_64/obj/symbol_inject (priority: 9)
-[ 96% 27164/28037] //build/soong:system-build.prop generating build.prop (priority: 9)
-[ 96% 27165/28037] //build/soong:system_ext-build.prop generating build.prop (priority: 9)
-[ 96% 27166/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/core/libprocessgroup/profiles/task_profiles.json/android_arm64_armv8-a/task_profiles.json (priority: 9)
-[ 96% 27167/28037] //system/core/toolbox:toolbox.recovery strip toolbox (priority: 9)
-[ 96% 27168/28037] //external/toybox:toybox_recovery strip toybox (priority: 9)
+-- Backing up /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/recovery/root//sbin/magiskboot to: /tmp/fox_build_tmp/ ...
+-- Copying the "dmsetup" binary ...
+-- Replacing any built-in "lzma" command with our own full version ...
+-- Copying bash ...
+-- Cleaning up any bash stragglers...
+-- Cleaning up any ash stragglers...
+-- Copying the GNU "tar" binary (gnutar) ...
+-- Copying the GNU "sed" binary (gnused) ...
+-- Copying the GNU "grep" binary ...
+-- Copying the "zstd" binary ...
+-- Copying the "lz4" binary ...
+-- Copying the GNU "date" binary (gnudate) ...
+-- Copying the AERA InfoZip "zip" binary ...
+-- Copying the "fsck.erofs" binary ...
+-- Copying the "patchelf" binary ...
+-- This build will use /data/recovery for its internal settings ... 
+-- This build will use /sdcard for its stuff ... 
+-- Copying the AERA Root Manager ksud binary ...
+-- Omitting the aapt binary (it is useless if the app manager is not enabled) ...
+-- Generating the build ID 
+-- Saving some original file sizes 
+-- Building the recovery image, using the official AOSP recovery image builder ...
+[ 99% 28034/28037] ----- Making uncompressed recovery ramdisk ------ (priority: 4)
+[ 99% 28035/28037] ----- Making compressed recovery ramdisk ------ (priority: 3)
+[ 99% 28036/28037] build /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/target/product/hummer/recovery.img (priority: 2)
 ```
