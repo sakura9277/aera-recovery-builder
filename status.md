@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:18:21Z |
-| 已运行 | **47 分钟** |
-| ninja 进度 | `17618/28037` |
+| 采样时刻 | 2026-11-10 00:18:52Z |
+| 已运行 | **48 分钟** |
+| ninja 进度 | `17674/28037` |
 | 工作卷 | `68G used, 28G avail, 71%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2876M used / 13107M avail | swap 3682M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94549876 full avg10=0.00 avg60=0.00 avg300=0.00 total=87333623 ` |
+| 内存 | `3068M used / 12915M avail | swap 3681M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94555260 full avg10=0.00 avg60=0.00 avg300=0.00 total=87339008 ` |
 
 ### 内存占用 Top6
 
 ```
-   653M  ninja
-   146M  soong_ui
-   125M  provjobd3626103
-   109M  clang++.real
-    96M  clang++.real
+   654M  ninja
+   314M  clang++.real
+   147M  soong_ui
+   123M  clang++.real
+   112M  provjobd3626103
     76M  Runner.Listener
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 62% 17594/28037] //bootable/recovery/aeraui:libaeraui clang++ components/text_edit.cpp (priority: 12)
-[ 62% 17595/28037] //bootable/recovery/aeraui:libaeraui clang++ features/security/lock_security.cpp (priority: 12)
-[ 62% 17596/28037] //bootable/recovery/aeraui:libaeraui clang++ components/lock_credential.cpp (priority: 12)
-[ 62% 17597/28037] //bootable/recovery/aeraui:libaeraui clang++ components/webkit_icon.cpp (priority: 12)
-[ 62% 17598/28037] //bootable/recovery/aeraui:libaeraui clang++ components/wallpaper.cpp (priority: 12)
-[ 62% 17599/28037] //bootable/recovery/aeraui:libaeraui clang++ features/developer/kernel_settings.cpp (priority: 12)
-[ 62% 17600/28037] //bootable/recovery/aeraui:libaeraui clang++ core/gpu_renderer.cpp (priority: 12)
-[ 62% 17601/28037] //bootable/recovery/aeraui:libaeraui clang++ core/runner.cpp (priority: 12)
-[ 62% 17602/28037] //bootable/recovery/aeraui:libaeraui clang++ core/status_bar.cpp (priority: 12)
-[ 62% 17603/28037] //bootable/recovery/aeraui:libaeraui clang++ core/engine.cpp (priority: 12)
-[ 62% 17604/28037] //bootable/recovery/aeraui:libaeraui clang++ features/artillery/game.cpp (priority: 12)
-[ 62% 17605/28037] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration.cpp (priority: 12)
-[ 62% 17606/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/mobile_data_scene.cpp (priority: 12)
-[ 62% 17607/28037] //bootable/recovery/aeraui:libaeraui clang++ features/backup/incremental_apks.cpp (priority: 12)
-[ 62% 17608/28037] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration_io.cpp (priority: 12)
-[ 62% 17609/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/launcher.cpp (priority: 12)
-[ 62% 17610/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/runtime.cpp (priority: 12)
-[ 62% 17611/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/session.cpp (priority: 12)
-[ 62% 17612/28037] //bootable/recovery/aeraui:libaeraui clang++ features/doom/launcher.cpp (priority: 12)
-[ 62% 17613/28037] //bootable/recovery/aeraui:libaeraui clang++ features/doom/session.cpp (priority: 12)
-[ 62% 17614/28037] //bootable/recovery/aeraui:libaeraui clang++ features/browser/web_scene.cpp (priority: 12)
-[ 62% 17615/28037] //bootable/recovery/aeraui:libaeraui clang++ features/files/file_manager.cpp (priority: 12)
-[ 62% 17616/28037] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/fontsource.cpp (priority: 12)
-[ 62% 17617/28037] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/fontsource_download.cpp (priority: 12)
-[ 62% 17618/28037] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/font_library.cpp (priority: 12)
+[ 62% 17650/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/browser_scene.cpp (priority: 12)
+[ 62% 17651/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/decrypt_scene.cpp (priority: 12)
+[ 62% 17652/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/appvault_scene.cpp (priority: 12)
+[ 62% 17653/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/android_adb_rescue_scene.cpp (priority: 12)
+[ 62% 17654/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/developer_scene.cpp (priority: 12)
+[ 62% 17655/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/doom_scene.cpp (priority: 12)
+[ 62% 17656/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/fastboot_scene.cpp (priority: 12)
+[ 62% 17657/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/gallery_scene.cpp (priority: 12)
+[ 62% 17658/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/font_browser.cpp (priority: 12)
+[ 62% 17659/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/generic_plugin_scene.cpp (priority: 12)
+[ 62% 17660/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/launcher_scene.cpp (priority: 12)
+[ 62% 17661/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/lock_scene.cpp (priority: 12)
+[ 62% 17662/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/media_scene.cpp (priority: 12)
+[ 62% 17663/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/nas_scene.cpp (priority: 12)
+[ 63% 17664/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/home_scene.cpp (priority: 12)
+[ 63% 17665/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/operation_scene.cpp (priority: 12)
+[ 63% 17666/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/plugin_scene.cpp (priority: 12)
+[ 63% 17667/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/package_review.cpp (priority: 12)
+[ 63% 17668/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/reboot_scene.cpp (priority: 12)
+[ 63% 17669/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/recorder_scene.cpp (priority: 12)
+[ 63% 17670/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/retroarch_scene.cpp (priority: 12)
+[ 63% 17671/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/sideload_scene.cpp (priority: 12)
+[ 63% 17672/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/root_manager_scene.cpp (priority: 12)
+[ 63% 17673/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/streams_scene.cpp (priority: 12)
+[ 63% 17674/28037] //bootable/recovery/aeraui:libaeraui clang++ scenes/terminal_scene.cpp (priority: 12)
 ```
