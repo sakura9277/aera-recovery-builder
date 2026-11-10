@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:19:54Z |
+| 采样时刻 | 2026-11-10 00:20:25Z |
 | 已运行 | **49 分钟** |
-| ninja 进度 | `18174/28037` |
+| ninja 进度 | `18878/28037` |
 | 工作卷 | `68G used, 28G avail, 72%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2665M used / 13318M avail | swap 3679M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94608459 full avg10=0.00 avg60=0.00 avg300=0.00 total=87391820 ` |
+| 内存 | `2771M used / 13212M avail | swap 3676M/17782M` |
+| PSI | `some avg10=0.01 avg60=0.02 avg300=0.00 total=94630927 full avg10=0.01 avg60=0.02 avg300=0.00 total=87412677 ` |
 
 ### 内存占用 Top6
 
 ```
-   657M  ninja
-   149M  soong_ui
-   136M  clang++.real
-   128M  clang++.real
-   111M  provjobd3626103
+   663M  ninja
+   184M  clang++.real
+   158M  soong_ui
+   112M  provjobd3626103
     76M  Runner.Listener
+    72M  Runner.Worker
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-system/core/libprocessgroup/include/processgroup/processgroup.h:82:3: note: 'setProcessGroupSwappiness' has been explicitly marked deprecated here
-   82 | [[deprecated("Unsupported in memcg v2")]]
-      |   ^
-1 warning generated.
-[ 64% 18154/28037] //system/core/init:libinit clang++ service_list.cpp (priority: 12)
-[ 64% 18155/28037] //system/core/init:libinit clang++ service_utils.cpp (priority: 12)
-[ 64% 18156/28037] //system/core/init:libinit clang++ service_parser.cpp (priority: 12)
-[ 64% 18157/28037] //system/core/init:libinit clang++ subcontext.cpp (priority: 12)
-[ 64% 18158/28037] //system/core/init:libinit clang++ tokenizer.cpp (priority: 12)
-[ 64% 18159/28037] //system/core/init:libinit clang++ proto/system/core/init/subcontext.pb.cc (priority: 12)
-[ 64% 18160/28037] //system/core/init:libinit clang++ apex_init_util.cpp (priority: 12)
-[ 64% 18161/28037] //system/core/init:libinit clang++ util.cpp (priority: 12)
-[ 64% 18162/28037] //system/core/init:libinit clang++ bootchart.cpp (priority: 12)
-[ 64% 18163/28037] //system/core/init:libinit clang++ block_dev_initializer.cpp (priority: 12)
-[ 64% 18164/28037] //system/core/init:libinit clang++ devices.cpp (priority: 12)
-[ 64% 18165/28037] //system/core/init:libinit clang++ builtins.cpp (priority: 12)
-[ 64% 18166/28037] //system/core/init:libinit clang++ firmware_handler.cpp (priority: 12)
-[ 64% 18167/28037] //system/core/init:libinit clang++ first_stage_console.cpp (priority: 12)
-[ 64% 18168/28037] //system/core/init:libinit clang++ first_stage_init.cpp (priority: 12)
-[ 64% 18169/28037] //system/core/init:libinit clang++ first_stage_mount.cpp (priority: 12)
-[ 64% 18170/28037] //system/core/init:libinit clang++ fscrypt_init_extensions.cpp (priority: 12)
-[ 64% 18171/28037] //system/core/init:libinit clang++ lmkd_service.cpp (priority: 12)
-[ 64% 18172/28037] //system/core/init:libinit clang++ modalias_handler.cpp (priority: 12)
-[ 64% 18173/28037] //system/core/init:libinit clang++ init.cpp (priority: 12)
-[ 64% 18174/28037] //system/core/init:libinit clang++ mount_handler.cpp (priority: 12)
+[ 67% 18854/28037] //external/libsmb2:libsmb2 clang lib/smb2-cmd-read.c (priority: 12)
+[ 67% 18855/28037] //external/libsmb2:libsmb2 clang lib/smb2-cmd-session-setup.c (priority: 12)
+[ 67% 18856/28037] //external/libsmb2:libsmb2 clang lib/smb2-cmd-set-info.c (priority: 12)
+[ 67% 18857/28037] //external/libsmb2:libsmb2 clang lib/smb2-cmd-tree-connect.c (priority: 12)
+[ 67% 18858/28037] //external/libsmb2:libsmb2 clang lib/smb2-cmd-tree-disconnect.c (priority: 12)
+[ 67% 18859/28037] //external/libsmb2:libsmb2 clang lib/smb2-cmd-write.c (priority: 12)
+[ 67% 18860/28037] //external/libsmb2:libsmb2 clang lib/smb2-data-file-info.c (priority: 12)
+[ 67% 18861/28037] //external/libsmb2:libsmb2 clang lib/smb2-data-filesystem-info.c (priority: 12)
+[ 67% 18862/28037] //external/libsmb2:libsmb2 clang lib/smb2-data-reparse-point.c (priority: 12)
+[ 67% 18863/28037] //external/libsmb2:libsmb2 clang lib/smb2-data-security-descriptor.c (priority: 12)
+[ 67% 18864/28037] //external/libsmb2:libsmb2 clang lib/smb2-share-enum.c (priority: 12)
+[ 67% 18865/28037] //external/libsmb2:libsmb2 clang lib/smb2-signing.c (priority: 12)
+[ 67% 18866/28037] //external/libsmb2:libsmb2 clang lib/smbdirect.c (priority: 12)
+[ 67% 18867/28037] //external/libsmb2:libsmb2 clang lib/smb3-seal.c (priority: 12)
+[ 67% 18868/28037] //external/libsmb2:libsmb2 clang lib/spnego-wrapper.c (priority: 12)
+[ 67% 18869/28037] //external/libsmb2:libsmb2 clang lib/socket.c (priority: 12)
+[ 67% 18870/28037] //external/libsmb2:libsmb2 clang lib/sync.c (priority: 12)
+[ 67% 18871/28037] //external/libsmb2:libsmb2 clang lib/timestamps.c (priority: 12)
+[ 67% 18872/28037] //external/libsmb2:libsmb2 clang lib/usha.c (priority: 12)
+[ 67% 18873/28037] //external/libsmb2:libsmb2 clang lib/unicode.c (priority: 12)
+[ 67% 18874/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_cow static link libsnapshot_cow.a (priority: 12)
+[ 67% 18875/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_init static link libsnapshot_init.a (priority: 12)
+[ 67% 18876/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ proto/android/snapshot/snapshot.pb.cc (priority: 12)
+[ 67% 18877/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ device_info.cpp (priority: 12)
+[ 67% 18878/28037] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ snapshot_stats.cpp (priority: 12)
 ```
