@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:26:09Z |
-| 已运行 | **55 分钟** |
-| ninja 进度 | `25996/28037` |
+| 采样时刻 | 2026-11-10 00:26:40Z |
+| 已运行 | **56 分钟** |
+| ninja 进度 | `26299/28037` |
 | 工作卷 | `70G used, 26G avail, 73%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2725M used / 13258M avail | swap 3653M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94860700 full avg10=0.00 avg60=0.00 avg300=0.00 total=87619760 ` |
+| 内存 | `2676M used / 13307M avail | swap 3651M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94866516 full avg10=0.00 avg60=0.00 avg300=0.00 total=87625567 ` |
 
 ### 内存占用 Top6
 
 ```
-   691M  ninja
+   694M  ninja
    207M  soong_ui
-   154M  clang++.real
    111M  provjobd3626103
+    97M  clang++.real
+    80M  clang++.real
     76M  Runner.Listener
-    72M  Runner.Worker
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 92% 25972/28037] //packages/modules/adb:libadbd_core clang++ transport.cpp [linux_glibc] (priority: 9)
-[ 92% 25973/28037] //packages/modules/adb:libadbd_core clang++ types.cpp [linux_glibc] (priority: 9)
-[ 92% 25974/28037] //packages/modules/adb:libadbd_core clang++ fdevent/fdevent_epoll.cpp [linux_glibc] (priority: 9)
-[ 92% 25975/28037] //packages/modules/adb:libadbd_core clang++ sysdeps_unix.cpp [linux_glibc] (priority: 9)
-[ 92% 25976/28037] //packages/modules/adb:libadbd_core clang++ sysdeps/posix/network.cpp [linux_glibc] (priority: 9)
-[ 92% 25977/28037] //packages/modules/adb:libadbd_core clang++ daemon/adb_wifi.cpp [linux_glibc] (priority: 9)
-[ 92% 25978/28037] //packages/modules/adb:libadbd_core clang++ daemon/auth.cpp [linux_glibc] (priority: 9)
-[ 92% 25979/28037] //packages/modules/adb:libadbd_core clang++ daemon/logging.cpp [linux_glibc] (priority: 9)
-[ 92% 25980/28037] //packages/modules/adb:libadbd_core clang++ daemon/jdwp_service.cpp [linux_glibc] (priority: 9)
-[ 92% 25981/28037] //packages/modules/adb/libs/libadbd_fs:libadbd_fs link libadbd_fs.so (priority: 9)
-[ 92% 25982/28037] //packages/modules/adb:libadbd_core clang++ daemon/transport_socket_server.cpp [linux_glibc] (priority: 9)
-[ 92% 25983/28037] //packages/modules/adb/libs/libadbd_fs:libadbd_fs link libadbd_fs.so [linux_glibc] (priority: 9)
-[ 92% 25984/28037] //packages/modules/adb:libadbd_services clang++ daemon/file_sync_service.cpp [apex31] (priority: 9)
-[ 92% 25985/28037] //packages/modules/adb:libadbd_services clang++ daemon/services.cpp [apex31] (priority: 9)
-[ 92% 25986/28037] //packages/modules/adb:libadbd_services clang++ daemon/shell_service.cpp [apex31] (priority: 9)
-[ 92% 25987/28037] //packages/modules/adb:libadbd_services clang++ daemon/tradeinmode.cpp [apex31] (priority: 9)
-[ 92% 25988/28037] //packages/modules/adb:libadbd_services clang++ shell_service_protocol.cpp [apex31] (priority: 9)
-[ 92% 25989/28037] //packages/modules/adb:libadbd_services clang++ daemon/abb_service.cpp [apex31] (priority: 9)
-[ 92% 25990/28037] //packages/modules/adb:libadbd_services clang++ daemon/framebuffer_service.cpp [apex31] (priority: 9)
-[ 92% 25991/28037] //packages/modules/adb:libadbd_services clang++ daemon/mdns.cpp [apex31] (priority: 9)
-[ 92% 25992/28037] //packages/modules/adb:libadbd_services strip libadbd_services.so (priority: 9)
-[ 92% 25993/28037] //packages/modules/adb:libadbd_services clang++ daemon/restart_service.cpp [apex31] (priority: 9)
-[ 92% 25994/28037] //packages/modules/adb:libadbd_services clang++ daemon/services.cpp [linux_glibc] (priority: 9)
-[ 92% 25995/28037] //packages/modules/adb:libadbd_services clang++ daemon/file_sync_service.cpp [linux_glibc] (priority: 9)
-[ 92% 25996/28037] //packages/modules/adb:libadbd_services clang++ daemon/shell_service.cpp [linux_glibc] (priority: 9)
+[ 93% 26275/28037] //external/boringssl:libcrypto clang++ src/crypto/sha/sha1.cc [linux_glibc x86] (priority: 9)
+[ 93% 26276/28037] //external/boringssl:libcrypto clang++ src/crypto/sha/sha256.cc [linux_glibc x86] (priority: 9)
+[ 93% 26277/28037] //external/boringssl:libcrypto clang++ src/crypto/sha/sha512.cc [linux_glibc x86] (priority: 9)
+[ 93% 26278/28037] //external/boringssl:libcrypto clang++ src/crypto/siphash/siphash.cc [linux_glibc x86] (priority: 9)
+[ 93% 26279/28037] //external/boringssl:libcrypto clang++ src/crypto/slhdsa/slhdsa.cc [linux_glibc x86] (priority: 9)
+[ 93% 26280/28037] //external/boringssl:libcrypto clang++ src/crypto/spake2plus/spake2plus.cc [linux_glibc x86] (priority: 9)
+[ 93% 26281/28037] //external/boringssl:libcrypto clang++ src/crypto/stack/stack.cc [linux_glibc x86] (priority: 9)
+[ 93% 26282/28037] //external/boringssl:libcrypto clang++ src/crypto/thread.cc [linux_glibc x86] (priority: 9)
+[ 93% 26283/28037] //external/boringssl:libcrypto clang++ src/crypto/thread_none.cc [linux_glibc x86] (priority: 9)
+[ 93% 26284/28037] //external/boringssl:libcrypto clang++ src/crypto/thread_pthread.cc [linux_glibc x86] (priority: 9)
+[ 93% 26285/28037] //external/boringssl:libcrypto clang++ src/crypto/thread_win.cc [linux_glibc x86] (priority: 9)
+[ 93% 26286/28037] //external/boringssl:libcrypto clang++ src/crypto/trust_token/trust_token.cc [linux_glibc x86] (priority: 9)
+[ 93% 26287/28037] //external/boringssl:libcrypto clang++ src/crypto/trust_token/pmbtoken.cc [linux_glibc x86] (priority: 9)
+[ 93% 26288/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/a_digest.cc [linux_glibc x86] (priority: 9)
+[ 93% 26289/28037] //external/boringssl:libcrypto clang++ src/crypto/trust_token/voprf.cc [linux_glibc x86] (priority: 9)
+[ 93% 26290/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/a_sign.cc [linux_glibc x86] (priority: 9)
+[ 93% 26291/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/a_verify.cc [linux_glibc x86] (priority: 9)
+[ 93% 26292/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/algorithm.cc [linux_glibc x86] (priority: 9)
+[ 93% 26293/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/asn1_gen.cc [linux_glibc x86] (priority: 9)
+[ 93% 26294/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/by_dir.cc [linux_glibc x86] (priority: 9)
+[ 93% 26295/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/by_file.cc [linux_glibc x86] (priority: 9)
+[ 93% 26296/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/i2d_pr.cc [linux_glibc x86] (priority: 9)
+[ 93% 26297/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/name_print.cc [linux_glibc x86] (priority: 9)
+[ 93% 26298/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/policy.cc [linux_glibc x86] (priority: 9)
+[ 93% 26299/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/rsa_pss.cc [linux_glibc x86] (priority: 9)
 ```
