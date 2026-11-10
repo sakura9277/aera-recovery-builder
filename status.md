@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:25:06Z |
-| 已运行 | **54 分钟** |
-| ninja 进度 | `25902/28037` |
+| 采样时刻 | 2026-11-10 00:25:38Z |
+| 已运行 | **55 分钟** |
+| ninja 进度 | `25933/28037` |
 | 工作卷 | `70G used, 26G avail, 73%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `3112M used / 12871M avail | swap 3654M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.01 avg300=0.00 total=94850237 full avg10=0.00 avg60=0.01 avg300=0.00 total=87610938 ` |
+| 内存 | `3043M used / 12940M avail | swap 3653M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94857176 full avg10=0.00 avg60=0.00 avg300=0.00 total=87616306 ` |
 
 ### 内存占用 Top6
 
 ```
    690M  ninja
-   602M  ld.lld
+   623M  ld.lld
    207M  soong_ui
-   150M  clang++.real
-   112M  provjobd3626103
+   113M  provjobd3626103
     76M  Runner.Listener
+    72M  Runner.Worker
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 92% 25878/28037] //device/oneplus/hummer/audio:aera-audio-service link aera-audio-service (priority: 9)
-[ 92% 25879/28037] //device/oneplus/hummer/mobile_data:aera-cellular-provider link aera-cellular-provider (priority: 9)
-[ 92% 25880/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/device/oneplus/hummer/mobile_data/aera-hummer-cn-static-nv/android_recovery_arm64_armv8-a/oplusstanvbk.img (priority: 9)
-[ 92% 25881/28037] //device/oneplus/hummer/mobile_data:aera-mobile-rmtfs strip aera-mobile-rmtfs (priority: 9)
-[ 92% 25882/28037] //device/oneplus/hummer/mobile_data:aera-mobile-tftp strip aera-mobile-tftp (priority: 9)
-[ 92% 25883/28037] //packages/modules/adb:adbd.recovery link adbd (priority: 9)
-[ 92% 25884/28037] //bootable/recovery/aeraui:aera-artillery-audio strip aera-artillery-audio (priority: 9)
-[ 92% 25885/28037] //bootable/recovery/aeraui:aera-browser-jail strip aera-browser-jail (priority: 9)
-[ 92% 25886/28037] //bootable/recovery/nas/native:aera-netfs strip aera-netfs (priority: 9)
-[ 92% 25887/28037] //bootable/recovery/third_party/htop:aera_htop strip htop (priority: 9)
-[ 92% 25888/28037] //external/aeracli:aeracli strip aera (priority: 9)
-[ 92% 25889/28037] //hardware/interfaces/biometrics/fingerprint/aidl:android.hardware.biometrics.fingerprint-V3-ndk strip android.hardware.biometrics.fingerprint-V3-ndk.so (priority: 9)
-[ 92% 25890/28037] //hardware/interfaces/health/2.1/default:android.hardware.health@2.1-impl strip android.hardware.health@2.0-impl-2.1.so (priority: 9)
-[ 92% 25891/28037] //frameworks/base:android_trade_in_mode_flags_cc_lib clang++ com_android_tradeinmode_flags.cc [apex31] (priority: 9)
-[ 92% 25892/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/external/boringssl/bcm_object/linux_glibc_x86/bcm_object.o (priority: 9)
-[ 92% 25893/28037] //system/core/healthd:charger link charger (priority: 9)
-[ 92% 25894/28037] //bionic/libc:crtbegin_dynamic link crtbegin_dynamic.o [apex31] (priority: 9)
-[ 92% 25895/28037] //bionic/libc:crtend_android clang arch-common/bionic/crtend.S [apex31] (priority: 9)
-[ 92% 25896/28037] //system/core/libnetutils:dhcptool strip dhcptool (priority: 9)
-[ 92% 25897/28037] //external/fmtlib:fmtlib clang++ src/format.cc [linux_glibc x86] (priority: 9)
-[ 92% 25898/28037] //system/linkerconfig:generate_recovery_linker_config generate ld.config.txt (priority: 9)
-[ 92% 25899/28037] cp /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/core/rootdir/init.environ.rc-soong/android_arm64_armv8-a/init.environ.rc (priority: 9)
-[ 92% 25900/28037] //packages/modules/adb/crypto:libadb_crypto clang++ key.cpp [apex31] (priority: 9)
-[ 92% 25901/28037] //packages/modules/adb/crypto:libadb_crypto clang++ rsa_2048_key.cpp [apex31] (priority: 9)
-[ 92% 25902/28037] //packages/modules/adb/crypto:libadb_crypto clang++ x509_generator.cpp [apex31] (priority: 9)
+[ 92% 25909/28037] //packages/modules/adb/proto:libadb_protos clang++ proto/packages/modules/adb/proto/key_type.pb.cc [apex31] (priority: 9)
+[ 92% 25910/28037] //packages/modules/adb/proto:libadb_protos clang++ proto/packages/modules/adb/proto/pairing.pb.cc [apex31] (priority: 9)
+[ 92% 25911/28037] //packages/modules/adb/proto:libadb_protos clang++ proto/packages/modules/adb/proto/adb_known_hosts.pb.cc [linux_glibc] (priority: 9)
+[ 92% 25912/28037] //packages/modules/adb/proto:libadb_protos clang++ proto/packages/modules/adb/proto/key_type.pb.cc [linux_glibc] (priority: 9)
+[ 92% 25913/28037] //packages/modules/adb/proto:libadb_protos clang++ proto/packages/modules/adb/proto/pairing.pb.cc [linux_glibc] (priority: 9)
+[ 92% 25914/28037] //packages/modules/adb:libadb_sysdeps clang++ sysdeps/env.cpp [apex31] (priority: 9)
+[ 92% 25915/28037] //packages/modules/adb:libadb_sysdeps clang++ sysdeps/env.cpp [linux_glibc] (priority: 9)
+[ 92% 25916/28037] //packages/modules/adb/tls:libadb_tls_connection clang++ adb_ca_list.cpp [apex31] (priority: 9)
+[ 92% 25917/28037] //packages/modules/adb/tls:libadb_tls_connection clang++ tls_connection.cpp [apex31] (priority: 9)
+[ 92% 25918/28037] //packages/modules/adb/tls:libadb_tls_connection clang++ adb_ca_list.cpp [linux_glibc] (priority: 9)
+[ 92% 25919/28037] //packages/modules/adb/tls:libadb_tls_connection clang++ tls_connection.cpp [linux_glibc] (priority: 9)
+[ 92% 25920/28037] //packages/modules/adb/libs/adbconnection:libadbconnection_server clang++ adbconnection_server.cpp [apex31] (priority: 9)
+[ 92% 25921/28037] //packages/modules/adb/libs/adbconnection:libadbconnection_server clang++ common.cpp [apex31] (priority: 9)
+[ 92% 25922/28037] //packages/modules/adb/libs/adbconnection:libadbconnection_server clang++ adbconnection_server.cpp [linux_glibc] (priority: 9)
+[ 92% 25923/28037] //packages/modules/adb/libs/adbconnection:libadbconnection_server clang++ common.cpp [linux_glibc] (priority: 9)
+[ 92% 25924/28037] //packages/modules/adb:libadbd strip libadbd.so (priority: 9)
+[ 92% 25925/28037] //frameworks/native/libs/adbd_auth:libadbd_auth link libadbd_auth.so (priority: 9)
+[ 92% 25926/28037] //frameworks/native/libs/adbd_auth:libadbd_auth link libadbd_auth.so [linux_glibc] (priority: 9)
+[ 92% 25927/28037] //packages/modules/adb:libadbd_core clang++ adb.cpp [apex31] (priority: 9)
+[ 92% 25928/28037] //packages/modules/adb:libadbd_core clang++ adb_io.cpp [apex31] (priority: 9)
+[ 92% 25929/28037] //packages/modules/adb:libadbd_core clang++ adb_listeners.cpp [apex31] (priority: 9)
+[ 92% 25930/28037] //packages/modules/adb:libadbd_core clang++ adb_mdns.cpp [apex31] (priority: 9)
+[ 92% 25931/28037] //packages/modules/adb:libadbd_core clang++ adb_trace.cpp [apex31] (priority: 9)
+[ 92% 25932/28037] //packages/modules/adb:libadbd_core clang++ adb_unique_fd.cpp [apex31] (priority: 9)
+[ 92% 25933/28037] //packages/modules/adb:libadbd_core clang++ adb_utils.cpp [apex31] (priority: 9)
 ```
