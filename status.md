@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:15:45Z |
+| 采样时刻 | 2026-11-10 00:16:16Z |
 | 已运行 | **45 分钟** |
-| ninja 进度 | `16369/28037` |
+| ninja 进度 | `16524/28037` |
 | 工作卷 | `68G used, 29G avail, 71%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2914M used / 13068M avail | swap 3690M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94486768 full avg10=0.00 avg60=0.00 avg300=0.00 total=87272728 ` |
+| 内存 | `2701M used / 13282M avail | swap 3689M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94489002 full avg10=0.00 avg60=0.00 avg300=0.00 total=87274962 ` |
 
 ### 内存占用 Top6
 
 ```
-   642M  ninja
-   341M  clang++.real
+   643M  ninja
    140M  soong_ui
+   138M  clang++.real
    111M  provjobd3626103
-    98M  clang++.real
-    77M  Runner.Listener
+   110M  clang++.real
+    76M  Runner.Listener
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 58% 16345/28037] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsX86_64.cpp (priority: 13)
-[ 58% 16346/28037] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsRiscv64.cpp (priority: 13)
-[ 58% 16347/28037] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Symbols.cpp (priority: 13)
-[ 58% 16348/28037] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ThreadEntry.cpp (priority: 13)
-[ 58% 16349/28037] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ThreadUnwinder.cpp (priority: 13)
-[ 58% 16350/28037] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Unwinder.cpp (priority: 13)
-[ 58% 16351/28037] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ LogAndroid.cpp (priority: 13)
-[ 58% 16352/28037] //system/update_engine:libupdate_engine_boot_control clang++ aosp/boot_control_android.cc (priority: 13)
-[ 58% 16353/28037] //system/update_engine:libupdate_engine_boot_control clang++ aosp/cleanup_previous_update_action.cc (priority: 13)
-[ 58% 16354/28037] //system/update_engine:libupdate_engine_boot_control clang++ aosp/dynamic_partition_utils.cc (priority: 13)
-[ 58% 16355/28037] //external/liburing:liburing clang src/queue.c (priority: 13)
-[ 58% 16356/28037] //external/liburing:liburing clang src/register.c (priority: 13)
-[ 58% 16357/28037] //external/liburing:liburing clang src/setup.c (priority: 13)
-[ 58% 16358/28037] //external/liburing:liburing clang src/syscall.c (priority: 13)
-[ 58% 16359/28037] //system/core/libvendorsupport:libvendorsupport generate toc libvendorsupport.so (priority: 13)
-[ 58% 16360/28037] //system/update_engine:libupdate_engine_boot_control clang++ aosp/dynamic_partition_control_android.cc (priority: 13)
-[ 58% 16361/28037] //system/extras/verity:libverity_tree clang++ build_verity_tree.cpp (priority: 13)
-[ 58% 16362/28037] //system/extras/verity:libverity_tree clang++ build_verity_tree_utils.cpp (priority: 13)
-[ 58% 16363/28037] //system/libvintf:libvintf strip libvintf.so (priority: 13)
-[ 58% 16364/28037] //system/extras/verity:libverity_tree clang++ hash_tree_builder.cpp (priority: 13)
-[ 58% 16365/28037] //system/vold:libvold_binder clang++ android/os/IVoldListener.cpp (priority: 13)
-[ 58% 16366/28037] //system/vold:libvold_binder clang++ android/os/IVold.cpp (priority: 13)
-[ 58% 16367/28037] //system/vold:libvold_binder clang++ android/os/IVoldMountCallback.cpp (priority: 13)
-[ 58% 16368/28037] //system/vold:libvold_binder clang++ android/os/IVoldTaskListener.cpp (priority: 13)
-[ 58% 16369/28037] //external/wpa_supplicant_8/wpa_supplicant:libwpa_aidl clang++ aidl/vendor/aidl.cpp (priority: 13)
+[ 58% 16500/28037] //external/zucchini:libzucchini clang++ encoded_view.cc (priority: 13)
+[ 58% 16501/28037] //external/zucchini:libzucchini clang++ ensemble_matcher.cc (priority: 13)
+[ 58% 16502/28037] //external/zucchini:libzucchini clang++ equivalence_map.cc (priority: 13)
+[ 58% 16503/28037] //external/zucchini:libzucchini clang++ heuristic_ensemble_matcher.cc (priority: 13)
+[ 58% 16504/28037] //external/zucchini:libzucchini clang++ image_index.cc (priority: 13)
+[ 58% 16505/28037] //external/zucchini:libzucchini clang++ imposed_ensemble_matcher.cc (priority: 13)
+[ 58% 16506/28037] //external/zucchini:libzucchini clang++ io_utils.cc (priority: 13)
+[ 58% 16507/28037] //external/zucchini:libzucchini clang++ mapped_file.cc (priority: 13)
+[ 58% 16508/28037] //external/zucchini:libzucchini clang++ patch_reader.cc (priority: 13)
+[ 58% 16509/28037] //external/zucchini:libzucchini clang++ patch_writer.cc (priority: 13)
+[ 58% 16510/28037] //external/zucchini:libzucchini clang++ reference_bytes_mixer.cc (priority: 13)
+[ 58% 16511/28037] //external/zucchini:libzucchini clang++ reference_set.cc (priority: 13)
+[ 58% 16512/28037] //external/zucchini:libzucchini clang++ rel32_finder.cc (priority: 13)
+[ 58% 16513/28037] //external/zucchini:libzucchini clang++ rel32_utils.cc (priority: 13)
+[ 58% 16514/28037] //external/zucchini:libzucchini clang++ reloc_elf.cc (priority: 13)
+[ 58% 16515/28037] //external/zucchini:libzucchini clang++ reloc_win32.cc (priority: 13)
+[ 58% 16516/28037] //external/zucchini:libzucchini clang++ target_pool.cc (priority: 13)
+[ 58% 16517/28037] //external/zucchini:libzucchini clang++ targets_affinity.cc (priority: 13)
+[ 58% 16518/28037] //external/zucchini:libzucchini clang++ zucchini_apply.cc (priority: 13)
+[ 58% 16519/28037] //external/zucchini:libzucchini clang++ zucchini_gen.cc (priority: 13)
+[ 58% 16520/28037] //bionic/linker:linker.recovery raw librustlibs.rs (priority: 13)
+[ 58% 16521/28037] //external/llvm-libc:llvmlibc clang++ src/stdlib/bsearch.cpp (priority: 13)
+[ 58% 16522/28037] //external/llvm-libc:llvmlibc clang++ src/string/strlcat.cpp (priority: 13)
+[ 58% 16523/28037] //external/llvm-libc:llvmlibc clang++ src/string/strlcpy.cpp (priority: 13)
+[ 58% 16524/28037] //external/zucchini:libzucchini clang++ zucchini_tools.cc (priority: 13)
 ```
