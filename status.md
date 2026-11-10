@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:00:41Z |
+| 采样时刻 | 2026-11-10 00:01:13Z |
 | 已运行 | **30 分钟** |
-| ninja 进度 | `9882/28037` |
+| ninja 进度 | `10154/28037` |
 | 工作卷 | `66G used, 30G avail, 69%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2383M used / 13600M avail | swap 3776M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.09 total=94311955 full avg10=0.00 avg60=0.00 avg300=0.08 total=87103188 ` |
+| 内存 | `2410M used / 13572M avail | swap 3772M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.07 total=94311987 full avg10=0.00 avg60=0.00 avg300=0.06 total=87103220 ` |
 
 ### 内存占用 Top6
 
 ```
-   554M  ninja
-   108M  provjobd3626103
-   100M  clippy-driver
-    82M  soong_ui
-    73M  clang++.real
+   558M  ninja
+   124M  provjobd3626103
+    83M  soong_ui
+    72M  clang++.real
     67M  Runner.Worker
+    58M  Runner.Listener
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 35% 9858/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang uuid.c (priority: 18)
-[ 35% 9859/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang ostype.c (priority: 18)
-[ 35% 9860/28037] //external/e2fsprogs/lib/e2p:libext2_e2p clang percent.c (priority: 18)
-[ 35% 9861/28037] //external/e2fsprogs/misc:libext2_misc strip libext2_misc.so (priority: 18)
-[ 35% 9862/28037] //external/e2fsprogs/misc:libext2_misc clang create_inode.c (priority: 18)
-[ 35% 9863/28037] //external/e2fsprogs/lib/support:libext2_quota generate toc libext2_quota.so (priority: 18)
-[ 35% 9864/28037] //system/extras/f2fs_utils:libf2fs_sparseblock clang f2fs_sparseblock.c (priority: 18)
-[ 35% 9865/28037] //external/rust/android-crates-io/crates/fallible-iterator:libfallible_iterator rustc src/lib.rs (priority: 18)
-[ 35% 9866/28037] //external/rust/android-crates-io/crates/fallible-streaming-iterator:libfallible_streaming_iterator rustc src/lib.rs (priority: 18)
-[ 35% 9867/28037] //system/extras/libfec:libfec link libfec.so (priority: 18)
-[ 35% 9868/28037] //external/rust/android-crates-io/crates/flagset:libflagset rustc src/lib.rs (priority: 18)
-[ 35% 9869/28037] //external/rust/android-crates-io/crates/der_derive:libder_derive rustc src/lib.rs [linux_glibc] (priority: 18)
-[ 35% 9870/28037] //system/core/fs_mgr:libfs_mgr link libfs_mgr.so (priority: 18)
-[ 35% 9871/28037] //system/core/gatekeeperd:libgatekeeper_aidl clang++ android/service/gatekeeper/IGateKeeperService.cpp (priority: 18)
-[ 35% 9872/28037] //external/rust/android-crates-io/crates/half:libhalf rustc src/lib.rs (priority: 18)
-[ 35% 9873/28037] //system/core/gatekeeperd:libgatekeeper_aidl clang++ GateKeeperResponse.cpp (priority: 18)
-[ 35% 9874/28037] //external/rust/android-crates-io/crates/icu_provider_baked:libicu_provider_baked rustc src/lib.rs (priority: 18)
-[ 35% 9875/28037] //external/rust/android-crates-io/crates/hashlink:libhashlink rustc src/lib.rs (priority: 18)
-[ 35% 9876/28037] //frameworks/base/core/java:libincremental_aidl-cpp gen aidl (priority: 18)
-[ 35% 9877/28037] //external/icu/icu4c/source/common:libicuuc strip libicuuc.so (priority: 18)
-[ 35% 9878/28037] //external/jsoncpp:libjsoncpp static link libjsoncpp.a (priority: 18)
-[ 35% 9879/28037] //external/jsoncpp:libjsoncpp link libjsoncpp.so (priority: 18)
-[ 35% 9880/28037] //system/libvintf:libkernelconfigs clang++ KernelConfigs.cpp [linux_glibc] (priority: 18)
-[ 35% 9881/28037] //system/security/keystore2/aaid:libkeystore2_aaid-rust clippy lib.rs (priority: 18)
-[ 35% 9882/28037] //system/security/keystore2/apc_compat:libkeystore2_apc_compat-rust clippy apc_compat.rs (priority: 18)
+[ 36% 10130/28037] //system/tools/aidl/metadata:aidl_metadata_in_cpp generate metadata.cpp [linux_glibc] (priority: 17)
+[ 36% 10131/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/biometrics/common/aidl/android.hardware.biometrics.common-V3-ndk-source/gen/timestamp (priority: 17)
+[ 36% 10132/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common_interface export types for android.hardware.biometrics.common/2 (priority: 17)
+[ 36% 10133/28037] //hardware/interfaces/biometrics/common/aidl:android.hardware.biometrics.common_interface export types for android.hardware.biometrics.common/3 (priority: 17)
+[ 36% 10134/28037]  (priority: 17)
+[ 36% 10135/28037] //hardware/interfaces/boot/aidl:android.hardware.boot-V1-ndk link android.hardware.boot-V1-ndk.so (priority: 17)
+[ 36% 10136/28037] //hardware/interfaces/boot/1.1:android.hardware.boot@1.1 link android.hardware.boot@1.1.so (priority: 17)
+[ 36% 10137/28037] //hardware/interfaces/boot/1.2:android.hardware.boot@1.2 link android.hardware.boot@1.2.so (priority: 17)
+[ 36% 10138/28037] AIDL ndk hardware/interfaces/fastboot/aidl/aidl_api/android.hardware.fastboot/1/android/hardware/fastboot/FileSystemType.aidl (priority: 17)
+[ 36% 10139/28037] AIDL ndk hardware/interfaces/fastboot/aidl/aidl_api/android.hardware.fastboot/1/android/hardware/fastboot/IFastboot.aidl (priority: 17)
+[ 36% 10140/28037] //hardware/interfaces/fastboot/1.0:android.hardware.fastboot@1.0 link android.hardware.fastboot@1.0.so (priority: 17)
+[ 36% 10141/28037] HIDL c++-sources: hardware/interfaces/fastboot/1.1/IFastboot.hal hardware/interfaces/current.txt => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/fastboot/1.1/android.hardware.fastboot@1.1_genc++/gen/android/hardware/fastboot/1.1/FastbootAll.cpp' (priority: 17)
+[ 36% 10142/28037] HIDL c++-headers: hardware/interfaces/fastboot/1.1/IFastboot.hal hardware/interfaces/current.txt => '/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/fastboot/1.1/android.hardware.fastboot@1.1_genc++_headers/gen/android/hardware/fastboot/1.1/IFastboot.h' (priority: 17)
+[ 36% 10143/28037] //hardware/interfaces/gatekeeper/aidl:android.hardware.gatekeeper-V1-ndk link android.hardware.gatekeeper-V1-ndk.so (priority: 17)
+[ 36% 10144/28037] //hardware/interfaces/gatekeeper/1.0:android.hardware.gatekeeper@1.0 link android.hardware.gatekeeper@1.0.so (priority: 17)
+[ 36% 10145/28037] create /home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/hardware/interfaces/health/aidl/android.hardware.health-V3-ndk-source/gen/timestamp (priority: 17)
+[ 36% 10146/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryCapacityLevel.cpp (priority: 17)
+[ 36% 10147/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryChargingPolicy.cpp (priority: 17)
+[ 36% 10148/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryChargingState.cpp (priority: 17)
+[ 36% 10149/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryHealth.cpp (priority: 17)
+[ 36% 10150/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryHealthData.cpp (priority: 17)
+[ 36% 10151/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryPartStatus.cpp (priority: 17)
+[ 36% 10152/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/BatteryStatus.cpp (priority: 17)
+[ 36% 10153/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/DiskStats.cpp (priority: 17)
+[ 36% 10154/28037] //hardware/interfaces/health/aidl:android.hardware.health-V4-ndk clang++ android/hardware/health/HealthInfo.cpp (priority: 17)
 ```
