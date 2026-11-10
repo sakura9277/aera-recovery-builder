@@ -2,23 +2,23 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:19:23Z |
-| 已运行 | **48 分钟** |
-| ninja 进度 | `17925/28037` |
+| 采样时刻 | 2026-11-10 00:19:54Z |
+| 已运行 | **49 分钟** |
+| ninja 进度 | `18174/28037` |
 | 工作卷 | `68G used, 28G avail, 72%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2575M used / 13408M avail | swap 3680M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94584310 full avg10=0.00 avg60=0.00 avg300=0.00 total=87368051 ` |
+| 内存 | `2665M used / 13318M avail | swap 3679M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94608459 full avg10=0.00 avg60=0.00 avg300=0.00 total=87391820 ` |
 
 ### 内存占用 Top6
 
 ```
-   656M  ninja
-   147M  soong_ui
+   657M  ninja
+   149M  soong_ui
+   136M  clang++.real
+   128M  clang++.real
    111M  provjobd3626103
     76M  Runner.Listener
-    72M  Runner.Worker
-    43M  multipathd
 ```
 
 ### 内核 OOM 记录
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-[ 63% 17903/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/t_x509a.cc [apex31] (priority: 12)
-[ 63% 17904/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_akey.cc [apex31] (priority: 12)
-[ 63% 17905/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_akeya.cc [apex31] (priority: 12)
-[ 63% 17906/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_alt.cc [apex31] (priority: 12)
-[ 63% 17907/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_bcons.cc [apex31] (priority: 12)
-[ 63% 17908/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_bitst.cc [apex31] (priority: 12)
-[ 63% 17909/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_conf.cc [apex31] (priority: 12)
-[ 63% 17910/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_cpols.cc [apex31] (priority: 12)
-[ 63% 17911/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_crld.cc [apex31] (priority: 12)
-[ 63% 17912/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_enum.cc [apex31] (priority: 12)
-[ 63% 17913/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_extku.cc [apex31] (priority: 12)
-[ 63% 17914/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_genn.cc [apex31] (priority: 12)
-[ 63% 17915/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_ia5.cc [apex31] (priority: 12)
-[ 63% 17916/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_info.cc [apex31] (priority: 12)
-[ 63% 17917/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_int.cc [apex31] (priority: 12)
-[ 63% 17918/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_lib.cc [apex31] (priority: 12)
-[ 63% 17919/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_ncons.cc [apex31] (priority: 12)
-[ 63% 17920/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_ocsp.cc [apex31] (priority: 12)
-[ 63% 17921/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_pcons.cc [apex31] (priority: 12)
-[ 63% 17922/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_pmaps.cc [apex31] (priority: 12)
-[ 63% 17923/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_prn.cc [apex31] (priority: 12)
-[ 63% 17924/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_purp.cc [apex31] (priority: 12)
-[ 63% 17925/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_skey.cc [apex31] (priority: 12)
-[ 63% 17926/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/v3_utl.cc [apex31] (priority: 12)
-[ 63% 17927/28037] //external/boringssl:libcrypto clang++ src/crypto/x509/x509.cc [apex31] (priority: 12)
+system/core/libprocessgroup/include/processgroup/processgroup.h:82:3: note: 'setProcessGroupSwappiness' has been explicitly marked deprecated here
+   82 | [[deprecated("Unsupported in memcg v2")]]
+      |   ^
+1 warning generated.
+[ 64% 18154/28037] //system/core/init:libinit clang++ service_list.cpp (priority: 12)
+[ 64% 18155/28037] //system/core/init:libinit clang++ service_utils.cpp (priority: 12)
+[ 64% 18156/28037] //system/core/init:libinit clang++ service_parser.cpp (priority: 12)
+[ 64% 18157/28037] //system/core/init:libinit clang++ subcontext.cpp (priority: 12)
+[ 64% 18158/28037] //system/core/init:libinit clang++ tokenizer.cpp (priority: 12)
+[ 64% 18159/28037] //system/core/init:libinit clang++ proto/system/core/init/subcontext.pb.cc (priority: 12)
+[ 64% 18160/28037] //system/core/init:libinit clang++ apex_init_util.cpp (priority: 12)
+[ 64% 18161/28037] //system/core/init:libinit clang++ util.cpp (priority: 12)
+[ 64% 18162/28037] //system/core/init:libinit clang++ bootchart.cpp (priority: 12)
+[ 64% 18163/28037] //system/core/init:libinit clang++ block_dev_initializer.cpp (priority: 12)
+[ 64% 18164/28037] //system/core/init:libinit clang++ devices.cpp (priority: 12)
+[ 64% 18165/28037] //system/core/init:libinit clang++ builtins.cpp (priority: 12)
+[ 64% 18166/28037] //system/core/init:libinit clang++ firmware_handler.cpp (priority: 12)
+[ 64% 18167/28037] //system/core/init:libinit clang++ first_stage_console.cpp (priority: 12)
+[ 64% 18168/28037] //system/core/init:libinit clang++ first_stage_init.cpp (priority: 12)
+[ 64% 18169/28037] //system/core/init:libinit clang++ first_stage_mount.cpp (priority: 12)
+[ 64% 18170/28037] //system/core/init:libinit clang++ fscrypt_init_extensions.cpp (priority: 12)
+[ 64% 18171/28037] //system/core/init:libinit clang++ lmkd_service.cpp (priority: 12)
+[ 64% 18172/28037] //system/core/init:libinit clang++ modalias_handler.cpp (priority: 12)
+[ 64% 18173/28037] //system/core/init:libinit clang++ init.cpp (priority: 12)
+[ 64% 18174/28037] //system/core/init:libinit clang++ mount_handler.cpp (priority: 12)
 ```
