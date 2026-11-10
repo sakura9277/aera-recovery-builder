@@ -2,22 +2,22 @@
 
 | 项 | 值 |
 | --- | --- |
-| 采样时刻 | 2026-11-10 00:11:04Z |
-| 已运行 | **40 分钟** |
-| ninja 进度 | `14147/28037` |
+| 采样时刻 | 2026-11-10 00:11:36Z |
+| 已运行 | **41 分钟** |
+| ninja 进度 | `14356/28037` |
 | 工作卷 | `67G used, 29G avail, 71%` |
 | 根分区 | `2.0G avail (99%)` |
-| 内存 | `2661M used / 13322M avail | swap 3701M/17782M` |
-| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94442170 full avg10=0.00 avg60=0.00 avg300=0.00 total=87230298 ` |
+| 内存 | `2548M used / 13435M avail | swap 3699M/17782M` |
+| PSI | `some avg10=0.00 avg60=0.00 avg300=0.00 total=94460411 full avg10=0.00 avg60=0.00 avg300=0.00 total=87246427 ` |
 
 ### 内存占用 Top6
 
 ```
-   625M  ninja
-   154M  clang++.real
-   148M  clang++.real
+   627M  ninja
    135M  soong_ui
-   110M  provjobd3626103
+   111M  provjobd3626103
+   105M  clang++.real
+    94M  clang++.real
     76M  Runner.Listener
 ```
 
@@ -30,29 +30,29 @@
 ### 编译日志尾部
 
 ```
-  704 |     int test_count = 0;
-      |         ^
-system/security/keystore/keystore_cli_v2.cpp:864:25: warning: 'listEntries' is deprecated: use listEntriesBatched instead. [-Wdeprecated-declarations]
-  864 |     auto rc = keystore->listEntries(ks2::Domain::APP, -1 /* nspace ignored */, &key_list);
-      |                         ^
-/home/runner/work/aera-recovery-builder/aera-recovery-builder/aera_workspace/out/soong/.intermediates/system/hardware/interfaces/keystore2/aidl/android.system.keystore2-V5-ndk-source/gen/include/aidl/android/system/keystore2/IKeystoreService.h:66:210: note: 'listEntries' has been explicitly marked deprecated here
-   66 |   virtual ::ndk::ScopedAStatus listEntries(::aidl::android::system::keystore2::Domain in_domain, int64_t in_nspace, std::vector<::aidl::android::system::keystore2::KeyDescriptor>* _aidl_return) __attribute__((deprecated("use listEntriesBatched instead."))) = 0;
-      |                                                                                                                                                                                                                  ^
-system/security/keystore/keystore_cli_v2.cpp:1002:33: warning: 'AServiceManager_getService' is deprecated: this polls 5s, use AServiceManager_waitForService or AServiceManager_checkService [-Wdeprecated-declarations]
- 1002 |     ::ndk::SpAIBinder apcBinder(AServiceManager_getService("android.security.apc"));
-      |                                 ^
-frameworks/native/libs/binder/ndk/include_platform/android/binder_manager.h:107:3: note: 'AServiceManager_getService' has been explicitly marked deprecated here
-  107 | [[deprecated("this polls 5s, use AServiceManager_waitForService or AServiceManager_checkService")]]
-      |   ^
-3 warnings generated.
-[ 50% 14138/28037] //packages/modules/adb:libadbd_core clang++ adb_io.cpp (priority: 13)
-[ 50% 14139/28037] //packages/modules/adb:libadbd_core clang++ adb.cpp (priority: 13)
-[ 50% 14140/28037] //packages/modules/adb:libadbd_core clang++ adb_mdns.cpp (priority: 13)
-[ 50% 14141/28037] //packages/modules/adb:libadbd_core clang++ adb_listeners.cpp (priority: 13)
-[ 50% 14142/28037] //packages/modules/adb:libadbd_core clang++ adb_unique_fd.cpp (priority: 13)
-[ 50% 14143/28037] //packages/modules/adb:libadbd_core clang++ adb_trace.cpp (priority: 13)
-[ 50% 14144/28037] //packages/modules/adb:libadbd_core clang++ adb_utils.cpp (priority: 13)
-[ 50% 14145/28037] //packages/modules/adb:libadbd_core clang++ apacket_reader.cpp (priority: 13)
-[ 50% 14146/28037] //packages/modules/adb:libadbd_core clang++ services.cpp (priority: 13)
-[ 50% 14147/28037] //packages/modules/adb:libadbd_core clang++ fdevent/fdevent.cpp (priority: 13)
+[ 51% 14332/28037] //external/brotli:libbrotli clang c/enc/cluster.c (priority: 13)
+[ 51% 14333/28037] //external/brotli:libbrotli clang c/enc/command.c (priority: 13)
+[ 51% 14334/28037] //external/brotli:libbrotli clang c/enc/compress_fragment.c (priority: 13)
+[ 51% 14335/28037] //external/brotli:libbrotli clang c/enc/compress_fragment_two_pass.c (priority: 13)
+[ 51% 14336/28037] //external/brotli:libbrotli clang c/enc/dictionary_hash.c (priority: 13)
+[ 51% 14337/28037] //external/brotli:libbrotli clang c/enc/encoder_dict.c (priority: 13)
+[ 51% 14338/28037] //external/brotli:libbrotli clang c/enc/entropy_encode.c (priority: 13)
+[ 51% 14339/28037] //external/brotli:libbrotli clang c/enc/fast_log.c (priority: 13)
+[ 51% 14340/28037] //external/brotli:libbrotli clang c/enc/encode.c (priority: 13)
+[ 51% 14341/28037] //external/brotli:libbrotli clang c/enc/literal_cost.c (priority: 13)
+[ 51% 14342/28037] //external/brotli:libbrotli clang c/enc/histogram.c (priority: 13)
+[ 51% 14343/28037] //external/brotli:libbrotli clang c/enc/memory.c (priority: 13)
+[ 51% 14344/28037] //external/brotli:libbrotli clang c/enc/static_dict.c (priority: 13)
+[ 51% 14345/28037] //external/brotli:libbrotli clang c/enc/metablock.c (priority: 13)
+[ 51% 14346/28037] //external/brotli:libbrotli clang c/enc/utf8_util.c (priority: 13)
+[ 51% 14347/28037] //external/bsdiff:libbspatch clang++ brotli_decompressor.cc (priority: 13)
+[ 51% 14348/28037] //external/bsdiff:libbspatch clang++ bspatch.cc (priority: 13)
+[ 51% 14349/28037] //external/bsdiff:libbspatch clang++ bz2_decompressor.cc (priority: 13)
+[ 51% 14350/28037] //external/bsdiff:libbspatch clang++ buffer_file.cc (priority: 13)
+[ 51% 14351/28037] //external/bsdiff:libbspatch clang++ decompressor_interface.cc (priority: 13)
+[ 51% 14352/28037] //external/bsdiff:libbspatch clang++ extents.cc (priority: 13)
+[ 51% 14353/28037] //external/bsdiff:libbspatch clang++ file.cc (priority: 13)
+[ 51% 14354/28037] //external/bsdiff:libbspatch clang++ extents_file.cc (priority: 13)
+[ 51% 14355/28037] //external/bsdiff:libbspatch clang++ memory_file.cc (priority: 13)
+[ 51% 14356/28037] //external/bsdiff:libbspatch clang++ logging.cc (priority: 13)
 ```
